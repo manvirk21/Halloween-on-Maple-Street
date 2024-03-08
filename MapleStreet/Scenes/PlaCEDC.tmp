@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://q35n1ykq2747"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_qkkqf"]
+[ext_resource type="Texture2D" uid="uid://bixto4alo46lc" path="res://Assets/Koala.png" id="2_vcbyh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_67o2e"]
+radius = 19.0
+height = 38.0
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(19, 460)
+collision_layer = 2
+script = ExtResource("1_qkkqf")
+
+[node name="PlayerLocator" type="RemoteTransform2D" parent="."]
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+position = Vector2(13, 14)
+scale = Vector2(0.0916998, 0.0936197)
+texture = ExtResource("2_vcbyh")
+
+[node name="FeetCollision" type="CollisionPolygon2D" parent="."]
+position = Vector2(9, 25)
+polygon = PackedVector2Array(-4, -5, 7, -3, 9, 1, 6, 4, -8, 1, -6, -5)
+
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
+position = Vector2(13, 12)
+shape = SubResource("CapsuleShape2D_67o2e")

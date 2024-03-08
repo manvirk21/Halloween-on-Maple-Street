@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://boe3f77hx3xwy"]
+
+[ext_resource type="Texture2D" uid="uid://homshv8uryp5" path="res://Assets/MapleStreet.jpg" id="1_r6h1i"]
+[ext_resource type="Script" path="res://Scripts/maple_street.gd" id="1_xbb3s"]
+[ext_resource type="Script" path="res://Scripts/minigame_enabler.gd" id="3_k28yf"]
+
+[node name="MapleStreet" type="Node2D"]
+script = ExtResource("1_xbb3s")
+
+[node name="MapleStreet" type="Sprite2D" parent="."]
+position = Vector2(638.5, 252.5)
+scale = Vector2(1.06417, 1.39722)
+texture = ExtResource("1_r6h1i")
+
+[node name="Camera" type="Camera2D" parent="."]
+light_mask = 0
+visibility_layer = 0
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 500
+position_smoothing_enabled = true
+position_smoothing_speed = 1.5
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
+light_mask = 2
+collision_layer = 2
+
+[node name="Offscreen" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
+light_mask = 2
+polygon = PackedVector2Array(0, 245, 0, 505, 1000, 504, 1276, 503, 1277, -1, 69, 0, 1, 1, -1, 310, -36, 158, -32, -43, 800, -63, 1326, -63, 1323, 562, 677, 565, -38, 562, -37, 365)
+
+[node name="NonReachableSpaces" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
+visible = false
+light_mask = 2
+polygon = PackedVector2Array(42, 376, 39, 412, 122, 414, 124, 403, 147.463, 404.305, 149, 415, 261, 415, 265, 394, 314, 391, 313, 405, 289, 405, 285, 415, 469, 416, 491, 394, 521, 393, 503, 416, 633, 415, 635, 398, 672, 397, 675, 415, 761, 412, 762, 398, 778, 397, 779, 412, 963, 416, 950, 398, 905, 398, 906, 382, 977, 383, 997, 415, 1113, 412, 1113, 400, 1142, 400, 1143, 414, 1232, 412, 1267, 414, 1268, 399, 1293, 399, 1297, 148, 1289, -11, -11, -12, -10, 401)
+
+[node name="MinigameEnabler" type="Node2D" parent="."]
+script = ExtResource("3_k28yf")
+
+[node name="RedHouse" type="Area2D" parent="MinigameEnabler"]
+light_mask = 4
+collision_layer = 4
+
+[node name="RedHouseCollision" type="CollisionPolygon2D" parent="MinigameEnabler/RedHouse"]
+light_mask = 4
+position = Vector2(-182.443, -290.273)
+scale = Vector2(2.15179, 1.84448)
+polygon = PackedVector2Array(139.16, 354.178, 137.301, 387.792, 158.214, 388.334, 157.285, 354.178)
+
+[node name="OrangeHouse" type="Area2D" parent="MinigameEnabler"]
+light_mask = 4
+collision_layer = 4
+
+[node name="OrangeHouseCollision" type="CollisionPolygon2D" parent="MinigameEnabler/OrangeHouse"]
+light_mask = 4
+position = Vector2(-21, -308)
+scale = Vector2(2.15179, 1.84448)
+polygon = PackedVector2Array(139.16, 354.178, 138.954, 387.102, 158.214, 388.334, 157.285, 354.178)
+
+[connection signal="body_entered" from="MinigameEnabler/RedHouse" to="MinigameEnabler" method="_activate_red_house"]
+[connection signal="body_exited" from="MinigameEnabler/RedHouse" to="MinigameEnabler" method="_deactivate_red_house"]
+[connection signal="body_entered" from="MinigameEnabler/OrangeHouse" to="MinigameEnabler" method="_activate_orange_house"]
+[connection signal="body_exited" from="MinigameEnabler/OrangeHouse" to="MinigameEnabler" method="_deactivate_orange_house"]
