@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbi06dkv4dmbs"]
+
+[ext_resource type="PackedScene" uid="uid://q35n1ykq2747" path="res://Scenes/Player.tscn" id="1_oqigm"]
+[ext_resource type="Texture2D" uid="uid://c1lhefvyira6p" path="res://Assets/Screen Shot 2024-03-08 at 8.10.17 PM.png" id="2_jqdlv"]
+
+[node name="Maze" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(331.5, 250.25)
+scale = Vector2(0.386737, 0.29424)
+texture = ExtResource("2_jqdlv")
+
+[node name="Player" parent="." instance=ExtResource("1_oqigm")]
+position = Vector2(338, 14)
+
+[node name="MazeCollision" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MazeCollision"]
+position = Vector2(-3.42353, -2.64874)
+scale = Vector2(1.02054, 1.01247)
+polygon = PackedVector2Array(48, 43, 332, 42, 334, 117, 320, 116, 321, 62, 203, 63, 201, 178, 323, 185, 329, 225, 199, 222, 202, 211, 312, 213, 315, 195, 190, 194, 192, 61, 74, 61, 72, 83, 160, 82, 165, 147, 145, 151, 144, 100, 70, 101, 70, 202, 101, 211, 108, 122, 117, 146, 121, 221, 73, 228, 69, 339, 232, 346, 232, 356, 70, 359, 66, 444, 145, 443, 150, 415, 163, 415, 164, 443, 187, 443, 190, 392, 115, 394, 114, 416, 103, 414, 103, 378, 201, 373, 207, 440, 331, 450, 328, 461, 52, 463)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MazeCollision"]
+position = Vector2(-5.47527, 0.514124)
+scale = Vector2(0.895907, 0.868196)
+polygon = PackedVector2Array(413, 50, 675, 48, 678, 539, 411, 544, 412, 526, 552, 522, 553, 380, 377, 379, 375, 470, 497, 478, 498, 419, 427, 418, 427, 436, 462, 439, 462, 454, 409, 455, 407, 406, 514, 403, 518, 488, 270, 493, 267, 476, 357, 474, 354, 379, 330, 377, 326, 451, 266, 454, 269, 442, 306, 441, 311, 380, 163, 378, 165, 330, 599, 326, 597, 117, 565, 113, 568, 298, 136, 307, 135, 371, 116, 371, 118, 294, 160, 289, 167, 221, 185, 225, 183, 287, 548, 288, 553, 100, 613, 97, 617, 336, 181, 342, 184, 364, 567, 365, 569, 521, 657, 523, 655.732, 384.114, 613, 381, 616, 489, 603, 480, 599, 369, 653, 366, 657, 68, 516, 68, 515, 260, 404, 264, 404, 192, 267, 191, 263, 103, 273, 123, 273, 174, 310, 174, 310, 101, 325, 107, 327, 173, 403, 173, 410, 107, 424, 128, 422, 246, 500, 247, 502, 67, 472, 68, 473, 217, 461, 220, 454, 69, 410, 63)
