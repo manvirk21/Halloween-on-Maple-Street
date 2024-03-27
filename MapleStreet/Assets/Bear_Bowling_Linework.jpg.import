@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bixto4alo46lc"
-path="res://.godot/imported/Koala.png-6e031502ba83f31f999dc52b7ad1f3f3.ctex"
+uid="uid://bmaok0o30bx5q"
+path="res://.godot/imported/Bear_Bowling_Linework.jpg-a423670243d429ab84bf66b8ffc3102f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Koala.png"
-dest_files=["res://.godot/imported/Koala.png-6e031502ba83f31f999dc52b7ad1f3f3.ctex"]
+source_file="res://Assets/Bear_Bowling_Linework.jpg"
+dest_files=["res://.godot/imported/Bear_Bowling_Linework.jpg-a423670243d429ab84bf66b8ffc3102f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://homshv8uryp5"
-path="res://.godot/imported/MapleStreet.jpg-dbdab696317f62312435e0bea2472e0d.ctex"
+uid="uid://drngjpwdw3xo5"
+path="res://.godot/imported/Mouse_House.jpg-e1ffee3c4e05654c84dbf65489dc0cc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MapleStreet.jpg"
-dest_files=["res://.godot/imported/MapleStreet.jpg-dbdab696317f62312435e0bea2472e0d.ctex"]
+source_file="res://Assets/Mouse_House.jpg"
+dest_files=["res://.godot/imported/Mouse_House.jpg-e1ffee3c4e05654c84dbf65489dc0cc4.ctex"]
 
 [params]
 

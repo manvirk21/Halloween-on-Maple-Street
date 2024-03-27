@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1lhefvyira6p"
-path="res://.godot/imported/Screen Shot 2024-03-08 at 8.10.17 PM.png-ce3ef5edfea7fb104cf8b5d644b7b789.ctex"
+uid="uid://c4hgm13b4624p"
+path="res://.godot/imported/Teddy.png-fbd0c5f4cf6488dde62473e28d10e35f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Screen Shot 2024-03-08 at 8.10.17 PM.png"
-dest_files=["res://.godot/imported/Screen Shot 2024-03-08 at 8.10.17 PM.png-ce3ef5edfea7fb104cf8b5d644b7b789.ctex"]
+source_file="res://Assets/Teddy.png"
+dest_files=["res://.godot/imported/Teddy.png-fbd0c5f4cf6488dde62473e28d10e35f.ctex"]
 
 [params]
 
