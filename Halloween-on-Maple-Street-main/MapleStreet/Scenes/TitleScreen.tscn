@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://6i4e1iq6g2th"]
+
+[ext_resource type="Script" path="res://Scripts/TitleScreen.gd" id="1_hjnc1"]
+[ext_resource type="Texture2D" uid="uid://cg2ts3mgkjj3k" path="res://Assets/Start_Screen.png" id="2_5v02h"]
+[ext_resource type="Texture2D" uid="uid://c7ylqlmpejtv3" path="res://Assets/Start_Game.png" id="3_oa2th"]
+[ext_resource type="Texture2D" uid="uid://daw7bvjghjru3" path="res://Assets/Settings.png" id="4_ptb1i"]
+[ext_resource type="Texture2D" uid="uid://dox4tl4c82tqw" path="res://Assets/Credits.png" id="5_m1nj5"]
+
+[sub_resource type="FontFile" id="FontFile_jqq4x"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
+cache/0/64/0/kerning_overrides/64/0 = Vector2(0, 0)
+cache/0/64/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/64/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="Theme_4cdov"]
+default_font = SubResource("FontFile_jqq4x")
+default_font_size = 64
+Button/colors/font_color = Color(0.827451, 0.45098, 0, 1)
+Button/colors/font_hover_color = Color(0.980392, 0.945098, 0.894118, 1)
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hjnc1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1681.0
+offset_bottom = 1079.0
+
+[node name="StartScreen" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(960.374, 544)
+scale = Vector2(1.37976, 1.2)
+texture = ExtResource("2_5v02h")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 873.0
+offset_right = 602.0
+offset_bottom = 998.0
+theme = SubResource("Theme_4cdov")
+text = "Start"
+
+[node name="StartGame" type="Sprite2D" parent="StartButton"]
+position = Vector2(231, 62.5)
+scale = Vector2(1.48077, 1.5625)
+texture = ExtResource("3_oa2th")
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 0
+offset_left = 731.0
+offset_top = 873.0
+offset_right = 1198.0
+offset_bottom = 998.0
+theme = SubResource("Theme_4cdov")
+text = "Settings"
+
+[node name="Setting" type="Sprite2D" parent="Settings"]
+position = Vector2(233.5, 62.5)
+scale = Vector2(1.54125, 1.5625)
+texture = ExtResource("4_ptb1i")
+
+[node name="Credits" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1312.0
+offset_top = 873.0
+offset_right = 1781.0
+offset_bottom = 998.0
+theme = SubResource("Theme_4cdov")
+text = "Credits"
+
+[node name="Credit" type="Sprite2D" parent="Credits"]
+position = Vector2(234.5, 62.5)
+scale = Vector2(1.58983, 1.52439)
+texture = ExtResource("5_m1nj5")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
