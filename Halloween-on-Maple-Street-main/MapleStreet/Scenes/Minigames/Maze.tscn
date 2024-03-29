@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbi06dkv4dmbs"]
+
+[ext_resource type="Script" path="res://Scripts/maze.gd" id="1_jnwhg"]
+[ext_resource type="Texture2D" uid="uid://jntnktkacac" path="res://Assets/MouseHouse_Maze_Prototype.png" id="3_cs3pk"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="3_o681t"]
+[ext_resource type="Texture2D" uid="uid://fi0ldb6gmcax" path="res://Assets/Maze_Icon.png" id="4_dfviu"]
+[ext_resource type="Script" path="res://Scenes/Minigames/mazefinish.gd" id="5_g44u3"]
+[ext_resource type="Texture2D" uid="uid://c24b15q7u14vj" path="res://Assets/Winning_Screen_Wireframe.png" id="6_0hi8s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u6o27"]
+radius = 10.8167
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5pud"]
+size = Vector2(258, 34)
+
+[node name="Maze" type="Node2D"]
+script = ExtResource("1_jnwhg")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("3_cs3pk")
+
+[node name="MazeCollision" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MazeCollision"]
+polygon = PackedVector2Array(1354, 124, 1328, 150, 1332, 168, 1386, 173, 1387, 418, 1402, 417, 1408, 173, 1446, 173, 1440, 463, 1339, 462, 1346, 268, 1326, 245, 1321, 344, 1216, 344, 1219, 235, 1203, 233, 1199, 348, 1151, 346, 1150, 244, 1143, 238, 1137, 245, 1142, 366, 1321, 372, 1324, 485, 1457, 482, 1467, 175, 1647, 176, 1640, 660, 1571, 662, 1566, 847, 1578, 848, 1578, 686, 1641, 686, 1638, 911, 1521, 908, 1520, 657, 1025, 649, 1035, 622, 1588, 611, 1588, 225, 1515, 225, 1504, 523, 1029, 529, 1031, 427, 1013, 426, 1007, 526, 951, 537, 946, 653, 966, 653, 967, 555, 1522, 538, 1527, 250, 1571, 251, 1566, 596, 1397, 598, 1005, 594, 1007, 667, 1193, 673, 1189, 771, 1138, 780, 1140, 791, 1206, 786, 1218, 673, 1250, 669, 1253, 827, 1139, 832, 1139, 851, 1451, 854, 1452, 721, 1328, 720, 1322, 791, 1379, 792, 1379, 777, 1334, 767, 1345, 733, 1433, 736, 1433, 836, 1271, 827, 1274, 672, 1504, 680, 1501, 911, 1325, 918, 1322, 955, 1435, 955, 1426, 1024, 1183, 1024, 1074, 1032, 1680, 1057, 1677, 15, 763, 13, 775, 1020, 1194, 1038, 1181, 1022, 1183, 954, 1270, 952, 1273, 907, 1092, 884, 1090, 761, 951, 770, 950, 825, 959, 827, 960, 787, 1071, 785, 1070, 887, 1032, 890, 1027, 838, 1014, 836, 1013, 891, 885, 889, 893, 721, 1128, 718, 1124, 706, 893, 693, 902, 481, 974, 466, 971, 326, 961, 292, 948, 449, 902, 432, 901, 238, 1015, 241, 1017, 332, 1042, 329, 1034, 213, 907, 207, 910, 158, 1085, 169, 1083, 415, 1259, 421, 1259, 455, 1094, 454, 1091, 470, 1271, 476, 1270, 403, 1096, 391, 1102, 170, 1273, 173, 1273, 279, 1292, 279, 1291, 149, 1279, 124, 1223, 122, 1222, 54, 1491, 55, 1492, 120)
+
+[node name="MazeTeddy" type="CharacterBody2D" parent="."]
+position = Vector2(1311, 124)
+collision_mask = 2
+script = ExtResource("3_o681t")
+
+[node name="Teddy_Sprite" type="Sprite2D" parent="MazeTeddy"]
+position = Vector2(-3.86238e-05, 3.8147e-06)
+scale = Vector2(0.196721, 0.196721)
+texture = ExtResource("4_dfviu")
+
+[node name="Collision" type="CollisionShape2D" parent="MazeTeddy"]
+position = Vector2(2, 0)
+shape = SubResource("CircleShape2D_u6o27")
+
+[node name="Finish" type="Node2D" parent="."]
+script = ExtResource("5_g44u3")
+
+[node name="FinishArea2D" type="Area2D" parent="Finish"]
+
+[node name="FinishCollision" type="CollisionShape2D" parent="Finish/FinishArea2D"]
+position = Vector2(1310, 1004)
+shape = SubResource("RectangleShape2D_k5pud")
+
+[node name="FinishScreen" type="Sprite2D" parent="Finish"]
+visible = false
+position = Vector2(961.5, 538)
+scale = Vector2(1.00052, 0.998148)
+texture = ExtResource("6_0hi8s")
+
+[connection signal="body_entered" from="Finish/FinishArea2D" to="Finish" method="_on_finish_area_2d_body_entered"]
