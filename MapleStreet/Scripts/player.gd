@@ -44,3 +44,7 @@ func resize_Teddy():
 		var distance = (position.y - far_y) / near_y
 		scale.x = lerp(min_scale, max_scale, distance)
 		scale.y = lerp(min_scale, max_scale, distance)
+
+
+func _on_finish_area_2d_body_entered(body):
+	pass # Replace with function body.

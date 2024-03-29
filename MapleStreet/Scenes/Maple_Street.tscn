@@ -1,16 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://boe3f77hx3xwy"]
+[gd_scene load_steps=6 format=3 uid="uid://boe3f77hx3xwy"]
 
 [ext_resource type="Script" path="res://Scripts/maple_street.gd" id="1_xbb3s"]
+[ext_resource type="Texture2D" uid="uid://c47x48ha6gli0" path="res://Assets/MouseHouse_Screen_Prototype.png" id="2_2xmth"]
 [ext_resource type="Script" path="res://Scripts/minigame_enabler.gd" id="3_k28yf"]
-[ext_resource type="Texture2D" uid="uid://drngjpwdw3xo5" path="res://Assets/Mouse_House.jpg" id="3_lw0nu"]
 [ext_resource type="Texture2D" uid="uid://bmaok0o30bx5q" path="res://Assets/Bear_Bowling_Linework.jpg" id="4_hhc16"]
+[ext_resource type="Texture2D" uid="uid://b0wr6c1gjl7gv" path="res://Assets/MouseHouse_Prototype_DoorHighlight.png" id="5_y8xcl"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
 
 [node name="MouseHouse" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("3_lw0nu")
+texture = ExtResource("2_2xmth")
 
 [node name="BearHouse" type="Sprite2D" parent="."]
 position = Vector2(2880, 540)
@@ -54,6 +55,11 @@ light_mask = 4
 position = Vector2(218, -101)
 scale = Vector2(2.15179, 1.84448)
 polygon = PackedVector2Array(109.676, 281.38, 103.635, 333.969, 107.817, 371.378, 149.643, 392.523, 189.61, 368.125, 198.439, 334.512, 193.792, 277.585)
+
+[node name="MouseDoorLight" type="Sprite2D" parent="MinigameEnabler"]
+visible = false
+position = Vector2(958, 539)
+texture = ExtResource("5_y8xcl")
 
 [node name="InitialTeddyPosition" type="Marker2D" parent="."]
 position = Vector2(58, 600)

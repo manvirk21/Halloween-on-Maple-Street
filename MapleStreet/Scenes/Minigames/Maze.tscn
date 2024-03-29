@@ -1,21 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbi06dkv4dmbs"]
+[gd_scene load_steps=9 format=3 uid="uid://bbi06dkv4dmbs"]
 
-[ext_resource type="Texture2D" uid="uid://ddi1dwl834rvm" path="res://Assets/Maze.jpg" id="1_8dbgd"]
 [ext_resource type="Script" path="res://Scripts/maze.gd" id="1_jnwhg"]
-[ext_resource type="PackedScene" uid="uid://boe3f77hx3xwy" path="res://Scenes/Maple_Street.tscn" id="2_qxw8x"]
+[ext_resource type="Texture2D" uid="uid://jntnktkacac" path="res://Assets/MouseHouse_Maze_Prototype.png" id="3_cs3pk"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="3_o681t"]
-[ext_resource type="Texture2D" uid="uid://gbsw1kahrots" path="res://Assets/Maze_Teddy.png" id="4_cew5l"]
+[ext_resource type="Texture2D" uid="uid://fi0ldb6gmcax" path="res://Assets/Maze_Icon.png" id="4_dfviu"]
+[ext_resource type="Script" path="res://Scenes/Minigames/mazefinish.gd" id="5_g44u3"]
+[ext_resource type="Texture2D" uid="uid://c24b15q7u14vj" path="res://Assets/Winning_Screen_Wireframe.png" id="6_0hi8s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u6o27"]
 radius = 10.8167
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5pud"]
+size = Vector2(258, 34)
+
 [node name="Maze" type="Node2D"]
 script = ExtResource("1_jnwhg")
-MapleStreet = ExtResource("2_qxw8x")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("1_8dbgd")
+texture = ExtResource("3_cs3pk")
 
 [node name="MazeCollision" type="StaticBody2D" parent="."]
 collision_layer = 2
@@ -31,8 +34,25 @@ script = ExtResource("3_o681t")
 [node name="Teddy_Sprite" type="Sprite2D" parent="MazeTeddy"]
 position = Vector2(-3.86238e-05, 3.8147e-06)
 scale = Vector2(0.196721, 0.196721)
-texture = ExtResource("4_cew5l")
+texture = ExtResource("4_dfviu")
 
 [node name="Collision" type="CollisionShape2D" parent="MazeTeddy"]
 position = Vector2(2, 0)
 shape = SubResource("CircleShape2D_u6o27")
+
+[node name="Finish" type="Node2D" parent="."]
+script = ExtResource("5_g44u3")
+
+[node name="FinishArea2D" type="Area2D" parent="Finish"]
+
+[node name="FinishCollision" type="CollisionShape2D" parent="Finish/FinishArea2D"]
+position = Vector2(1310, 1004)
+shape = SubResource("RectangleShape2D_k5pud")
+
+[node name="FinishScreen" type="Sprite2D" parent="Finish"]
+visible = false
+position = Vector2(961.5, 538)
+scale = Vector2(1.00052, 0.998148)
+texture = ExtResource("6_0hi8s")
+
+[connection signal="body_entered" from="Finish/FinishArea2D" to="Finish" method="_on_finish_area_2d_body_entered"]
