@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://xdseo5g3c2bv"]
+
+[ext_resource type="PackedScene" uid="uid://b1cfpxxjwjabl" path="res://Scenes/Obstacles/barrel.tscn" id="2_3i2op"]
+[ext_resource type="PackedScene" uid="uid://disyjktm8rarv" path="res://Scenes/Items/carrot.tscn" id="3_ffinf"]
+
+[sub_resource type="GDScript" id="GDScript_qwv16"]
+script/source = "extends Node2D
+
+@export var scenes: Array[PackedScene] = []
+
+func _on_timer_timeout():
+	var scene_instance = scenes.pick_random().instantiate()
+	add_child(scene_instance)
+"
+
+[node name="Spawner" type="Node2D"]
+script = SubResource("GDScript_qwv16")
+scenes = Array[PackedScene]([ExtResource("2_3i2op"), ExtResource("3_ffinf")])
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

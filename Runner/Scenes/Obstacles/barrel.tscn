@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1cfpxxjwjabl"]
+
+[ext_resource type="Script" path="res://Scripts/barrel.gd" id="1_4jvcl"]
+[ext_resource type="PackedScene" uid="uid://blq0xthld78i2" path="res://Scenes/Effectors/effect_damage.tscn" id="2_3m3f0"]
+[ext_resource type="Texture2D" uid="uid://5ee4ff64qdsx" path="res://Assets/Sprites/Obstacles/barrel.jpeg" id="2_evjub"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yigkj"]
+size = Vector2(60, 81)
+
+[node name="Barrel" type="Node2D"]
+top_level = true
+position = Vector2(-1, -39)
+script = ExtResource("1_4jvcl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1007.25, 507.75)
+scale = Vector2(0.30402, 0.322134)
+texture = ExtResource("2_evjub")
+
+[node name="EffectDamage" parent="." instance=ExtResource("2_3m3f0")]
+position = Vector2(1006.25, 506.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EffectDamage"]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_yigkj")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1008, 508.5)
+scale = Vector2(3, 4.05)
+
+[connection signal="body_entered" from="EffectDamage" to="." method="_on_effect_damage_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

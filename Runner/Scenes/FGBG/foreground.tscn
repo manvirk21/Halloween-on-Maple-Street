@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://basaa74qx6e7q"]
+
+[ext_resource type="PackedScene" uid="uid://d0ew3skq60xar" path="res://Scenes/Effectors/Backgrounds/scrolling_background.tscn" id="1_yudl0"]
+[ext_resource type="Shader" path="res://Scenes/Effectors/Backgrounds/scrolling_background.gdshader" id="2_83kcj"]
+[ext_resource type="Texture2D" uid="uid://dg220l6pon10s" path="res://Assets/Backgrounds/grass.png" id="2_r7jai"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5d7xs"]
+resource_local_to_scene = true
+shader = ExtResource("2_83kcj")
+shader_parameter/scroll_speed = 0.2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyry8"]
+size = Vector2(1150, 126.5)
+
+[node name="Foreground" type="Node2D"]
+
+[node name="ScrollingBackground" parent="." instance=ExtResource("1_yudl0")]
+material = SubResource("ShaderMaterial_5d7xs")
+offset_right = 1151.0
+offset_bottom = 132.0
+texture = ExtResource("2_r7jai")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(576, 66.75)
+shape = SubResource("RectangleShape2D_gyry8")
