@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="MapleStreetPrototype"
-run/main_scene="res://Scenes/TitleScreen.tscn"
+run/main_scene="res://maple_street/Scenes/TitleScreen.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Scripts/global.gd"
+Global="*res://global/global.gd"
 
 [display]
 

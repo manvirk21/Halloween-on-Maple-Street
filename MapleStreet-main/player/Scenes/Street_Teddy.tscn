@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://q35n1ykq2747"]
+
+[ext_resource type="Script" path="res://player/Scripts/player.gd" id="1_7eqgn"]
+[ext_resource type="Texture2D" uid="uid://l7a5bocyoc6s" path="res://player/Assets/Teddy_Character_Prototype.png" id="2_4aqui"]
+
+
+[node name="Street_Teddy" type="CharacterBody2D"]
+position = Vector2(19, 460)
+collision_mask = 6
+script = ExtResource("1_7eqgn")
+
+[node name="Locator" type="RemoteTransform2D" parent="."]
+
+[node name="Teddy_Sprite" type="Sprite2D" parent="."]
+position = Vector2(142.76, 173.963)
+scale = Vector2(0.974421, 0.994822)
+texture = ExtResource("2_4aqui")
+
+[node name="Collision" type="CollisionPolygon2D" parent="."]
+visibility_layer = 6
+position = Vector2(9, 25)
+polygon = PackedVector2Array(92, 298, 92, 315, 103, 320, 132, 319, 153, 315, 196, 317, 204, 305, 203, 296, 183, 286, 148, 286, 92, 288)
