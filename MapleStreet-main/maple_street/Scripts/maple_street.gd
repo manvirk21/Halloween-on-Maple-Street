@@ -1,6 +1,6 @@
 extends Node2D
 
-var Street_Teddy = preload("res://Scenes/Players/Street_Teddy.tscn")
+var Street_Teddy = preload("res://player/Scenes/Street_Teddy.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,7 +20,8 @@ func _process(_delta):
 		Global.Teddy_sprite_flip = Teddy_sprite.flip_h
 		
 		# change to the right minigame scene
-		var scene = "res://Scenes/Minigames/" + Global.active_minigame + ".tscn"
+		# make sure minigame folder and minigame scene have same name!
+		var scene = "res://minigame/" + Global.active_minigame + "/Scenes/" + Global.active_minigame + ".tscn"
 		get_tree().change_scene_to_file(scene)
 	
 

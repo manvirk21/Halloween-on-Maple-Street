@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bmaok0o30bx5q" path="res://maple_street/Assets/Bear_Bowling_Linework.jpg" id="4_hhc16"]
 [ext_resource type="Texture2D" uid="uid://b0wr6c1gjl7gv" path="res://maple_street/Assets/MouseHouse_Prototype_DoorHighlight.png" id="5_y8xcl"]
 
-
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
 

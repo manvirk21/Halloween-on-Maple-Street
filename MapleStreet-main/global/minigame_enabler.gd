@@ -26,7 +26,7 @@ func _deactivate_minigame(body):
 # MAZE SIGNALS
 func _maze_area_entered(body):
 	MouseDoorLight.visible = true 
-	_activate_minigame(body, "Maze")
+	_activate_minigame(body, "maze")
 
 
 func _maze_area_exited(body):

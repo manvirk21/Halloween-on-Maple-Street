@@ -15,9 +15,9 @@ func _on_finish_area_2d_body_entered(body):
 	Congrats.visible = true 
 
 func _on_continue_game_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Maple_Street.tscn")
+	get_tree().change_scene_to_file("res://maple_street/Scenes/Maple_Street.tscn")
 
 
 
 func _on_try_again_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Minigames/Maze.tscn")
+	get_tree().change_scene_to_file("res://minigame/maze/Scenes/maze.tscn")
