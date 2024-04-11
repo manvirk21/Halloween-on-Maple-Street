@@ -39,12 +39,13 @@ func instantiate_Teddy():
 	# make Teddy instance
 	var Teddy = Street_Teddy.instantiate()
 	
-	# position Teddy correctly
+	# get Teddy's initial position
 	if Global.Street_Teddy_gp_not_initialized:
 		Global.Street_Teddy_global_position = get_node("InitialTeddyPosition").global_position
 		Global.Street_Teddy_gp_not_initialized = false
-	else:
-		Teddy.global_position = Global.Street_Teddy_global_position
+	
+	# position Teddy correctly
+	Teddy.global_position = Global.Street_Teddy_global_position
 	
 	# set flip
 	var Teddy_sprite = Teddy.get_node("Teddy_Sprite")
@@ -56,3 +57,14 @@ func instantiate_Teddy():
 	
 	# add Teddy to scene
 	add_child(Teddy)
+
+
+# SIGNALS 
+
+func _on_Teddy_exits_grass(body):
+	if body.name == "Street_Teddy":
+		Global.Teddy_Speed = Global.NORMAL_SPEED
+
+func _on_Teddy_enters_grass(body):
+	if body.name == "Street_Teddy":
+		Global.Teddy_Speed = Global.GRASS_SPEED

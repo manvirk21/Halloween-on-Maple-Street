@@ -5,6 +5,11 @@ const NONE : String = "None"
 var active_minigame : String = NONE
 var minigame_ready : bool = false
 
+# Teddy Speeds
+const NORMAL_SPEED : float = 275
+const GRASS_SPEED : float = 215
+var Teddy_Speed : float = NORMAL_SPEED # used by Street Teddy scene
+
 # Street Teddy position
 var Street_Teddy_gp_not_initialized : bool = true
 var Street_Teddy_global_position : Vector2

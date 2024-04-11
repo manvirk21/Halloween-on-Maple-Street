@@ -1,21 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://boe3f77hx3xwy"]
+[gd_scene load_steps=5 format=3 uid="uid://boe3f77hx3xwy"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
-[ext_resource type="Texture2D" uid="uid://c47x48ha6gli0" path="res://maple_street/Assets/MouseHouse_Screen_Prototype.png" id="2_2xmth"]
-[ext_resource type="Script" path="res://global/minigame_enabler.gd" id="3_k28yf"]
-[ext_resource type="Texture2D" uid="uid://bmaok0o30bx5q" path="res://maple_street/Assets/Bear_Bowling_Linework.jpg" id="4_hhc16"]
+[ext_resource type="Texture2D" uid="uid://b0ipwvoxdub7p" path="res://maple_street/Assets/ColorblockedDWHomes.png" id="2_4xk6p"]
+[ext_resource type="Script" path="res://maple_street/Scripts/minigame_enabler.gd" id="3_k28yf"]
 [ext_resource type="Texture2D" uid="uid://b0wr6c1gjl7gv" path="res://maple_street/Assets/MouseHouse_Prototype_DoorHighlight.png" id="5_y8xcl"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
 
-[node name="MouseHouse" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-texture = ExtResource("2_2xmth")
-
-[node name="BearHouse" type="Sprite2D" parent="."]
-position = Vector2(2880, 540)
-texture = ExtResource("4_hhc16")
+[node name="Houses" type="Sprite2D" parent="."]
+position = Vector2(1920, 540)
+texture = ExtResource("2_4xk6p")
 
 [node name="Camera" type="Camera2D" parent="."]
 light_mask = 0
@@ -36,12 +31,21 @@ light_mask = 2
 collision_layer = 2
 
 [node name="Offscreen" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
+visible = false
 light_mask = 2
 polygon = PackedVector2Array(0, 246, 0, 1079, 3841, 1081, 3844, 2, 0, 0, 1, 309, -36, 158, -32, -43, 3890, -44, 3896, 1119, -36, 1136, -37, 365)
 
 [node name="Background" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
 light_mask = 2
-polygon = PackedVector2Array(4, 521, -1, 4, 3842, -1, 3842, 486, 3699, 484, 3718, 516, 3703, 539, 3628, 576, 3621, 619, 3608, 747, 3598, 765, 3620, 774, 3627, 798, 3446, 798, 3453, 778, 3476, 761, 3426, 652, 3421, 606, 3416.09, 586.256, 3424, 535, 3380, 520, 3358, 487, 3309, 485, 3306, 539, 3321, 579, 3308, 612, 3291, 618, 3280, 633, 3250, 634, 3244, 651, 3222, 664, 3204, 652, 3196.62, 638.701, 3170, 645, 3153, 630, 3131, 622, 3124, 586, 3142, 553, 3124, 511, 3134.83, 488.036, 3024, 487, 3018, 532, 3009, 571, 2968, 576, 2969, 602, 3034, 679, 3058, 682, 3080, 753, 3061, 787, 3018, 790, 3000, 818, 2890, 821, 2887, 767, 2839, 763, 2790, 732, 2826, 677, 2881, 602, 2853, 589, 2841, 556, 2533, 556, 2522, 517, 2481, 521, 2458, 499, 2282, 500, 2241, 523, 2216, 525, 2210, 537, 2170, 545, 2139, 532, 2114, 535, 2068, 565, 2019, 566, 2007, 549, 1987, 556, 1964, 516, 1957, 486, 1913, 522, 1796, 517, 1524.82, 511.872, 1401, 531, 1272.68, 523.107, 1261, 366, 1080, 370, 1064, 444, 1081, 471, 1052, 527, 897, 500, 821, 545, 736, 549, 691, 516, 641, 548, 511, 566, 376, 537, 279, 551, 215, 541, 181.175, 507.148, 157, 507)
+polygon = PackedVector2Array(0, 506, -1, 4, 3842, -1, 3846, 534, 3621, 528, 3564, 530, 3576, 552, 3498.08, 532.446, 3484, 555, 3451, 559, 3455, 537, 3380, 555, 3397, 538, 3316, 545, 3332, 588, 3313, 610, 3254, 633, 3248, 650, 3210, 647, 3205, 628, 3171, 638, 3140, 622, 3133, 587, 3148, 555, 3134, 528, 3031, 530, 3029, 538, 2864, 541, 2817, 563, 2701, 568, 2541, 560, 2528, 535, 2505, 531, 2487, 502, 2469, 461, 2285, 460, 2276, 492, 2251, 547, 2217, 550, 2194, 566, 2144, 562, 2129, 541, 2098, 543, 2088, 559, 1992, 569, 1968, 516, 1569, 514, 1272.68, 523.107, 1261, 471, 1042, 468, 1047, 533, 887, 498, 854, 528, 756, 540, 685, 512, 655, 534, 661.762, 575.841, 644, 576, 641, 540, 614, 555, 590, 524, 507, 526, 483, 556, 425, 532, 432.418, 587.49, 416, 588, 413, 527, 389, 507, 353, 548, 310, 554, 217, 544, 165, 503, 73, 516)
+
+[node name="Pumpkins" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
+polygon = PackedVector2Array(3313, 714, 3315, 754, 3350, 767, 3393, 764, 3461, 748, 3453, 704, 3385, 702, 3395, 716)
+
+[node name="GrassAreas" type="Area2D" parent="."]
+
+[node name="NotGrass" type="CollisionPolygon2D" parent="GrassAreas"]
+polygon = PackedVector2Array(-1, 984, -3, 1078, 3841, 1083, 3838, 992, 3619, 994, 3629, 975, 3354, 584, 3120, 567, 2879, 992, 2670, 992, 2595, 848, 2608, 832, 2560, 721, 2540, 721, 2530, 700, 2539, 689, 2480, 571, 2468, 493, 2272, 491, 2244, 572, 2220, 665, 2186, 770, 2142, 991, 609, 986, 592, 914, 605, 794, 721, 763, 832, 762, 968, 740, 1060, 707, 1159, 684, 1168, 528, 1077, 521, 1057, 631, 600, 663, 589, 560, 508, 560, 482, 641, 473, 715, 434, 815, 418, 898, 357, 992)
 
 [node name="MinigameEnabler" type="Node2D" parent="."]
 script = ExtResource("3_k28yf")
@@ -51,6 +55,7 @@ light_mask = 4
 collision_layer = 4
 
 [node name="MazeCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Maze"]
+visible = false
 light_mask = 4
 position = Vector2(218, -101)
 scale = Vector2(2.15179, 1.84448)
@@ -64,5 +69,7 @@ texture = ExtResource("5_y8xcl")
 [node name="InitialTeddyPosition" type="Marker2D" parent="."]
 position = Vector2(58, 600)
 
+[connection signal="body_entered" from="GrassAreas" to="." method="_on_Teddy_exits_grass"]
+[connection signal="body_exited" from="GrassAreas" to="." method="_on_Teddy_enters_grass"]
 [connection signal="body_entered" from="MinigameEnabler/Maze" to="MinigameEnabler" method="_maze_area_entered"]
 [connection signal="body_exited" from="MinigameEnabler/Maze" to="MinigameEnabler" method="_maze_area_exited"]

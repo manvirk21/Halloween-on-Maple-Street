@@ -1,6 +1,5 @@
 res://maple_street/Scenes/TitleScreen.tscn
-res://maple_street/Scripts/TitleScreen.gd
-res://maple_street/Scripts/maple_street.gd
-res://minigame/maze/Scripts/mazefinish.gd
-res://global/minigame_enabler.gd
 res://maple_street/Scenes/Maple_Street.tscn
+res://global/global.gd
+res://maple_street/Scripts/maple_street.gd
+res://player/Scripts/player.gd

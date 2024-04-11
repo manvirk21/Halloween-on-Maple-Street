@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-# Speed
-const SPEED : float = 275
-
 # Resize variables
 var far_y = 0
 var near_y = 1080
@@ -21,7 +18,7 @@ func _physics_process(_delta):
 # Process user input
 func _process_user_input():
 	var direction = Input.get_vector("LEFT", "RIGHT", "UP", "DOWN")
-	velocity = SPEED * direction
+	velocity = Global.Teddy_Speed * direction
 	
 	
 # Flip sprite, if applicable
@@ -44,7 +41,3 @@ func resize_Teddy():
 		var distance = (position.y - far_y) / near_y
 		scale.x = lerp(min_scale, max_scale, distance)
 		scale.y = lerp(min_scale, max_scale, distance)
-
-
-func _on_finish_area_2d_body_entered(body):
-	pass # Replace with function body.
