@@ -3,3 +3,4 @@ res://maple_street/Scenes/Maple_Street.tscn
 res://global/global.gd
 res://maple_street/Scripts/maple_street.gd
 res://player/Scripts/player.gd
+res://maple_street/Scripts/minigame_enabler.gd

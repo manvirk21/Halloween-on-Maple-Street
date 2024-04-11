@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://boe3f77hx3xwy"]
+[gd_scene load_steps=7 format=3 uid="uid://boe3f77hx3xwy"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://b0ipwvoxdub7p" path="res://maple_street/Assets/ColorblockedDWHomes.png" id="2_4xk6p"]
 [ext_resource type="Script" path="res://maple_street/Scripts/minigame_enabler.gd" id="3_k28yf"]
+[ext_resource type="Texture2D" uid="uid://c1f11cf226tjj" path="res://maple_street/Assets/DialogueDummy.png" id="5_feovw"]
 [ext_resource type="Texture2D" uid="uid://b0wr6c1gjl7gv" path="res://maple_street/Assets/MouseHouse_Prototype_DoorHighlight.png" id="5_y8xcl"]
+[ext_resource type="Texture2D" uid="uid://glbtgeivte2q" path="res://maple_street/Assets/InvenInventoryButton.png" id="6_uolr2"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -27,6 +29,7 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
+visible = false
 light_mask = 2
 collision_layer = 2
 
@@ -54,25 +57,57 @@ script = ExtResource("3_k28yf")
 light_mask = 4
 collision_layer = 4
 
-[node name="MazeCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Maze"]
+[node name="MouseDoorLight" type="Sprite2D" parent="MinigameEnabler/Maze"]
 visible = false
+position = Vector2(958, 539)
+scale = Vector2(1, 1)
+texture = ExtResource("5_y8xcl")
+
+[node name="MazeCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Maze"]
 light_mask = 4
 position = Vector2(218, -101)
 scale = Vector2(2.15179, 1.84448)
 polygon = PackedVector2Array(109.676, 281.38, 103.635, 333.969, 107.817, 371.378, 149.643, 392.523, 189.61, 368.125, 198.439, 334.512, 193.792, 277.585)
 
-[node name="MouseDoorLight" type="Sprite2D" parent="MinigameEnabler"]
+[node name="Bowling" type="Area2D" parent="MinigameEnabler"]
+light_mask = 4
+collision_layer = 4
+
+[node name="BearDoorLight" type="Sprite2D" parent="MinigameEnabler/Bowling"]
 visible = false
-position = Vector2(958, 539)
+position = Vector2(2785, 473)
+scale = Vector2(1, 1)
 texture = ExtResource("5_y8xcl")
+
+[node name="BowlingCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Bowling"]
+light_mask = 4
+position = Vector2(2056, -141)
+scale = Vector2(2.15179, 1.84448)
+polygon = PackedVector2Array(87.8339, 305.235, 90.1575, 367.583, 151.037, 374.631, 213.776, 366.499, 211.917, 305.235, 148.713, 277.043)
 
 [node name="InitialTeddyPosition" type="Marker2D" parent="."]
 position = Vector2(55, 741)
 
-[node name="InitialTeddyPosition2" type="Marker2D" parent="."]
-position = Vector2(3587, 742)
+[node name="MazeExitPosition" type="Marker2D" parent="."]
+position = Vector2(1035, 322)
+
+[node name="Dialogue" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(958, 884)
+scale = Vector2(2, 1)
+texture = ExtResource("5_feovw")
+
+[node name="InventoryButton" type="Button" parent="."]
+offset_left = 1633.0
+offset_top = 27.0
+offset_right = 1891.0
+offset_bottom = 285.0
+icon = ExtResource("6_uolr2")
+flat = true
 
 [connection signal="body_entered" from="GrassAreas" to="." method="_on_Teddy_exits_grass"]
 [connection signal="body_exited" from="GrassAreas" to="." method="_on_Teddy_enters_grass"]
 [connection signal="body_entered" from="MinigameEnabler/Maze" to="MinigameEnabler" method="_maze_area_entered"]
 [connection signal="body_exited" from="MinigameEnabler/Maze" to="MinigameEnabler" method="_maze_area_exited"]
+[connection signal="body_entered" from="MinigameEnabler/Bowling" to="MinigameEnabler" method="_bowling_area_entered"]
+[connection signal="body_exited" from="MinigameEnabler/Bowling" to="MinigameEnabler" method="_bowling_area_exited"]

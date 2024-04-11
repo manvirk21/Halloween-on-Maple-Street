@@ -1,5 +1,10 @@
 extends Node2D
-@onready var MouseDoorLight: Sprite2D = find_child("MouseDoorLight") #set variable Congrats for the FinishScreen Sprite2D
+
+# Door light nodes
+@onready var MouseDoorLight: Sprite2D = find_child("MouseDoorLight")
+@onready var BearDoorLight: Sprite2D = find_child("BearDoorLight")
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -31,4 +36,15 @@ func _maze_area_entered(body):
 
 func _maze_area_exited(body):
 	MouseDoorLight.visible = false 
+	_deactivate_minigame(body)
+
+
+# BOWLING SIGNALS
+func _bowling_area_entered(body):
+	BearDoorLight.visible = true 
+	_activate_minigame(body, "bowling")
+
+
+func _bowling_area_exited(body):
+	BearDoorLight.visible = false 
 	_deactivate_minigame(body)

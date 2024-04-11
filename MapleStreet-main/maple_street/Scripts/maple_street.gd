@@ -23,7 +23,6 @@ func _process(_delta):
 		# make sure minigame folder and minigame scene have same name!
 		var scene = "res://minigame/" + Global.active_minigame + "/Scenes/" + Global.active_minigame + ".tscn"
 		get_tree().change_scene_to_file(scene)
-	
 
 
 # Set Teddy settings : resize and sprite flip on
@@ -41,7 +40,8 @@ func instantiate_Teddy():
 	
 	# get Teddy's initial position
 	if Global.Street_Teddy_gp_not_initialized:
-		Global.Street_Teddy_global_position = get_node("InitialTeddyPosition2").global_position
+		Global.Street_Teddy_global_position = get_node("InitialTeddyPosition").global_position
+		Global.Street_Teddy_maze_completed_position = get_node("MazeExitPosition").global_position
 		Global.Street_Teddy_gp_not_initialized = false
 	
 	# position Teddy correctly
