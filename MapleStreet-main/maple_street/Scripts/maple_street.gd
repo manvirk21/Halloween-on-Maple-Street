@@ -41,7 +41,7 @@ func instantiate_Teddy():
 	
 	# get Teddy's initial position
 	if Global.Street_Teddy_gp_not_initialized:
-		Global.Street_Teddy_global_position = get_node("InitialTeddyPosition").global_position
+		Global.Street_Teddy_global_position = get_node("InitialTeddyPosition2").global_position
 		Global.Street_Teddy_gp_not_initialized = false
 	
 	# position Teddy correctly
@@ -60,11 +60,12 @@ func instantiate_Teddy():
 
 
 # SIGNALS 
-
+# Set Teddy's speed to normal when he's not in grass areas
 func _on_Teddy_exits_grass(body):
 	if body.name == "Street_Teddy":
 		Global.Teddy_Speed = Global.NORMAL_SPEED
 
+# Slow down Teddy when he's in grass areas
 func _on_Teddy_enters_grass(body):
 	if body.name == "Street_Teddy":
 		Global.Teddy_Speed = Global.GRASS_SPEED

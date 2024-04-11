@@ -31,9 +31,8 @@ light_mask = 2
 collision_layer = 2
 
 [node name="Offscreen" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
-visible = false
 light_mask = 2
-polygon = PackedVector2Array(0, 246, 0, 1079, 3841, 1081, 3844, 2, 0, 0, 1, 309, -36, 158, -32, -43, 3890, -44, 3896, 1119, -36, 1136, -37, 365)
+polygon = PackedVector2Array(48, 264, 96, 1082, 3777, 1081, 3815, 3, 15, -1, 54, 316, -36, 158, -32, -43, 3890, -44, 3896, 1119, -36, 1136, -37, 365)
 
 [node name="Background" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
 light_mask = 2
@@ -43,6 +42,7 @@ polygon = PackedVector2Array(0, 506, -1, 4, 3842, -1, 3846, 534, 3621, 528, 3564
 polygon = PackedVector2Array(3313, 714, 3315, 754, 3350, 767, 3393, 764, 3461, 748, 3453, 704, 3385, 702, 3395, 716)
 
 [node name="GrassAreas" type="Area2D" parent="."]
+visible = false
 
 [node name="NotGrass" type="CollisionPolygon2D" parent="GrassAreas"]
 polygon = PackedVector2Array(-1, 984, -3, 1078, 3841, 1083, 3838, 992, 3619, 994, 3629, 975, 3354, 584, 3120, 567, 2879, 992, 2670, 992, 2595, 848, 2608, 832, 2560, 721, 2540, 721, 2530, 700, 2539, 689, 2480, 571, 2468, 493, 2272, 491, 2244, 572, 2220, 665, 2186, 770, 2142, 991, 609, 986, 592, 914, 605, 794, 721, 763, 832, 762, 968, 740, 1060, 707, 1159, 684, 1168, 528, 1077, 521, 1057, 631, 600, 663, 589, 560, 508, 560, 482, 641, 473, 715, 434, 815, 418, 898, 357, 992)
@@ -67,7 +67,10 @@ position = Vector2(958, 539)
 texture = ExtResource("5_y8xcl")
 
 [node name="InitialTeddyPosition" type="Marker2D" parent="."]
-position = Vector2(58, 600)
+position = Vector2(55, 741)
+
+[node name="InitialTeddyPosition2" type="Marker2D" parent="."]
+position = Vector2(3587, 742)
 
 [connection signal="body_entered" from="GrassAreas" to="." method="_on_Teddy_exits_grass"]
 [connection signal="body_exited" from="GrassAreas" to="." method="_on_Teddy_enters_grass"]
