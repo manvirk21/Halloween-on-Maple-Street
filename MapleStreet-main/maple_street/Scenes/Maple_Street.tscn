@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://boe3f77hx3xwy"]
+[gd_scene load_steps=9 format=3 uid="uid://boe3f77hx3xwy"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://b0ipwvoxdub7p" path="res://maple_street/Assets/ColorblockedDWHomes.png" id="2_4xk6p"]
 [ext_resource type="Script" path="res://maple_street/Scripts/minigame_enabler.gd" id="3_k28yf"]
 [ext_resource type="Texture2D" uid="uid://c1f11cf226tjj" path="res://maple_street/Assets/DialogueDummy.png" id="5_feovw"]
 [ext_resource type="Texture2D" uid="uid://b0wr6c1gjl7gv" path="res://maple_street/Assets/MouseHouse_Prototype_DoorHighlight.png" id="5_y8xcl"]
+[ext_resource type="Script" path="res://maple_street/Scripts/UI.gd" id="6_bcvno"]
+[ext_resource type="Material" uid="uid://cwvkalvixg3i6" path="res://global/blur.tres" id="6_q1ns2"]
 [ext_resource type="Texture2D" uid="uid://glbtgeivte2q" path="res://maple_street/Assets/InvenInventoryButton.png" id="6_uolr2"]
 
 [node name="MapleStreet" type="Node2D"]
@@ -29,13 +31,12 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
-visible = false
 light_mask = 2
 collision_layer = 2
 
 [node name="Offscreen" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
 light_mask = 2
-polygon = PackedVector2Array(48, 264, 96, 1082, 3777, 1081, 3815, 3, 15, -1, 54, 316, -36, 158, -32, -43, 3890, -44, 3896, 1119, -36, 1136, -37, 365)
+polygon = PackedVector2Array(48, 264, 93, 1072, 3778, 1072, 3815, 3, 15, -1, 54, 316, -36, 158, -32, -43, 3890, -44, 3896, 1119, -36, 1136, -37, 365)
 
 [node name="Background" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
 light_mask = 2
@@ -60,7 +61,6 @@ collision_layer = 4
 [node name="MouseDoorLight" type="Sprite2D" parent="MinigameEnabler/Maze"]
 visible = false
 position = Vector2(958, 539)
-scale = Vector2(1, 1)
 texture = ExtResource("5_y8xcl")
 
 [node name="MazeCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Maze"]
@@ -76,7 +76,6 @@ collision_layer = 4
 [node name="BearDoorLight" type="Sprite2D" parent="MinigameEnabler/Bowling"]
 visible = false
 position = Vector2(2785, 473)
-scale = Vector2(1, 1)
 texture = ExtResource("5_y8xcl")
 
 [node name="BowlingCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Bowling"]
@@ -97,13 +96,25 @@ position = Vector2(958, 884)
 scale = Vector2(2, 1)
 texture = ExtResource("5_feovw")
 
-[node name="InventoryButton" type="Button" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("6_bcvno")
+
+[node name="Blur" type="ColorRect" parent="UI"]
+visible = false
+material = ExtResource("6_q1ns2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryButton" type="TextureButton" parent="UI"]
 offset_left = 1633.0
 offset_top = 27.0
-offset_right = 1891.0
-offset_bottom = 285.0
-icon = ExtResource("6_uolr2")
-flat = true
+offset_right = 1883.0
+offset_bottom = 277.0
+texture_normal = ExtResource("6_uolr2")
 
 [connection signal="body_entered" from="GrassAreas" to="." method="_on_Teddy_exits_grass"]
 [connection signal="body_exited" from="GrassAreas" to="." method="_on_Teddy_enters_grass"]
@@ -111,3 +122,4 @@ flat = true
 [connection signal="body_exited" from="MinigameEnabler/Maze" to="MinigameEnabler" method="_maze_area_exited"]
 [connection signal="body_entered" from="MinigameEnabler/Bowling" to="MinigameEnabler" method="_bowling_area_entered"]
 [connection signal="body_exited" from="MinigameEnabler/Bowling" to="MinigameEnabler" method="_bowling_area_exited"]
+[connection signal="pressed" from="UI/InventoryButton" to="UI" method="toggle_inventory"]
