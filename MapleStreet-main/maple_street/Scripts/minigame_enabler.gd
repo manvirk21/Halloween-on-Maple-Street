@@ -4,7 +4,6 @@ extends Node2D
 @onready var MouseDoorLight: Sprite2D = find_child("MouseDoorLight")
 @onready var BearDoorLight: Sprite2D = find_child("BearDoorLight")
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass

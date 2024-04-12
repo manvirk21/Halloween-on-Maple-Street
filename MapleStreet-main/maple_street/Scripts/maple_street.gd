@@ -7,22 +7,13 @@ func _ready():
 	instantiate_Teddy()
 	set_Teddy_settings()
 	
+	# when "Change Scene" is emitted, change_scene() will be called
+	$UI.connect("ChangeScene", change_scene)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	# Change scene, if applicable
-	if Input.is_action_just_pressed("E") and Global.minigame_ready:
-		# save Teddy's location
-		Global.Street_Teddy_global_position = $Street_Teddy.global_position
-		
-		# save Teddy sprite flip
-		var Teddy_sprite = get_node("Street_Teddy").get_node("Teddy_Sprite")
-		Global.Teddy_sprite_flip = Teddy_sprite.flip_h
-		
-		# change to the right minigame scene
-		# make sure minigame folder and minigame scene have same name!
-		var scene = "res://minigame/" + Global.active_minigame + "/Scenes/" + Global.active_minigame + ".tscn"
-		get_tree().change_scene_to_file(scene)
+	pass
 
 
 # Set Teddy settings : resize and sprite flip on
@@ -40,8 +31,8 @@ func instantiate_Teddy():
 	
 	# get Teddy's initial position
 	if Global.Street_Teddy_gp_not_initialized:
-		Global.Street_Teddy_global_position = get_node("InitialTeddyPosition").global_position
-		Global.Street_Teddy_maze_completed_position = get_node("MazeExitPosition").global_position
+		Global.Street_Teddy_global_position = $InitialTeddyPosition.global_position
+		Global.Street_Teddy_maze_completed_position = $MazeExitPosition.global_position
 		Global.Street_Teddy_gp_not_initialized = false
 	
 	# position Teddy correctly
@@ -53,11 +44,28 @@ func instantiate_Teddy():
 	
 	# point camera to Teddy
 	var Teddy_locator = Teddy.get_node("Locator")
-	Teddy_locator.remote_path = get_node("Camera").get_path()
+	Teddy_locator.remote_path = $Camera.get_path()
 	
 	# add Teddy to scene
 	add_child(Teddy)
 
+# change scene to a minigame
+func change_scene():
+	# save Teddy's location
+	Global.Street_Teddy_global_position = $Street_Teddy.global_position
+	
+	# save Teddy sprite flip
+	var Teddy_sprite = $Street_Teddy/Teddy_Sprite
+	#get_node("Street_Teddy").get_node("Teddy_Sprite")
+	Global.Teddy_sprite_flip = Teddy_sprite.flip_h
+	
+	# change to the right minigame scene
+	# make sure minigame folder and minigame scene have same name!
+	var scene = "res://minigame/" + Global.active_minigame + "/Scenes/" + Global.active_minigame + ".tscn"
+	get_tree().change_scene_to_file(scene)
+	
+	# hide blur 
+	$UI/Blur.visible = false
 
 # SIGNALS 
 # Set Teddy's speed to normal when he's not in grass areas

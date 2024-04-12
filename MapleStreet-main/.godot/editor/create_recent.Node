@@ -1,6 +1,7 @@
+Label
+TextureRect
 Sprite2D
 ColorRect
-TextureRect
 TextureButton
 CanvasLayer
 Button

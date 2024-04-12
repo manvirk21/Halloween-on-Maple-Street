@@ -20,6 +20,17 @@ var Teddy_resize_on : bool
 var Teddy_sprite_flip_on : bool # to know if flipping is allowed
 var Teddy_sprite_flip : bool = false # to save last state of flip_h
 
+# Dialog tracker helpers, see Dialog.json for dialog strings
+const MINIGAME_STATES = ["first", "incomplete", "finished"] # [0, 1, 2]
+var Minigame_State = {
+	"maze" : 0,
+	"bowling" : 0
+}
+
+# returns key for dialog dictionary of active minigame based on it's state
+func get_minigame_state():
+	return MINIGAME_STATES[Minigame_State[active_minigame]]
+
 # Change Teddy settings
 func set_Teddy_settings(resize : bool, sprite_flip : bool):
 	Teddy_resize_on = resize

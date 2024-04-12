@@ -1,0 +1,35 @@
+{
+	"maze" : {
+		"first" : [
+			"Maze Hello",
+			"Maze Instructions"
+		],
+		
+		"incomplete" : [
+			"Maze Hello Again",
+			"Maze Reminder to Finish"
+		],
+		
+		"finished" : [
+			"Maze candy collected",
+			"Maze go again?"
+		]
+	},
+	
+	"bowling" : {
+		"first" : [
+			"Bowling Hello",
+			"Bowling Instructions"
+		],
+		
+		"incomplete" : [
+			"Bowling Hello Again",
+			"Bowling Reminder to Finish"
+		],
+		
+		"finished" : [
+			"Bowling candy collected",
+			"Bowling go again?"
+		]
+	}
+}

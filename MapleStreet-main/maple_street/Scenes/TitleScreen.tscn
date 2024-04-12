@@ -46,7 +46,7 @@ offset_right = 1681.0
 offset_bottom = 1079.0
 
 [node name="StartScreen" type="Sprite2D" parent="VBoxContainer"]
-position = Vector2(960.374, 544)
+position = Vector2(959.374, 540)
 scale = Vector2(1.37976, 1.2)
 texture = ExtResource("2_q6jrb")
 
