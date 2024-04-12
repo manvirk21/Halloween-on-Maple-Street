@@ -22,12 +22,17 @@ texture = ExtResource("2_t3sfn")
 position = Vector2(2880, 540)
 texture = ExtResource("3_qwi7m")
 
+[node name="RunnerHouse" type="Sprite2D" parent="."]
+position = Vector2(4800, 540)
+texture = ExtResource("2_t3sfn")
+
 [node name="Camera" type="Camera2D" parent="."]
 light_mask = 0
 visibility_layer = 0
+position = Vector2(72, 0)
 limit_left = 0
 limit_top = 0
-limit_right = 3840
+limit_right = 5760
 limit_bottom = 1080
 position_smoothing_enabled = true
 position_smoothing_speed = 1.8
@@ -42,19 +47,27 @@ collision_layer = 2
 
 [node name="Offscreen" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
 light_mask = 2
-polygon = PackedVector2Array(48, 264, 93, 1072, 3778, 1072, 3815, 3, 15, -1, 54, 316, -36, 158, -32, -43, 3890, -44, 3896, 1119, -36, 1136, -37, 365)
+polygon = PackedVector2Array(48, 264, 93, 1072, 5693, 1079, 5727, 5, 15, -1, 54, 316, -36, 158, -32, -43, 5866, -56, 5861, 1141, -36, 1136, -37, 365)
 
 [node name="Background" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
 light_mask = 2
+polygon = PackedVector2Array(0, 506, -1, 4, 3842, -1, 3846, 534, 3621, 528, 3564, 530, 3576, 552, 3498.08, 532.446, 3484, 555, 3451, 559, 3455, 537, 3380, 555, 3397, 538, 3316, 545, 3332, 588, 3313, 610, 3254, 633, 3248, 650, 3210, 647, 3205, 628, 3171, 638, 3140, 622, 3133, 587, 3148, 555, 3134, 528, 3031, 530, 3029, 538, 2864, 541, 2817, 563, 2701, 568, 2541, 560, 2528, 535, 2505, 531, 2487, 502, 2475, 478, 2283, 475, 2276, 492, 2251, 547, 2217, 550, 2194, 566, 2144, 562, 2129, 541, 2098, 543, 2088, 559, 1992, 569, 1968, 516, 1569, 514, 1272.68, 523.107, 1261, 471, 1042, 468, 1047, 533, 887, 498, 854, 528, 756, 540, 685, 512, 655, 534, 661.762, 575.841, 644, 576, 641, 540, 614, 555, 591, 549, 509, 549, 483, 556, 425, 532, 432.418, 587.49, 416, 588, 413, 527, 389, 507, 353, 548, 310, 554, 217, 544, 165, 503, 73, 516)
+
+[node name="Background2" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
+light_mask = 2
+position = Vector2(3847, 9)
 polygon = PackedVector2Array(0, 506, -1, 4, 3842, -1, 3846, 534, 3621, 528, 3564, 530, 3576, 552, 3498.08, 532.446, 3484, 555, 3451, 559, 3455, 537, 3380, 555, 3397, 538, 3316, 545, 3332, 588, 3313, 610, 3254, 633, 3248, 650, 3210, 647, 3205, 628, 3171, 638, 3140, 622, 3133, 587, 3148, 555, 3134, 528, 3031, 530, 3029, 538, 2864, 541, 2817, 563, 2701, 568, 2541, 560, 2528, 535, 2505, 531, 2487, 502, 2475, 478, 2283, 475, 2276, 492, 2251, 547, 2217, 550, 2194, 566, 2144, 562, 2129, 541, 2098, 543, 2088, 559, 1992, 569, 1968, 516, 1569, 514, 1272.68, 523.107, 1261, 471, 1042, 468, 1047, 533, 887, 498, 854, 528, 756, 540, 685, 512, 655, 534, 661.762, 575.841, 644, 576, 641, 540, 614, 555, 591, 549, 509, 549, 483, 556, 425, 532, 432.418, 587.49, 416, 588, 413, 527, 389, 507, 353, 548, 310, 554, 217, 544, 165, 503, 73, 516)
 
 [node name="Pumpkins" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
 polygon = PackedVector2Array(3313, 714, 3315, 754, 3350, 767, 3393, 764, 3461, 748, 3453, 704, 3385, 702, 3395, 716)
 
 [node name="GrassAreas" type="Area2D" parent="."]
-visible = false
 
 [node name="NotGrass" type="CollisionPolygon2D" parent="GrassAreas"]
+polygon = PackedVector2Array(-1, 984, -3, 1078, 3841, 1083, 3838, 992, 3619, 994, 3629, 975, 3354, 584, 3120, 567, 3076, 666, 3063.75, 666.195, 2879, 992, 2673, 992, 2595, 848, 2618, 839, 2560, 721, 2540, 721, 2537, 707, 2545, 691, 2492, 584, 2480, 576, 2491, 560, 2468, 493, 2280, 490, 2253, 563, 2258, 573, 2225, 623, 2215, 645, 2220, 665, 2199, 686, 2211, 701, 2195, 708, 2179, 761, 2184, 781, 2162, 840, 2175, 849, 2160.26, 863.138, 2144, 922, 2151, 947, 2142, 991, 616, 988, 592, 914, 592, 854, 609, 792, 726, 765, 832, 762, 905, 758, 968, 740, 1056, 710, 1119, 703, 1159, 684, 1172, 612, 1168, 528, 1077, 521, 1072, 590, 1057, 631, 999, 645, 899, 647, 818, 648, 600, 663, 590, 615, 589, 560, 508, 560, 486, 639, 473, 715, 434, 815, 414, 896, 357, 992)
+
+[node name="NotGrass2" type="CollisionPolygon2D" parent="GrassAreas"]
+position = Vector2(3837, 3)
 polygon = PackedVector2Array(-1, 984, -3, 1078, 3841, 1083, 3838, 992, 3619, 994, 3629, 975, 3354, 584, 3120, 567, 3076, 666, 3063.75, 666.195, 2879, 992, 2673, 992, 2595, 848, 2618, 839, 2560, 721, 2540, 721, 2537, 707, 2545, 691, 2492, 584, 2480, 576, 2491, 560, 2468, 493, 2280, 490, 2253, 563, 2258, 573, 2225, 623, 2215, 645, 2220, 665, 2199, 686, 2211, 701, 2195, 708, 2179, 761, 2184, 781, 2162, 840, 2175, 849, 2160.26, 863.138, 2144, 922, 2151, 947, 2142, 991, 616, 988, 592, 914, 592, 854, 609, 792, 726, 765, 832, 762, 905, 758, 968, 740, 1056, 710, 1119, 703, 1159, 684, 1172, 612, 1168, 528, 1077, 521, 1072, 590, 1057, 631, 999, 645, 899, 647, 818, 648, 600, 663, 590, 615, 589, 560, 508, 560, 486, 639, 473, 715, 434, 815, 414, 896, 357, 992)
 
 [node name="MinigameEnabler" type="Node2D" parent="."]
@@ -91,6 +104,23 @@ light_mask = 4
 position = Vector2(2056, -141)
 scale = Vector2(2.15179, 1.84448)
 polygon = PackedVector2Array(87.8339, 305.235, 90.1575, 367.583, 151.037, 374.631, 213.776, 366.499, 211.917, 305.235, 148.713, 277.043)
+
+[node name="Runner" type="Area2D" parent="MinigameEnabler"]
+light_mask = 4
+collision_layer = 4
+
+[node name="RunnerDoorLight" type="Sprite2D" parent="MinigameEnabler/Runner"]
+visible = false
+position = Vector2(4388, 503)
+scale = Vector2(0.966, 1.01587)
+texture = ExtResource("5_4v37p")
+
+[node name="RunnerCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Runner"]
+visible = false
+light_mask = 4
+position = Vector2(4058, -91)
+scale = Vector2(2.15179, 1.84448)
+polygon = PackedVector2Array(109.676, 281.38, 86.9044, 349.692, 111.535, 386.017, 149.643, 392.523, 190.074, 383.848, 214.24, 350.234, 193.792, 277.585)
 
 [node name="InitialTeddyPosition" type="Marker2D" parent="."]
 position = Vector2(55, 741)
@@ -140,4 +170,6 @@ text = "text"
 [connection signal="body_exited" from="MinigameEnabler/Maze" to="MinigameEnabler" method="_maze_area_exited"]
 [connection signal="body_entered" from="MinigameEnabler/Bowling" to="MinigameEnabler" method="_bowling_area_entered"]
 [connection signal="body_exited" from="MinigameEnabler/Bowling" to="MinigameEnabler" method="_bowling_area_exited"]
+[connection signal="body_entered" from="MinigameEnabler/Runner" to="MinigameEnabler" method="_runner_area_entered"]
+[connection signal="body_exited" from="MinigameEnabler/Runner" to="MinigameEnabler" method="_runner_area_exited"]
 [connection signal="pressed" from="UI/InventoryButton" to="UI" method="toggle_inventory"]

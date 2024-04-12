@@ -77,3 +77,4 @@ func _on_Teddy_exits_grass(body):
 func _on_Teddy_enters_grass(body):
 	if body.name == "Street_Teddy":
 		Global.Teddy_Speed = Global.GRASS_SPEED
+

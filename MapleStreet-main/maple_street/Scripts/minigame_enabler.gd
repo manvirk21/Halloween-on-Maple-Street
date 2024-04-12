@@ -3,6 +3,7 @@ extends Node2D
 # Door light nodes
 @onready var MouseDoorLight: Sprite2D = find_child("MouseDoorLight")
 @onready var BearDoorLight: Sprite2D = find_child("BearDoorLight")
+@onready var RunnerDoorLight: Sprite2D = find_child("RunnerDoorLight")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -46,4 +47,14 @@ func _bowling_area_entered(body):
 
 func _bowling_area_exited(body):
 	BearDoorLight.visible = false 
+	_deactivate_minigame(body)
+
+
+# RUNNER SIGNALS
+func _runner_area_entered(body):
+	RunnerDoorLight.visible = true 
+	_activate_minigame(body, "runner")
+
+func _runner_area_exited(body):
+	RunnerDoorLight.visible = false 
 	_deactivate_minigame(body)

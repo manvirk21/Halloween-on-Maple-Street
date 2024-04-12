@@ -31,5 +31,22 @@
 			"Bowling candy collected",
 			"Bowling go again?"
 		]
+	},
+	
+	"runner" : {
+		"first" : [
+			"Runner Hello",
+			"Runner Instructions"
+		],
+		
+		"incomplete" : [
+			"Runner Hello Again",
+			"Runner Reminder to Finish"
+		],
+		
+		"finished" : [
+			"Runner candy collected",
+			"Runner go again?"
+		]
 	}
 }

@@ -6,7 +6,7 @@ var active_minigame : String = NONE
 var minigame_ready : bool = false
 
 # Teddy Speeds
-const NORMAL_SPEED : float = 275
+const NORMAL_SPEED : float = 500#275
 const GRASS_SPEED : float = 215
 var Teddy_Speed : float = NORMAL_SPEED # used by Street Teddy scene
 
@@ -24,7 +24,8 @@ var Teddy_sprite_flip : bool = false # to save last state of flip_h
 const MINIGAME_STATES = ["first", "incomplete", "finished"] # [0, 1, 2]
 var Minigame_State = {
 	"maze" : 0,
-	"bowling" : 0
+	"bowling" : 0,
+	"runner" : 0
 }
 
 # returns key for dialog dictionary of active minigame based on it's state
