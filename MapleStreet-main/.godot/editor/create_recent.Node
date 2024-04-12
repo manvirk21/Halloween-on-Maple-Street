@@ -1,9 +1,10 @@
-Label
+Button
+Node2D
 TextureRect
+Label
 Sprite2D
 ColorRect
 TextureButton
 CanvasLayer
-Button
 CollisionPolygon2D
 Area2D

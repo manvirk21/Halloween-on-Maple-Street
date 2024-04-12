@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=3 uid="uid://dtx7yre83vthn"]
+
+[ext_resource type="Script" path="res://minigame/bowling/Scripts/bowling.gd" id="1_mypux"]
+[ext_resource type="Texture2D" uid="uid://dduyfxnjyh2de" path="res://minigame/bowling/Assets/game_frame.png" id="2_oddi8"]
+[ext_resource type="Texture2D" uid="uid://cijkd5mkebnce" path="res://minigame/bowling/Assets/Bowling_Game_Screen_Background_2.png" id="3_3a0q0"]
+[ext_resource type="Texture2D" uid="uid://dkpu8o27wdpv" path="res://minigame/bowling/Assets/Pins_Frame_1_2-removebg-preview.png" id="4_dryxo"]
+[ext_resource type="Script" path="res://minigame/bowling/Scripts/pumpkin.gd" id="5_48gey"]
+[ext_resource type="Texture2D" uid="uid://bcx4hhv6eh2pb" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_1-removebg-preview.png" id="6_13bcn"]
+[ext_resource type="Texture2D" uid="uid://bu7pn8xo5k6fm" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_2-removebg-preview.png" id="7_nmhta"]
+[ext_resource type="Texture2D" uid="uid://d13e7td68bcx7" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_3-removebg-preview.png" id="8_8mgud"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hhyq5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_13bcn")
+}],
+"loop": true,
+"name": &"rest",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_13bcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nmhta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8mgud")
+}],
+"loop": true,
+"name": &"roll",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_54kkt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00xyg"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_mypux")
+
+[node name="frame" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_oddi8")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(800, 80)
+scale = Vector2(1.1, 1.1)
+
+[node name="background" type="TextureRect" parent="Node2D"]
+offset_right = 840.0
+offset_bottom = 840.0
+texture = ExtResource("3_3a0q0")
+
+[node name="pins" type="TextureRect" parent="Node2D"]
+offset_left = 150.0
+offset_top = -20.0
+offset_right = 684.0
+offset_bottom = 447.0
+texture = ExtResource("4_dryxo")
+
+[node name="pumpkin" type="Area2D" parent="Node2D" groups=["pumpkin"]]
+position = Vector2(420, 700)
+script = ExtResource("5_48gey")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/pumpkin"]
+sprite_frames = SubResource("SpriteFrames_hhyq5")
+animation = &"roll"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/pumpkin" groups=["pumpkin"]]
+position = Vector2(0, 20)
+shape = SubResource("CircleShape2D_54kkt")
+
+[node name="strike" type="Area2D" parent="Node2D" groups=["strike"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/strike"]
+position = Vector2(420, 220)
+scale = Vector2(8, 15)
+shape = SubResource("RectangleShape2D_00xyg")
+
+[node name="some" type="Area2D" parent="Node2D" groups=["some"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/some"]
+position = Vector2(259, 220)
+scale = Vector2(8, 15)
+shape = SubResource("RectangleShape2D_00xyg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/some"]
+position = Vector2(581, 220)
+scale = Vector2(8, 15)
+shape = SubResource("RectangleShape2D_00xyg")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 404.0
+offset_top = 974.0
+offset_right = 491.0
+offset_bottom = 1005.0
+text = "End Game"
+
+[connection signal="area_shape_entered" from="Node2D/strike" to="Node2D/pumpkin" method="_on_strike_area_shape_entered"]
+[connection signal="area_shape_entered" from="Node2D/some" to="Node2D/pumpkin" method="_on_some_area_shape_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
