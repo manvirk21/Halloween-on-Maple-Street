@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccjbypgll3lqe"]
+
+[ext_resource type="Script" path="res://minigame/runner/Scripts/player.gd" id="1_lbvdq"]
+[ext_resource type="Texture2D" uid="uid://dadnkk24tl4to" path="res://minigame/runner/Assets/Sprites/Player/Stand.png" id="2_474b4"]
+[ext_resource type="Texture2D" uid="uid://b4p2rlcjd777c" path="res://minigame/runner/Assets/Backgrounds/Teddy_Character_Prototype.png" id="3_ctliq"]
+[ext_resource type="Texture2D" uid="uid://btgoblsdhqshx" path="res://minigame/runner/Assets/Sprites/Player/walk1.png" id="4_ucacm"]
+[ext_resource type="Texture2D" uid="uid://cut5fm6tswp1h" path="res://minigame/runner/Assets/Sprites/Player/walk2.png" id="5_atfi0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gr0tv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_474b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ctliq")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_474b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ucacm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_474b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_atfi0")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rar31"]
+size = Vector2(106, 129)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xx0b"]
+size = Vector2(42, 11.5)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_lbvdq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.450761, 0.454135)
+sprite_frames = SubResource("SpriteFrames_gr0tv")
+animation = &"run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rar31")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 60.75)
+shape = SubResource("RectangleShape2D_3xx0b")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

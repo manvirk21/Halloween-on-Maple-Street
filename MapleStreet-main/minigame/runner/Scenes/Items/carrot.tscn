@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://disyjktm8rarv"]
+
+[ext_resource type="Script" path="res://minigame/runner/Scripts/carrot.gd" id="1_c6rx1"]
+[ext_resource type="Texture2D" uid="uid://c3rq0l0ushhu8" path="res://minigame/runner/Assets/Sprites/Items/carrot.png" id="2_nla16"]
+[ext_resource type="PackedScene" uid="uid://cw4ir7xdisw14" path="res://minigame/runner/Scenes/Effectors/pickup.tscn" id="3_vou0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3ugq"]
+size = Vector2(152, 163.399)
+
+[node name="Carrot" type="Node2D"]
+top_level = true
+script = ExtResource("1_c6rx1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1456, 952.585)
+scale = Vector2(0.5, 0.51)
+texture = ExtResource("2_nla16")
+
+[node name="Pickup" parent="." instance=ExtResource("3_vou0i")]
+position = Vector2(1462, 954.585)
+scale = Vector2(0.5, 0.51)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup"]
+position = Vector2(-12, -4.41174)
+scale = Vector2(1, 1.02)
+shape = SubResource("RectangleShape2D_w3ugq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1456.5, 952.585)
+scale = Vector2(3.68008, 4.10049)
+
+[connection signal="body_entered" from="Pickup" to="." method="_on_pickup_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
