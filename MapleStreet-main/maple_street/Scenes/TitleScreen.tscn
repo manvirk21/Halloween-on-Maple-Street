@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://6i4e1iq6g2th"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/TitleScreen.gd" id="1_l3tev"]
-[ext_resource type="Texture2D" uid="uid://cg2ts3mgkjj3k" path="res://maple_street/Assets/Start_Screen.png" id="2_q6jrb"]
-[ext_resource type="Texture2D" uid="uid://c7ylqlmpejtv3" path="res://maple_street/Assets/Start_Game.png" id="3_l2gbe"]
-[ext_resource type="Texture2D" uid="uid://daw7bvjghjru3" path="res://maple_street/Assets/Settings.png" id="4_k8uik"]
-[ext_resource type="Texture2D" uid="uid://dox4tl4c82tqw" path="res://maple_street/Assets/Credits.png" id="5_uuty7"]
+[ext_resource type="Texture2D" uid="uid://cg2ts3mgkjj3k" path="res://maple_street/Assets/TitleScreen/Start_Screen.png" id="2_q6jrb"]
+[ext_resource type="Texture2D" uid="uid://c7ylqlmpejtv3" path="res://maple_street/Assets/TitleScreen/Start_Game.png" id="3_l2gbe"]
+[ext_resource type="Texture2D" uid="uid://daw7bvjghjru3" path="res://maple_street/Assets/TitleScreen/Settings.png" id="4_k8uik"]
+[ext_resource type="Texture2D" uid="uid://dox4tl4c82tqw" path="res://maple_street/Assets/TitleScreen/Credits.png" id="5_uuty7"]
 
 [sub_resource type="FontFile" id="FontFile_jqq4x"]
 subpixel_positioning = 0

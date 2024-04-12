@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7ylqlmpejtv3"
-path="res://.godot/imported/Start_Game.png-79ee97fb28ef7c07064c9633620e7438.ctex"
+uid="uid://dpimaingcsnm7"
+path="res://.godot/imported/MouseHouseIIJPEG.jpg-a48394e54c03122804d61b805183d896.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maple_street/Assets/Start_Game.png"
-dest_files=["res://.godot/imported/Start_Game.png-79ee97fb28ef7c07064c9633620e7438.ctex"]
+source_file="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg"
+dest_files=["res://.godot/imported/MouseHouseIIJPEG.jpg-a48394e54c03122804d61b805183d896.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c47x48ha6gli0"
-path="res://.godot/imported/MouseHouse_Screen_Prototype.png-9899368629986290cd351a6211dd5b9a.ctex"
+path="res://.godot/imported/MouseHouse_Screen_Prototype.png-676eccbe6c5641844bb34b0e6745ce62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maple_street/Assets/MouseHouse_Screen_Prototype.png"
-dest_files=["res://.godot/imported/MouseHouse_Screen_Prototype.png-9899368629986290cd351a6211dd5b9a.ctex"]
+source_file="res://maple_street/Assets/Test/MouseHouse_Screen_Prototype.png"
+dest_files=["res://.godot/imported/MouseHouse_Screen_Prototype.png-676eccbe6c5641844bb34b0e6745ce62.ctex"]
 
 [params]
 

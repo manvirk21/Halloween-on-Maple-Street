@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://boe3f77hx3xwy"]
+[gd_scene load_steps=11 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
-[ext_resource type="Texture2D" uid="uid://b0ipwvoxdub7p" path="res://maple_street/Assets/ColorblockedDWHomes.png" id="2_4xk6p"]
+[ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
 [ext_resource type="Script" path="res://maple_street/Scripts/minigame_enabler.gd" id="3_k28yf"]
+[ext_resource type="Texture2D" uid="uid://c3n3b7uyhgvkm" path="res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg" id="3_qwi7m"]
+[ext_resource type="Texture2D" uid="uid://dxnky5efvjn2u" path="res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png" id="5_4v37p"]
 [ext_resource type="Texture2D" uid="uid://c1f11cf226tjj" path="res://maple_street/Assets/DialogueDummy.png" id="5_feovw"]
-[ext_resource type="Texture2D" uid="uid://b0wr6c1gjl7gv" path="res://maple_street/Assets/MouseHouse_Prototype_DoorHighlight.png" id="5_y8xcl"]
+[ext_resource type="Texture2D" uid="uid://xikusl2jfhyr" path="res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png" id="6_02pr7"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI.gd" id="6_bcvno"]
 [ext_resource type="Material" uid="uid://cwvkalvixg3i6" path="res://global/blur.tres" id="6_q1ns2"]
 [ext_resource type="Texture2D" uid="uid://glbtgeivte2q" path="res://maple_street/Assets/InvenInventoryButton.png" id="6_uolr2"]
@@ -12,9 +14,13 @@
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
 
-[node name="Houses" type="Sprite2D" parent="."]
-position = Vector2(1920, 540)
-texture = ExtResource("2_4xk6p")
+[node name="MouseHouse" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_t3sfn")
+
+[node name="BearHouse" type="Sprite2D" parent="."]
+position = Vector2(2880, 540)
+texture = ExtResource("3_qwi7m")
 
 [node name="Camera" type="Camera2D" parent="."]
 light_mask = 0
@@ -31,6 +37,7 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
+visible = false
 light_mask = 2
 collision_layer = 2
 
@@ -40,16 +47,15 @@ polygon = PackedVector2Array(48, 264, 93, 1072, 3778, 1072, 3815, 3, 15, -1, 54,
 
 [node name="Background" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
 light_mask = 2
-polygon = PackedVector2Array(0, 506, -1, 4, 3842, -1, 3846, 534, 3621, 528, 3564, 530, 3576, 552, 3498.08, 532.446, 3484, 555, 3451, 559, 3455, 537, 3380, 555, 3397, 538, 3316, 545, 3332, 588, 3313, 610, 3254, 633, 3248, 650, 3210, 647, 3205, 628, 3171, 638, 3140, 622, 3133, 587, 3148, 555, 3134, 528, 3031, 530, 3029, 538, 2864, 541, 2817, 563, 2701, 568, 2541, 560, 2528, 535, 2505, 531, 2487, 502, 2469, 461, 2285, 460, 2276, 492, 2251, 547, 2217, 550, 2194, 566, 2144, 562, 2129, 541, 2098, 543, 2088, 559, 1992, 569, 1968, 516, 1569, 514, 1272.68, 523.107, 1261, 471, 1042, 468, 1047, 533, 887, 498, 854, 528, 756, 540, 685, 512, 655, 534, 661.762, 575.841, 644, 576, 641, 540, 614, 555, 590, 524, 507, 526, 483, 556, 425, 532, 432.418, 587.49, 416, 588, 413, 527, 389, 507, 353, 548, 310, 554, 217, 544, 165, 503, 73, 516)
+polygon = PackedVector2Array(0, 506, -1, 4, 3842, -1, 3846, 534, 3621, 528, 3564, 530, 3576, 552, 3498.08, 532.446, 3484, 555, 3451, 559, 3455, 537, 3380, 555, 3397, 538, 3316, 545, 3332, 588, 3313, 610, 3254, 633, 3248, 650, 3210, 647, 3205, 628, 3171, 638, 3140, 622, 3133, 587, 3148, 555, 3134, 528, 3031, 530, 3029, 538, 2864, 541, 2817, 563, 2701, 568, 2541, 560, 2528, 535, 2505, 531, 2487, 502, 2475, 478, 2283, 475, 2276, 492, 2251, 547, 2217, 550, 2194, 566, 2144, 562, 2129, 541, 2098, 543, 2088, 559, 1992, 569, 1968, 516, 1569, 514, 1272.68, 523.107, 1261, 471, 1042, 468, 1047, 533, 887, 498, 854, 528, 756, 540, 685, 512, 655, 534, 661.762, 575.841, 644, 576, 641, 540, 614, 555, 590, 524, 507, 526, 483, 556, 425, 532, 432.418, 587.49, 416, 588, 413, 527, 389, 507, 353, 548, 310, 554, 217, 544, 165, 503, 73, 516)
 
 [node name="Pumpkins" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
 polygon = PackedVector2Array(3313, 714, 3315, 754, 3350, 767, 3393, 764, 3461, 748, 3453, 704, 3385, 702, 3395, 716)
 
 [node name="GrassAreas" type="Area2D" parent="."]
-visible = false
 
 [node name="NotGrass" type="CollisionPolygon2D" parent="GrassAreas"]
-polygon = PackedVector2Array(-1, 984, -3, 1078, 3841, 1083, 3838, 992, 3619, 994, 3629, 975, 3354, 584, 3120, 567, 2879, 992, 2670, 992, 2595, 848, 2608, 832, 2560, 721, 2540, 721, 2530, 700, 2539, 689, 2480, 571, 2468, 493, 2272, 491, 2244, 572, 2220, 665, 2186, 770, 2142, 991, 609, 986, 592, 914, 605, 794, 721, 763, 832, 762, 968, 740, 1060, 707, 1159, 684, 1168, 528, 1077, 521, 1057, 631, 600, 663, 589, 560, 508, 560, 482, 641, 473, 715, 434, 815, 418, 898, 357, 992)
+polygon = PackedVector2Array(-1, 984, -3, 1078, 3841, 1083, 3838, 992, 3619, 994, 3629, 975, 3354, 584, 3120, 567, 3076, 666, 3063.75, 666.195, 2879, 992, 2673, 992, 2595, 848, 2618, 839, 2560, 721, 2540, 721, 2537, 707, 2545, 691, 2492, 584, 2480, 576, 2491, 560, 2468, 493, 2280, 490, 2253, 563, 2258, 573, 2225, 623, 2215, 645, 2220, 665, 2199, 686, 2211, 701, 2195, 708, 2179, 761, 2184, 781, 2162, 840, 2175, 849, 2160.26, 863.138, 2144, 922, 2151, 947, 2142, 991, 616, 988, 592, 914, 592, 854, 609, 792, 726, 765, 832, 762, 905, 758, 968, 740, 1056, 710, 1119, 703, 1159, 684, 1172, 612, 1168, 528, 1077, 521, 1072, 590, 1057, 631, 999, 645, 899, 647, 818, 648, 600, 663, 590, 615, 589, 560, 508, 560, 486, 639, 473, 715, 434, 815, 414, 896, 357, 992)
 
 [node name="MinigameEnabler" type="Node2D" parent="."]
 script = ExtResource("3_k28yf")
@@ -60,14 +66,15 @@ collision_layer = 4
 
 [node name="MouseDoorLight" type="Sprite2D" parent="MinigameEnabler/Maze"]
 visible = false
-position = Vector2(958, 539)
-texture = ExtResource("5_y8xcl")
+position = Vector2(546.375, 506)
+scale = Vector2(0.966, 1.01587)
+texture = ExtResource("5_4v37p")
 
 [node name="MazeCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Maze"]
 light_mask = 4
 position = Vector2(218, -101)
 scale = Vector2(2.15179, 1.84448)
-polygon = PackedVector2Array(109.676, 281.38, 103.635, 333.969, 107.817, 371.378, 149.643, 392.523, 189.61, 368.125, 198.439, 334.512, 193.792, 277.585)
+polygon = PackedVector2Array(109.676, 281.38, 86.9044, 349.692, 111.535, 386.017, 149.643, 392.523, 190.074, 383.848, 214.24, 350.234, 193.792, 277.585)
 
 [node name="Bowling" type="Area2D" parent="MinigameEnabler"]
 light_mask = 4
@@ -75,8 +82,9 @@ collision_layer = 4
 
 [node name="BearDoorLight" type="Sprite2D" parent="MinigameEnabler/Bowling"]
 visible = false
-position = Vector2(2785, 473)
-texture = ExtResource("5_y8xcl")
+position = Vector2(2380, 412)
+scale = Vector2(0.984581, 0.984018)
+texture = ExtResource("6_02pr7")
 
 [node name="BowlingCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Bowling"]
 light_mask = 4

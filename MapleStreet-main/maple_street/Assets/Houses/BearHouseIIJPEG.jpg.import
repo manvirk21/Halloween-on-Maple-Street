@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0ipwvoxdub7p"
-path="res://.godot/imported/ColorblockedDWHomes.png-70c8528a56727e79ccb19f791920d32f.ctex"
+uid="uid://c3n3b7uyhgvkm"
+path="res://.godot/imported/BearHouseIIJPEG.jpg-19b684a565071c84ef152da88cf85e00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maple_street/Assets/ColorblockedDWHomes.png"
-dest_files=["res://.godot/imported/ColorblockedDWHomes.png-70c8528a56727e79ccb19f791920d32f.ctex"]
+source_file="res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg"
+dest_files=["res://.godot/imported/BearHouseIIJPEG.jpg-19b684a565071c84ef152da88cf85e00.ctex"]
 
 [params]
 

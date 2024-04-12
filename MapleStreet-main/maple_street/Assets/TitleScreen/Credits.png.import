@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daw7bvjghjru3"
-path="res://.godot/imported/Settings.png-fd54e793b25e20cc4001f15f278cfdcb.ctex"
+uid="uid://dox4tl4c82tqw"
+path="res://.godot/imported/Credits.png-c037133c274ac6cf2b32d408d31436c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maple_street/Assets/Settings.png"
-dest_files=["res://.godot/imported/Settings.png-fd54e793b25e20cc4001f15f278cfdcb.ctex"]
+source_file="res://maple_street/Assets/TitleScreen/Credits.png"
+dest_files=["res://.godot/imported/Credits.png-c037133c274ac6cf2b32d408d31436c6.ctex"]
 
 [params]
 

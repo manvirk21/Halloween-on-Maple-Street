@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0wr6c1gjl7gv"
-path="res://.godot/imported/MouseHouse_Prototype_DoorHighlight.png-28b1de23f2e718a7865b5c97dd34c732.ctex"
+uid="uid://xikusl2jfhyr"
+path="res://.godot/imported/BearHouseDoorIICropped.png-f171eb9908c38cb87a2ae5e036c29d8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maple_street/Assets/MouseHouse_Prototype_DoorHighlight.png"
-dest_files=["res://.godot/imported/MouseHouse_Prototype_DoorHighlight.png-28b1de23f2e718a7865b5c97dd34c732.ctex"]
+source_file="res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png"
+dest_files=["res://.godot/imported/BearHouseDoorIICropped.png-f171eb9908c38cb87a2ae5e036c29d8f.ctex"]
 
 [params]
 
