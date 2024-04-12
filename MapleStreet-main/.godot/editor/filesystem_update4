@@ -2,7 +2,7 @@ res://maple_street/Scenes/Maple_Street.tscn
 res://maple_street/Scripts/UI.gd
 res://global/blur.gdshader
 res://global/blur.tres
-res://minigame/bowling/Scenes/main.tscn
-res://minigame/bowling/Scripts/main.gd
-res://minigame/bowling/Scenes/bowling.tscn
-res://minigame/bowling/Scripts/bowling.gd
+res://global/global.gd
+res://maple_street/Scripts/minigame_enabler.gd
+res://maple_street/Scripts/maple_street.gd
+res://maple_street/Scripts/Dialog.json
