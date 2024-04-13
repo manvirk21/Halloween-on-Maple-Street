@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://6i4e1iq6g2th"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/TitleScreen.gd" id="1_l3tev"]
-[ext_resource type="Texture2D" uid="uid://cg2ts3mgkjj3k" path="res://maple_street/Assets/TitleScreen/Start_Screen.png" id="2_q6jrb"]
+[ext_resource type="Texture2D" uid="uid://c3h2n8ym6whga" path="res://maple_street/Assets/TitleScreen/Title_Screen.png" id="2_gxhoo"]
 [ext_resource type="Texture2D" uid="uid://c7ylqlmpejtv3" path="res://maple_street/Assets/TitleScreen/Start_Game.png" id="3_l2gbe"]
 [ext_resource type="Texture2D" uid="uid://daw7bvjghjru3" path="res://maple_street/Assets/TitleScreen/Settings.png" id="4_k8uik"]
 [ext_resource type="Texture2D" uid="uid://dox4tl4c82tqw" path="res://maple_street/Assets/TitleScreen/Credits.png" id="5_uuty7"]
@@ -46,9 +46,9 @@ offset_right = 1681.0
 offset_bottom = 1079.0
 
 [node name="StartScreen" type="Sprite2D" parent="VBoxContainer"]
-position = Vector2(959.374, 540)
-scale = Vector2(1.37976, 1.2)
-texture = ExtResource("2_q6jrb")
+position = Vector2(962.5, 544)
+scale = Vector2(2.62432, 2.2833)
+texture = ExtResource("2_gxhoo")
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
