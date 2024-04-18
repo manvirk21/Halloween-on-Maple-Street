@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvjgbwkd4oomw"]
+
+[ext_resource type="Script" path="res://minigame/maze/Scripts/Cheese.gd" id="1_j5ftf"]
+[ext_resource type="Texture2D" uid="uid://c4h2jf07527sd" path="res://minigame/maze/Assets/Cheese_For_Maze.png" id="2_bpdcp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6g223"]
+radius = 33.541
+
+[node name="Cheese" type="Node2D"]
+position = Vector2(2, 2)
+script = ExtResource("1_j5ftf")
+
+[node name="CheeseSprite" type="Sprite2D" parent="."]
+position = Vector2(218, 154)
+scale = Vector2(0.25, 0.234)
+texture = ExtResource("2_bpdcp")
+
+[node name="Pickup" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup"]
+position = Vector2(217, 155)
+shape = SubResource("CircleShape2D_6g223")
+
+[connection signal="body_entered" from="Pickup" to="." method="_on_pickup_body_entered"]
