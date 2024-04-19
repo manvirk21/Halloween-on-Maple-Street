@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://bbi06dkv4dmbs"]
 
-[ext_resource type="Script" path="res://minigame/maze/Scripts/maze.gd" id="1_iotuc"]
-[ext_resource type="Texture2D" uid="uid://jntnktkacac" path="res://minigame/maze/Assets/MouseHouse_Maze_Prototype.png" id="2_1ej44"]
-[ext_resource type="Script" path="res://player/Scripts/player.gd" id="3_drysb"]
-[ext_resource type="Texture2D" uid="uid://dbpgwb6b2rftt" path="res://minigame/maze/Assets/New_Maze_Icon.png" id="4_qu357"]
-[ext_resource type="Script" path="res://minigame/maze/Scripts/mazefinish.gd" id="5_l04ja"]
-[ext_resource type="Texture2D" uid="uid://c24b15q7u14vj" path="res://minigame/maze/Assets/Winning_Screen_Wireframe.png" id="6_5qfwv"]
+[ext_resource type="Script" path="res://minigame/maze/Scripts/maze.gd" id="1_jnwhg"]
+[ext_resource type="Texture2D" uid="uid://jntnktkacac" path="res://minigame/maze/Assets/MouseHouse_Maze_Prototype.png" id="3_cs3pk"]
+[ext_resource type="Script" path="res://player/Scripts/player.gd" id="3_o681t"]
+[ext_resource type="Texture2D" uid="uid://fi0ldb6gmcax" path="res://minigame/maze/Assets/Maze_Icon.png" id="4_dfviu"]
+[ext_resource type="Script" path="res://minigame/maze/Scripts/mazefinish.gd" id="5_g44u3"]
+[ext_resource type="Texture2D" uid="uid://c24b15q7u14vj" path="res://minigame/maze/Assets/Winning_Screen_Wireframe.png" id="6_0hi8s"]
 [ext_resource type="PackedScene" uid="uid://cvjgbwkd4oomw" path="res://minigame/maze/Scenes/Cheese.tscn" id="7_ap6op"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u6o27"]
@@ -15,11 +15,15 @@ radius = 10.8167
 size = Vector2(258, 34)
 
 [node name="Maze" type="Node2D"]
-script = ExtResource("1_iotuc")
+script = ExtResource("1_jnwhg")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("2_1ej44")
+texture = ExtResource("3_cs3pk")
+
+[node name="Cheese" parent="." instance=ExtResource("7_ap6op")]
+position = Vector2(963.501, 539.996)
+scale = Vector2(1.00052, 0.998148)
 
 [node name="MazeCollision" type="StaticBody2D" parent="."]
 collision_layer = 2
@@ -30,19 +34,19 @@ polygon = PackedVector2Array(1354, 124, 1328, 150, 1332, 168, 1386, 173, 1387, 4
 [node name="MazeTeddy" type="CharacterBody2D" parent="."]
 position = Vector2(1311, 124)
 collision_mask = 2
-script = ExtResource("3_drysb")
+script = ExtResource("3_o681t")
 
 [node name="Teddy_Sprite" type="Sprite2D" parent="MazeTeddy"]
 position = Vector2(-3.86238e-05, 3.8147e-06)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("4_qu357")
+scale = Vector2(0.196721, 0.196721)
+texture = ExtResource("4_dfviu")
 
 [node name="Collision" type="CollisionShape2D" parent="MazeTeddy"]
 position = Vector2(2, 0)
 shape = SubResource("CircleShape2D_u6o27")
 
 [node name="Finish" type="Node2D" parent="."]
-script = ExtResource("5_l04ja")
+script = ExtResource("5_g44u3")
 
 [node name="FinishArea2D" type="Area2D" parent="Finish"]
 
@@ -54,7 +58,7 @@ shape = SubResource("RectangleShape2D_k5pud")
 visible = false
 position = Vector2(961.5, 538)
 scale = Vector2(1.00052, 0.998148)
-texture = ExtResource("6_5qfwv")
+texture = ExtResource("6_0hi8s")
 
 [node name="continue_game" type="Button" parent="Finish/FinishScreen"]
 offset_left = 463.0
@@ -69,9 +73,6 @@ offset_top = 297.0
 offset_right = -473.0
 offset_bottom = 402.0
 flat = true
-
-[node name="Cheese" parent="." instance=ExtResource("7_ap6op")]
-position = Vector2(1384, 724)
 
 [connection signal="body_entered" from="Finish/FinishArea2D" to="Finish" method="_on_finish_area_2d_body_entered"]
 [connection signal="pressed" from="Finish/FinishScreen/continue_game" to="Finish" method="_on_continue_game_pressed"]
