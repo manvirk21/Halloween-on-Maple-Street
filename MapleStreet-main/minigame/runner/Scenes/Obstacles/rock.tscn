@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5wbgsch230uu"]
+
+[ext_resource type="Script" path="res://minigame/runner/Scripts/rock.gd" id="1_ohkis"]
+[ext_resource type="Texture2D" uid="uid://b01mw1pjwrrnw" path="res://minigame/runner/Assets/Sprites/Obstacles/rock.png" id="2_6do2n"]
+[ext_resource type="PackedScene" uid="uid://blq0xthld78i2" path="res://minigame/runner/Scenes/Effectors/effect_damage.tscn" id="3_coilj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yigkj"]
+size = Vector2(106.5, 119)
+
+[node name="Rock" type="Node2D"]
+top_level = true
+position = Vector2(-1, -39)
+script = ExtResource("1_ohkis")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1561, 983)
+scale = Vector2(0.291667, 0.344086)
+texture = ExtResource("2_6do2n")
+
+[node name="EffectDamage" parent="." instance=ExtResource("3_coilj")]
+position = Vector2(1565.75, 982.045)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EffectDamage"]
+position = Vector2(-3.5, -0.544983)
+shape = SubResource("RectangleShape2D_yigkj")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1561.89, 984.298)
+scale = Vector2(5.28882, 6.6702)
+
+[connection signal="body_entered" from="EffectDamage" to="." method="_on_effect_damage_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
