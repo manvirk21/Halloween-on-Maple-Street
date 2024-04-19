@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0w60yoweu6a7"
-path="res://.godot/imported/background.jpg-b3a2c7d1c105d56ba01ce5ef14c041a0.ctex"
+path="res://.godot/imported/background.jpg-9f4c5683377f82b37d1c15fd879e370b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/background.jpg"
-dest_files=["res://.godot/imported/background.jpg-b3a2c7d1c105d56ba01ce5ef14c041a0.ctex"]
+source_file="res://minigame/cupswap/Assets/background.jpg"
+dest_files=["res://.godot/imported/background.jpg-9f4c5683377f82b37d1c15fd879e370b.ctex"]
 
 [params]
 
