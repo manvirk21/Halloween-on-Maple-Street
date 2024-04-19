@@ -7,12 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://c63hxw8llc2u6" path="res://maple_street/Assets/Houses/WIPSecondRowHouses.png" id="4_2dqhn"]
 [ext_resource type="Texture2D" uid="uid://dxnky5efvjn2u" path="res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png" id="5_4v37p"]
 [ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="5_6qnc0"]
-[ext_resource type="Texture2D" uid="uid://c1f11cf226tjj" path="res://maple_street/Assets/UI/DialogueDummy.png" id="5_feovw"]
 [ext_resource type="Texture2D" uid="uid://xikusl2jfhyr" path="res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png" id="6_02pr7"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI.gd" id="6_bcvno"]
 [ext_resource type="Texture2D" uid="uid://b7hhhwsiu05xr" path="res://maple_street/Assets/NPC/Colorblockedmousesmall.png" id="6_cfwgk"]
 [ext_resource type="Material" uid="uid://cwvkalvixg3i6" path="res://global/blur.tres" id="6_q1ns2"]
 [ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
+[ext_resource type="Texture2D" uid="uid://bw0c5mxtms8hh" path="res://maple_street/Assets/UI/DialogBoxLineArt.png" id="13_678g1"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -168,15 +168,14 @@ texture_normal = ExtResource("11_7xv4g")
 [node name="DialogBox" type="Sprite2D" parent="UI"]
 visible = false
 position = Vector2(958, 884)
-scale = Vector2(2, 1)
-texture = ExtResource("5_feovw")
+texture = ExtResource("13_678g1")
 
 [node name="Dialog" type="Label" parent="UI"]
 visible = false
-offset_left = 155.0
-offset_top = 763.0
-offset_right = 1752.0
-offset_bottom = 995.0
+offset_left = 171.0
+offset_top = 795.0
+offset_right = 1725.0
+offset_bottom = 975.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
 text = "text"
