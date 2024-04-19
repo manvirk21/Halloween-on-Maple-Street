@@ -1,11 +1,8 @@
 res://maple_street/Scenes/Maple_Street.tscn
-res://global/Dialog/UI.gd
 res://maple_street/Scripts/UI.gd
 res://global/blur.gdshader
 res://global/blur.tres
-res://global/Dialog/Dialog.json
-res://global/global.gd
 res://minigame/maze/Scenes/maze.tscn
-res://global/Dialog/ui.tscn
 res://minigame/bowling/Scenes/bowling.tscn
-res://maple_street/Scripts/Dialog.json
+res://player/Scenes/Street_Teddy.tscn
+res://player/Scripts/player.gd

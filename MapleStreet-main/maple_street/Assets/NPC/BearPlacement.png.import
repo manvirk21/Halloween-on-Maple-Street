@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1f11cf226tjj"
-path="res://.godot/imported/DialogueDummy.png-590b60797300a82dcb37300dd9112c5e.ctex"
+uid="uid://c4xxvuqr35rj"
+path="res://.godot/imported/BearPlacement.png-b802d85c6fe5a576fc3f0e110df2dede.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maple_street/Assets/DialogueDummy.png"
-dest_files=["res://.godot/imported/DialogueDummy.png-590b60797300a82dcb37300dd9112c5e.ctex"]
+source_file="res://maple_street/Assets/NPC/BearPlacement.png"
+dest_files=["res://.godot/imported/BearPlacement.png-b802d85c6fe5a576fc3f0e110df2dede.ctex"]
 
 [params]
 

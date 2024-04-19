@@ -1,16 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=14 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
 [ext_resource type="Script" path="res://maple_street/Scripts/minigame_enabler.gd" id="3_k28yf"]
 [ext_resource type="Texture2D" uid="uid://c3n3b7uyhgvkm" path="res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg" id="3_qwi7m"]
-[ext_resource type="Texture2D" uid="uid://dv21s5wjtsiue" path="res://maple_street/Assets/Houses/mapleStreet2.jpg" id="4_sxyi5"]
+[ext_resource type="Texture2D" uid="uid://c63hxw8llc2u6" path="res://maple_street/Assets/Houses/WIPSecondRowHouses.png" id="4_2dqhn"]
 [ext_resource type="Texture2D" uid="uid://dxnky5efvjn2u" path="res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png" id="5_4v37p"]
-[ext_resource type="Texture2D" uid="uid://c1f11cf226tjj" path="res://maple_street/Assets/DialogueDummy.png" id="5_feovw"]
+[ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="5_6qnc0"]
+[ext_resource type="Texture2D" uid="uid://c1f11cf226tjj" path="res://maple_street/Assets/UI/DialogueDummy.png" id="5_feovw"]
 [ext_resource type="Texture2D" uid="uid://xikusl2jfhyr" path="res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png" id="6_02pr7"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI.gd" id="6_bcvno"]
+[ext_resource type="Texture2D" uid="uid://b7hhhwsiu05xr" path="res://maple_street/Assets/NPC/Colorblockedmousesmall.png" id="6_cfwgk"]
 [ext_resource type="Material" uid="uid://cwvkalvixg3i6" path="res://global/blur.tres" id="6_q1ns2"]
-[ext_resource type="Texture2D" uid="uid://glbtgeivte2q" path="res://maple_street/Assets/InvenInventoryButton.png" id="6_uolr2"]
+[ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -25,12 +27,21 @@ texture = ExtResource("3_qwi7m")
 
 [node name="HouseSet2" type="Sprite2D" parent="."]
 position = Vector2(5760, 540)
-texture = ExtResource("4_sxyi5")
+texture = ExtResource("4_2dqhn")
 
 [node name="RunnerHouse" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(4800, 540)
 texture = ExtResource("2_t3sfn")
+
+[node name="Bear" type="Sprite2D" parent="."]
+position = Vector2(3630, 508)
+texture = ExtResource("5_6qnc0")
+
+[node name="Mouse" type="Sprite2D" parent="."]
+position = Vector2(978, 515)
+scale = Vector2(0.340491, 0.340491)
+texture = ExtResource("6_cfwgk")
 
 [node name="Camera" type="Camera2D" parent="."]
 light_mask = 0
@@ -48,6 +59,7 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
+visible = false
 light_mask = 2
 collision_layer = 2
 
@@ -147,11 +159,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="InventoryButton" type="TextureButton" parent="UI"]
-offset_left = 1633.0
-offset_top = 27.0
-offset_right = 1883.0
-offset_bottom = 277.0
-texture_normal = ExtResource("6_uolr2")
+offset_left = 1702.0
+offset_top = 29.0
+offset_right = 1890.0
+offset_bottom = 244.0
+texture_normal = ExtResource("11_7xv4g")
 
 [node name="DialogBox" type="Sprite2D" parent="UI"]
 visible = false

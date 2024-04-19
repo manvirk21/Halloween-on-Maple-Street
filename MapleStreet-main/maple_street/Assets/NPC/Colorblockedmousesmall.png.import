@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0r4n5jjjefqq"
-path="res://.godot/imported/QuizFrame.png-e89dd1cf4f23f163dfc61b99af4c2a75.ctex"
+uid="uid://b7hhhwsiu05xr"
+path="res://.godot/imported/Colorblockedmousesmall.png-2b941c9fe938b2020f361d631f48abd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maple_street/Assets/QuizFrame.png"
-dest_files=["res://.godot/imported/QuizFrame.png-e89dd1cf4f23f163dfc61b99af4c2a75.ctex"]
+source_file="res://maple_street/Assets/NPC/Colorblockedmousesmall.png"
+dest_files=["res://.godot/imported/Colorblockedmousesmall.png-2b941c9fe938b2020f361d631f48abd8.ctex"]
 
 [params]
 

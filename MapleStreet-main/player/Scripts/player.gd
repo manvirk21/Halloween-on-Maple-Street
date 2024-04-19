@@ -4,7 +4,7 @@ extends CharacterBody2D
 var far_y = 0
 var near_y = 1080
 var max_scale : float = 1.1
-var min_scale : float = 0.45
+var min_scale : float = max_scale * (4/5)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

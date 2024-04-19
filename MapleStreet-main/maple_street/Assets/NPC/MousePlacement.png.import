@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be5lsgvbfwb1"
-path="res://.godot/imported/MinigameFrame.png-eee9d1aec4d00015d4cf2336320060f7.ctex"
+uid="uid://b7fughwlf5plf"
+path="res://.godot/imported/MousePlacement.png-09702d93d8dddfeece56134f3a8fdc16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maple_street/Assets/MinigameFrame.png"
-dest_files=["res://.godot/imported/MinigameFrame.png-eee9d1aec4d00015d4cf2336320060f7.ctex"]
+source_file="res://maple_street/Assets/NPC/MousePlacement.png"
+dest_files=["res://.godot/imported/MousePlacement.png-09702d93d8dddfeece56134f3a8fdc16.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://glbtgeivte2q"
-path="res://.godot/imported/InvenInventoryButton.png-5a66853ec5be4b44f84484186b6b70cd.ctex"
+uid="uid://c5x1p0owyt4tl"
+path="res://.godot/imported/Inventory_ButtonPNG.png-618736914b5a3f03333cd795f82af41e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maple_street/Assets/InvenInventoryButton.png"
-dest_files=["res://.godot/imported/InvenInventoryButton.png-5a66853ec5be4b44f84484186b6b70cd.ctex"]
+source_file="res://maple_street/Assets/UI/Inventory_ButtonPNG.png"
+dest_files=["res://.godot/imported/Inventory_ButtonPNG.png-618736914b5a3f03333cd795f82af41e.ctex"]
 
 [params]
 
