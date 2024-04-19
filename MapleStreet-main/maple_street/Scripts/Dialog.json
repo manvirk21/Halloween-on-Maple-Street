@@ -85,11 +85,12 @@
 		"Instructions" : [
 			"Teddy! It's great to see you. I know you're here for some candy, but can you do me a favor first?",
 			"I hurt my leg while hopping to get all these candy for halloween, and now I can't get to my carrots in my backyard because of all the barrels there.",
-			"Can you jump over the barrels and grab me 10 carrots so I can make some dinner? In return, I'll give you my favorite piece of candy."
+			"Can you jump over the rocks and grab me a dozen carrots so I can make some dinner? In return, I'll give you my favorite piece of candy.",
+			"Remember a dozen is 12!"
 		],
 
 		"Minigame" : [
-			"Grab 10 carrots!"
+			"Grab 12 carrots!"
 		],
 
 		"Completion" : [

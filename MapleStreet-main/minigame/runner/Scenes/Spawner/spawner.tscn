@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://xdseo5g3c2bv"]
 
-[ext_resource type="PackedScene" uid="uid://b1cfpxxjwjabl" path="res://minigame/runner/Scenes/Obstacles/barrel.tscn" id="2_3i2op"]
+[ext_resource type="PackedScene" uid="uid://c5wbgsch230uu" path="res://minigame/runner/Scenes/Obstacles/rock.tscn" id="2_lfies"]
 [ext_resource type="PackedScene" uid="uid://disyjktm8rarv" path="res://minigame/runner/Scenes/Items/carrot.tscn" id="3_ffinf"]
 
 [sub_resource type="GDScript" id="GDScript_qwv16"]
@@ -15,7 +15,7 @@ func _on_timer_timeout():
 
 [node name="Spawner" type="Node2D"]
 script = SubResource("GDScript_qwv16")
-scenes = Array[PackedScene]([ExtResource("2_3i2op"), ExtResource("3_ffinf")])
+scenes = Array[PackedScene]([ExtResource("3_ffinf"), ExtResource("2_lfies")])
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.3

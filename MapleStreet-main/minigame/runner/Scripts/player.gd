@@ -51,10 +51,11 @@ func _on_area_2d_body_exited(body):
 func rewardplayer(scoretoadd):
 	score += scoretoadd
 	Signals.emit_signal("updatescore", score)
-	#if score == 2:
-		#get_tree().paused = true
-		#get_tree().change_scene_to_file("res://Scenes/UI/win_ui.tscn")
 
 func killplayer():
 	queue_free()
+	if score >= 12:
+		print("You got candy!")
+	else:
+		print("Try again to get a dozen carrots!")
 
