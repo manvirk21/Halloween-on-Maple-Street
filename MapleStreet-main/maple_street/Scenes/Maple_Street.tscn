@@ -163,11 +163,12 @@ texture = ExtResource("5_feovw")
 visible = false
 offset_left = 155.0
 offset_top = 763.0
-offset_right = 370.0
-offset_bottom = 1076.0
+offset_right = 1752.0
+offset_bottom = 995.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 60
 text = "text"
+autowrap_mode = 2
 
 [connection signal="body_entered" from="GrassAreas" to="." method="_on_Teddy_exits_grass"]
 [connection signal="body_exited" from="GrassAreas" to="." method="_on_Teddy_enters_grass"]

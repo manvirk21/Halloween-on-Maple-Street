@@ -5,10 +5,6 @@
 			"I misplaced a piece of cheese at the start of my maze and I don't have time to get it back.",
 			"Think you can get it for me? If you do, I'll give you a sweet piece of candy! I'll just wait for you at the end."
 		],
-
-		"Minigame" : [
-			"Don't forget to get the cheese Teddy!"
-		],
 		
 		"Completion" : [
 			"Wowie! You did it, Teddy!",
@@ -32,10 +28,6 @@
 			"Hey Teddy, I just set up this new bowling lane for Halloween but my paws are too big to fit into the bowling balls.",
 			"So I'll make you a deal. You knock all those pins down for me once and I'll give you my most delicious piece of candy."
 		],
-
-		"Minigame" : [
-			"Knock all the pins down!"
-		],
 		
 		"Completion" : [
 			"Nice elbow work Teddy! You knocked them all down with your pumpkin roll!",
@@ -58,10 +50,6 @@
 			"Hi Teddy. I know you're here for some halloween candy but you're out of luck because I ate them all since they were all so tasty.",
 			"I saved the best one for last, but I'm not willing to give it up without a challenge. So I'll make you a deal.",
 			"If you're good enough to beat me at my cup game, I might spare it just for you! So just follow the bins and find the one that has the ball!"
-		],
-
-		"Minigame" : [
-			"Keep your eye on the ball!"
 		],
 		
 		"Completion" : [
@@ -88,10 +76,6 @@
 			"Can you jump over the barrels and grab me 10 carrots so I can make some dinner? In return, I'll give you my favorite piece of candy."
 		],
 
-		"Minigame" : [
-			"Grab 10 carrots!"
-		],
-
 		"Completion" : [
 			"Wow! Couldn't have hopped better myself! So, candy time!"
 		],
@@ -114,10 +98,6 @@
 			"Quiz Instructions"
 		],
 
-		"Minigame" : [
-			"Select the correct answer!"
-		],
-
 		"Completion" : [
 			"Hoot hoot! Impressive, Teddy!",
 			"You got every question right. Here's your well-earned candy!"
@@ -126,6 +106,10 @@
 		"Retry" : [
 			"You need to brush up on your trivia if you want to get that candy.",
 			"Go back and study and then you can try again."
+		],
+
+		"Fun Fact" : [
+			"Quiz Fun Fact"
 		]
 	}
 }

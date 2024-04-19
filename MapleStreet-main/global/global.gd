@@ -21,11 +21,13 @@ var Teddy_sprite_flip_on : bool # to know if flipping is allowed
 var Teddy_sprite_flip : bool = false # to save last state of flip_h
 
 # Dialog tracker helpers, see Dialog.json for dialog strings
-const MINIGAME_STATES = ["first", "incomplete", "finished"] # [0, 1, 2]
+const MINIGAME_STATES = ["Instructions", "Retry", "Completion"] # [0, 1, 2]
 var Minigame_State = {
 	"maze" : 0,
 	"bowling" : 0,
-	"runner" : 0
+	"runner" : 0,
+	"cups" : 0,
+	"quiz" : 0
 }
 
 # returns key for dialog dictionary of active minigame based on it's state
