@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbi06dkv4dmbs"]
+[gd_scene load_steps=10 format=3 uid="uid://bbi06dkv4dmbs"]
 
 [ext_resource type="Script" path="res://minigame/maze/Scripts/maze.gd" id="1_jnwhg"]
 [ext_resource type="Texture2D" uid="uid://jntnktkacac" path="res://minigame/maze/Assets/MouseHouse_Maze_Prototype.png" id="3_cs3pk"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://fi0ldb6gmcax" path="res://minigame/maze/Assets/Maze_Icon.png" id="4_dfviu"]
 [ext_resource type="Script" path="res://minigame/maze/Scripts/mazefinish.gd" id="5_g44u3"]
 [ext_resource type="Texture2D" uid="uid://c24b15q7u14vj" path="res://minigame/maze/Assets/Winning_Screen_Wireframe.png" id="6_0hi8s"]
-
+[ext_resource type="PackedScene" uid="uid://cvjgbwkd4oomw" path="res://minigame/maze/Scenes/Cheese.tscn" id="7_ap6op"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u6o27"]
 radius = 10.8167
@@ -20,6 +20,10 @@ script = ExtResource("1_jnwhg")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 texture = ExtResource("3_cs3pk")
+
+[node name="Cheese" parent="." instance=ExtResource("7_ap6op")]
+position = Vector2(963.501, 539.996)
+scale = Vector2(1.00052, 0.998148)
 
 [node name="MazeCollision" type="StaticBody2D" parent="."]
 collision_layer = 2

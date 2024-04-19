@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwvg7830bux5d"]
+
+[ext_resource type="Script" path="res://Scripts/CupSwap.gd" id="1_3g2hc"]
+[ext_resource type="Texture2D" uid="uid://0w60yoweu6a7" path="res://Assets/background.jpg" id="2_3f4ne"]
+[ext_resource type="Texture2D" uid="uid://7ij5vh7dpyf4" path="res://Assets/cotton.png" id="3_x8q60"]
+[ext_resource type="Texture2D" uid="uid://xktk46r8ejj8" path="res://Assets/trash.png" id="4_hr3gj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yya4s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qunf4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ane53"]
+
+[node name="CupSwap" type="Node2D"]
+script = ExtResource("1_3g2hc")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="."]
+position = Vector2(962, 540)
+texture = ExtResource("2_3f4ne")
+
+[node name="Cotton" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1017, 526)
+scale = Vector2(0.648664, 0.648664)
+texture = ExtResource("3_x8q60")
+
+[node name="Cotton2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1260, 526)
+scale = Vector2(0.648664, 0.648664)
+texture = ExtResource("3_x8q60")
+
+[node name="Cotton3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1520, 526)
+scale = Vector2(0.648664, 0.648664)
+texture = ExtResource("3_x8q60")
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 1164.0
+offset_top = 552.0
+offset_right = 1364.0
+offset_bottom = 670.0
+theme_override_font_sizes/font_size = 80
+text = "PLAY"
+
+[node name="Trash1" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1113.0
+offset_top = 401.0
+offset_right = 1875.0
+offset_bottom = 1249.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+scale = Vector2(0.294, 0.294)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yya4s")
+icon = ExtResource("4_hr3gj")
+flat = true
+
+[node name="Trash2" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1372.0
+offset_top = 401.0
+offset_right = 2134.0
+offset_bottom = 1249.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+scale = Vector2(0.294, 0.294)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qunf4")
+icon = ExtResource("4_hr3gj")
+flat = true
+
+[node name="Trash3" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1632.0
+offset_top = 401.0
+offset_right = 2394.0
+offset_bottom = 1249.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+scale = Vector2(0.294, 0.294)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ane53")
+icon = ExtResource("4_hr3gj")
+flat = true
+
+[node name="Retry" type="Button" parent="."]
+visible = false
+offset_left = 1124.0
+offset_top = 425.0
+offset_right = 1407.0
+offset_bottom = 543.0
+theme_override_font_sizes/font_size = 80
+text = "RETRY?"
+
+[node name="YouWin" type="PanelContainer" parent="."]
+visible = false
+offset_left = 1069.0
+offset_top = 450.0
+offset_right = 1479.0
+offset_bottom = 570.0
+
+[node name="TextEdit" type="TextEdit" parent="YouWin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 81
+text = " YOU WIN"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="Trash1" to="." method="_on_trash_1_pressed"]
+[connection signal="pressed" from="Trash2" to="." method="_on_trash_2_pressed"]
+[connection signal="pressed" from="Trash3" to="." method="_on_trash_3_pressed"]
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
