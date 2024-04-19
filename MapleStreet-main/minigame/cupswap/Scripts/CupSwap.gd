@@ -2,9 +2,9 @@ extends Node2D
 
 
 var trash_positions = {
-	"left": Vector2(899, 377),
-	"middle": Vector2(1148, 377),
-	"right": Vector2(1408, 377)
+	"left": Vector2(1113, 626),
+	"middle": Vector2(1372, 626),
+	"right": Vector2(1632, 626)
 }
 
 
@@ -121,27 +121,14 @@ func check_position(trash: Button) -> String:
 	var position = trash.position
 	print(trash.position)
 	var trash_position = ""
-	if position == Vector2(899, 377):
+	if position == Vector2(1113, 626):
 		trash_position = "left"
-	elif position == Vector2(1148, 377):
+	elif position == Vector2(1372, 626):
 		trash_position = "middle"
-	elif position == Vector2(1408, 377):
+	elif position == Vector2(1632, 626):
 		trash_position = "right"
 	print(trash_position)
 	return trash_position
-
-func check_candy_position(candy: Sprite2D) -> String:
-	var position = candy.position
-	print(candy.position)
-	var candy_position = ""
-	if position == Vector2(1000, 526):
-		candy_position = "left"
-	elif position == Vector2(1260, 526):
-		candy_position = "middle"
-	elif position == Vector2(1520, 526):
-		candy_position = "right"
-	print(candy_position)
-	return candy_position
 
 
 
