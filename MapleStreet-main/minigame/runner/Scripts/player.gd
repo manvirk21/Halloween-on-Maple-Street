@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 var vel = Vector2.ZERO
 
-@export var jump_vel = 780.0
-@export var gravity_scale = 20.0
+@export var jump_vel = 740.0
+@export var gravity_scale = 25.0
 
 var score = 0
 

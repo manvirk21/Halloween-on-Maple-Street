@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://gnmwcs0buwwi"]
+[gd_scene load_steps=8 format=3 uid="uid://gnmwcs0buwwi"]
 
 [ext_resource type="PackedScene" uid="uid://b5yotg3nxth1p" path="res://minigame/runner/Scenes/FGBG/background.tscn" id="1_xxm55"]
 [ext_resource type="PackedScene" uid="uid://basaa74qx6e7q" path="res://minigame/runner/Scenes/FGBG/foreground.tscn" id="2_mmeh4"]
@@ -6,31 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://xdseo5g3c2bv" path="res://minigame/runner/Scenes/Spawner/spawner.tscn" id="4_f00vw"]
 [ext_resource type="PackedScene" uid="uid://epghtp3e4cbc" path="res://minigame/runner/Scenes/UI/score_ui.tscn" id="5_dljuw"]
 [ext_resource type="PackedScene" uid="uid://cp4s05lr4wwhh" path="res://minigame/runner/Scenes/UI/game_over_ui.tscn" id="6_stain"]
+[ext_resource type="Texture2D" uid="uid://bniwd08jvwoo5" path="res://minigame/runner/Assets/Backgrounds/FrameRunner.png" id="7_t0pgj"]
 
 [node name="Game" type="Node2D"]
 scale = Vector2(1.00167, 0.989457)
-
-[node name="Background" parent="." instance=ExtResource("1_xxm55")]
-scale = Vector2(1.66164, 1.98763)
-
-[node name="Foreground" parent="." instance=ExtResource("2_mmeh4")]
-position = Vector2(-3.99334, 1024.8)
-scale = Vector2(1.67934, 0.964116)
-
-[node name="Player" parent="." instance=ExtResource("3_78afx")]
-position = Vector2(139.767, 903.526)
-scale = Vector2(1.60929, 1.79138)
-
-[node name="Spawner" parent="." instance=ExtResource("4_f00vw")]
-position = Vector2(1595.34, 947.995)
-
-[node name="ScoreUI" parent="." instance=ExtResource("5_dljuw")]
-offset_left = 409.318
-offset_top = 48.5115
-offset_right = 409.318
-offset_bottom = 48.5115
-scale = Vector2(1.03912, 1.39521)
-metadata/_edit_use_anchors_ = true
 
 [node name="GameOverUI" parent="." instance=ExtResource("6_stain")]
 process_mode = 3
@@ -39,3 +18,42 @@ offset_left = -49.0
 offset_top = 7.0
 offset_right = -49.0
 offset_bottom = 7.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 782.0
+offset_top = 66.0
+offset_right = 822.0
+offset_bottom = 106.0
+scale = Vector2(23.9784, 24.4546)
+
+[node name="Background" parent="VBoxContainer" instance=ExtResource("1_xxm55")]
+position = Vector2(0.0288951, -1.45904)
+scale = Vector2(0.0351467, 0.0783283)
+
+[node name="Foreground" parent="VBoxContainer" instance=ExtResource("2_mmeh4")]
+position = Vector2(-0.262546, 39.2075)
+scale = Vector2(0.0700354, 0.0394247)
+
+[node name="Player" parent="VBoxContainer" instance=ExtResource("3_78afx")]
+position = Vector2(6.52389, 35.7773)
+scale = Vector2(0.052147, 0.0567716)
+
+[node name="Spawner" parent="VBoxContainer" instance=ExtResource("4_f00vw")]
+position = Vector2(66.1446, 38.3396)
+scale = Vector2(0.0376929, 0.0395553)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(958.4, 554.85)
+scale = Vector2(0.997813, 1.01656)
+texture = ExtResource("7_t0pgj")
+
+[node name="ScoreUI" parent="." instance=ExtResource("5_dljuw")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 736.77
+offset_top = 84.8951
+offset_right = 776.77
+offset_bottom = 84.8951
+grow_horizontal = 1
+grow_vertical = 1
