@@ -33,51 +33,59 @@ func roll():
 	position.y += -6
 	
 func reset():
-	$"../pins_Some".flip_v = false
-	$"../pins_Some".visible = false
-	$"../pins_Strike".visible = false
 	position.x = 420
 	position.y = 700
 	visible = true
 	left_right = true
 	pin_status = 0
 
+
 func knock_pins():
 	if pin_status == 0: #miss
-		print("miss")
+		print("knock pins miss")
+		reset()
 	else:
 		$"../Crash".visible = true
-		$"../CrashTimer".start()
-		$"../CycleTimer".start()
 		$"../pins_Up".visible = false
 		if pin_status == 3:
 			$"../pins_Strike".visible = true
-		elif pin_status == 1:
-			$"../pins_Some".flip_v = true
-			$"../pins_Some".visible = true
-		elif pin_status == 2:
-			$"../pins_Some".visible = true
+		elif pin_status == 1: #left
+			$"../pins_Some_Left".visible = true
+		elif pin_status == 2: #right
+			$"../pins_Some_Right".visible = true
+		await get_tree().create_timer(1).timeout
+		$"../Crash".visible = false
+		await get_tree().create_timer(1).timeout
+		bear_reset()
+		await get_tree().create_timer(1).timeout
+		reset()
+		
 
+func bear_reset():
+	$"../bear".visible = true
+	await get_tree().create_timer(3).timeout
+	$"../pins_Some_Right".visible = false
+	$"../pins_Some_Left".visible = false
+	$"../pins_Strike".visible = false
+	$"../pins_Up".visible = true
+	await get_tree().create_timer(2).timeout
+	$"../bear".visible = false
+	
 func _on_strike_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	print("strike")
 	pin_status = 3
-	
-	
+
 
 func _on_some_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	print("some")
-	if position.y > 1250:
+	if position.x > 420:
+		print("right")
 		pin_status = 2 #right
 	else:
+		print("left")
 		pin_status = 1 #left
-	
 
 
-func _on_crash_timer_timeout():
-	print("crash timer over")
-	$"../Crash".visible = false
-
-
-func _on_cycle_timer_timeout():
-	print("cycle timer over")
-	reset()
+func _on_miss_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	print("collision miss")
+	pin_status = 0

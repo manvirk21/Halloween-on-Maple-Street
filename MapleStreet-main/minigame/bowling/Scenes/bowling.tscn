@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dtx7yre83vthn"]
+[gd_scene load_steps=17 format=3 uid="uid://dtx7yre83vthn"]
 
 [ext_resource type="Script" path="res://minigame/bowling/Scripts/bowling.gd" id="1_mypux"]
 [ext_resource type="Texture2D" uid="uid://dduyfxnjyh2de" path="res://minigame/bowling/Assets/game_frame.png" id="2_oddi8"]
@@ -8,9 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://cjoj0wfwypwou" path="res://minigame/bowling/Assets/Pins_Strike.png" id="5_lt6yq"]
 [ext_resource type="Texture2D" uid="uid://bcx4hhv6eh2pb" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_1-removebg-preview.png" id="6_13bcn"]
 [ext_resource type="Texture2D" uid="uid://0kksyt1uvxqj" path="res://minigame/bowling/Assets/Pins_Some.png" id="6_l2637"]
-[ext_resource type="Texture2D" uid="uid://c855dlcd42ccj" path="res://minigame/bowling/Assets/Crash_Effect.png" id="7_ltpmm"]
+[ext_resource type="Texture2D" uid="uid://cff2eqmffc807" path="res://minigame/bowling/Assets/Crash_Effect.png" id="7_ltpmm"]
 [ext_resource type="Texture2D" uid="uid://bu7pn8xo5k6fm" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_2-removebg-preview.png" id="7_nmhta"]
 [ext_resource type="Texture2D" uid="uid://d13e7td68bcx7" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_3-removebg-preview.png" id="8_8mgud"]
+[ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="12_7wbhp"]
+[ext_resource type="Script" path="res://minigame/bowling/Scenes/bear.gd" id="13_s3e5a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hhyq5"]
 animations = [{
@@ -74,13 +76,22 @@ offset_bottom = 427.0
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("5_lt6yq")
 
-[node name="pins_Some" type="TextureRect" parent="Node2D"]
+[node name="pins_Some_Right" type="TextureRect" parent="Node2D"]
 visible = false
 offset_left = 173.0
 offset_top = 30.0
 offset_right = 674.0
 offset_bottom = 394.0
 texture = ExtResource("6_l2637")
+
+[node name="pins_Some_Left" type="TextureRect" parent="Node2D"]
+visible = false
+offset_left = 173.0
+offset_top = 30.0
+offset_right = 674.0
+offset_bottom = 394.0
+texture = ExtResource("6_l2637")
+flip_h = true
 
 [node name="Crash" type="TextureRect" parent="Node2D"]
 visible = false
@@ -96,6 +107,7 @@ position = Vector2(420, 700)
 script = ExtResource("5_48gey")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/pumpkin"]
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_hhyq5")
 animation = &"roll"
 
@@ -122,13 +134,25 @@ position = Vector2(581, 220)
 scale = Vector2(8, 15)
 shape = SubResource("RectangleShape2D_00xyg")
 
-[node name="CrashTimer" type="Timer" parent="Node2D"]
-wait_time = 2.0
-one_shot = true
+[node name="miss" type="Area2D" parent="Node2D" groups=["some"]]
 
-[node name="CycleTimer" type="Timer" parent="Node2D"]
-wait_time = 6.0
-one_shot = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/miss"]
+position = Vector2(98, 220)
+scale = Vector2(8, 15)
+shape = SubResource("RectangleShape2D_00xyg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/miss"]
+position = Vector2(743, 220)
+scale = Vector2(8, 15)
+shape = SubResource("RectangleShape2D_00xyg")
+
+[node name="bear" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(1500, 200)
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("12_7wbhp")
+script = ExtResource("13_s3e5a")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 404.0
@@ -139,6 +163,5 @@ text = "End Game"
 
 [connection signal="area_shape_entered" from="Node2D/strike" to="Node2D/pumpkin" method="_on_strike_area_shape_entered"]
 [connection signal="area_shape_entered" from="Node2D/some" to="Node2D/pumpkin" method="_on_some_area_shape_entered"]
-[connection signal="timeout" from="Node2D/CrashTimer" to="Node2D/pumpkin" method="_on_crash_timer_timeout"]
-[connection signal="timeout" from="Node2D/CycleTimer" to="Node2D/pumpkin" method="_on_cycle_timer_timeout"]
+[connection signal="area_shape_entered" from="Node2D/miss" to="Node2D/pumpkin" method="_on_miss_area_shape_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
