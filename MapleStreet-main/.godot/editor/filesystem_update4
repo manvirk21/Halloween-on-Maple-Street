@@ -1,10 +1,5 @@
-res://maple_street/Scenes/Maple_Street.tscn
+res://minigame/runner/Scenes/runner.tscn
 res://maple_street/Scripts/UI.gd
 res://global/blur.gdshader
 res://global/blur.tres
-res://minigame/maze/Scenes/maze.tscn
-res://minigame/bowling/Scenes/bowling.tscn
-res://player/Scenes/Street_Teddy.tscn
-res://minigame/cupswap/Scenes/cup_swap.tscn
-res://minigame/cupswap/Scripts/CupSwap.gd
-res://maple_street/Scripts/Dialog.json
+res://maple_street/Scenes/Maple_Street.tscn

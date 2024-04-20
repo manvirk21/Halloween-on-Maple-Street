@@ -42,9 +42,9 @@ scale = Vector2(0.052147, 0.0567716)
 position = Vector2(66.1446, 38.3396)
 scale = Vector2(0.0376929, 0.0395553)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(958.4, 554.85)
-scale = Vector2(0.997813, 1.01656)
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(7.35662, 19.9901)
+scale = Vector2(0.041613, 0.0415693)
 texture = ExtResource("7_t0pgj")
 
 [node name="ScoreUI" parent="." instance=ExtResource("5_dljuw")]
