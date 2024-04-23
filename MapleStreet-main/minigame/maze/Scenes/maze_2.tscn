@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://cuywogwt0fgrg"]
+
+[ext_resource type="Script" path="res://minigame/maze/Scripts/maze.gd" id="1_xby02"]
+[ext_resource type="Texture2D" uid="uid://b4o8g3oq1n44b" path="res://minigame/maze/Assets/Maze Two.png" id="2_e3p35"]
+[ext_resource type="Texture2D" uid="uid://dagj55yuo4bg4" path="res://minigame/maze/Assets/mazeborder.png" id="2_vi0wr"]
+[ext_resource type="PackedScene" uid="uid://cvjgbwkd4oomw" path="res://minigame/maze/Scenes/Cheese.tscn" id="3_wawf2"]
+[ext_resource type="Script" path="res://player/Scripts/player.gd" id="4_o2a0u"]
+[ext_resource type="Texture2D" uid="uid://dbpgwb6b2rftt" path="res://minigame/maze/Assets/New_Maze_Icon.png" id="5_8otus"]
+[ext_resource type="Script" path="res://minigame/maze/Scripts/mazefinish.gd" id="6_hxfna"]
+[ext_resource type="Texture2D" uid="uid://c24b15q7u14vj" path="res://minigame/maze/Assets/Winning_Screen_Wireframe.png" id="7_flns0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u6o27"]
+radius = 10.8167
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5pud"]
+size = Vector2(258, 34)
+
+[node name="Maze" type="Node2D"]
+script = ExtResource("1_xby02")
+
+[node name="Maze" type="Sprite2D" parent="."]
+position = Vector2(1260.5, 538.5)
+scale = Vector2(0.934238, 0.943763)
+texture = ExtResource("2_e3p35")
+
+[node name="Border" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_vi0wr")
+
+[node name="MazeCollision" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MazeCollision"]
+
+[node name="Maze1" type="Node2D" parent="."]
+
+[node name="Cheese" parent="." instance=ExtResource("3_wawf2")]
+position = Vector2(1217, 761)
+scale = Vector2(1.00052, 0.998148)
+
+[node name="MazeTeddy" type="CharacterBody2D" parent="."]
+position = Vector2(882, 108)
+collision_mask = 2
+script = ExtResource("4_o2a0u")
+
+[node name="Teddy_Sprite" type="Sprite2D" parent="MazeTeddy"]
+position = Vector2(-3.86238e-05, 3.8147e-06)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_8otus")
+
+[node name="Collision" type="CollisionShape2D" parent="MazeTeddy"]
+position = Vector2(2, 0)
+shape = SubResource("CircleShape2D_u6o27")
+
+[node name="Finish" type="Node2D" parent="."]
+script = ExtResource("6_hxfna")
+
+[node name="FinishArea2D" type="Area2D" parent="Finish"]
+
+[node name="FinishCollision" type="CollisionShape2D" parent="Finish/FinishArea2D"]
+position = Vector2(1310, 1004)
+shape = SubResource("RectangleShape2D_k5pud")
+
+[node name="FinishScreen" type="Sprite2D" parent="Finish"]
+visible = false
+position = Vector2(961.5, 538)
+scale = Vector2(1.00052, 0.998148)
+texture = ExtResource("7_flns0")
+
+[node name="continue_game" type="Button" parent="Finish/FinishScreen"]
+offset_left = 463.0
+offset_top = 297.0
+offset_right = 796.0
+offset_bottom = 402.0
+flat = true
+
+[node name="try_again" type="Button" parent="Finish/FinishScreen"]
+offset_left = -782.0
+offset_top = 297.0
+offset_right = -473.0
+offset_bottom = 402.0
+flat = true
+
+[connection signal="body_entered" from="Finish/FinishArea2D" to="Finish" method="_on_finish_area_2d_body_entered"]
+[connection signal="pressed" from="Finish/FinishScreen/continue_game" to="Finish" method="_on_continue_game_pressed"]
+[connection signal="pressed" from="Finish/FinishScreen/try_again" to="Finish" method="_on_try_again_pressed"]

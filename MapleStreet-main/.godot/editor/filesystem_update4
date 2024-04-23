@@ -1,5 +1,8 @@
-res://minigame/runner/Scenes/runner.tscn
+res://minigame/maze/Scenes/Maze.tscn
 res://maple_street/Scripts/UI.gd
 res://global/blur.gdshader
 res://global/blur.tres
 res://maple_street/Scenes/Maple_Street.tscn
+res://minigame/maze/Scenes/maze.tscn
+res://minigame/maze/Scenes/maze_2.tscn
+res://maple_street/Scripts/minigame_enabler.gd
