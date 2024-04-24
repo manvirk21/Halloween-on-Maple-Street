@@ -9,7 +9,7 @@ func _ready():
 	
 	# when "Change Scene" is emitted, change_scene() will be called
 	$UI.connect("ChangeScene", change_scene)
-	
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -63,9 +63,6 @@ func change_scene():
 	# make sure minigame folder and minigame scene have same name!
 	var scene = "res://minigame/" + Global.active_minigame + "/Scenes/" + Global.active_minigame + ".tscn"
 	get_tree().change_scene_to_file(scene)
-	
-	# hide blur 
-	$UI/Blur.visible = false
 
 # SIGNALS 
 # Set Teddy's speed to normal when he's not in grass areas
