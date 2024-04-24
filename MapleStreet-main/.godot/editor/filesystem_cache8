@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713900698
+::res://::1713926864
 icon.svg::CompressedTexture2D::2558303370247231020::1713364214::1713414995::1::::<><>::
-::res://global/::1713901267
-blur.gdshader::Shader::-1::1713901267::0::1::::<><>::
+::res://global/::1713905382
+blur.gdshader::Shader::-1::1713905382::0::1::::<><>::
 blur.tres::ShaderMaterial::6360955640778066431::1713900793::0::1::::<><>::res://global/blur.gdshader
 global.gd::GDScript::-1::1713569013::0::1::::<>Node<>::
 ::res://maple_street/::1713364214
@@ -36,13 +36,13 @@ DialogBoxLineArt.png::CompressedTexture2D::3982360362074745961::1713569013::1713
 DialogueDummy.png::CompressedTexture2D::6609698377233598927::1713569013::1713569013::1::::<><>::
 InvenInventoryButton.png::CompressedTexture2D::443936185911428638::1713569013::1713569013::1::::<><>::
 Inventory_ButtonPNG.png::CompressedTexture2D::6927594129334497757::1713569013::1713569013::1::::<><>::
-::res://maple_street/Scenes/::1713901267
-Maple_Street.tscn::PackedScene::4231654671746741309::1713901267::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://c63hxw8llc2u6::::res://maple_street/Assets/Houses/WIPSecondRowHouses.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>res://maple_street/Scripts/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://cwvkalvixg3i6::::res://global/blur.tres<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>uid://bw0c5mxtms8hh::::res://maple_street/Assets/UI/DialogBoxLineArt.png
+::res://maple_street/Scenes/::1713903260
+Maple_Street.tscn::PackedScene::4231654671746741309::1713903260::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://c63hxw8llc2u6::::res://maple_street/Assets/Houses/WIPSecondRowHouses.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>res://maple_street/Scripts/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://cwvkalvixg3i6::::res://global/blur.tres<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>uid://bw0c5mxtms8hh::::res://maple_street/Assets/UI/DialogBoxLineArt.png
 TitleScreen.tscn::PackedScene::2194138489511529113::1713414999::0::1::::<><>::res://maple_street/Scripts/TitleScreen.gd<>uid://c3h2n8ym6whga::::res://maple_street/Assets/TitleScreen/Title_Screen.png<>uid://c7ylqlmpejtv3::::res://maple_street/Assets/TitleScreen/Start_Game.png<>uid://daw7bvjghjru3::::res://maple_street/Assets/TitleScreen/Settings.png<>uid://dox4tl4c82tqw::::res://maple_street/Assets/TitleScreen/Credits.png
-::res://maple_street/Scripts/::1713900793
+::res://maple_street/Scripts/::1713901801
 Dialog.json::JSON::-1::1713569013::0::1::::<><>::
 maple_street.gd::GDScript::-1::1713364214::0::1::::<>Node2D<>::
-minigame_enabler.gd::GDScript::-1::1713364214::0::1::::<>Node2D<>::
+minigame_enabler.gd::GDScript::-1::1713901801::0::1::::<>Node2D<>::
 TitleScreen.gd::GDScript::-1::1713364214::0::1::::<>Control<>::
 UI.gd::GDScript::-1::1713900793::0::1::::<>CanvasLayer<>::
 ::res://minigame/::1713900668
@@ -85,10 +85,10 @@ mazeborder.png::CompressedTexture2D::7172249958060075573::1713835256::1713835271
 MouseHouse_Maze_Prototype.png::CompressedTexture2D::19403349904929802::1713364214::1713364214::1::::<><>::
 New_Maze_Icon.png::CompressedTexture2D::7260820250945216837::1713408895::1713414995::1::::<><>::
 Winning_Screen_Wireframe.png::CompressedTexture2D::6727915850014195159::1713364214::1713364214::1::::<><>::
-::res://minigame/maze/Scenes/::1713901365
+::res://minigame/maze/Scenes/::1713905285
 Cheese.tscn::PackedScene::6265753742459298054::1713836716::0::1::::<><>::res://minigame/maze/Scripts/Cheese.gd<>uid://c4h2jf07527sd::::res://minigame/maze/Assets/Cheese_For_Maze.png
-Maze.tscn::PackedScene::2474698007804949100::1713901267::0::1::::<><>::res://minigame/maze/Scripts/maze.gd<>uid://jntnktkacac::::res://minigame/maze/Assets/MouseHouse_Maze_Prototype.png<>res://player/Scripts/player.gd<>res://minigame/maze/Scripts/mazefinish.gd<>uid://dbpgwb6b2rftt::::res://minigame/maze/Assets/New_Maze_Icon.png<>uid://c24b15q7u14vj::::res://minigame/maze/Assets/Winning_Screen_Wireframe.png<>uid://cvjgbwkd4oomw::::res://minigame/maze/Scenes/Cheese.tscn
-maze_2.tscn::PackedScene::6227524431222498680::1713901365::0::1::::<><>::res://minigame/maze/Scripts/maze.gd<>uid://jntnktkacac::::res://minigame/maze/Assets/MouseHouse_Maze_Prototype.png<>uid://cvjgbwkd4oomw::::res://minigame/maze/Scenes/Cheese.tscn<>res://player/Scripts/player.gd<>uid://dbpgwb6b2rftt::::res://minigame/maze/Assets/New_Maze_Icon.png<>res://minigame/maze/Scripts/mazefinish.gd<>uid://c24b15q7u14vj::::res://minigame/maze/Assets/Winning_Screen_Wireframe.png
+maze.tscn::PackedScene::2474698007804949100::1713903260::0::1::::<><>::res://minigame/maze/Scripts/maze.gd<>uid://jntnktkacac::::res://minigame/maze/Assets/MouseHouse_Maze_Prototype.png<>uid://cvjgbwkd4oomw::::res://minigame/maze/Scenes/Cheese.tscn<>res://player/Scripts/player.gd<>uid://dbpgwb6b2rftt::::res://minigame/maze/Assets/New_Maze_Icon.png<>res://minigame/maze/Scripts/mazefinish.gd<>uid://c24b15q7u14vj::::res://minigame/maze/Assets/Winning_Screen_Wireframe.png
+maze_2.tscn::PackedScene::6227524431222498680::1713905285::0::1::::<><>::res://minigame/maze/Scripts/maze.gd<>uid://b4o8g3oq1n44b::::res://minigame/maze/Assets/Maze Two.png<>uid://dagj55yuo4bg4::::res://minigame/maze/Assets/mazeborder.png<>uid://cvjgbwkd4oomw::::res://minigame/maze/Scenes/Cheese.tscn<>res://player/Scripts/player.gd<>uid://dbpgwb6b2rftt::::res://minigame/maze/Assets/New_Maze_Icon.png<>res://minigame/maze/Scripts/mazefinish.gd<>uid://c24b15q7u14vj::::res://minigame/maze/Assets/Winning_Screen_Wireframe.png
 ::res://minigame/maze/Scripts/::1713633165
 Cheese.gd::GDScript::-1::1713633165::0::1::::<>Node2D<>::
 Finish.gd::GDScript::-1::1713364214::0::1::::<>Node2D<>::
