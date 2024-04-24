@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=15 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -13,6 +13,7 @@
 [ext_resource type="Material" uid="uid://cwvkalvixg3i6" path="res://global/blur.tres" id="6_q1ns2"]
 [ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
 [ext_resource type="Texture2D" uid="uid://bw0c5mxtms8hh" path="res://maple_street/Assets/UI/DialogBoxLineArt.png" id="13_678g1"]
+[ext_resource type="Texture2D" uid="uid://dx8uu164iy0f7" path="res://maple_street/Assets/UI/questionMark_transparent.png" id="13_sk14g"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -165,6 +166,13 @@ offset_right = 1890.0
 offset_bottom = 244.0
 texture_normal = ExtResource("11_7xv4g")
 
+[node name="HelpButton" type="TextureButton" parent="UI"]
+offset_left = 1820.0
+offset_top = 250.0
+offset_right = 1892.0
+offset_bottom = 325.0
+texture_normal = ExtResource("13_sk14g")
+
 [node name="DialogBox" type="Sprite2D" parent="UI"]
 visible = false
 position = Vector2(958, 884)
@@ -190,3 +198,4 @@ autowrap_mode = 2
 [connection signal="body_entered" from="MinigameEnabler/Runner" to="MinigameEnabler" method="_runner_area_entered"]
 [connection signal="body_exited" from="MinigameEnabler/Runner" to="MinigameEnabler" method="_runner_area_exited"]
 [connection signal="pressed" from="UI/InventoryButton" to="UI" method="toggle_inventory"]
+[connection signal="pressed" from="UI/HelpButton" to="UI" method="toggle_inventory"]
