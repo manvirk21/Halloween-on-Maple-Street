@@ -16,7 +16,6 @@ var dialog_index : int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	game_paused = false
-	get_node("Blur").visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -37,9 +36,8 @@ func start_dialog():
 	dialog_not_started = false
 	dialog_running = true
 	
-	# pause street and add blur, display dialog
+	# pause street, display dialog
 	pause()
-	$Blur.visible = true
 	$DialogBox.visible = true
 	$Dialog.visible = true
 	
@@ -66,7 +64,6 @@ func finish_dialog():
 	
 	# resume scene and hide 
 	resume()
-	$Blur.visible = false
 	$DialogBox.visible = false
 	$Dialog.visible = false
 	
@@ -81,12 +78,10 @@ func toggle_inventory():
 
 # pause street and show inventory
 func show_inventory():
-	get_node("Blur").visible = true
 	pause()
 
 # resume street and hide inventory
 func hide_inventory():
-	get_node("Blur").visible = false
 	resume()
 
 # pause street 

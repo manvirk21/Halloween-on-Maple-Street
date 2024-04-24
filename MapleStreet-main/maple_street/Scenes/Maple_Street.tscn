@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=13 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://xikusl2jfhyr" path="res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png" id="6_02pr7"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI.gd" id="6_bcvno"]
 [ext_resource type="Texture2D" uid="uid://b7hhhwsiu05xr" path="res://maple_street/Assets/NPC/Colorblockedmousesmall.png" id="6_cfwgk"]
-[ext_resource type="Material" uid="uid://cwvkalvixg3i6" path="res://global/blur.tres" id="6_q1ns2"]
 [ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
 [ext_resource type="Texture2D" uid="uid://bw0c5mxtms8hh" path="res://maple_street/Assets/UI/DialogBoxLineArt.png" id="13_678g1"]
 
@@ -148,15 +147,6 @@ position = Vector2(1035, 322)
 [node name="UI" type="CanvasLayer" parent="."]
 process_mode = 3
 script = ExtResource("6_bcvno")
-
-[node name="Blur" type="ColorRect" parent="UI"]
-visible = false
-material = ExtResource("6_q1ns2")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="InventoryButton" type="TextureButton" parent="UI"]
 offset_left = 1702.0
