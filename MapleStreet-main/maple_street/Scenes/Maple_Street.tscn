@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=14 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b7hhhwsiu05xr" path="res://maple_street/Assets/NPC/Colorblockedmousesmall.png" id="6_cfwgk"]
 [ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
 [ext_resource type="Texture2D" uid="uid://bw0c5mxtms8hh" path="res://maple_street/Assets/UI/DialogBoxLineArt.png" id="13_678g1"]
-[ext_resource type="Texture2D" uid="uid://dx8uu164iy0f7" path="res://maple_street/Assets/UI/questionMark_transparent.png" id="13_sk14g"]
+[ext_resource type="Texture2D" path="res://maple_street/Assets/UI/questionMark_transparent.png" id="13_sk14g"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -139,6 +139,37 @@ position = Vector2(3832, -104)
 scale = Vector2(2.15179, 1.84448)
 polygon = PackedVector2Array(100.846, 370.294, 96.1989, 395.775, 211.452, 401.197, 207.734, 373.005)
 
+[node name="Cupswap" type="Area2D" parent="MinigameEnabler"]
+light_mask = 4
+collision_layer = 4
+
+[node name="CupswapDoorLight" type="Sprite2D" parent="MinigameEnabler/Cupswap"]
+visible = false
+position = Vector2(5568, 588)
+scale = Vector2(1.395, 1.45238)
+texture = ExtResource("5_4v37p")
+
+[node name="CupswapCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Cupswap"]
+light_mask = 4
+position = Vector2(5235, -45)
+scale = Vector2(2.15179, 1.84448)
+polygon = PackedVector2Array(100.846, 370.294, 96.1989, 395.775, 211.452, 401.197, 207.734, 373.005)
+
+[node name="Quiz" type="Area2D" parent="MinigameEnabler"]
+light_mask = 4
+collision_layer = 4
+
+[node name="QuizDoorLight" type="Sprite2D" parent="MinigameEnabler/Quiz"]
+position = Vector2(7306, 295)
+scale = Vector2(1.395, 1.45238)
+texture = ExtResource("5_4v37p")
+
+[node name="QuizCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Quiz"]
+light_mask = 4
+position = Vector2(6935, -46)
+scale = Vector2(2.15179, 1.84448)
+polygon = PackedVector2Array(82.722, 387.643, 97.1286, 427.763, 196.116, 441.317, 243.054, 392.523, 175.668, 358.367)
+
 [node name="InitialTeddyPosition" type="Marker2D" parent="."]
 position = Vector2(55, 741)
 
@@ -187,5 +218,9 @@ autowrap_mode = 2
 [connection signal="body_exited" from="MinigameEnabler/Bowling" to="MinigameEnabler" method="_bowling_area_exited"]
 [connection signal="body_entered" from="MinigameEnabler/Runner" to="MinigameEnabler" method="_runner_area_entered"]
 [connection signal="body_exited" from="MinigameEnabler/Runner" to="MinigameEnabler" method="_runner_area_exited"]
+[connection signal="body_entered" from="MinigameEnabler/Cupswap" to="MinigameEnabler" method="_cupswap_area_entered"]
+[connection signal="body_exited" from="MinigameEnabler/Cupswap" to="MinigameEnabler" method="_cupswap_area_exited"]
+[connection signal="body_entered" from="MinigameEnabler/Quiz" to="MinigameEnabler" method="_quiz_area_entered"]
+[connection signal="body_exited" from="MinigameEnabler/Quiz" to="MinigameEnabler" method="_quiz_area_exited"]
 [connection signal="pressed" from="UI/InventoryButton" to="UI" method="toggle_inventory"]
 [connection signal="pressed" from="UI/HelpButton" to="UI" method="toggle_inventory"]

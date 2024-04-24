@@ -26,7 +26,7 @@ var Minigame_State = {
 	"maze" : 0,
 	"bowling" : 0,
 	"runner" : 0,
-	"cups" : 0,
+	"cupswap" : 0,
 	"quiz" : 0
 }
 

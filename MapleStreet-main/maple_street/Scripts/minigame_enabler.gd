@@ -4,6 +4,8 @@ extends Node2D
 @onready var MouseDoorLight: Sprite2D = find_child("MouseDoorLight")
 @onready var BearDoorLight: Sprite2D = find_child("BearDoorLight")
 @onready var RunnerDoorLight: Sprite2D = find_child("RunnerDoorLight")
+@onready var CupswapDoorLight: Sprite2D = find_child("CupswapDoorLight")
+@onready var QuizDoorLight: Sprite2D = find_child("QuizDoorLight")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -57,4 +59,24 @@ func _runner_area_entered(body):
 
 func _runner_area_exited(body):
 	RunnerDoorLight.visible = false 
+	_deactivate_minigame(body)
+
+
+# CUPSWAP SIGNALS
+func _cupswap_area_entered(body):
+	CupswapDoorLight.visible = true 
+	_activate_minigame(body, "cupswap")
+
+func _cupswap_area_exited(body):
+	CupswapDoorLight.visible = false 
+	_deactivate_minigame(body)
+
+
+# QUIZ SIGNALS
+func _quiz_area_entered(body):
+	QuizDoorLight.visible = true 
+	_activate_minigame(body, "quiz")
+
+func _quiz_area_exited(body):
+	QuizDoorLight.visible = false 
 	_deactivate_minigame(body)
