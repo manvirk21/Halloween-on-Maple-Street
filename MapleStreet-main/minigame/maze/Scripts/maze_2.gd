@@ -3,11 +3,11 @@ extends Node2D
 @export var MapleStreet : PackedScene
 @onready var Cheese: Node2D = find_child("Cheese")
 var rng = RandomNumberGenerator.new()
-var position1 = Vector2(1391, 578)
-var position2 = Vector2(1315, 415)
-var position3 = Vector2(733, 34)
-var position4 = Vector2(1185, 643)
-var position5 = Vector2(711, 701)
+var position1 = Vector2(1132, 252)
+var position2 = Vector2(1279, 135)
+var position3 = Vector2(916, 359)
+var position4 = Vector2(1238, 781)
+var position5 = Vector2(1021, 510)
 
 
 # Called when the node enters the scene tree for the first time.
