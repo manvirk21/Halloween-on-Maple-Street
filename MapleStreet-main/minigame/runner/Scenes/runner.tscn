@@ -43,6 +43,7 @@ position = Vector2(66.1446, 38.3396)
 scale = Vector2(0.0376929, 0.0395553)
 
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
+z_index = 2
 position = Vector2(7.35662, 19.9901)
 scale = Vector2(0.041613, 0.0415693)
 texture = ExtResource("7_t0pgj")

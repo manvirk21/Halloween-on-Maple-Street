@@ -4,7 +4,7 @@ extends Control
 @onready var ListItem = $ListItem
 @onready var RestartButton = $RestartButton
 
-var items : Array = read_json_file("res://Assets/questions.json")
+var items : Array = read_json_file("res://minigame/quiz/Assets/questions.json")
 var item : Dictionary
 var index_item : int = 0
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bs2l4dmmw2om6"]
 
-[ext_resource type="Script" path="res://Scripts/game.gd" id="1_g8lkh"]
-[ext_resource type="Texture2D" uid="uid://do2xhshjfjmu5" path="res://Assets/background.png" id="2_le2f0"]
+[ext_resource type="Script" path="res://minigame/quiz/Scripts/game.gd" id="1_g8lkh"]
+[ext_resource type="Texture2D" uid="uid://do2xhshjfjmu5" path="res://minigame/quiz/Assets/background.png" id="2_le2f0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jefce"]
 bg_color = Color(1, 1, 1, 1)
@@ -30,8 +30,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 768.0
-offset_bottom = 432.0
+offset_right = 1277.0
+offset_bottom = 717.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.599995, 0.599988)
@@ -39,10 +39,10 @@ texture = ExtResource("2_le2f0")
 
 [node name="DisplayText" type="Label" parent="."]
 layout_mode = 2
-offset_left = 556.0
-offset_top = 84.0
-offset_right = 1003.0
-offset_bottom = 244.0
+offset_left = 916.0
+offset_top = 127.0
+offset_right = 1674.0
+offset_bottom = 406.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 45
 text = "Testing"
@@ -54,11 +54,11 @@ justification_flags = 128
 [node name="ListItem" type="ItemList" parent="."]
 self_modulate = Color(1, 1, 1, 0.682353)
 layout_mode = 2
-offset_left = 541.0
-offset_top = 286.0
-offset_right = 1451.0
-offset_bottom = 478.0
-scale = Vector2(0.515185, 1.55184)
+offset_left = 900.0
+offset_top = 483.0
+offset_right = 1273.0
+offset_bottom = 675.0
+scale = Vector2(2.11924, 2.54027)
 theme = SubResource("Theme_d53fw")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/icon_margin = 100
@@ -67,17 +67,17 @@ max_text_lines = 2
 auto_height = true
 text_overrun_behavior = 4
 item_count = 4
-item_0/text = "A"
-item_1/text = "B"
-item_2/text = "C"
-item_3/text = "D"
+item_0/text = "      A"
+item_1/text = "      B"
+item_2/text = "      C"
+item_3/text = "      D"
 
 [node name="RestartButton" type="Button" parent="."]
 layout_mode = 2
-offset_left = 141.0
-offset_top = 595.0
-offset_right = 1051.0
-offset_bottom = 638.0
+offset_left = 856.0
+offset_top = 996.0
+offset_right = 1668.0
+offset_bottom = 1039.0
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Restart"
