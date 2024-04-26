@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=22 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cldkj1p1c01nk" path="res://maple_street/Assets/UI/Bear Text Box.png" id="17_2ff0b"]
 [ext_resource type="Texture2D" uid="uid://pjrm2x627wvg" path="res://maple_street/Assets/UI/Raccoon Text Box.png" id="18_r3alk"]
 [ext_resource type="Texture2D" uid="uid://cv6s2bjx6f2vo" path="res://maple_street/Assets/UI/Mouse Text Box.png" id="19_c7aed"]
+[ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="21_fn7h3"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -270,6 +271,10 @@ offset_top = 250.0
 offset_right = 1892.0
 offset_bottom = 325.0
 texture_normal = ExtResource("13_sk14g")
+
+[node name="OpenWorld" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_fn7h3")
+autoplay = true
 
 [connection signal="body_entered" from="GrassAreas" to="." method="_on_Teddy_exits_grass"]
 [connection signal="body_exited" from="GrassAreas" to="." method="_on_Teddy_enters_grass"]

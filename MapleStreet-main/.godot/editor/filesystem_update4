@@ -1,1 +1,5 @@
 res://minigame/cupswap/Scenes/cupswap.tscn
+res://maple_street/Scenes/Maple_Street.tscn
+res://maple_street/Scenes/TitleScreen.tscn
+res://player/Scenes/Street_Teddy.tscn
+res://minigame/maze/Scenes/maze.tscn
