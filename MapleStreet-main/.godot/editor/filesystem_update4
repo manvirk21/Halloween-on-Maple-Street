@@ -1,5 +1,10 @@
 res://minigame/quiz/Scenes/game.tscn
 res://maple_street/Scenes/Maple_Street.tscn
 res://maple_street/Scripts/UI.gd
+<<<<<<< HEAD
 res://minigame/runner/Scenes/runner.tscn
 res://minigame/quiz/Scripts/game.gd
+=======
+res://minigame/cupswap/Scenes/cup_swap.tscn
+res://minigame/cupswap/Scripts/CupSwap.gd
+>>>>>>> 8c7fa5116c2b63986c6b632dd18c74d88453826d

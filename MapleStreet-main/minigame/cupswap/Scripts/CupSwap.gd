@@ -38,7 +38,7 @@ func _on_PlayButton_pressed():
 	await timer(1)
 	for i in range(20):
 		swap_trash_cans_and_candy()
-		await timer(0.4)
+		await timer(0.6)
 
 
 
@@ -74,10 +74,10 @@ func swap_trash_cans_and_candy():
 	var second_position = positions[(index + 1) % 3]
 		
 	if first_position in trash_cans and second_position in trash_cans:
-		tween.parallel().tween_property(trash_cans[first_position], "position", trash_positions[second_position], 0.3) 
-		tween.parallel().tween_property(trash_cans[second_position], "position", trash_positions[first_position], 0.3)
-		tween.parallel().tween_property(candy[first_position], "position", candy_positions[second_position], 0.3)
-		tween.parallel().tween_property(candy[second_position], "position", candy_positions[first_position], 0.3)
+		tween.parallel().tween_property(trash_cans[first_position], "position", trash_positions[second_position], 0.5) 
+		tween.parallel().tween_property(trash_cans[second_position], "position", trash_positions[first_position], 0.5)
+		tween.parallel().tween_property(candy[first_position], "position", candy_positions[second_position], 0.5)
+		tween.parallel().tween_property(candy[second_position], "position", candy_positions[first_position], 0.5)
 
 		var temp = trash_cans[first_position]
 		var temp2 = candy[first_position]

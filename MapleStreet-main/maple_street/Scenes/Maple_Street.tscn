@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=20 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -10,9 +10,18 @@
 [ext_resource type="Texture2D" uid="uid://xikusl2jfhyr" path="res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png" id="6_02pr7"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI.gd" id="6_bcvno"]
 [ext_resource type="Texture2D" uid="uid://b7hhhwsiu05xr" path="res://maple_street/Assets/NPC/Colorblockedmousesmall.png" id="6_cfwgk"]
+[ext_resource type="Texture2D" uid="uid://dmajvt2pqlg7v" path="res://maple_street/Assets/NPC/Resized Raccoon.png" id="7_0l4x6"]
+[ext_resource type="Texture2D" uid="uid://b4weqs3uvlsq5" path="res://maple_street/Assets/NPC/Resized Bunny.png" id="8_bk0tn"]
 [ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
 [ext_resource type="Texture2D" uid="uid://bw0c5mxtms8hh" path="res://maple_street/Assets/UI/DialogBoxLineArt.png" id="13_678g1"]
 [ext_resource type="Texture2D" uid="uid://dx8uu164iy0f7" path="res://maple_street/Assets/UI/questionMark_transparent.png" id="13_sk14g"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Texture2D" uid="uid://bm1gmqn2tnpx5" path="res://maple_street/Assets/UI/Bunny Text Box PNG.png" id="16_lf1h5"]
+[ext_resource type="Texture2D" uid="uid://cldkj1p1c01nk" path="res://maple_street/Assets/UI/Bear Text Box.png" id="17_2ff0b"]
+[ext_resource type="Texture2D" uid="uid://pjrm2x627wvg" path="res://maple_street/Assets/UI/Raccoon Text Box.png" id="18_r3alk"]
+[ext_resource type="Texture2D" uid="uid://cv6s2bjx6f2vo" path="res://maple_street/Assets/UI/Mouse Text Box.png" id="19_c7aed"]
+>>>>>>> 8c7fa5116c2b63986c6b632dd18c74d88453826d
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -42,6 +51,14 @@ texture = ExtResource("5_6qnc0")
 position = Vector2(978, 515)
 scale = Vector2(0.340491, 0.340491)
 texture = ExtResource("6_cfwgk")
+
+[node name="Raccoon" type="Sprite2D" parent="."]
+position = Vector2(5952, 592)
+texture = ExtResource("7_0l4x6")
+
+[node name="Bunny" type="Sprite2D" parent="."]
+position = Vector2(4596, 503)
+texture = ExtResource("8_bk0tn")
 
 [node name="Camera" type="Camera2D" parent="."]
 light_mask = 0
@@ -198,6 +215,26 @@ texture_normal = ExtResource("13_sk14g")
 visible = false
 position = Vector2(958, 884)
 texture = ExtResource("13_678g1")
+
+[node name="BunnyDialogue" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(958, 884)
+texture = ExtResource("16_lf1h5")
+
+[node name="BearDialogue" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(958, 884)
+texture = ExtResource("17_2ff0b")
+
+[node name="RaccoonDialogue" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(958, 884)
+texture = ExtResource("18_r3alk")
+
+[node name="MouseDialogue" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(958, 884)
+texture = ExtResource("19_c7aed")
 
 [node name="Dialog" type="Label" parent="UI"]
 visible = false
