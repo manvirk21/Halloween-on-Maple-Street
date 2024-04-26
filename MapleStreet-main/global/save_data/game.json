@@ -1,1 +1,17 @@
-{"candy":{"bowling":0,"cupswap":0,"maze":5,"quiz":0,"runner":0},"minigames":{"bowling":0,"cupswap":0,"maze":0,"quiz":0,"runner":0}}
+{
+	"minigames" : {
+		"maze" : 0,
+		"bowling" : 0,
+		"runner" : 0,
+		"cupswap" : 0,
+		"quiz" : 0
+	},
+
+	"candy" : {
+		"maze" : 0,
+		"bowling" : 1,
+		"runner" : 1,
+		"cupswap" : 1,
+		"quiz" : 1
+	}
+}

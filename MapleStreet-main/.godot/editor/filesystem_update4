@@ -4,3 +4,5 @@ res://maple_street/Scenes/TitleScreen.tscn
 res://maple_street/Scenes/Maple_Street.tscn
 res://minigame/maze/Scenes/maze.tscn
 res://global/global.gd
+res://minigame/maze/Scripts/mazefinish.gd
+res://global/save_data/game.json

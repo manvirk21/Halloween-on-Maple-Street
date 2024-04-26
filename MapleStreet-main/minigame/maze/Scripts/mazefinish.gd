@@ -15,5 +15,7 @@ func _process(delta):
 func _on_finish_area_2d_body_entered(body):
 	if Cheese.visible == false:
 		Congrats.visible = true 
+		Save.give_candy_to_Teddy("maze")
+		Global.move_Teddy_to_maze_exit()
 	else:
 		pass
