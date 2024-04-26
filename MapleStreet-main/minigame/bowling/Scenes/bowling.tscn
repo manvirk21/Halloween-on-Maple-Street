@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dtx7yre83vthn"]
+[gd_scene load_steps=18 format=3 uid="uid://dtx7yre83vthn"]
 
 [ext_resource type="Script" path="res://minigame/bowling/Scripts/bowling.gd" id="1_mypux"]
 [ext_resource type="Texture2D" uid="uid://dduyfxnjyh2de" path="res://minigame/bowling/Assets/game_frame.png" id="2_oddi8"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d13e7td68bcx7" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_3-removebg-preview.png" id="8_8mgud"]
 [ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="12_7wbhp"]
 [ext_resource type="Script" path="res://minigame/bowling/Scenes/bear.gd" id="13_s3e5a"]
+[ext_resource type="AudioStream" uid="uid://d1kljt4hyfpvr" path="res://minigame/bowling/sounds/A_Halloween_on_Maple_Street_-_Bear_Bowling.mp3" id="14_0876e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hhyq5"]
 animations = [{
@@ -160,6 +161,10 @@ offset_top = 974.0
 offset_right = 491.0
 offset_bottom = 1005.0
 text = "End Game"
+
+[node name="BowlingMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_0876e")
+autoplay = true
 
 [connection signal="area_shape_entered" from="Node2D/strike" to="Node2D/pumpkin" method="_on_strike_area_shape_entered"]
 [connection signal="area_shape_entered" from="Node2D/some" to="Node2D/pumpkin" method="_on_some_area_shape_entered"]

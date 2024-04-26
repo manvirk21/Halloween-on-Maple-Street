@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://gnmwcs0buwwi"]
+[gd_scene load_steps=9 format=3 uid="uid://gnmwcs0buwwi"]
 
 [ext_resource type="PackedScene" uid="uid://b5yotg3nxth1p" path="res://minigame/runner/Scenes/FGBG/background.tscn" id="1_xxm55"]
 [ext_resource type="PackedScene" uid="uid://basaa74qx6e7q" path="res://minigame/runner/Scenes/FGBG/foreground.tscn" id="2_mmeh4"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://epghtp3e4cbc" path="res://minigame/runner/Scenes/UI/score_ui.tscn" id="5_dljuw"]
 [ext_resource type="PackedScene" uid="uid://cp4s05lr4wwhh" path="res://minigame/runner/Scenes/UI/game_over_ui.tscn" id="6_stain"]
 [ext_resource type="Texture2D" uid="uid://bniwd08jvwoo5" path="res://minigame/runner/Assets/Backgrounds/FrameRunner.png" id="7_t0pgj"]
+[ext_resource type="AudioStream" uid="uid://c6fdcbqdhh8h1" path="res://minigame/runner/sounds/A_Halloween_on_Maple_Street_-_Rabbit_Run.mp3" id="8_h8k55"]
 
 [node name="Game" type="Node2D"]
 scale = Vector2(1.00167, 0.989457)
@@ -58,3 +59,7 @@ offset_right = 776.77
 offset_bottom = 84.8951
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="RunnerMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_h8k55")
+autoplay = true

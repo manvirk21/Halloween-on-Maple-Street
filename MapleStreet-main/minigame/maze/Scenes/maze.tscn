@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbi06dkv4dmbs"]
+[gd_scene load_steps=11 format=3 uid="uid://bbi06dkv4dmbs"]
 
 [ext_resource type="Script" path="res://minigame/maze/Scripts/maze.gd" id="1_gpj00"]
 [ext_resource type="Texture2D" uid="uid://jntnktkacac" path="res://minigame/maze/Assets/MouseHouse_Maze_Prototype.png" id="2_vw0gl"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dbpgwb6b2rftt" path="res://minigame/maze/Assets/New_Maze_Icon.png" id="5_6a35s"]
 [ext_resource type="Script" path="res://minigame/maze/Scripts/mazefinish.gd" id="6_eu63f"]
 [ext_resource type="PackedScene" uid="uid://c3flmmd32aah6" path="res://maple_street/Scenes/minigame_finish.tscn" id="7_6gd11"]
+[ext_resource type="AudioStream" uid="uid://5hcsme27hiqj" path="res://minigame/maze/sounds/A_Halloween_on_Maple_Street_-_Mouse_Maze.mp3" id="8_cypti"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u6o27"]
 radius = 10.8167
@@ -55,5 +56,9 @@ position = Vector2(1310, 1004)
 shape = SubResource("RectangleShape2D_k5pud")
 
 [node name="MiniGameFinish" parent="Finish" instance=ExtResource("7_6gd11")]
+
+[node name="MazeMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_cypti")
+autoplay = true
 
 [connection signal="body_entered" from="Finish/FinishArea2D" to="Finish" method="_on_finish_area_2d_body_entered"]
