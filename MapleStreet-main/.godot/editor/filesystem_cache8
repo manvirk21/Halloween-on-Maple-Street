@@ -13,11 +13,12 @@ BearHouseIIJPEG.jpg::CompressedTexture2D::6766669474388609748::1714096986::17140
 mapleStreet2.jpg::CompressedTexture2D::8690578363061041452::1714096986::1714096986::1::::<><>::
 MouseHouseIIJPEG.jpg::CompressedTexture2D::8229338772140731420::1714096986::1714096986::1::::<><>::
 WIPSecondRowHouses.png::CompressedTexture2D::7006965396494906387::1714096986::1714096986::1::::<><>::
-::res://maple_street/Assets/NPC/::1714098521
+::res://maple_street/Assets/NPC/::1714098890
 BearPlacement.png::CompressedTexture2D::201683340874501171::1714096986::1714096986::1::::<><>::
 ColorblockedbearKRAsmall.png::CompressedTexture2D::9005404916302278925::1714096986::1714096986::1::::<><>::
 Colorblockedmousesmall.png::CompressedTexture2D::4647353027606666143::1714096986::1714096986::1::::<><>::
 MousePlacement.png::CompressedTexture2D::4644011025656011223::1714096986::1714096986::1::::<><>::
+Resized Bunny.png::CompressedTexture2D::4467585890070950958::1714098890::1714098891::1::::<><>::
 Resized Raccoon.png::CompressedTexture2D::8002113169699317861::1714098521::1714098522::1::::<><>::
 ::res://maple_street/Assets/Test/::1714096986
 Bear_Bowling_Linework.jpg::CompressedTexture2D::3229556039203951744::1714096986::1714096986::1::::<><>::
@@ -36,8 +37,8 @@ DialogueDummy.png::CompressedTexture2D::6609698377233598927::1714096986::1714096
 InvenInventoryButton.png::CompressedTexture2D::443936185911428638::1714096986::1714096986::1::::<><>::
 Inventory_ButtonPNG.png::CompressedTexture2D::6927594129334497757::1714096986::1714096986::1::::<><>::
 questionMark_transparent.png::CompressedTexture2D::8842981391196778830::1714096986::1714096986::1::::<><>::
-::res://maple_street/Scenes/::1714098275
-Maple_Street.tscn::PackedScene::4231654671746741309::1714098275::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://c63hxw8llc2u6::::res://maple_street/Assets/Houses/WIPSecondRowHouses.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>res://maple_street/Scripts/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>uid://bw0c5mxtms8hh::::res://maple_street/Assets/UI/DialogBoxLineArt.png<>uid://dx8uu164iy0f7::::res://maple_street/Assets/UI/questionMark_transparent.png
+::res://maple_street/Scenes/::1714098565
+Maple_Street.tscn::PackedScene::4231654671746741309::1714098565::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://c63hxw8llc2u6::::res://maple_street/Assets/Houses/WIPSecondRowHouses.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>res://maple_street/Scripts/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://dmajvt2pqlg7v::::res://maple_street/Assets/NPC/Resized Raccoon.png<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>uid://bw0c5mxtms8hh::::res://maple_street/Assets/UI/DialogBoxLineArt.png<>uid://dx8uu164iy0f7::::res://maple_street/Assets/UI/questionMark_transparent.png
 TitleScreen.tscn::PackedScene::2194138489511529113::1714096986::0::1::::<><>::res://maple_street/Scripts/TitleScreen.gd<>uid://c3h2n8ym6whga::::res://maple_street/Assets/TitleScreen/Title_Screen.png<>uid://c7ylqlmpejtv3::::res://maple_street/Assets/TitleScreen/Start_Game.png<>uid://daw7bvjghjru3::::res://maple_street/Assets/TitleScreen/Settings.png<>uid://dox4tl4c82tqw::::res://maple_street/Assets/TitleScreen/Credits.png
 ::res://maple_street/Scripts/::1714097123
 Dialog.json::JSON::-1::1714096986::0::1::::<><>::
