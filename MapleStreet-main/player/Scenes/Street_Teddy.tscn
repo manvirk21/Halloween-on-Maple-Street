@@ -1,7 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://q35n1ykq2747"]
+[gd_scene load_steps=5 format=3 uid="uid://q35n1ykq2747"]
 
 [ext_resource type="Script" path="res://player/Scripts/player.gd" id="1_7eqgn"]
-[ext_resource type="Texture2D" uid="uid://bjioucp2nuuml" path="res://player/Assets/Teddy_StandingPNG.png" id="2_nkb4o"]
+[ext_resource type="Texture2D" uid="uid://coh8x4l48kol6" path="res://player/Assets/teddy_walk_01.png" id="2_h1p7h"]
+[ext_resource type="Texture2D" uid="uid://bh6s5fan62tt7" path="res://player/Assets/teddy_walk_02.png" id="3_7cw7j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ffn2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7cw7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h1p7h")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="Street_Teddy" type="CharacterBody2D"]
 position = Vector2(19, 460)
@@ -10,10 +25,12 @@ script = ExtResource("1_7eqgn")
 
 [node name="Locator" type="RemoteTransform2D" parent="."]
 
-[node name="Teddy_Sprite" type="Sprite2D" parent="."]
+[node name="Teddy_Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(142.76, 173.963)
 scale = Vector2(0.974421, 0.994822)
-texture = ExtResource("2_nkb4o")
+sprite_frames = SubResource("SpriteFrames_5ffn2")
+animation = &"walk"
+frame_progress = 0.874325
 
 [node name="Collision" type="CollisionPolygon2D" parent="."]
 visibility_layer = 6

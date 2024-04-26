@@ -42,17 +42,17 @@ Inventory_ButtonPNG.png::CompressedTexture2D::6927594129334497757::1713547707::1
 Mouse Text Box.png::CompressedTexture2D::6311943983979223292::1714104408::1714113789::1::::<><>::
 questionMark_transparent.png::CompressedTexture2D::8842981391196778830::1713979153::1713979153::1::::<><>::
 Raccoon Text Box.png::CompressedTexture2D::1072467127867730936::1714104408::1714113789::1::::<><>::
-::res://maple_street/Scenes/::1714113793
+::res://maple_street/Scenes/::1714114059
 Maple_Street.tscn::PackedScene::4231654671746741309::1714113935::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://c63hxw8llc2u6::::res://maple_street/Assets/Houses/WIPSecondRowHouses.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>res://maple_street/Scripts/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://dmajvt2pqlg7v::::res://maple_street/Assets/NPC/Resized Raccoon.png<>uid://b4weqs3uvlsq5::::res://maple_street/Assets/NPC/Resized Bunny.png<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>uid://bw0c5mxtms8hh::::res://maple_street/Assets/UI/DialogBoxLineArt.png<>uid://dx8uu164iy0f7::::res://maple_street/Assets/UI/questionMark_transparent.png<>uid://bm1gmqn2tnpx5::::res://maple_street/Assets/UI/Bunny Text Box PNG.png<>uid://cldkj1p1c01nk::::res://maple_street/Assets/UI/Bear Text Box.png<>uid://pjrm2x627wvg::::res://maple_street/Assets/UI/Raccoon Text Box.png<>uid://cv6s2bjx6f2vo::::res://maple_street/Assets/UI/Mouse Text Box.png
 minigame_finish.tscn::PackedScene::6749140830691585789::1714104408::0::1::::<><>::res://maple_street/Scripts/minigame_finish.gd<>uid://c24b15q7u14vj::::res://minigame/maze/Assets/Winning_Screen_Wireframe.png
-TitleScreen.tscn::PackedScene::2194138489511529113::1714113793::0::1::::<><>::res://maple_street/Scripts/TitleScreen.gd<>uid://c3h2n8ym6whga::::res://maple_street/Assets/TitleScreen/Title_Screen.png<>uid://c7ylqlmpejtv3::::res://maple_street/Assets/TitleScreen/Start_Game.png<>uid://daw7bvjghjru3::::res://maple_street/Assets/TitleScreen/Settings.png<>uid://dox4tl4c82tqw::::res://maple_street/Assets/TitleScreen/Credits.png
-::res://maple_street/Scripts/::1714113793
+TitleScreen.tscn::PackedScene::2194138489511529113::1714114059::0::1::::<><>::res://maple_street/Scripts/TitleScreen.gd<>uid://c3h2n8ym6whga::::res://maple_street/Assets/TitleScreen/Title_Screen.png<>uid://c7ylqlmpejtv3::::res://maple_street/Assets/TitleScreen/Start_Game.png<>uid://daw7bvjghjru3::::res://maple_street/Assets/TitleScreen/Settings.png<>uid://dox4tl4c82tqw::::res://maple_street/Assets/TitleScreen/Credits.png
+::res://maple_street/Scripts/::1714113965
 Dialog.json::JSON::-1::1714058453::0::1::::<><>::
 maple_street.gd::GDScript::-1::1713979720::0::1::::<>Node2D<>::
 minigame_enabler.gd::GDScript::-1::1714058453::0::1::::<>Node2D<>::
 minigame_finish.gd::GDScript::-1::1714104408::0::1::::<>Node2D<>::
 TitleScreen.gd::GDScript::-1::1712770882::0::1::::<>Control<>::
-UI.gd::GDScript::-1::1714113793::0::1::::<>CanvasLayer<>::
+UI.gd::GDScript::-1::1714113965::0::1::::<>CanvasLayer<>::
 ::res://minigame/::1714104408
 ::res://minigame/bowling/::1712941930
 ::res://minigame/bowling/Assets/::1713644436
@@ -167,9 +167,11 @@ spawner.gd::GDScript::-1::1712941930::0::1::::<>Node2D<>::
 updatescoreui.gd::GDScript::-1::1712941930::0::1::::<>RichTextLabel<>::
 ::res://player/::1713543794
 Dialog.json::JSON::-1::1713543794::0::1::::<><>::
-::res://player/Assets/::1713543794
+::res://player/Assets/::1714114498
 Teddy_Character_Prototype.png::CompressedTexture2D::838191016239524456::1712766468::1712770596::1::::<><>::
 Teddy_StandingPNG.png::CompressedTexture2D::3035521181708404099::1713543794::1713543794::1::::<><>::
+teddy_walk_01.png::CompressedTexture2D::5771982098150318605::1714114493::1714114493::1::::<><>::
+teddy_walk_02.png::CompressedTexture2D::2942885042472045530::1714114498::1714114498::1::::<><>::
 ::res://player/Scenes/::1713649640
 Street_Teddy.tscn::PackedScene::1182670203585194002::1713649640::0::1::::<><>::res://player/Scripts/player.gd<>uid://bjioucp2nuuml::::res://player/Assets/Teddy_StandingPNG.png
 ::res://player/Scripts/::1713543794

@@ -19,6 +19,10 @@ func _physics_process(_delta):
 func _process_user_input():
 	var direction = Input.get_vector("LEFT", "RIGHT", "UP", "DOWN")
 	velocity = Global.Teddy_Speed * direction
+	if velocity != Vector2(0, 0) :
+		$Teddy_Sprite.play()
+	else:
+		$Teddy_Sprite.stop()
 	
 	
 # Flip sprite, if applicable
