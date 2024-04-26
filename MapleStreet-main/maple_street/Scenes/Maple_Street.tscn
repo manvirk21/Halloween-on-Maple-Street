@@ -209,22 +209,27 @@ offset_bottom = 325.0
 texture_normal = ExtResource("13_sk14g")
 
 [node name="DialogBox" type="Sprite2D" parent="UI"]
+visible = false
 position = Vector2(958, 884)
 texture = ExtResource("13_678g1")
 
 [node name="BunnyDialogue" type="Sprite2D" parent="UI"]
+visible = false
 position = Vector2(958, 884)
 texture = ExtResource("16_lf1h5")
 
 [node name="BearDialogue" type="Sprite2D" parent="UI"]
+visible = false
 position = Vector2(958, 884)
 texture = ExtResource("17_2ff0b")
 
 [node name="RaccoonDialogue" type="Sprite2D" parent="UI"]
+visible = false
 position = Vector2(958, 884)
 texture = ExtResource("18_r3alk")
 
 [node name="MouseDialogue" type="Sprite2D" parent="UI"]
+visible = false
 position = Vector2(958, 884)
 texture = ExtResource("19_c7aed")
 
