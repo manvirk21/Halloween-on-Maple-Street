@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://6i4e1iq6g2th"]
+[gd_scene load_steps=9 format=3 uid="uid://6i4e1iq6g2th"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/TitleScreen.gd" id="1_l3tev"]
 [ext_resource type="Texture2D" uid="uid://c3h2n8ym6whga" path="res://maple_street/Assets/TitleScreen/Title_Screen.png" id="2_gxhoo"]
 [ext_resource type="Texture2D" uid="uid://c7ylqlmpejtv3" path="res://maple_street/Assets/TitleScreen/Start_Game.png" id="3_l2gbe"]
 [ext_resource type="Texture2D" uid="uid://daw7bvjghjru3" path="res://maple_street/Assets/TitleScreen/Settings.png" id="4_k8uik"]
 [ext_resource type="Texture2D" uid="uid://dox4tl4c82tqw" path="res://maple_street/Assets/TitleScreen/Credits.png" id="5_uuty7"]
+[ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="6_jrqqy"]
 
 [sub_resource type="FontFile" id="FontFile_jqq4x"]
 subpixel_positioning = 0
@@ -91,5 +92,9 @@ text = "Credits"
 position = Vector2(234.5, 62.5)
 scale = Vector2(1.58983, 1.52439)
 texture = ExtResource("5_uuty7")
+
+[node name="OpenWorld" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_jrqqy")
+autoplay = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

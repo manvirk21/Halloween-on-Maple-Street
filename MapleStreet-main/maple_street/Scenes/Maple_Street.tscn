@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=23 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b7hhhwsiu05xr" path="res://maple_street/Assets/NPC/Colorblockedmousesmall.png" id="6_cfwgk"]
 [ext_resource type="Texture2D" uid="uid://dmajvt2pqlg7v" path="res://maple_street/Assets/NPC/Resized Raccoon.png" id="7_0l4x6"]
 [ext_resource type="Texture2D" uid="uid://b4weqs3uvlsq5" path="res://maple_street/Assets/NPC/Resized Bunny.png" id="8_bk0tn"]
+[ext_resource type="Texture2D" uid="uid://csge70d0wqrb0" path="res://maple_street/Assets/NPC/Resized Owl.png" id="9_irgaj"]
 [ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI/Dialog.gd" id="12_ejm64"]
 [ext_resource type="Texture2D" uid="uid://bw0c5mxtms8hh" path="res://maple_street/Assets/UI/DialogBoxLineArt.png" id="13_678g1"]
@@ -80,7 +81,7 @@ texture = ExtResource("7_0l4x6")
 [node name="Owl" type="Sprite2D" parent="NPCsSprites"]
 visible = false
 position = Vector2(6972, 578)
-texture = ExtResource("7_0l4x6")
+texture = ExtResource("9_irgaj")
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
 visible = false

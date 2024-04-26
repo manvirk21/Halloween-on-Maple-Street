@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwvg7830bux5d"]
+[gd_scene load_steps=10 format=3 uid="uid://cwvg7830bux5d"]
 
 [ext_resource type="Script" path="res://minigame/cupswap/Scripts/CupSwap.gd" id="1_3g2hc"]
 [ext_resource type="Texture2D" uid="uid://0w60yoweu6a7" path="res://minigame/cupswap/Assets/background.jpg" id="2_3f4ne"]
 [ext_resource type="Texture2D" uid="uid://81j7tcs38pae" path="res://minigame/cupswap/Assets/Cotton_Candy_Prize_-_Cup_Swap.png" id="3_v1nnl"]
 [ext_resource type="Texture2D" uid="uid://44wowhpaotue" path="res://minigame/cupswap/Assets/Trash_Can_cupswap.png" id="4_uy6yb"]
+[ext_resource type="AudioStream" uid="uid://ootq6miqb6cx" path="res://minigame/cupswap/sounds/A_Halloween_on_Maple_Street_-_Racoon_Game.mp3" id="6_bdh80"]
 [ext_resource type="Texture2D" uid="uid://ibscnkijh11p" path="res://minigame/cupswap/Assets/RaccoonGameScreenTransparent.png" id="6_q57a5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yya4s"]
@@ -137,6 +138,10 @@ offset_right = 1365.0
 offset_bottom = 743.0
 theme_override_font_sizes/font_size = 40
 text = "Exit Game"
+
+[node name="CupswapMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_bdh80")
+autoplay = true
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="Trash1" to="." method="_on_trash_1_pressed"]
