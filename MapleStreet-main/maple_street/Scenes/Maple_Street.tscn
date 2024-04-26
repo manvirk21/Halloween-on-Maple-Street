@@ -260,6 +260,21 @@ autowrap_mode = 2
 process_mode = 3
 script = ExtResource("6_bcvno")
 
+[node name="Container" type="Node2D" parent="Buttons"]
+position = Vector2(500, 250)
+
+[node name="temp_inventory" type="TextureRect" parent="Buttons/Container"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("23_8b35x")
+
+[node name="temp_help" type="TextureRect" parent="Buttons/Container"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("23_8b35x")
+
 [node name="InventoryButton" type="TextureButton" parent="Buttons"]
 offset_left = 1702.0
 offset_top = 29.0
@@ -277,21 +292,6 @@ texture_normal = ExtResource("13_sk14g")
 [node name="OpenWorld" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_fn7h3")
 autoplay = true
-
-[node name="Container" type="Node2D" parent="."]
-position = Vector2(500, 250)
-
-[node name="temp_inventory" type="TextureRect" parent="Container"]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("23_8b35x")
-
-[node name="temp_help" type="TextureRect" parent="Container"]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("23_8b35x")
 
 [connection signal="body_entered" from="GrassAreas" to="." method="_on_Teddy_exits_grass"]
 [connection signal="body_exited" from="GrassAreas" to="." method="_on_Teddy_enters_grass"]

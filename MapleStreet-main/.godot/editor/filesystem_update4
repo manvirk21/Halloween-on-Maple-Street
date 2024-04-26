@@ -1,5 +1,6 @@
-res://maple_street/Scenes/TitleScreen.tscn
 res://maple_street/Scenes/Maple_Street.tscn
+res://global/save_data/game.json
+res://maple_street/Scenes/TitleScreen.tscn
 res://player/Scenes/Street_Teddy.tscn
 res://minigame/maze/Scenes/maze.tscn
 res://minigame/cupswap/Scenes/cupswap.tscn
