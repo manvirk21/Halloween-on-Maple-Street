@@ -24,7 +24,9 @@
 			"Squeak! Thank you Teddy! I couldn't have done that on my own.",
 			"Do you know why I love cheese so much?",
 			"It's because us mice are omnivores which means that I love eating  veggies, meat, and more!"
-		]
+		],
+
+		"NPC" : "Mouse"
 	},
 	
 	"bowling" : {
@@ -50,7 +52,9 @@
 			"Wow wasn't that a blast!",
 			"Did you know that although my paws are too big for those bowling balls, they are great for fishing!",
 			"I can catch around 30 salmon with my bare paws a day! Keep that in mind!"
-		]
+		],
+
+		"NPC" : "Bear"
 	},
 	
 	"cupswap" : {
@@ -78,7 +82,9 @@
 			"You know what kid? You have really sharp eyes!",
 			"Did you notice how fast those cups were? It's because raccoons are known for their dexterity.",
 			"We have nimble fingers that allow us to play with objects, and that's how I moved those cups around!"
-		]
+		],
+
+		"NPC" : "Raccoon"
 	},
 
 	"runner" : {
@@ -107,7 +113,9 @@
 			"I'm ready for some dinner. I'm sure you're curious about why I have so many carrots for dinner.",
 			"I just have to keep munching on things like carrots and other food because my teeth never stop growing.",
 			"So I use food to grind them down and keep them shiny."
-		]
+		],
+
+		"NPC" : "Bunny"
 	},
 
 	"quiz" : {
@@ -127,6 +135,8 @@
 		"Retry" : [
 			"You need to brush up on your trivia if you want to get that candy.",
 			"Go back and study and then you can try again."
-		]
+		],
+
+		"NPC" : "Owl"
 	}
 }

@@ -1,4 +1,3 @@
 res://maple_street/Scenes/Maple_Street.tscn
 res://maple_street/Scripts/UI.gd
-res://minigame/cupswap/Scenes/cup_swap.tscn
-res://minigame/cupswap/Scripts/CupSwap.gd
+res://maple_street/Scripts/Dialog.json

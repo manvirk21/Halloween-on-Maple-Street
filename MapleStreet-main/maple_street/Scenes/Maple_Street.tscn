@@ -174,6 +174,7 @@ light_mask = 4
 collision_layer = 4
 
 [node name="QuizDoorLight" type="Sprite2D" parent="MinigameEnabler/Quiz"]
+visible = false
 position = Vector2(7306, 295)
 scale = Vector2(1.395, 1.45238)
 texture = ExtResource("5_4v37p")
@@ -208,34 +209,50 @@ offset_right = 1892.0
 offset_bottom = 325.0
 texture_normal = ExtResource("13_sk14g")
 
-[node name="DialogBox" type="Sprite2D" parent="UI"]
+[node name="OwlDialogBox" type="Sprite2D" parent="UI"]
+visible = false
 position = Vector2(958, 884)
 texture = ExtResource("13_678g1")
 
-[node name="BunnyDialogue" type="Sprite2D" parent="UI"]
+[node name="BunnyDialogBox" type="Sprite2D" parent="UI"]
+visible = false
 position = Vector2(958, 884)
 texture = ExtResource("16_lf1h5")
 
-[node name="BearDialogue" type="Sprite2D" parent="UI"]
+[node name="BearDialogBox" type="Sprite2D" parent="UI"]
+visible = false
 position = Vector2(958, 884)
 texture = ExtResource("17_2ff0b")
 
-[node name="RaccoonDialogue" type="Sprite2D" parent="UI"]
+[node name="RaccoonDialogBox" type="Sprite2D" parent="UI"]
+visible = false
 position = Vector2(958, 884)
 texture = ExtResource("18_r3alk")
 
-[node name="MouseDialogue" type="Sprite2D" parent="UI"]
+[node name="MouseDialogBox" type="Sprite2D" parent="UI"]
+visible = false
 position = Vector2(958, 884)
 texture = ExtResource("19_c7aed")
 
+[node name="NPC_Name" type="Label" parent="UI"]
+visible = false
+offset_left = 440.0
+offset_top = 775.0
+offset_right = 1721.0
+offset_bottom = 968.0
+theme_override_colors/font_color = Color(0.329412, 0.729412, 0.478431, 1)
+theme_override_font_sizes/font_size = 40
+text = "text"
+autowrap_mode = 2
+
 [node name="Dialog" type="Label" parent="UI"]
 visible = false
-offset_left = 171.0
-offset_top = 795.0
-offset_right = 1725.0
-offset_bottom = 975.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 60
+offset_left = 442.0
+offset_top = 831.0
+offset_right = 1761.0
+offset_bottom = 968.0
+theme_override_colors/font_color = Color(0.384314, 0.27451, 0.0509804, 1)
+theme_override_font_sizes/font_size = 40
 text = "text"
 autowrap_mode = 2
 
