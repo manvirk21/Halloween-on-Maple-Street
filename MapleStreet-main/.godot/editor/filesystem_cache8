@@ -13,7 +13,7 @@ BearHouseIIJPEG.jpg::CompressedTexture2D::6766669474388609748::1714096986::17140
 mapleStreet2.jpg::CompressedTexture2D::8690578363061041452::1714096986::1714096986::1::::<><>::
 MouseHouseIIJPEG.jpg::CompressedTexture2D::8229338772140731420::1714096986::1714096986::1::::<><>::
 WIPSecondRowHouses.png::CompressedTexture2D::7006965396494906387::1714096986::1714096986::1::::<><>::
-::res://maple_street/Assets/NPC/::1714098890
+::res://maple_street/Assets/NPC/::1714098891
 BearPlacement.png::CompressedTexture2D::201683340874501171::1714096986::1714096986::1::::<><>::
 ColorblockedbearKRAsmall.png::CompressedTexture2D::9005404916302278925::1714096986::1714096986::1::::<><>::
 Colorblockedmousesmall.png::CompressedTexture2D::4647353027606666143::1714096986::1714096986::1::::<><>::
@@ -31,12 +31,16 @@ Settings.png::CompressedTexture2D::7206624208406983744::1714096986::1714096986::
 Start_Game.png::CompressedTexture2D::7069126486505340186::1714096986::1714096986::1::::<><>::
 Start_Screen.png::CompressedTexture2D::5250899885204659342::1714096986::1714096986::1::::<><>::
 Title_Screen.png::CompressedTexture2D::6754243978588370696::1714096986::1714096986::1::::<><>::
-::res://maple_street/Assets/UI/::1714096986
+::res://maple_street/Assets/UI/::1714099007
+Bear Text Box.png::CompressedTexture2D::5551736412703723156::1714099003::1714099004::1::::<><>::
+Bunny Text Box PNG.png::CompressedTexture2D::3282747222147237024::1714099007::1714099007::1::::<><>::
 DialogBoxLineArt.png::CompressedTexture2D::3982360362074745961::1714096986::1714096986::1::::<><>::
 DialogueDummy.png::CompressedTexture2D::6609698377233598927::1714096986::1714096986::1::::<><>::
 InvenInventoryButton.png::CompressedTexture2D::443936185911428638::1714096986::1714096986::1::::<><>::
 Inventory_ButtonPNG.png::CompressedTexture2D::6927594129334497757::1714096986::1714096986::1::::<><>::
+Mouse Text Box.png::CompressedTexture2D::6311943983979223292::1714099000::1714099000::1::::<><>::
 questionMark_transparent.png::CompressedTexture2D::8842981391196778830::1714096986::1714096986::1::::<><>::
+Raccoon Text Box.png::CompressedTexture2D::1072467127867730936::1714098995::1714098995::1::::<><>::
 ::res://maple_street/Scenes/::1714098565
 Maple_Street.tscn::PackedScene::4231654671746741309::1714098565::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://c63hxw8llc2u6::::res://maple_street/Assets/Houses/WIPSecondRowHouses.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>res://maple_street/Scripts/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://dmajvt2pqlg7v::::res://maple_street/Assets/NPC/Resized Raccoon.png<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>uid://bw0c5mxtms8hh::::res://maple_street/Assets/UI/DialogBoxLineArt.png<>uid://dx8uu164iy0f7::::res://maple_street/Assets/UI/questionMark_transparent.png
 TitleScreen.tscn::PackedScene::2194138489511529113::1714096986::0::1::::<><>::res://maple_street/Scripts/TitleScreen.gd<>uid://c3h2n8ym6whga::::res://maple_street/Assets/TitleScreen/Title_Screen.png<>uid://c7ylqlmpejtv3::::res://maple_street/Assets/TitleScreen/Start_Game.png<>uid://daw7bvjghjru3::::res://maple_street/Assets/TitleScreen/Settings.png<>uid://dox4tl4c82tqw::::res://maple_street/Assets/TitleScreen/Credits.png
