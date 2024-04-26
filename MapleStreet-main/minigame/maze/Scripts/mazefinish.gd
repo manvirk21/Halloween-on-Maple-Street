@@ -13,9 +13,9 @@ func _process(delta):
 
 #when teddy finishes the maze the finish screen becomes visible
 func _on_finish_area_2d_body_entered(body):
+	var give_candy : bool = false
+	
 	if Cheese.visible == false:
-		Congrats.visible = true 
-		Save.give_candy_to_Teddy("maze")
-		Global.move_Teddy_to_maze_exit()
-	else:
-		pass
+		give_candy = true
+	
+	Global.change_to_main_street("maze", give_candy)

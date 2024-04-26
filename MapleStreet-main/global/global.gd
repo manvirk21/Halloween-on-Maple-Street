@@ -20,29 +20,25 @@ var Street_Teddy_gp_not_initialized : bool = true
 var Street_Teddy_global_position : Vector2
 var Street_Teddy_maze_completed_position : Vector2
 var Street_Teddy_reposition : Dictionary = {
-	"maze" : null,
-	"bowling" : null,
-	"runner" : null,
-	"cupswap" : null,
-	"quiz" : null
-}
+	"maze" : [null, true],
+	"bowling" : [null, false],
+	"runner" : [null, true],
+	"cupswap" : [null, true],
+	"quiz" : [null, true]
+} # [position : Vector2, sprite flip : bool]
 
 # Teddy settings
 var Teddy_resize_on : bool
 var Teddy_sprite_edit_on : bool # to know if flipping and animations are allowed
 var Teddy_sprite_flip : bool = false # to save last state of flip_h
 
-# valid strings for states and minigames
-var VALID_STATES = ["Instructions", "Retry", "Fun Fact"]
+# valid strings for minigames
 var VALID_MINIGAMES = ["maze", "bowling", "runner", "cupswap", "quiz"]
 
-# flag for if dialog needs to pop up when returning from minigame
+# helpers for if dialog needs to pop up when returning from minigame
 var dialog_after_minigame : bool = false
-
-# returns key for dialog dictionary of active minigame based on it's state
-func get_minigame_state():
-	var minigame_states = Save.get_minigame_states()
-	return VALID_STATES[minigame_states[active_minigame]]
+var dialog_key : String = "Instructions"
+var dialog_minigame : String
 
 # Change Teddy settings
 func set_Teddy_settings(resize : bool, sprite_flip : bool):
@@ -71,3 +67,28 @@ func move_Teddy_to_maze_exit():
 	
 	# have Teddy facing the mouse
 	Teddy_sprite_flip = true
+
+# used within minigame scenes
+func change_to_main_street(minigame : String, candy_acquired : bool):
+	# signal to maple street that dialog needs to pop up upon loading
+	dialog_after_minigame = true
+	
+	# assume minigame wasn't completed
+	dialog_key = "Retry"
+	
+	# if candy was acquired 
+	if candy_acquired:
+		# give the candy
+		Save.give_candy_to_Teddy(minigame)
+	
+		# update Teddy position and sprite
+		var settings = Street_Teddy_reposition[minigame]
+		Street_Teddy_global_position = settings[0]
+		Teddy_sprite_flip = settings[1]
+		
+		# select dialog blurb
+		dialog_key = "Completion"
+		active_minigame = minigame
+
+	# change scene to maple street
+	get_tree().change_scene_to_file("res://maple_street/Scenes/Maple_Street.tscn")

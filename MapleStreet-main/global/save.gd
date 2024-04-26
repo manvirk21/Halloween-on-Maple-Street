@@ -5,13 +5,8 @@ var json = JSON.new()
 var save_file_name : String = "res://global/save_data/game.json"
 var save_data : Dictionary = JSON.parse_string(FileAccess.get_file_as_string(save_file_name))
 
-# valid minigame states
-var STATES = Global.VALID_STATES
+# valid minigames
 var MINIGAMES = Global.VALID_MINIGAMES
-
-# returns all minigame states
-func get_minigame_states():
-	return save_data["minigames"]
 
 # returns candy inventory 
 func get_candy_inventory():
@@ -22,10 +17,6 @@ func give_candy_to_Teddy(minigame):
 	if minigame in MINIGAMES:
 		save_data["candy"][minigame] += 1
 		_save()
-
-# set minigame state 
-func set_minigame_state():
-	pass
 	
 # saves game data
 func _save():

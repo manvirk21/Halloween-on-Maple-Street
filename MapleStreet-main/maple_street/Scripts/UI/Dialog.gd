@@ -8,6 +8,7 @@ var dialog_not_started : bool = true # to know if dialog needs to be initialized
 var dialog_running : bool = false # to know to keep showing dialog
 var dialog_finished : bool = false # to know when to change scene
 var dialog_index : int = 0
+var dialog_feedback_started : bool = false
 
 # JSON file with minigame info strings
 var dialog_file : String = "res://maple_street/Scripts/UI/Dialog.json"
@@ -23,14 +24,27 @@ var dialog_box : Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	game_paused = false
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	# Change scene, if applicable
-	if Input.is_action_just_pressed("E"):
-		if Global.minigame_ready and dialog_not_started:
+	# check if instruction dialog shuld be started
+	var user_input = Input.is_action_just_pressed("DIALOG") 
+	var instructions_dialog = user_input and Global.minigame_ready
+	
+	# check if retry/completion dialog shuld be started
+	var start_feedback_dialog = Global.dialog_after_minigame and not dialog_feedback_started # makes sure feedback dialog starts
+	var continue_feedback_dialog = user_input and Global.dialog_after_minigame # makes sure sure feedback continues
+	var feedback_dialog = start_feedback_dialog or continue_feedback_dialog
+	
+	# Start dialog, if applicable
+	if instructions_dialog or feedback_dialog:
+		if dialog_not_started:
 			start_dialog()
+			
+			# turn flag off so that feedback dialog displays correctly
+			if start_feedback_dialog:
+				dialog_feedback_started = true
 	
 		elif dialog_running:
 			display_dialog_text()
@@ -49,9 +63,9 @@ func start_dialog():
 	$Dialog.visible = true
 	$NPC_Name.visible = true
 
-	# get dialog for minigame based on the state of the minigame
+	# if entering a minigame get dialog on the state of the minigame
 	minigame_info = dialog_dict[Global.active_minigame]
-	minigame_dialog = minigame_info[Global.get_minigame_state()]
+	minigame_dialog = minigame_info[Global.dialog_key]
 	
 	# display name of minigame NPC
 	minigame_npc = minigame_info["NPC"]
@@ -79,14 +93,23 @@ func finish_dialog():
 	dialog_not_started = true
 	dialog_finished = false
 	
+	# reset globals
+	Global.dialog_after_minigame = false
+	Global.minigame_ready = false
+	
 	# resume scene and hide dialog nodes
 	resume()
 	dialog_box.visible = false
 	$Dialog.visible = false
 	$NPC_Name.visible = false
 	
-	# send signal to MapleStreet node to change scene to minigame
-	emit_signal("ChangeScene")
+	# if starting/retrying minigame, send signal to MapleStreet node to change scene to minigame
+	if Global.dialog_key != "Completion":
+		emit_signal("ChangeScene")
+	
+	# reset dialog key
+	else:
+		Global.dialog_key = "Instructions"
 
 
 # pause street 

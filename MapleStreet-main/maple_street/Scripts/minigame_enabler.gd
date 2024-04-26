@@ -26,7 +26,6 @@ func _activate_minigame(body, minigame : String):
 # Deactivates house when player leaves house area 
 func _deactivate_minigame(body):
 	if body.name == "Street_Teddy":
-		Global.active_minigame = Global.NONE
 		Global.minigame_ready = false
 
 

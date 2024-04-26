@@ -30,10 +30,11 @@ func instantiate_Teddy():
 	# make Teddy instance
 	var Teddy = Street_Teddy.instantiate()
 	
-	# get Teddy's initial position
+	# get Teddy's initial position and minigame finished positions
 	if Global.Street_Teddy_gp_not_initialized:
-		Global.Street_Teddy_global_position = $PositionMarkers/InitialTeddyPosition.global_position
-		Global.Street_Teddy_maze_completed_position = $PositionMarkers/mazeFinishPosition.global_position
+		set_minigame_finished_positions()
+		var initial_marker = $PositionMarkers/InitialTeddyPosition
+		Global.Street_Teddy_global_position = initial_marker.global_position
 		Global.Street_Teddy_gp_not_initialized = false
 	
 	# position Teddy correctly
@@ -53,7 +54,10 @@ func instantiate_Teddy():
 # save minigame finished positions (used to move Teddy)
 func set_minigame_finished_positions():
 	for minigame in Global.VALID_MINIGAMES:
-		var position = get_node("Position")
+		var marker_node = get_node("PositionMarkers/" + minigame + "FinishPosition")
+		var minigame_position = marker_node.global_position
+		# position is at index 0, sprite flip is at index 1
+		Global.Street_Teddy_reposition[minigame][0] = minigame_position
 
 # change scene to a minigame
 func change_scene():

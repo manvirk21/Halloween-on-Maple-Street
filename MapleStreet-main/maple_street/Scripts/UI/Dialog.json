@@ -12,18 +12,14 @@
 		
 		"Completion" : [
 			"Wowie! You did it, Teddy!",
-			"That cheese made it through the maze like a champ. Here's your candy!"
+			"That cheese made it through the maze like a champ. Here's your candy!",
+			"Do you know why I love cheese so much?",
+			"It's because us mice are omnivores which means that I love eating  veggies, meat, and more!"
 		],
 		
 		"Retry" : [
 			"Eep! You must have taken a wrong turn.",
 			"Just remember to go back if you get stuck! Let's try that again."
-		],
-		
-		"Fun Fact" : [
-			"Squeak! Thank you Teddy! I couldn't have done that on my own.",
-			"Do you know why I love cheese so much?",
-			"It's because us mice are omnivores which means that I love eating  veggies, meat, and more!"
 		],
 
 		"NPC" : "Mouse"
@@ -41,17 +37,13 @@
 		
 		"Completion" : [
 			"Nice elbow work Teddy! You knocked them all down with your pumpkin roll!",
-			"Here's a piece of candy!"
+			"Here's a piece of candy!",
+			"Did you know that although my paws are too big for those bowling balls, they are great for fishing!",
+			"I can catch around 30 salmon with my bare paws a day! Keep that in mind!"
 		],
 		
 		"Retry" : [
 			"Oops, you missed a pin or two. But I'll let you try again. You just gotta adjust your aim. Let's go again."
-		],
-		
-		"Fun Fact" : [
-			"Wow wasn't that a blast!",
-			"Did you know that although my paws are too big for those bowling balls, they are great for fishing!",
-			"I can catch around 30 salmon with my bare paws a day! Keep that in mind!"
 		],
 
 		"NPC" : "Bear"
@@ -70,18 +62,14 @@
 		
 		"Completion" : [
 			"Wow! I didn't think you'd beat me at my own game!",
+			"Did you notice how fast those cups were? It's because raccoons are known for their dexterity.",
+			"We have nimble fingers that allow us to play with objects, and that's how I moved those cups around!",
 			"But here you go as promised. A piece of candy coming right up!"
 		],
 		
 		"Retry" : [
 			"Darn kid, you picked the wrong bin.",
 			"You know what, since I like you so much, I'll let you try again. You gotta focus though. Let's go!"
-		],
-
-		"Fun Fact" : [
-			"You know what kid? You have really sharp eyes!",
-			"Did you notice how fast those cups were? It's because raccoons are known for their dexterity.",
-			"We have nimble fingers that allow us to play with objects, and that's how I moved those cups around!"
 		],
 
 		"NPC" : "Raccoon"
@@ -100,19 +88,16 @@
 		],
 
 		"Completion" : [
-			"Wow! Couldn't have hopped better myself! So, candy time!"
+			"Wow! Couldn't have hopped better myself! So, candy time!",
+			"That was great Teddy! Couldn't have hopped better myself!",
+			"I'm ready for some dinner. I'm sure you're curious about why I have so many carrots for dinner.",
+			"I just have to keep munching on things like carrots and other food because my teeth never stop growing.",
+			"So I use food to grind them down and keep them shiny."
 		],
 
 		"Retry" : [
 			"Aww. You missed a jump, Teddy.",
 			"You need to time it better. Let's hop to it again."
-		],
-
-		"Fun Fact" : [
-			"That was great Teddy! Couldn't have hopped better myself!",
-			"I'm ready for some dinner. I'm sure you're curious about why I have so many carrots for dinner.",
-			"I just have to keep munching on things like carrots and other food because my teeth never stop growing.",
-			"So I use food to grind them down and keep them shiny."
 		],
 
 		"NPC" : "Bunny"
