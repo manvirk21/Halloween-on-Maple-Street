@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3flmmd32aah6"]
+
+[ext_resource type="Script" path="res://maple_street/Scripts/minigame_finish.gd" id="1_ufgis"]
+[ext_resource type="Texture2D" uid="uid://c24b15q7u14vj" path="res://minigame/maze/Assets/Winning_Screen_Wireframe.png" id="7_qy50p"]
+
+[node name="MiniGameFinish" type="Node2D"]
+script = ExtResource("1_ufgis")
+
+[node name="FinishScreen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(961.5, 538)
+scale = Vector2(1.00052, 0.998148)
+texture = ExtResource("7_qy50p")
+
+[node name="continue_game" type="Button" parent="FinishScreen"]
+offset_left = 463.0
+offset_top = 297.0
+offset_right = 796.0
+offset_bottom = 402.0
+flat = true
+
+[node name="try_again" type="Button" parent="FinishScreen"]
+offset_left = -782.0
+offset_top = 297.0
+offset_right = -473.0
+offset_bottom = 402.0
+flat = true
+
+[connection signal="pressed" from="FinishScreen/continue_game" to="." method="_on_continue_game_pressed"]
+[connection signal="pressed" from="FinishScreen/try_again" to="." method="_on_try_again_pressed"]
