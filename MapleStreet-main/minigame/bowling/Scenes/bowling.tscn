@@ -156,6 +156,7 @@ texture = ExtResource("12_7wbhp")
 script = ExtResource("13_s3e5a")
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = 404.0
 offset_top = 974.0
 offset_right = 491.0
