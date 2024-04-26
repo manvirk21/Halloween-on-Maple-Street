@@ -62,3 +62,4 @@ grow_vertical = 1
 
 [node name="RunnerMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_llurp")
+autoplay = true
