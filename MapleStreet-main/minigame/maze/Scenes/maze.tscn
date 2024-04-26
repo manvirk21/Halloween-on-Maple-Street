@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://bbi06dkv4dmbs"]
 
-[ext_resource type="Script" path="res://minigame/maze/Scripts/maze.gd" id="1_jnwhg"]
-[ext_resource type="Texture2D" uid="uid://jntnktkacac" path="res://minigame/maze/Assets/MouseHouse_Maze_Prototype.png" id="3_cs3pk"]
-[ext_resource type="Script" path="res://player/Scripts/player.gd" id="3_o681t"]
-[ext_resource type="Texture2D" uid="uid://dbpgwb6b2rftt" path="res://minigame/maze/Assets/New_Maze_Icon.png" id="4_dfviu"]
-[ext_resource type="Script" path="res://minigame/maze/Scripts/mazefinish.gd" id="5_g44u3"]
-[ext_resource type="Texture2D" uid="uid://c24b15q7u14vj" path="res://minigame/maze/Assets/Winning_Screen_Wireframe.png" id="6_0hi8s"]
-[ext_resource type="PackedScene" uid="uid://cvjgbwkd4oomw" path="res://minigame/maze/Scenes/Cheese.tscn" id="7_ap6op"]
+[ext_resource type="Script" path="res://minigame/maze/Scripts/maze.gd" id="1_gpj00"]
+[ext_resource type="Texture2D" uid="uid://jntnktkacac" path="res://minigame/maze/Assets/MouseHouse_Maze_Prototype.png" id="2_vw0gl"]
+[ext_resource type="PackedScene" uid="uid://cvjgbwkd4oomw" path="res://minigame/maze/Scenes/Cheese.tscn" id="3_ey44g"]
+[ext_resource type="Script" path="res://player/Scripts/player.gd" id="4_1ech6"]
+[ext_resource type="Texture2D" uid="uid://dbpgwb6b2rftt" path="res://minigame/maze/Assets/New_Maze_Icon.png" id="5_6a35s"]
+[ext_resource type="Script" path="res://minigame/maze/Scripts/mazefinish.gd" id="6_eu63f"]
+[ext_resource type="PackedScene" uid="uid://c3flmmd32aah6" path="res://maple_street/Scenes/minigame_finish.tscn" id="7_6gd11"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u6o27"]
 radius = 10.8167
@@ -15,13 +15,13 @@ radius = 10.8167
 size = Vector2(258, 34)
 
 [node name="Maze" type="Node2D"]
-script = ExtResource("1_jnwhg")
+script = ExtResource("1_gpj00")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("3_cs3pk")
+texture = ExtResource("2_vw0gl")
 
-[node name="Cheese" parent="." instance=ExtResource("7_ap6op")]
+[node name="Cheese" parent="." instance=ExtResource("3_ey44g")]
 position = Vector2(963.501, 539.996)
 scale = Vector2(1.00052, 0.998148)
 
@@ -34,19 +34,19 @@ polygon = PackedVector2Array(1354, 124, 1328, 150, 1332, 168, 1386, 173, 1387, 4
 [node name="MazeTeddy" type="CharacterBody2D" parent="."]
 position = Vector2(1311, 124)
 collision_mask = 2
-script = ExtResource("3_o681t")
+script = ExtResource("4_1ech6")
 
 [node name="Teddy_Sprite" type="Sprite2D" parent="MazeTeddy"]
 position = Vector2(-3.86238e-05, 3.8147e-06)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_dfviu")
+texture = ExtResource("5_6a35s")
 
 [node name="Collision" type="CollisionShape2D" parent="MazeTeddy"]
 position = Vector2(2, 0)
 shape = SubResource("CircleShape2D_u6o27")
 
 [node name="Finish" type="Node2D" parent="."]
-script = ExtResource("5_g44u3")
+script = ExtResource("6_eu63f")
 
 [node name="FinishArea2D" type="Area2D" parent="Finish"]
 
@@ -54,26 +54,6 @@ script = ExtResource("5_g44u3")
 position = Vector2(1310, 1004)
 shape = SubResource("RectangleShape2D_k5pud")
 
-[node name="FinishScreen" type="Sprite2D" parent="Finish"]
-visible = false
-position = Vector2(961.5, 538)
-scale = Vector2(1.00052, 0.998148)
-texture = ExtResource("6_0hi8s")
-
-[node name="continue_game" type="Button" parent="Finish/FinishScreen"]
-offset_left = 463.0
-offset_top = 297.0
-offset_right = 796.0
-offset_bottom = 402.0
-flat = true
-
-[node name="try_again" type="Button" parent="Finish/FinishScreen"]
-offset_left = -782.0
-offset_top = 297.0
-offset_right = -473.0
-offset_bottom = 402.0
-flat = true
+[node name="MiniGameFinish" parent="Finish" instance=ExtResource("7_6gd11")]
 
 [connection signal="body_entered" from="Finish/FinishArea2D" to="Finish" method="_on_finish_area_2d_body_entered"]
-[connection signal="pressed" from="Finish/FinishScreen/continue_game" to="Finish" method="_on_continue_game_pressed"]
-[connection signal="pressed" from="Finish/FinishScreen/try_again" to="Finish" method="_on_try_again_pressed"]
