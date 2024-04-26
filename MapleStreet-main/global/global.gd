@@ -19,6 +19,13 @@ var Teddy_Speed : float = NORMAL_SPEED # used by Street Teddy scene
 var Street_Teddy_gp_not_initialized : bool = true
 var Street_Teddy_global_position : Vector2
 var Street_Teddy_maze_completed_position : Vector2
+var Street_Teddy_reposition : Dictionary = {
+	"maze" : null,
+	"bowling" : null,
+	"runner" : null,
+	"cupswap" : null,
+	"quiz" : null
+}
 
 # Teddy settings
 var Teddy_resize_on : bool

@@ -32,8 +32,8 @@ func instantiate_Teddy():
 	
 	# get Teddy's initial position
 	if Global.Street_Teddy_gp_not_initialized:
-		Global.Street_Teddy_global_position = $Markers/InitialTeddyPosition.global_position
-		Global.Street_Teddy_maze_completed_position = $Markers/MazeExitPosition.global_position
+		Global.Street_Teddy_global_position = $PositionMarkers/InitialTeddyPosition.global_position
+		Global.Street_Teddy_maze_completed_position = $PositionMarkers/mazeFinishPosition.global_position
 		Global.Street_Teddy_gp_not_initialized = false
 	
 	# position Teddy correctly
@@ -49,6 +49,11 @@ func instantiate_Teddy():
 	
 	# add Teddy to scene
 	add_child(Teddy)
+
+# save minigame finished positions (used to move Teddy)
+func set_minigame_finished_positions():
+	for minigame in Global.VALID_MINIGAMES:
+		var position = get_node("Position")
 
 # change scene to a minigame
 func change_scene():
