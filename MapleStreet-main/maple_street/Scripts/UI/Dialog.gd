@@ -10,7 +10,7 @@ var dialog_finished : bool = false # to know when to change scene
 var dialog_index : int = 0
 
 # JSON file with minigame info strings
-var dialog_file : String = "res://maple_street/Scripts/Dialog.json"
+var dialog_file : String = "res://maple_street/Scripts/UI/Dialog.json"
 var dialog_dict : Dictionary = JSON.parse_string(FileAccess.get_file_as_string(dialog_file))
 
 # Minigame info
@@ -85,30 +85,19 @@ func finish_dialog():
 	$Dialog.visible = false
 	$NPC_Name.visible = false
 	
+	# send signal to MapleStreet node to change scene to minigame
 	emit_signal("ChangeScene")
-	
-# show/hide inventory 
-func toggle_inventory():
-	if game_paused:
-		hide_inventory()
-	else:
-		show_inventory()
 
-# pause street and show inventory
-func show_inventory():
-	pause()
-
-# resume street and hide inventory
-func hide_inventory():
-	resume()
 
 # pause street 
 func pause():
-	game_paused = true
+	Global.is_game_paused = true
+	Global.current_pauser = Global.pausers.DIALOG
 	get_tree().paused = true
-	
+
+
 # resume street   
 func resume():
-	game_paused = false
+	Global.is_game_paused = false
+	Global.current_pauser = Global.pausers.NONE
 	get_tree().paused = false
-	

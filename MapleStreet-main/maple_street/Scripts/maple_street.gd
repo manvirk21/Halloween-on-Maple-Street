@@ -6,9 +6,10 @@ var Street_Teddy = preload("res://player/Scenes/Street_Teddy.tscn")
 func _ready():
 	instantiate_Teddy()
 	set_Teddy_settings()
+	NPC_display()
 	
 	# when "Change Scene" is emitted, change_scene() will be called
-	$UI.connect("ChangeScene", change_scene)
+	$Dialog.connect("ChangeScene", change_scene)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,8 +32,8 @@ func instantiate_Teddy():
 	
 	# get Teddy's initial position
 	if Global.Street_Teddy_gp_not_initialized:
-		Global.Street_Teddy_global_position = $InitialTeddyPosition.global_position
-		Global.Street_Teddy_maze_completed_position = $MazeExitPosition.global_position
+		Global.Street_Teddy_global_position = $Markers/InitialTeddyPosition.global_position
+		Global.Street_Teddy_maze_completed_position = $Markers/MazeExitPosition.global_position
 		Global.Street_Teddy_gp_not_initialized = false
 	
 	# position Teddy correctly
@@ -63,6 +64,23 @@ func change_scene():
 	# make sure minigame folder and minigame scene have same name!
 	var scene = "res://minigame/" + Global.active_minigame + "/Scenes/" + Global.active_minigame + ".tscn"
 	get_tree().change_scene_to_file(scene)
+
+# display NPC if appropriate
+func NPC_display():
+	var MINIGAMES = Global.VALID_MINIGAMES
+	var candy_inventory = Save.get_candy_inventory()
+	
+	var NPCs = {
+		"maze" : $NPCsSprites/Mouse,
+		"bowling" : $NPCsSprites/Bear,
+		"runner" : $NPCsSprites/Bunny,
+		"cupswap" : $NPCsSprites/Raccoon,
+		"quiz" : $NPCsSprites/Owl
+	}
+	
+	for minigame in MINIGAMES:
+		if candy_inventory[minigame] > 0:
+			NPCs[minigame].visible = true
 
 # SIGNALS 
 # Set Teddy's speed to normal when he's not in grass areas

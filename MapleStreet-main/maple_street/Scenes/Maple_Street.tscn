@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=21 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -8,11 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://dxnky5efvjn2u" path="res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png" id="5_4v37p"]
 [ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="5_6qnc0"]
 [ext_resource type="Texture2D" uid="uid://xikusl2jfhyr" path="res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png" id="6_02pr7"]
-[ext_resource type="Script" path="res://maple_street/Scripts/UI.gd" id="6_bcvno"]
+[ext_resource type="Script" path="res://maple_street/Scripts/UI/UI.gd" id="6_bcvno"]
 [ext_resource type="Texture2D" uid="uid://b7hhhwsiu05xr" path="res://maple_street/Assets/NPC/Colorblockedmousesmall.png" id="6_cfwgk"]
 [ext_resource type="Texture2D" uid="uid://dmajvt2pqlg7v" path="res://maple_street/Assets/NPC/Resized Raccoon.png" id="7_0l4x6"]
 [ext_resource type="Texture2D" uid="uid://b4weqs3uvlsq5" path="res://maple_street/Assets/NPC/Resized Bunny.png" id="8_bk0tn"]
 [ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
+[ext_resource type="Script" path="res://maple_street/Scripts/UI/Dialog.gd" id="12_ejm64"]
 [ext_resource type="Texture2D" uid="uid://bw0c5mxtms8hh" path="res://maple_street/Assets/UI/DialogBoxLineArt.png" id="13_678g1"]
 [ext_resource type="Texture2D" uid="uid://dx8uu164iy0f7" path="res://maple_street/Assets/UI/questionMark_transparent.png" id="13_sk14g"]
 [ext_resource type="Texture2D" uid="uid://bm1gmqn2tnpx5" path="res://maple_street/Assets/UI/Bunny Text Box PNG.png" id="16_lf1h5"]
@@ -22,40 +23,6 @@
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
-
-[node name="MouseHouse" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-texture = ExtResource("2_t3sfn")
-
-[node name="BearHouse" type="Sprite2D" parent="."]
-position = Vector2(2880, 540)
-texture = ExtResource("3_qwi7m")
-
-[node name="HouseSet2" type="Sprite2D" parent="."]
-position = Vector2(5760, 540)
-texture = ExtResource("4_2dqhn")
-
-[node name="RunnerHouse" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(4800, 540)
-texture = ExtResource("2_t3sfn")
-
-[node name="Bear" type="Sprite2D" parent="."]
-position = Vector2(3630, 508)
-texture = ExtResource("5_6qnc0")
-
-[node name="Mouse" type="Sprite2D" parent="."]
-position = Vector2(978, 515)
-scale = Vector2(0.340491, 0.340491)
-texture = ExtResource("6_cfwgk")
-
-[node name="Raccoon" type="Sprite2D" parent="."]
-position = Vector2(5952, 592)
-texture = ExtResource("7_0l4x6")
-
-[node name="Bunny" type="Sprite2D" parent="."]
-position = Vector2(4596, 503)
-texture = ExtResource("8_bk0tn")
 
 [node name="Camera" type="Camera2D" parent="."]
 light_mask = 0
@@ -71,6 +38,48 @@ drag_horizontal_enabled = true
 drag_left_margin = 0.5
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="HousesSprites" type="Node2D" parent="."]
+
+[node name="MouseHouse" type="Sprite2D" parent="HousesSprites"]
+position = Vector2(960, 540)
+texture = ExtResource("2_t3sfn")
+
+[node name="BearHouse" type="Sprite2D" parent="HousesSprites"]
+position = Vector2(2880, 540)
+texture = ExtResource("3_qwi7m")
+
+[node name="HouseSet2" type="Sprite2D" parent="HousesSprites"]
+position = Vector2(5760, 540)
+texture = ExtResource("4_2dqhn")
+
+[node name="NPCsSprites" type="Node2D" parent="."]
+
+[node name="Mouse" type="Sprite2D" parent="NPCsSprites"]
+visible = false
+position = Vector2(978, 515)
+scale = Vector2(0.340491, 0.340491)
+texture = ExtResource("6_cfwgk")
+
+[node name="Bear" type="Sprite2D" parent="NPCsSprites"]
+visible = false
+position = Vector2(3630, 508)
+texture = ExtResource("5_6qnc0")
+
+[node name="Bunny" type="Sprite2D" parent="NPCsSprites"]
+visible = false
+position = Vector2(4596, 503)
+texture = ExtResource("8_bk0tn")
+
+[node name="Raccoon" type="Sprite2D" parent="NPCsSprites"]
+visible = false
+position = Vector2(5952, 592)
+texture = ExtResource("7_0l4x6")
+
+[node name="Owl" type="Sprite2D" parent="NPCsSprites"]
+visible = false
+position = Vector2(6972, 578)
+texture = ExtResource("7_0l4x6")
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
 visible = false
@@ -185,56 +194,44 @@ position = Vector2(6935, -46)
 scale = Vector2(2.15179, 1.84448)
 polygon = PackedVector2Array(82.722, 387.643, 97.1286, 427.763, 196.116, 441.317, 243.054, 392.523, 175.668, 358.367)
 
-[node name="InitialTeddyPosition" type="Marker2D" parent="."]
-position = Vector2(55, 741)
+[node name="Markers" type="Node2D" parent="."]
 
-[node name="MazeExitPosition" type="Marker2D" parent="."]
+[node name="MazeExitPosition" type="Marker2D" parent="Markers"]
 position = Vector2(1035, 322)
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="InitialTeddyPosition" type="Marker2D" parent="Markers"]
+position = Vector2(55, 741)
+
+[node name="Dialog" type="CanvasLayer" parent="."]
 process_mode = 3
-script = ExtResource("6_bcvno")
+script = ExtResource("12_ejm64")
 
-[node name="InventoryButton" type="TextureButton" parent="UI"]
-offset_left = 1702.0
-offset_top = 29.0
-offset_right = 1890.0
-offset_bottom = 244.0
-texture_normal = ExtResource("11_7xv4g")
-
-[node name="HelpButton" type="TextureButton" parent="UI"]
-offset_left = 1820.0
-offset_top = 250.0
-offset_right = 1892.0
-offset_bottom = 325.0
-texture_normal = ExtResource("13_sk14g")
-
-[node name="OwlDialogBox" type="Sprite2D" parent="UI"]
+[node name="OwlDialogBox" type="Sprite2D" parent="Dialog"]
 visible = false
 position = Vector2(958, 884)
 texture = ExtResource("13_678g1")
 
-[node name="BunnyDialogBox" type="Sprite2D" parent="UI"]
+[node name="BunnyDialogBox" type="Sprite2D" parent="Dialog"]
 visible = false
 position = Vector2(958, 884)
 texture = ExtResource("16_lf1h5")
 
-[node name="BearDialogBox" type="Sprite2D" parent="UI"]
+[node name="BearDialogBox" type="Sprite2D" parent="Dialog"]
 visible = false
 position = Vector2(958, 884)
 texture = ExtResource("17_2ff0b")
 
-[node name="RaccoonDialogBox" type="Sprite2D" parent="UI"]
+[node name="RaccoonDialogBox" type="Sprite2D" parent="Dialog"]
 visible = false
 position = Vector2(958, 884)
 texture = ExtResource("18_r3alk")
 
-[node name="MouseDialogBox" type="Sprite2D" parent="UI"]
+[node name="MouseDialogBox" type="Sprite2D" parent="Dialog"]
 visible = false
 position = Vector2(958, 884)
 texture = ExtResource("19_c7aed")
 
-[node name="NPC_Name" type="Label" parent="UI"]
+[node name="NPC_Name" type="Label" parent="Dialog"]
 visible = false
 offset_left = 440.0
 offset_top = 775.0
@@ -245,7 +242,7 @@ theme_override_font_sizes/font_size = 40
 text = "text"
 autowrap_mode = 2
 
-[node name="Dialog" type="Label" parent="UI"]
+[node name="Dialog" type="Label" parent="Dialog"]
 visible = false
 offset_left = 442.0
 offset_top = 831.0
@@ -255,6 +252,24 @@ theme_override_colors/font_color = Color(0.384314, 0.27451, 0.0509804, 1)
 theme_override_font_sizes/font_size = 40
 text = "text"
 autowrap_mode = 2
+
+[node name="Buttons" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("6_bcvno")
+
+[node name="InventoryButton" type="TextureButton" parent="Buttons"]
+offset_left = 1702.0
+offset_top = 29.0
+offset_right = 1890.0
+offset_bottom = 244.0
+texture_normal = ExtResource("11_7xv4g")
+
+[node name="HelpButton" type="TextureButton" parent="Buttons"]
+offset_left = 1820.0
+offset_top = 250.0
+offset_right = 1892.0
+offset_bottom = 325.0
+texture_normal = ExtResource("13_sk14g")
 
 [connection signal="body_entered" from="GrassAreas" to="." method="_on_Teddy_exits_grass"]
 [connection signal="body_exited" from="GrassAreas" to="." method="_on_Teddy_enters_grass"]
@@ -268,5 +283,5 @@ autowrap_mode = 2
 [connection signal="body_exited" from="MinigameEnabler/Cupswap" to="MinigameEnabler" method="_cupswap_area_exited"]
 [connection signal="body_entered" from="MinigameEnabler/Quiz" to="MinigameEnabler" method="_quiz_area_entered"]
 [connection signal="body_exited" from="MinigameEnabler/Quiz" to="MinigameEnabler" method="_quiz_area_exited"]
-[connection signal="pressed" from="UI/InventoryButton" to="UI" method="toggle_inventory"]
-[connection signal="pressed" from="UI/HelpButton" to="UI" method="toggle_inventory"]
+[connection signal="pressed" from="Buttons/InventoryButton" to="Buttons" method="toggle_inventory"]
+[connection signal="pressed" from="Buttons/HelpButton" to="Buttons" method="toggle_inventory"]

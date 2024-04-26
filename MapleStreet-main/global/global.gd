@@ -1,5 +1,10 @@
 extends Node
 
+# helpers to know if game is paused and by what
+var is_game_paused : bool = false
+enum pausers {HELP_BUTTON, INVENTORY_BUTTON, DIALOG, NONE}
+var current_pauser : int
+
 # Minigame settings : keep track of which minigame is accessible, if any
 const NONE : String = "None"
 var active_minigame : String = NONE
@@ -20,19 +25,17 @@ var Teddy_resize_on : bool
 var Teddy_sprite_flip_on : bool # to know if flipping is allowed
 var Teddy_sprite_flip : bool = false # to save last state of flip_h
 
-# Dialog tracker helpers, see Dialog.json for dialog strings
-const MINIGAME_STATES = ["Instructions", "Retry", "Completion"] # [0, 1, 2]
-var Minigame_State = {
-	"maze" : 0,
-	"bowling" : 0,
-	"runner" : 0,
-	"cupswap" : 0,
-	"quiz" : 0
-}
+# valid strings for states and minigames
+var VALID_STATES = ["Instructions", "Retry", "Fun Fact"]
+var VALID_MINIGAMES = ["maze", "bowling", "runner", "cupswap", "quiz"]
+
+# flag for if dialog needs to pop up when returning from minigame
+var dialog_after_minigame : bool = false
 
 # returns key for dialog dictionary of active minigame based on it's state
 func get_minigame_state():
-	return MINIGAME_STATES[Minigame_State[active_minigame]]
+	var minigame_states = Save.get_minigame_states()
+	return VALID_STATES[minigame_states[active_minigame]]
 
 # Change Teddy settings
 func set_Teddy_settings(resize : bool, sprite_flip : bool):
@@ -43,3 +46,21 @@ func set_Teddy_settings(resize : bool, sprite_flip : bool):
 func initialize_Teddy_position(position : Vector2):
 	Street_Teddy_global_position = position
 	Street_Teddy_gp_not_initialized = false
+
+# returns true if all minigames have been won, false otherwise
+func is_game_won():
+	var candy_inventory = Save.get_candy_inventory()
+	var minigames_won : int = 0
+	
+	for minigame in VALID_MINIGAMES:
+		if candy_inventory[minigame] > 0:
+			minigames_won += 1
+	
+	return minigames_won == 5
+
+# position Teddy at the exit of the maze
+func move_Teddy_to_maze_exit():
+	Street_Teddy_global_position = Street_Teddy_maze_completed_position
+	
+	# have Teddy facing the mouse
+	Teddy_sprite_flip = true

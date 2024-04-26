@@ -1,8 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714104321
+::res://::1714118724
 icon.svg::CompressedTexture2D::2558303370247231020::1714104163::1714104163::1::::<><>::
-::res://global/::1714104163
-global.gd::GDScript::-1::1714104163::0::1::::<>Node<>::
+::res://global/::1714117254
+global.gd::GDScript::-1::1714117254::0::1::::<>Node<>::
+save.gd::GDScript::-1::1714115513::0::1::::<>Node<>::
+::res://global/save_data/::1714118296
+game.json::JSON::-1::1714118296::0::1::::<><>::
+reset.json::JSON::-1::1714112603::0::1::::<><>::
+won.json::JSON::-1::1714115793::0::1::::<><>::
 ::res://maple_street/::1714104164
 ::res://maple_street/Assets/::1714104164
 ::res://maple_street/Assets/DoorLights/::1714104163
@@ -41,17 +46,19 @@ Inventory_ButtonPNG.png::CompressedTexture2D::6927594129334497757::1714104164::1
 Mouse Text Box.png::CompressedTexture2D::6311943983979223292::1714104164::1714104321::1::::<><>::
 questionMark_transparent.png::CompressedTexture2D::8842981391196778830::1714104164::1714104164::1::::<><>::
 Raccoon Text Box.png::CompressedTexture2D::1072467127867730936::1714104164::1714104321::1::::<><>::
-::res://maple_street/Scenes/::1714105335
-Maple_Street.tscn::PackedScene::4231654671746741309::1714105335::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://c63hxw8llc2u6::::res://maple_street/Assets/Houses/WIPSecondRowHouses.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>res://maple_street/Scripts/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://dmajvt2pqlg7v::::res://maple_street/Assets/NPC/Resized Raccoon.png<>uid://b4weqs3uvlsq5::::res://maple_street/Assets/NPC/Resized Bunny.png<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>uid://bw0c5mxtms8hh::::res://maple_street/Assets/UI/DialogBoxLineArt.png<>uid://dx8uu164iy0f7::::res://maple_street/Assets/UI/questionMark_transparent.png<>uid://bm1gmqn2tnpx5::::res://maple_street/Assets/UI/Bunny Text Box PNG.png<>uid://cldkj1p1c01nk::::res://maple_street/Assets/UI/Bear Text Box.png<>uid://pjrm2x627wvg::::res://maple_street/Assets/UI/Raccoon Text Box.png<>uid://cv6s2bjx6f2vo::::res://maple_street/Assets/UI/Mouse Text Box.png
+::res://maple_street/Scenes/::1714118721
+Maple_Street.tscn::PackedScene::4231654671746741309::1714118729::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://c63hxw8llc2u6::::res://maple_street/Assets/Houses/WIPSecondRowHouses.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>res://maple_street/Scripts/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://dmajvt2pqlg7v::::res://maple_street/Assets/NPC/Resized Raccoon.png<>uid://b4weqs3uvlsq5::::res://maple_street/Assets/NPC/Resized Bunny.png<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>res://maple_street/Scripts/UI/Dialog.gd<>uid://bw0c5mxtms8hh::::res://maple_street/Assets/UI/DialogBoxLineArt.png<>uid://dx8uu164iy0f7::::res://maple_street/Assets/UI/questionMark_transparent.png<>uid://bm1gmqn2tnpx5::::res://maple_street/Assets/UI/Bunny Text Box PNG.png<>uid://cldkj1p1c01nk::::res://maple_street/Assets/UI/Bear Text Box.png<>uid://pjrm2x627wvg::::res://maple_street/Assets/UI/Raccoon Text Box.png<>uid://cv6s2bjx6f2vo::::res://maple_street/Assets/UI/Mouse Text Box.png
 minigame_finish.tscn::PackedScene::6749140830691585789::1714104164::0::1::::<><>::res://maple_street/Scripts/minigame_finish.gd<>uid://c24b15q7u14vj::::res://minigame/maze/Assets/Winning_Screen_Wireframe.png
 TitleScreen.tscn::PackedScene::2194138489511529113::1714104164::0::1::::<><>::res://maple_street/Scripts/TitleScreen.gd<>uid://c3h2n8ym6whga::::res://maple_street/Assets/TitleScreen/Title_Screen.png<>uid://c7ylqlmpejtv3::::res://maple_street/Assets/TitleScreen/Start_Game.png<>uid://daw7bvjghjru3::::res://maple_street/Assets/TitleScreen/Settings.png<>uid://dox4tl4c82tqw::::res://maple_street/Assets/TitleScreen/Credits.png
-::res://maple_street/Scripts/::1714105198
-Dialog.json::JSON::-1::1714105198::0::1::::<><>::
-maple_street.gd::GDScript::-1::1714104164::0::1::::<>Node2D<>::
+::res://maple_street/Scripts/::1714118724
+maple_street.gd::GDScript::-1::1714118005::0::1::::<>Node2D<>::
 minigame_enabler.gd::GDScript::-1::1714104164::0::1::::<>Node2D<>::
 minigame_finish.gd::GDScript::-1::1714104164::0::1::::<>Node2D<>::
 TitleScreen.gd::GDScript::-1::1714104164::0::1::::<>Control<>::
-UI.gd::GDScript::-1::1714104917::0::1::::<>CanvasLayer<>::
+UI.gd::GDScript::-1::1714118611::0::1::::<>CanvasLayer<>::
+::res://maple_street/Scripts/UI/::1714118724
+Dialog.gd::GDScript::-1::1714118101::0::1::::<>CanvasLayer<>::
+Dialog.json::JSON::-1::1714105198::0::1::::<><>::
 ::res://minigame/::1714104325
 ::res://minigame/bowling/::1714104164
 ::res://minigame/bowling/Assets/::1714104164
@@ -82,8 +89,8 @@ icon.svg::CompressedTexture2D::6736386315688513779::1714104164::1714104164::1:::
 RaccoonGameScreenTransparent.png::CompressedTexture2D::564672302943337523::1714104164::1714104164::1::::<><>::
 trash.png::CompressedTexture2D::1636160233899714695::1714104164::1714104164::1::::<><>::
 Trash_Can_cupswap.png::CompressedTexture2D::2096705362335641736::1714104164::1714104164::1::::<><>::
-::res://minigame/cupswap/Scenes/::1714104325
-cup_swap.tscn::PackedScene::-1::1714104325::0::1::::<><>::
+::res://minigame/cupswap/Scenes/::1714105419
+cupswap.tscn::PackedScene::6360771085282839339::1714104325::0::1::::<><>::res://minigame/cupswap/Scripts/CupSwap.gd<>uid://0w60yoweu6a7::::res://minigame/cupswap/Assets/background.jpg<>uid://81j7tcs38pae::::res://minigame/cupswap/Assets/Cotton_Candy_Prize_-_Cup_Swap.png<>uid://44wowhpaotue::::res://minigame/cupswap/Assets/Trash_Can_cupswap.png<>uid://ibscnkijh11p::::res://minigame/cupswap/Assets/RaccoonGameScreenTransparent.png
 ::res://minigame/cupswap/Scripts/::1714104164
 CupSwap.gd::GDScript::-1::1714104164::0::1::::<>Node2D<>::
 ::res://minigame/maze/::1714104164
@@ -99,10 +106,10 @@ Winning_Screen_Wireframe.png::CompressedTexture2D::6727915850014195159::17141041
 Cheese.tscn::PackedScene::6265753742459298054::1714104164::0::1::::<><>::res://minigame/maze/Scripts/Cheese.gd<>uid://c4h2jf07527sd::::res://minigame/maze/Assets/Cheese_For_Maze.png
 maze.tscn::PackedScene::2474698007804949100::1714104164::0::1::::<><>::res://minigame/maze/Scripts/maze.gd<>uid://jntnktkacac::::res://minigame/maze/Assets/MouseHouse_Maze_Prototype.png<>uid://cvjgbwkd4oomw::::res://minigame/maze/Scenes/Cheese.tscn<>res://player/Scripts/player.gd<>uid://dbpgwb6b2rftt::::res://minigame/maze/Assets/New_Maze_Icon.png<>res://minigame/maze/Scripts/mazefinish.gd<>uid://c3flmmd32aah6::::res://maple_street/Scenes/minigame_finish.tscn
 maze_2.tscn::PackedScene::6227524431222498680::1714104164::0::1::::<><>::res://minigame/maze/Scripts/maze_2.gd<>uid://b4o8g3oq1n44b::::res://minigame/maze/Assets/Maze Two.png<>uid://dagj55yuo4bg4::::res://minigame/maze/Assets/mazeborder.png<>uid://cvjgbwkd4oomw::::res://minigame/maze/Scenes/Cheese.tscn<>res://player/Scripts/player.gd<>uid://dbpgwb6b2rftt::::res://minigame/maze/Assets/New_Maze_Icon.png<>res://minigame/maze/Scripts/mazefinish.gd<>uid://c24b15q7u14vj::::res://minigame/maze/Assets/Winning_Screen_Wireframe.png
-::res://minigame/maze/Scripts/::1714104164
+::res://minigame/maze/Scripts/::1714116198
 Cheese.gd::GDScript::-1::1714104164::0::1::::<>Node2D<>::
 maze.gd::GDScript::-1::1714104164::0::1::::<>Node2D<>::
-mazefinish.gd::GDScript::-1::1714104164::0::1::::<>Node2D<>::
+mazefinish.gd::GDScript::-1::1714116198::0::1::::<>Node2D<>::
 maze_2.gd::GDScript::-1::1714104164::0::1::::<>Node2D<>::
 ::res://minigame/runner/::1714104164
 ::res://minigame/runner/Assets/::1714104164
@@ -126,7 +133,7 @@ Stand.png::CompressedTexture2D::7166262931473200368::1714104164::1714104164::1::
 walk1.png::CompressedTexture2D::3733247408742352029::1714104164::1714104164::1::::<><>::
 walk2.png::CompressedTexture2D::6217672535283852583::1714104164::1714104164::1::::<><>::
 ::res://minigame/runner/Scenes/::1714104325
-runner.tscn::PackedScene::448737998001290652::1714104164::0::1::::<><>::uid://b5yotg3nxth1p::::res://minigame/runner/Scenes/FGBG/background.tscn<>uid://basaa74qx6e7q::::res://minigame/runner/Scenes/FGBG/foreground.tscn<>uid://ccjbypgll3lqe::::res://minigame/runner/Scenes/Player/player.tscn<>uid://xdseo5g3c2bv::::res://minigame/runner/Scenes/Spawner/spawner.tscn<>uid://epghtp3e4cbc::::res://minigame/runner/Scenes/UI/score_ui.tscn<>uid://cp4s05lr4wwhh::::res://minigame/runner/Scenes/UI/game_over_ui.tscn<>uid://bniwd08jvwoo5::::res://minigame/runner/Assets/Backgrounds/FrameRunner.png
+runner.tscn::PackedScene::448737998001290652::1714104325::0::1::::<><>::uid://b5yotg3nxth1p::::res://minigame/runner/Scenes/FGBG/background.tscn<>uid://basaa74qx6e7q::::res://minigame/runner/Scenes/FGBG/foreground.tscn<>uid://ccjbypgll3lqe::::res://minigame/runner/Scenes/Player/player.tscn<>uid://xdseo5g3c2bv::::res://minigame/runner/Scenes/Spawner/spawner.tscn<>uid://epghtp3e4cbc::::res://minigame/runner/Scenes/UI/score_ui.tscn<>uid://cp4s05lr4wwhh::::res://minigame/runner/Scenes/UI/game_over_ui.tscn<>uid://bniwd08jvwoo5::::res://minigame/runner/Assets/Backgrounds/FrameRunner.png
 ::res://minigame/runner/Scenes/Effectors/::1714104164
 effect_damage.tscn::PackedScene::3193088015117766399::1714104164::0::1::::<><>::
 pickup.tscn::PackedScene::6377380693154599961::1714104164::0::1::::<><>::
@@ -156,12 +163,11 @@ scrollmovement.gd::GDScript::-1::1714104164::0::1::::<>Node2D<>::
 signals.gd::GDScript::-1::1714104164::0::1::::<>Node2D<>::
 spawner.gd::GDScript::-1::1714104164::0::1::::<>Node2D<>::
 updatescoreui.gd::GDScript::-1::1714104164::0::1::::<>RichTextLabel<>::
-::res://player/::1714104164
-Dialog.json::JSON::-1::1714104164::0::1::::<><>::
+::res://player/::1714107888
 ::res://player/Assets/::1714104164
 Teddy_Character_Prototype.png::CompressedTexture2D::838191016239524456::1714104164::1714104164::1::::<><>::
 Teddy_StandingPNG.png::CompressedTexture2D::3035521181708404099::1714104164::1714104164::1::::<><>::
 ::res://player/Scenes/::1714104164
 Street_Teddy.tscn::PackedScene::1182670203585194002::1714104164::0::1::::<><>::res://player/Scripts/player.gd<>uid://bjioucp2nuuml::::res://player/Assets/Teddy_StandingPNG.png
-::res://player/Scripts/::1714104164
-player.gd::GDScript::-1::1714104164::0::1::::<>CharacterBody2D<>::
+::res://player/Scripts/::1714116536
+player.gd::GDScript::-1::1714116536::0::1::::<>CharacterBody2D<>::

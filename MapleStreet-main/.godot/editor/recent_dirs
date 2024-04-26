@@ -1,3 +1,5 @@
+res://global
+C:/Users/magal/OneDrive/Documents/KU/Classes/Spring2024/EECS690/Halloween-on-Maple-Street/MapleStreet-main/global
 res://minigame/cupswap/Scripts
 res://minigame/runner/Scenes/Effectors/Backgrounds
 res://minigame/runner/Scenes/UI
@@ -9,4 +11,3 @@ res://minigame/bowling/Assets
 res://minigame/bowling/Scripts
 res://maple_street/Scripts
 res://maple_street/Scenes
-res://global
