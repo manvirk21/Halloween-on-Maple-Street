@@ -71,7 +71,7 @@ texture = ExtResource("5_6qnc0")
 
 [node name="Bunny" type="Sprite2D" parent="NPCsSprites"]
 visible = false
-position = Vector2(4596, 503)
+position = Vector2(4500, 511)
 texture = ExtResource("8_bk0tn")
 
 [node name="Raccoon" type="Sprite2D" parent="NPCsSprites"]
@@ -85,7 +85,6 @@ position = Vector2(6972, 578)
 texture = ExtResource("9_irgaj")
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
-visible = false
 light_mask = 2
 collision_layer = 2
 
@@ -197,12 +196,24 @@ position = Vector2(6935, -46)
 scale = Vector2(2.15179, 1.84448)
 polygon = PackedVector2Array(82.722, 387.643, 97.1286, 427.763, 196.116, 441.317, 243.054, 392.523, 175.668, 358.367)
 
-[node name="Markers" type="Node2D" parent="."]
+[node name="PositionMarkers" type="Node2D" parent="."]
 
-[node name="MazeExitPosition" type="Marker2D" parent="Markers"]
+[node name="mazeFinishPosition" type="Marker2D" parent="PositionMarkers"]
 position = Vector2(1035, 322)
 
-[node name="InitialTeddyPosition" type="Marker2D" parent="Markers"]
+[node name="bowlingFinishPosition" type="Marker2D" parent="PositionMarkers"]
+position = Vector2(2995, 484)
+
+[node name="runnerFinishPosition" type="Marker2D" parent="PositionMarkers"]
+position = Vector2(4736, 366)
+
+[node name="cupswapFinishPosition" type="Marker2D" parent="PositionMarkers"]
+position = Vector2(6251, 352)
+
+[node name="quizFinishPosition" type="Marker2D" parent="PositionMarkers"]
+position = Vector2(7170, 413)
+
+[node name="InitialTeddyPosition" type="Marker2D" parent="PositionMarkers"]
 position = Vector2(55, 741)
 
 [node name="Dialog" type="CanvasLayer" parent="."]
