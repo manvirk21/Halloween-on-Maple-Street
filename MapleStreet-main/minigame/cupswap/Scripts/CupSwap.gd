@@ -27,6 +27,7 @@ func _ready():
 
 func _on_PlayButton_pressed():
 	$PlayButton.visible = false
+	$ExitGame.visible=false
 	candy["left"].visible = false
 	candy["middle"].visible = false
 	candy["right"].visible = false
@@ -140,10 +141,12 @@ func check_win(trash_position: String):
 		await timer(5)
 		$PlayButton.visible = true
 		$YouWin.visible = false
+		$ExitGame.visible=true
 		# Show "You won!" text or perform other win actions
 	else:
 		print("Try again")
 		$Retry.visible = true
+		$ExitGame.visible=true
 		# Show "Try again" text or perform other lose actions
 
 
@@ -152,3 +155,10 @@ func check_win(trash_position: String):
 func _on_retry_pressed():
 	_on_PlayButton_pressed()
 	$Retry.visible = false
+	$ExitGame.visible=false
+
+
+func _on_exit_game_pressed():
+	$ExitGame.visible = false
+	get_tree().change_scene_to_file("res://maple_street/Scenes/Maple_Street.tscn")
+	# Replace with function body.

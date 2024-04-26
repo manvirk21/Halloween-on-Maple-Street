@@ -1,8 +1,3 @@
-res://player/Scenes/Street_Teddy.tscn
-res://player/Scripts/player.gd
-res://maple_street/Scenes/TitleScreen.tscn
-res://maple_street/Scenes/Maple_Street.tscn
-res://minigame/maze/Scenes/maze.tscn
-res://global/global.gd
-res://minigame/maze/Scripts/mazefinish.gd
+res://minigame/cupswap/Scripts/CupSwap.gd
+res://minigame/cupswap/Scenes/cupswap.tscn
 res://global/save_data/game.json

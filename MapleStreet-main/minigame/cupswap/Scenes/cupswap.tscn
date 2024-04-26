@@ -130,8 +130,17 @@ text = " YOU WIN"
 position = Vector2(960, 540)
 texture = ExtResource("6_q57a5")
 
+[node name="ExitGame" type="Button" parent="."]
+offset_left = 1163.0
+offset_top = 680.0
+offset_right = 1365.0
+offset_bottom = 743.0
+theme_override_font_sizes/font_size = 40
+text = "Exit Game"
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="Trash1" to="." method="_on_trash_1_pressed"]
 [connection signal="pressed" from="Trash2" to="." method="_on_trash_2_pressed"]
 [connection signal="pressed" from="Trash3" to="." method="_on_trash_3_pressed"]
 [connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="ExitGame" to="." method="_on_exit_game_pressed"]
