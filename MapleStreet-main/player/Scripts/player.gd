@@ -4,7 +4,7 @@ extends CharacterBody2D
 var far_y = 0
 var near_y = 1080
 var max_scale : float = 1.1
-var min_scale : float = max_scale * (4/5)
+var min_scale : float = max_scale * (2.0/3.0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,15 +19,18 @@ func _physics_process(_delta):
 func _process_user_input():
 	var direction = Input.get_vector("LEFT", "RIGHT", "UP", "DOWN")
 	velocity = Global.Teddy_Speed * direction
-	if velocity != Vector2(0, 0) :
-		$Teddy_Sprite.play()
-	else:
-		$Teddy_Sprite.stop()
+	
+	# if moving, play animation, otherwise stop (street teddy only)
+	if Global.Teddy_sprite_edit_on:
+		if velocity != Vector2(0, 0) :
+			$Teddy_Sprite.play()
+		else:
+			$Teddy_Sprite.stop()
 	
 	
 # Flip sprite, if applicable
 func flip_Teddy():
-	if Global.Teddy_sprite_flip_on:
+	if Global.Teddy_sprite_edit_on:
 		var sprite = get_node("Teddy_Sprite")
 		
 		# moving left

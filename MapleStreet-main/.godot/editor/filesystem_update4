@@ -1,4 +1,6 @@
-res://maple_street/Scenes/TitleScreen.tscn
-res://maple_street/Scripts/UI.gd
 res://player/Scenes/Street_Teddy.tscn
 res://player/Scripts/player.gd
+res://maple_street/Scenes/TitleScreen.tscn
+res://maple_street/Scenes/Maple_Street.tscn
+res://minigame/maze/Scenes/maze.tscn
+res://global/global.gd
