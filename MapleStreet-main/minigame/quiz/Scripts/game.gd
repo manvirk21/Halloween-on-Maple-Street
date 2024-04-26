@@ -3,6 +3,7 @@ extends Control
 @onready var DisplayText = $DisplayText
 @onready var ListItem = $ListItem
 @onready var RestartButton = $RestartButton
+@onready var QuitButton = $Quit
 
 var items : Array = read_json_file("res://minigame/quiz/Assets/questions.json")
 var item : Dictionary
@@ -32,6 +33,7 @@ func refresh_scene():
 func show_question():
 	ListItem.show()
 	RestartButton.hide()
+	QuitButton.hide()
 	ListItem.clear()
 	item = items[index_item]
 	DisplayText.text = item.question
@@ -42,6 +44,7 @@ func show_question():
 func show_result():
 	ListItem.hide()
 	RestartButton.show()
+	QuitButton.show()
 	var score = round(correct/items.size()*100)
 	var greet
 	if score >= 80:
@@ -62,3 +65,7 @@ func _on_button_pressed():
 	correct = 0
 	index_item = 0	
 	refresh_scene()
+
+
+func _on_quit_pressed():
+	get_tree().change_scene_to_file("res://maple_street/Scenes/Maple_Street.tscn")
