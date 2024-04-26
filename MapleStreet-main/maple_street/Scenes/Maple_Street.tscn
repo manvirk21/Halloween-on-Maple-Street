@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=24 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://pjrm2x627wvg" path="res://maple_street/Assets/UI/Raccoon Text Box.png" id="18_r3alk"]
 [ext_resource type="Texture2D" uid="uid://cv6s2bjx6f2vo" path="res://maple_street/Assets/UI/Mouse Text Box.png" id="19_c7aed"]
 [ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="21_fn7h3"]
+[ext_resource type="Texture2D" uid="uid://daaer0foq2el4" path="res://maple_street/Assets/UI/temp-inventory.png" id="23_8b35x"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -277,6 +278,21 @@ texture_normal = ExtResource("13_sk14g")
 stream = ExtResource("21_fn7h3")
 autoplay = true
 
+[node name="Container" type="Node2D" parent="."]
+position = Vector2(500, 250)
+
+[node name="temp_inventory" type="TextureRect" parent="Container"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("23_8b35x")
+
+[node name="temp_help" type="TextureRect" parent="Container"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("23_8b35x")
+
 [connection signal="body_entered" from="GrassAreas" to="." method="_on_Teddy_exits_grass"]
 [connection signal="body_exited" from="GrassAreas" to="." method="_on_Teddy_enters_grass"]
 [connection signal="body_entered" from="MinigameEnabler/Maze" to="MinigameEnabler" method="_maze_area_entered"]
@@ -290,4 +306,4 @@ autoplay = true
 [connection signal="body_entered" from="MinigameEnabler/Quiz" to="MinigameEnabler" method="_quiz_area_entered"]
 [connection signal="body_exited" from="MinigameEnabler/Quiz" to="MinigameEnabler" method="_quiz_area_exited"]
 [connection signal="pressed" from="Buttons/InventoryButton" to="Buttons" method="toggle_inventory"]
-[connection signal="pressed" from="Buttons/HelpButton" to="Buttons" method="toggle_inventory"]
+[connection signal="pressed" from="Buttons/HelpButton" to="Buttons" method="_on_help_button_pressed"]

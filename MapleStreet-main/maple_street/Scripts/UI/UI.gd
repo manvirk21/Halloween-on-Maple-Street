@@ -13,10 +13,12 @@ func toggle_inventory():
 	# show inventory
 	if not Global.is_game_paused:
 		show_inventory()
+		$"../Container/temp_inventory".visible = true
 		
 	# hide inventory
 	elif Global.current_pauser == Global.pausers.INVENTORY_BUTTON:
 		hide_inventory()
+		$"../Container/temp_inventory".visible = false
 
 # pause street and show inventory
 func show_inventory():
@@ -37,3 +39,15 @@ func resume():
 	Global.is_game_paused = false
 	Global.current_pauser = Global.pausers.NONE
 	get_tree().paused = false
+
+
+func _on_help_button_pressed():
+	# show inventory
+	if not Global.is_game_paused:
+		show_inventory()
+		$"../Container/temp_help".visible = true
+		
+	# hide inventory
+	elif Global.current_pauser == Global.pausers.INVENTORY_BUTTON:
+		hide_inventory()
+		$"../Container/temp_help".visible = false
