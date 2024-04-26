@@ -1,8 +1,8 @@
 # Godot 4+ specific ignores
-MapleStreet-main\.godot\
+MapleStreet-main\.godot\editor/
 
 # Godot-specific ignores
-MapleStreet-main\.import\
+MapleStreet-main\.import/
 export.cfg
 export_presets.cfg
 
