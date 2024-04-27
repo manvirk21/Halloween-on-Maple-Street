@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://gnmwcs0buwwi"]
+[gd_scene load_steps=10 format=3 uid="uid://gnmwcs0buwwi"]
 
 [ext_resource type="PackedScene" uid="uid://b5yotg3nxth1p" path="res://minigame/runner/Scenes/FGBG/background.tscn" id="1_xxm55"]
 [ext_resource type="PackedScene" uid="uid://basaa74qx6e7q" path="res://minigame/runner/Scenes/FGBG/foreground.tscn" id="2_mmeh4"]
 [ext_resource type="PackedScene" uid="uid://ccjbypgll3lqe" path="res://minigame/runner/Scenes/Player/player.tscn" id="3_78afx"]
 [ext_resource type="PackedScene" uid="uid://xdseo5g3c2bv" path="res://minigame/runner/Scenes/Spawner/spawner.tscn" id="4_f00vw"]
 [ext_resource type="PackedScene" uid="uid://epghtp3e4cbc" path="res://minigame/runner/Scenes/UI/score_ui.tscn" id="5_dljuw"]
+[ext_resource type="PackedScene" uid="uid://dgirucdi7tlut" path="res://minigame/runner/Scenes/Spawner/cloud_spawner.tscn" id="6_p5xpm"]
 [ext_resource type="PackedScene" uid="uid://cp4s05lr4wwhh" path="res://minigame/runner/Scenes/UI/game_over_ui.tscn" id="6_stain"]
 [ext_resource type="Texture2D" uid="uid://bniwd08jvwoo5" path="res://minigame/runner/Assets/Backgrounds/FrameRunner.png" id="7_t0pgj"]
 [ext_resource type="AudioStream" uid="uid://ooymadleyttt" path="res://minigame/runner/sounds/A_Halloween_on_Maple_Street_-_Rabbit_Run_faster.mp3" id="8_llurp"]
@@ -29,10 +30,10 @@ scale = Vector2(23.9784, 24.4546)
 
 [node name="Background" parent="VBoxContainer" instance=ExtResource("1_xxm55")]
 position = Vector2(0.0288951, -1.45904)
-scale = Vector2(0.0351467, 0.0783283)
+scale = Vector2(0.0374011, 0.0458502)
 
 [node name="Foreground" parent="VBoxContainer" instance=ExtResource("2_mmeh4")]
-position = Vector2(-0.262546, 39.2075)
+position = Vector2(-0.553989, 38.4636)
 scale = Vector2(0.0700354, 0.0394247)
 
 [node name="Player" parent="VBoxContainer" instance=ExtResource("3_78afx")]
@@ -43,7 +44,11 @@ scale = Vector2(0.052147, 0.0567716)
 position = Vector2(66.1446, 38.3396)
 scale = Vector2(0.0376929, 0.0395553)
 
-[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
+[node name="Cloud_spawner" parent="VBoxContainer" instance=ExtResource("6_p5xpm")]
+z_index = 2
+position = Vector2(47.4091, 10.65)
+
+[node name="Frame" type="Sprite2D" parent="VBoxContainer"]
 z_index = 2
 position = Vector2(7.35662, 19.9901)
 scale = Vector2(0.041613, 0.0415693)

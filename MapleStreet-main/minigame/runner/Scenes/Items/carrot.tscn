@@ -12,12 +12,12 @@ top_level = true
 script = ExtResource("1_c6rx1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1629.5, 931)
+position = Vector2(1897.5, 958)
 scale = Vector2(0.222628, 0.153846)
 texture = ExtResource("2_nla16")
 
 [node name="Pickup" parent="." instance=ExtResource("3_vou0i")]
-position = Vector2(1643, 929.585)
+position = Vector2(1911, 956.585)
 scale = Vector2(0.5, 0.51)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup"]
@@ -26,7 +26,7 @@ scale = Vector2(1, 1.02)
 shape = SubResource("RectangleShape2D_w3ugq")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(1628.85, 931.295)
+position = Vector2(1896.85, 958.295)
 scale = Vector2(2.81505, 3.7295)
 
 [connection signal="body_entered" from="Pickup" to="." method="_on_pickup_body_entered"]

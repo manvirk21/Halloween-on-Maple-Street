@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://byqrdiu4ki2x2"]
+
+[ext_resource type="Script" path="res://minigame/runner/Scripts/cloud03.gd" id="1_4asr7"]
+[ext_resource type="Texture2D" uid="uid://ca5cv3tn033sa" path="res://minigame/runner/Assets/Backgrounds/RabbitGameClouds03.png" id="1_dp0bk"]
+
+[node name="Cloud03" type="Node2D"]
+top_level = true
+script = ExtResource("1_4asr7")
+
+[node name="RabbitGameClouds03" type="Sprite2D" parent="."]
+position = Vector2(2303, 419)
+scale = Vector2(0.75049, 0.692022)
+texture = ExtResource("1_dp0bk")

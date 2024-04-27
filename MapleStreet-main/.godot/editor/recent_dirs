@@ -1,3 +1,5 @@
+res://minigame/runner/Scripts
+res://minigame/runner/Scenes/FGBG
 res://global
 res://player/Assets
 res://minigame/cupswap/Scripts
@@ -5,8 +7,6 @@ res://minigame/runner/Scenes/Effectors/Backgrounds
 res://minigame/runner/Scenes/UI
 res://minigame/runner/Scenes/Spawner
 res://minigame/runner/Scenes/Player
-res://minigame/runner/Scenes/FGBG
-res://minigame/runner/Scripts
 res://minigame/bowling/Assets
 res://minigame/bowling/Scripts
 res://maple_street/Scripts

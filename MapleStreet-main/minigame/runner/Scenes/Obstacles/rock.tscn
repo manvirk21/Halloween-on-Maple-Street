@@ -11,12 +11,12 @@ scale = Vector2(1.0034, 0.993962)
 script = ExtResource("1_ohkis")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1581.3, 1009.43)
+position = Vector2(1846.41, 1000.38)
 scale = Vector2(0.221565, 0.26146)
 texture = ExtResource("2_6do2n")
 
 [node name="EffectDamage" parent="." instance=ExtResource("3_coilj")]
-position = Vector2(1586.05, 1008.48)
+position = Vector2(1851.16, 999.428)
 scale = Vector2(0.71331, 0.733715)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EffectDamage"]
@@ -24,7 +24,7 @@ position = Vector2(-23.8597, -50.8928)
 polygon = PackedVector2Array(-1.39722, -9.59839, -9.78027, -1.37122, -16.7661, 16.4546, -23.7517, 47.9923, -36.3262, 89.1285, -32.1348, 93.2421, -26.5461, 97.3557, -18.1631, 101.469, -9.78027, 101.469, -2.79443, 105.583, 2.79419, 108.325, 15.3687, 112.439, 30.7375, 112.439, 39.1204, 109.697, 44.7092, 108.325, 50.2979, 104.212, 53.092, 101.469, 65.6665, 90.4998, 64.2693, 90.4998, 65.6665, 90.4998, 68.4609, 86.3861, 68.4609, 75.4164, 67.0637, 65.818, 62.8723, 50.7347, 50.2979, 34.2803, 41.9148, 24.6818, 30.7375, 16.4546, 16.7659, -4.11353, 5.58862, -9.59839)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(1580.57, 1008.36)
+position = Vector2(1845.68, 999.308)
 scale = Vector2(3.72984, 4.52733)
 
 [connection signal="body_entered" from="EffectDamage" to="." method="_on_effect_damage_body_entered"]

@@ -10,6 +10,7 @@ shader = ExtResource("2_g3ruu")
 shader_parameter/scroll_speed = 0.0
 
 [node name="Background" type="Node2D"]
+scale = Vector2(1.65995, 0.900486)
 
 [node name="ScrollingBackground" parent="." instance=ExtResource("1_ei2po")]
 material = SubResource("ShaderMaterial_dl2ih")
