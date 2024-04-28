@@ -15,5 +15,5 @@ func _process(delta):
 
 
 
-func _on_button_pressed():
+func _on_button_pressed(): # code for testing button, left minigame
 	get_tree().change_scene_to_file("res://maple_street/Scenes/Maple_Street.tscn")

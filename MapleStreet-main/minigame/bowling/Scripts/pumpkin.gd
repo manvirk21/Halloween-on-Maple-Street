@@ -2,10 +2,13 @@ extends Area2D
 var move = 8
 var left_right = true
 var pin_status = 0 # 0: up, 1: left, 2: right, 3: strike
+var strike_count = 0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	left_right == true
+	$"../../FinishScreen".visible = false
 	#$AnimatedSprite2D.set_animation("rest")
 
 
@@ -70,10 +73,16 @@ func bear_reset():
 	$"../pins_Up".visible = true
 	await get_tree().create_timer(2).timeout
 	$"../bear".visible = false
+	if(strike_count >= 4):
+		get_tree().change_scene_to_file("res://minigame/bowling/Scenes/finished.tscn")
+	
+func end_bowling():
+	$"../../FinishScreen".visible = true
 	
 func _on_strike_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	print("strike")
 	pin_status = 3
+	strike_count += 1
 
 
 func _on_some_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
@@ -89,3 +98,4 @@ func _on_some_area_shape_entered(area_rid, area, area_shape_index, local_shape_i
 func _on_miss_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	print("collision miss")
 	pin_status = 0
+
