@@ -7,7 +7,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dl2ih"]
 resource_local_to_scene = true
 shader = ExtResource("2_g3ruu")
-shader_parameter/scroll_speed = 0.0
+shader_parameter/scroll_speed = 0.3
 
 [node name="Background" type="Node2D"]
 scale = Vector2(1.65995, 0.900486)

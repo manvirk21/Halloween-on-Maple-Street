@@ -33,6 +33,7 @@ position = Vector2(0.0288951, -1.45904)
 scale = Vector2(0.0374011, 0.0458502)
 
 [node name="Foreground" parent="VBoxContainer" instance=ExtResource("2_mmeh4")]
+visible = false
 position = Vector2(-0.553989, 38.4636)
 scale = Vector2(0.0700354, 0.0394247)
 

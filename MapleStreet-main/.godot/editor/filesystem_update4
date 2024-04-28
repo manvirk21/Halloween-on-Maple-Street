@@ -1,7 +1,4 @@
-res://minigame/runner/Scenes/FGBG/cloud02.tscn
 res://minigame/runner/Scenes/runner.tscn
-res://minigame/runner/Scenes/Spawner/cloud_spawner.tscn
-res://minigame/runner/Scenes/Spawner/spawner.tscn
-res://minigame/runner/Scenes/Items/carrot.tscn
-res://minigame/runner/Scenes/Obstacles/rock.tscn
-res://minigame/runner/Scenes/FGBG/cloud01.tscn
+res://minigame/runner/Scenes/FGBG/background.tscn
+res://minigame/runner/Scenes/FGBG/foreground.tscn
+res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.tscn
