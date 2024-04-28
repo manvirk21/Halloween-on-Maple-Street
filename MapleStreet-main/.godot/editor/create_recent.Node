@@ -1,14 +1,14 @@
+CollisionPolygon2D
+Area2D
+CollisionShape2D
 Button
 Node2D
 TextureRect
 Container
 AudioStreamPlayer
 AnimatedSprite2D
-CollisionPolygon2D
-CollisionShape2D
 Sprite2D
 Label
 ColorRect
 TextureButton
 CanvasLayer
-Area2D
