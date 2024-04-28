@@ -1,8 +1,6 @@
-res://minigame/runner/Scenes/runner.tscn
-res://minigame/bowling/Scripts/pumpkin.gd
-res://minigame/runner/Scenes/FGBG/background.tscn
-res://minigame/runner/Scenes/FGBG/foreground.tscn
-res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.tscn
+res://maple_street/Scenes/TitleScreen.tscn
+res://maple_street/Scenes/settings.tscn
+res://maple_street/Scripts/settings.gd
+res://maple_street/Scenes/credits.tscn
 res://maple_street/Scenes/Maple_Street.tscn
-res://minigame/bowling/Scenes/bowling.tscn
-res://minigame/bowling/Scenes/finished.tscn
+res://maple_street/Scripts/TitleScreen.gd
