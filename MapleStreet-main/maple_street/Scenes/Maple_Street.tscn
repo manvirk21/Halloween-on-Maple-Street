@@ -1,12 +1,13 @@
-[gd_scene load_steps=24 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=28 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
 [ext_resource type="Script" path="res://maple_street/Scripts/minigame_enabler.gd" id="3_k28yf"]
 [ext_resource type="Texture2D" uid="uid://c3n3b7uyhgvkm" path="res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg" id="3_qwi7m"]
-[ext_resource type="Texture2D" uid="uid://c63hxw8llc2u6" path="res://maple_street/Assets/Houses/WIPSecondRowHouses.png" id="4_2dqhn"]
+[ext_resource type="Texture2D" uid="uid://31br8wohlnas" path="res://maple_street/Assets/Houses/SecondHouseShadedPart01.png" id="4_sygxs"]
 [ext_resource type="Texture2D" uid="uid://dxnky5efvjn2u" path="res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png" id="5_4v37p"]
 [ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="5_6qnc0"]
+[ext_resource type="Texture2D" uid="uid://ddxomws82yu0r" path="res://maple_street/Assets/Houses/SecondHouseShaded02.png" id="5_46742"]
 [ext_resource type="Texture2D" uid="uid://xikusl2jfhyr" path="res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png" id="6_02pr7"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI/UI.gd" id="6_bcvno"]
 [ext_resource type="Texture2D" uid="uid://b7hhhwsiu05xr" path="res://maple_street/Assets/NPC/Colorblockedmousesmall.png" id="6_cfwgk"]
@@ -17,7 +18,10 @@
 [ext_resource type="Script" path="res://maple_street/Scripts/UI/Dialog.gd" id="12_ejm64"]
 [ext_resource type="Texture2D" uid="uid://bw0c5mxtms8hh" path="res://maple_street/Assets/UI/DialogBoxLineArt.png" id="13_678g1"]
 [ext_resource type="Texture2D" uid="uid://dx8uu164iy0f7" path="res://maple_street/Assets/UI/questionMark_transparent.png" id="13_sk14g"]
+[ext_resource type="Texture2D" uid="uid://2nkumg3pudqn" path="res://maple_street/Assets/DoorLights/SecondHouseShaded01RabbitDoor.png" id="14_np42t"]
+[ext_resource type="Texture2D" uid="uid://3jw8gkrc1fgg" path="res://maple_street/Assets/DoorLights/SecondHouseShadedRaccoonDoor.png" id="15_mtnwa"]
 [ext_resource type="Texture2D" uid="uid://bm1gmqn2tnpx5" path="res://maple_street/Assets/UI/Bunny Text Box PNG.png" id="16_lf1h5"]
+[ext_resource type="Texture2D" uid="uid://istx7llj5anb" path="res://maple_street/Assets/DoorLights/SecondHouseOwlDoor.png" id="16_x82po"]
 [ext_resource type="Texture2D" uid="uid://cldkj1p1c01nk" path="res://maple_street/Assets/UI/Bear Text Box.png" id="17_2ff0b"]
 [ext_resource type="Texture2D" uid="uid://pjrm2x627wvg" path="res://maple_street/Assets/UI/Raccoon Text Box.png" id="18_r3alk"]
 [ext_resource type="Texture2D" uid="uid://cv6s2bjx6f2vo" path="res://maple_street/Assets/UI/Mouse Text Box.png" id="19_c7aed"]
@@ -53,8 +57,12 @@ position = Vector2(2880, 540)
 texture = ExtResource("3_qwi7m")
 
 [node name="HouseSet2" type="Sprite2D" parent="HousesSprites"]
-position = Vector2(5760, 540)
-texture = ExtResource("4_2dqhn")
+position = Vector2(4800, 540)
+texture = ExtResource("4_sygxs")
+
+[node name="HouseSet3" type="Sprite2D" parent="HousesSprites"]
+position = Vector2(6720, 540)
+texture = ExtResource("5_46742")
 
 [node name="NPCsSprites" type="Node2D" parent="."]
 
@@ -85,6 +93,7 @@ position = Vector2(6972, 578)
 texture = ExtResource("9_irgaj")
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
+visible = false
 light_mask = 2
 collision_layer = 2
 
@@ -105,6 +114,7 @@ polygon = PackedVector2Array(0, 524, -1, 4, 3842, -1, 3832, 523, 3674, 522, 3670
 polygon = PackedVector2Array(3313, 714, 3315, 754, 3350, 767, 3393, 764, 3461, 748, 3453, 704, 3385, 702, 3395, 716)
 
 [node name="GrassAreas" type="Area2D" parent="."]
+visible = false
 
 [node name="NotGrass" type="CollisionPolygon2D" parent="GrassAreas"]
 polygon = PackedVector2Array(-1, 984, -3, 1078, 3841, 1083, 3838, 992, 3619, 994, 3629, 975, 3354, 584, 3120, 567, 3076, 666, 3063.75, 666.195, 2879, 992, 2673, 992, 2595, 848, 2618, 839, 2560, 721, 2540, 721, 2537, 707, 2545, 691, 2492, 584, 2480, 576, 2491, 560, 2468, 493, 2280, 490, 2253, 563, 2258, 573, 2225, 623, 2215, 645, 2220, 665, 2199, 686, 2211, 701, 2195, 708, 2179, 761, 2184, 781, 2162, 840, 2175, 849, 2160.26, 863.138, 2144, 922, 2151, 947, 2142, 991, 616, 988, 592, 914, 592, 854, 609, 792, 726, 765, 832, 762, 905, 758, 968, 740, 1056, 710, 1119, 703, 1159, 684, 1172, 612, 1168, 528, 1077, 521, 1072, 590, 1057, 631, 999, 645, 899, 647, 818, 648, 600, 663, 590, 615, 589, 560, 508, 560, 486, 639, 473, 715, 434, 815, 414, 896, 357, 992)
@@ -154,9 +164,8 @@ collision_layer = 4
 
 [node name="RunnerDoorLight" type="Sprite2D" parent="MinigameEnabler/Runner"]
 visible = false
-position = Vector2(4160, 504)
-scale = Vector2(1.395, 1.45238)
-texture = ExtResource("5_4v37p")
+position = Vector2(4800, 540)
+texture = ExtResource("14_np42t")
 
 [node name="RunnerCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Runner"]
 light_mask = 4
@@ -170,9 +179,8 @@ collision_layer = 4
 
 [node name="CupswapDoorLight" type="Sprite2D" parent="MinigameEnabler/Cupswap"]
 visible = false
-position = Vector2(5568, 588)
-scale = Vector2(1.395, 1.45238)
-texture = ExtResource("5_4v37p")
+position = Vector2(4800, 540)
+texture = ExtResource("15_mtnwa")
 
 [node name="CupswapCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Cupswap"]
 light_mask = 4
@@ -186,9 +194,8 @@ collision_layer = 4
 
 [node name="QuizDoorLight" type="Sprite2D" parent="MinigameEnabler/Quiz"]
 visible = false
-position = Vector2(7306, 295)
-scale = Vector2(1.395, 1.45238)
-texture = ExtResource("5_4v37p")
+position = Vector2(6720, 539)
+texture = ExtResource("16_x82po")
 
 [node name="QuizCollision" type="CollisionPolygon2D" parent="MinigameEnabler/Quiz"]
 light_mask = 4
