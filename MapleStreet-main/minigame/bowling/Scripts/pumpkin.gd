@@ -21,19 +21,28 @@ func _process(delta):
 		elif(position.x == 100):
 			move = move * -1
 	else:
-		if(position.y >= 98):
-			roll()
+		if(pin_status == 3):
+			if(position.y >= 250):
+				roll()
+			else:
+				$AnimatedSprite2D.stop()
+				visible = false
+				knock_pins()
 		else:
-			$AnimatedSprite2D.stop()
-			visible = false
-			knock_pins()
+			if(position.y >= 180):
+				roll()
+			else:
+				$AnimatedSprite2D.stop()
+				visible = false
+				knock_pins()
+			
 	
 	if Input.is_action_pressed("ui_accept"):
 		left_right = false
 		
 func roll():
 	$AnimatedSprite2D.play("roll")
-	position.y += -6
+	position.y += -5
 	
 func reset():
 	position.x = 420

@@ -120,32 +120,32 @@ shape = SubResource("CircleShape2D_54kkt")
 [node name="strike" type="Area2D" parent="Node2D" groups=["strike"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/strike"]
-position = Vector2(420, 220)
-scale = Vector2(8, 15)
+position = Vector2(430, 240)
+scale = Vector2(5, 15)
 shape = SubResource("RectangleShape2D_00xyg")
 
 [node name="some" type="Area2D" parent="Node2D" groups=["some"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/some"]
-position = Vector2(259, 220)
-scale = Vector2(8, 15)
+position = Vector2(279, 190)
+scale = Vector2(10, 15)
 shape = SubResource("RectangleShape2D_00xyg")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/some"]
-position = Vector2(581, 220)
-scale = Vector2(8, 15)
+position = Vector2(571, 190)
+scale = Vector2(9, 15)
 shape = SubResource("RectangleShape2D_00xyg")
 
 [node name="miss" type="Area2D" parent="Node2D" groups=["some"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/miss"]
-position = Vector2(98, 220)
-scale = Vector2(8, 15)
+position = Vector2(90, 160)
+scale = Vector2(8.7, 15)
 shape = SubResource("RectangleShape2D_00xyg")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/miss"]
-position = Vector2(743, 220)
-scale = Vector2(8, 15)
+position = Vector2(750, 160)
+scale = Vector2(8.7, 16.313)
 shape = SubResource("RectangleShape2D_00xyg")
 
 [node name="bear" type="Sprite2D" parent="Node2D"]

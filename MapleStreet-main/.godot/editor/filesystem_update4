@@ -1,4 +1,5 @@
 res://minigame/bowling/Scenes/bowling.tscn
+res://minigame/bowling/Scripts/pumpkin.gd
 res://minigame/runner/Scenes/runner.tscn
 res://minigame/runner/Scenes/FGBG/background.tscn
 res://minigame/runner/Scenes/FGBG/foreground.tscn
