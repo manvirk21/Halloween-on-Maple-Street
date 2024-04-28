@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714281378
+::res://::1714282435
 export_presets.cfg::TextFile::-1::1714160521::0::1::::<><>::
 icon.svg::CompressedTexture2D::2558303370247231020::1712766468::1714281381::1::::<><>::
 ::res://global/::1714161222
@@ -14,13 +14,13 @@ won.json::JSON::-1::1714161222::0::1::::<><>::
 ::res://global/UI/::1713547706
 ::res://maple_street/::1713233631
 ::res://maple_street/Assets/::1714281281
-::res://maple_street/Assets/DoorLights/::1714281281
+::res://maple_street/Assets/DoorLights/::1714281386
 BearHouseDoorIICropped.png::CompressedTexture2D::1631502275165125685::1712932220::1712932220::1::::<><>::
 MouseHouseDoorIICropped.png::CompressedTexture2D::8801093976673539094::1712932220::1712932220::1::::<><>::
 SecondHouseOwlDoor.png::CompressedTexture2D::599865943052759899::1714281281::1714281386::1::::<><>::
 SecondHouseShaded01RabbitDoor.png::CompressedTexture2D::1922579215677469257::1714281281::1714281386::1::::<><>::
 SecondHouseShadedRaccoonDoor.png::CompressedTexture2D::1985262058055416310::1714281281::1714281386::1::::<><>::
-::res://maple_street/Assets/Houses/::1714281281
+::res://maple_street/Assets/Houses/::1714281386
 BearHouseIIJPEG.jpg::CompressedTexture2D::6766669474388609748::1712932220::1712932220::1::::<><>::
 FirstRowHousesShaded01.png::CompressedTexture2D::3087947335212350951::1714281281::1714281385::1::::<><>::
 FirstRowHousesShaded02.png::CompressedTexture2D::3721586393270113053::1714281281::1714281385::1::::<><>::
@@ -29,7 +29,7 @@ MouseHouseIIJPEG.jpg::CompressedTexture2D::8229338772140731420::1712932220::1712
 SecondHouseShaded02.png::CompressedTexture2D::7418181922618964419::1714281281::1714281386::1::::<><>::
 SecondHouseShadedPart01.png::CompressedTexture2D::2019054286861760206::1714281281::1714281386::1::::<><>::
 WIPSecondRowHouses.png::CompressedTexture2D::7006965396494906387::1713543794::1713543794::1::::<><>::
-::res://maple_street/Assets/NPC/::1714281281
+::res://maple_street/Assets/NPC/::1714281384
 BearPlacement.png::CompressedTexture2D::201683340874501171::1713543794::1713543794::1::::<><>::
 ColorblockedbearKRAsmall.png::CompressedTexture2D::9005404916302278925::1713543794::1713543794::1::::<><>::
 Colorblockedmousesmall.png::CompressedTexture2D::4647353027606666143::1713543794::1713543794::1::::<><>::
@@ -65,8 +65,8 @@ Mouse Text Box.png::CompressedTexture2D::6311943983979223292::1714104408::171411
 questionMark_transparent.png::CompressedTexture2D::8842981391196778830::1713979153::1713979153::1::::<><>::
 Raccoon Text Box.png::CompressedTexture2D::1072467127867730936::1714104408::1714113789::1::::<><>::
 temp-inventory.png::CompressedTexture2D::7159536599013071483::1714151279::1714151287::1::::<><>::
-::res://maple_street/Scenes/::1714281259
-Maple_Street.tscn::PackedScene::4231654671746741309::1714281259::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://c63hxw8llc2u6::::res://maple_street/Assets/Houses/WIPSecondRowHouses.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>res://maple_street/Scripts/UI/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://dmajvt2pqlg7v::::res://maple_street/Assets/NPC/Resized Raccoon.png<>uid://b4weqs3uvlsq5::::res://maple_street/Assets/NPC/Resized Bunny.png<>uid://csge70d0wqrb0::::res://maple_street/Assets/NPC/Resized Owl.png<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>res://maple_street/Scripts/UI/Dialog.gd<>uid://bw0c5mxtms8hh::::res://maple_street/Assets/UI/DialogBoxLineArt.png<>uid://dx8uu164iy0f7::::res://maple_street/Assets/UI/questionMark_transparent.png<>uid://bm1gmqn2tnpx5::::res://maple_street/Assets/UI/Bunny Text Box PNG.png<>uid://cldkj1p1c01nk::::res://maple_street/Assets/UI/Bear Text Box.png<>uid://pjrm2x627wvg::::res://maple_street/Assets/UI/Raccoon Text Box.png<>uid://cv6s2bjx6f2vo::::res://maple_street/Assets/UI/Mouse Text Box.png<>uid://cvnd7y86efl6f::::res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3<>uid://daaer0foq2el4::::res://maple_street/Assets/UI/temp-inventory.png
+::res://maple_street/Scenes/::1714282333
+Maple_Street.tscn::PackedScene::4231654671746741309::1714282333::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://31br8wohlnas::::res://maple_street/Assets/Houses/SecondHouseShadedPart01.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://ddxomws82yu0r::::res://maple_street/Assets/Houses/SecondHouseShaded02.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>res://maple_street/Scripts/UI/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://dmajvt2pqlg7v::::res://maple_street/Assets/NPC/Resized Raccoon.png<>uid://b4weqs3uvlsq5::::res://maple_street/Assets/NPC/Resized Bunny.png<>uid://csge70d0wqrb0::::res://maple_street/Assets/NPC/Resized Owl.png<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>res://maple_street/Scripts/UI/Dialog.gd<>uid://bw0c5mxtms8hh::::res://maple_street/Assets/UI/DialogBoxLineArt.png<>uid://dx8uu164iy0f7::::res://maple_street/Assets/UI/questionMark_transparent.png<>uid://2nkumg3pudqn::::res://maple_street/Assets/DoorLights/SecondHouseShaded01RabbitDoor.png<>uid://3jw8gkrc1fgg::::res://maple_street/Assets/DoorLights/SecondHouseShadedRaccoonDoor.png<>uid://bm1gmqn2tnpx5::::res://maple_street/Assets/UI/Bunny Text Box PNG.png<>uid://istx7llj5anb::::res://maple_street/Assets/DoorLights/SecondHouseOwlDoor.png<>uid://cldkj1p1c01nk::::res://maple_street/Assets/UI/Bear Text Box.png<>uid://pjrm2x627wvg::::res://maple_street/Assets/UI/Raccoon Text Box.png<>uid://cv6s2bjx6f2vo::::res://maple_street/Assets/UI/Mouse Text Box.png<>uid://cvnd7y86efl6f::::res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3<>uid://daaer0foq2el4::::res://maple_street/Assets/UI/temp-inventory.png
 minigame_finish.tscn::PackedScene::6749140830691585789::1714149957::0::1::::<><>::res://maple_street/Scripts/minigame_finish.gd<>uid://c24b15q7u14vj::::res://minigame/maze/Assets/Winning_Screen_Wireframe.png
 TitleScreen.tscn::PackedScene::2194138489511529113::1714152656::0::1::::<><>::res://maple_street/Scripts/TitleScreen.gd<>uid://c3h2n8ym6whga::::res://maple_street/Assets/TitleScreen/Title_Screen.png<>uid://c7ylqlmpejtv3::::res://maple_street/Assets/TitleScreen/Start_Game.png<>uid://daw7bvjghjru3::::res://maple_street/Assets/TitleScreen/Settings.png<>uid://dox4tl4c82tqw::::res://maple_street/Assets/TitleScreen/Credits.png<>uid://cvnd7y86efl6f::::res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3
 ::res://maple_street/Scripts/::1714161222
@@ -101,7 +101,7 @@ pumpkin.gd::GDScript::-1::1713977923::0::1::::<>Area2D<>::
 ::res://minigame/bowling/sounds/::1714148796
 A_Halloween_on_Maple_Street_-_Bear_Bowling.mp3::AudioStreamMP3::9005500765367633503::1714147578::1714148796::1::::<><>::
 ::res://minigame/cupswap/::1714147578
-::res://minigame/cupswap/Assets/::1714104408
+::res://minigame/cupswap/Assets/::1714281381
 A_Halloween_on_Maple_Street_-_Racoon_Game.mp3::AudioStreamMP3::7885294138746881719::1714104408::1714104408::1::::<><>::
 background.jpg::CompressedTexture2D::1802065556356919356::1713547301::1713550222::1::::<><>::
 cotton.png::CompressedTexture2D::2263159160464103567::1713547301::1713550222::1::::<><>::
@@ -146,7 +146,7 @@ quiz.tscn::PackedScene::3706277920164376743::1714148349::0::1::::<><>::res://min
 game.gd::GDScript::-1::1714148349::0::1::::<>Control<>::
 ::res://minigame/runner/::1714153147
 ::res://minigame/runner/Assets/::1714281281
-::res://minigame/runner/Assets/Backgrounds/::1714281281
+::res://minigame/runner/Assets/Backgrounds/::1714281382
 background.png::CompressedTexture2D::6305493075716214778::1714281281::1713550133::1::::<><>::
 FrameRunner.png::CompressedTexture2D::3316733168742739730::1714104408::1713666965::1::::<><>::
 game_over.png::CompressedTexture2D::6750488805921506240::1712941930::1713550132::1::::<><>::
@@ -169,21 +169,21 @@ rock.png::CompressedTexture2D::4195584876846746588::1713547301::1713550133::1:::
 Stand.png::CompressedTexture2D::7166262931473200368::1712941930::1713550133::1::::<><>::
 walk1.png::CompressedTexture2D::3733247408742352029::1712941930::1713550133::1::::<><>::
 walk2.png::CompressedTexture2D::6217672535283852583::1712941930::1713550133::1::::<><>::
-::res://minigame/runner/Scenes/::1714281281
-runner.tscn::PackedScene::448737998001290652::1714281281::0::1::::<><>::uid://b5yotg3nxth1p::::res://minigame/runner/Scenes/FGBG/background.tscn<>uid://basaa74qx6e7q::::res://minigame/runner/Scenes/FGBG/foreground.tscn<>uid://ccjbypgll3lqe::::res://minigame/runner/Scenes/Player/player.tscn<>uid://xdseo5g3c2bv::::res://minigame/runner/Scenes/Spawner/spawner.tscn<>uid://epghtp3e4cbc::::res://minigame/runner/Scenes/UI/score_ui.tscn<>uid://dgirucdi7tlut::::res://minigame/runner/Scenes/Spawner/cloud_spawner.tscn<>uid://cp4s05lr4wwhh::::res://minigame/runner/Scenes/UI/game_over_ui.tscn<>uid://bniwd08jvwoo5::::res://minigame/runner/Assets/Backgrounds/FrameRunner.png<>uid://ooymadleyttt::::res://minigame/runner/sounds/A_Halloween_on_Maple_Street_-_Rabbit_Run_faster.mp3
+::res://minigame/runner/Scenes/::1714282299
+runner.tscn::PackedScene::448737998001290652::1714282299::0::1::::<><>::uid://b5yotg3nxth1p::::res://minigame/runner/Scenes/FGBG/background.tscn<>uid://basaa74qx6e7q::::res://minigame/runner/Scenes/FGBG/foreground.tscn<>uid://ccjbypgll3lqe::::res://minigame/runner/Scenes/Player/player.tscn<>uid://xdseo5g3c2bv::::res://minigame/runner/Scenes/Spawner/spawner.tscn<>uid://epghtp3e4cbc::::res://minigame/runner/Scenes/UI/score_ui.tscn<>uid://dgirucdi7tlut::::res://minigame/runner/Scenes/Spawner/cloud_spawner.tscn<>uid://cp4s05lr4wwhh::::res://minigame/runner/Scenes/UI/game_over_ui.tscn<>uid://bniwd08jvwoo5::::res://minigame/runner/Assets/Backgrounds/FrameRunner.png<>uid://ooymadleyttt::::res://minigame/runner/sounds/A_Halloween_on_Maple_Street_-_Rabbit_Run_faster.mp3
 ::res://minigame/runner/Scenes/Effectors/::1713372907
 effect_damage.tscn::PackedScene::3193088015117766399::1713372907::0::1::::<><>::
 pickup.tscn::PackedScene::6377380693154599961::1713372907::0::1::::<><>::
-::res://minigame/runner/Scenes/Effectors/Backgrounds/::1713550131
+::res://minigame/runner/Scenes/Effectors/Backgrounds/::1714282299
 scrolling_background.gdshader::Shader::-1::1713373070::0::1::::<><>::
-scrolling_background.tscn::PackedScene::8923627390754300325::1713550131::0::1::::<><>::res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.gdshader
-::res://minigame/runner/Scenes/FGBG/::1714281281
-background.tscn::PackedScene::4542515385931207239::1714281281::0::1::::<><>::uid://d0ew3skq60xar::::res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.tscn<>res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.gdshader<>uid://cv3osxp6iipc1::::res://minigame/runner/Assets/Backgrounds/background.png
+scrolling_background.tscn::PackedScene::8923627390754300325::1714282299::0::1::::<><>::res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.gdshader
+::res://minigame/runner/Scenes/FGBG/::1714282299
+background.tscn::PackedScene::4542515385931207239::1714282299::0::1::::<><>::uid://d0ew3skq60xar::::res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.tscn<>res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.gdshader<>uid://cv3osxp6iipc1::::res://minigame/runner/Assets/Backgrounds/background.png
 cloud01.tscn::PackedScene::6117099750883511160::1714281281::0::1::::<><>::res://minigame/runner/Scripts/cloud01.gd<>uid://dnebdm4joi4ee::::res://minigame/runner/Assets/Backgrounds/RabbitGameClouds01.png
 cloud02.tscn::PackedScene::3540331573326015084::1714281281::0::1::::<><>::res://minigame/runner/Scripts/cloud02.gd<>uid://cp5bb8h077645::::res://minigame/runner/Assets/Backgrounds/RabbitGameClouds02.png
 cloud03.tscn::PackedScene::4105020973743805845::1714281281::0::1::::<><>::res://minigame/runner/Scripts/cloud03.gd<>uid://ca5cv3tn033sa::::res://minigame/runner/Assets/Backgrounds/RabbitGameClouds03.png
 cloud04.tscn::PackedScene::4925553377227198744::1714281281::0::1::::<><>::res://minigame/runner/Scripts/cloud04.gd<>uid://dln5c0rq6xj1u::::res://minigame/runner/Assets/Backgrounds/RabbitGameClouds04.png
-foreground.tscn::PackedScene::2423581209571636360::1713550131::0::1::::<><>::uid://d0ew3skq60xar::::res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.tscn<>res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.gdshader<>uid://dg220l6pon10s::::res://minigame/runner/Assets/Backgrounds/grass.png
+foreground.tscn::PackedScene::2423581209571636360::1714282299::0::1::::<><>::uid://d0ew3skq60xar::::res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.tscn<>res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.gdshader<>uid://dg220l6pon10s::::res://minigame/runner/Assets/Backgrounds/grass.png
 ::res://minigame/runner/Scenes/Items/::1714281281
 carrot.tscn::PackedScene::7759405434902955695::1714281281::0::1::::<><>::res://minigame/runner/Scripts/carrot.gd<>uid://c3rq0l0ushhu8::::res://minigame/runner/Assets/Sprites/Items/carrot.png<>uid://cw4ir7xdisw14::::res://minigame/runner/Scenes/Effectors/pickup.tscn
 ::res://minigame/runner/Scenes/Obstacles/::1714281281
