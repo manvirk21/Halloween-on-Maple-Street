@@ -4,6 +4,12 @@ var left_right = true
 var pin_status = 0 # 0: up, 1: left, 2: right, 3: strike
 var strike_count = 0
 
+# Resize variables
+var far_y = 0
+var near_y = 840
+var max_scale : float = 1.1
+var min_scale : float = max_scale * (1.8/3.0)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +20,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	resize()
 	if(left_right):
 		position.x += move
 		if(position.x == 740):
@@ -108,3 +115,7 @@ func _on_miss_area_shape_entered(area_rid, area, area_shape_index, local_shape_i
 	print("collision miss")
 	pin_status = 0
 
+func resize():
+	var distance = (position.y - far_y) / near_y
+	scale.x = lerp(min_scale, max_scale, distance)
+	scale.y = lerp(min_scale, max_scale, distance)
