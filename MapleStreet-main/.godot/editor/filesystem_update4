@@ -1,10 +1,7 @@
+res://minigame/bowling/Scenes/bowling.tscn
 res://minigame/runner/Scenes/runner.tscn
-res://minigame/bowling/Scripts/pumpkin.gd
 res://minigame/runner/Scenes/FGBG/background.tscn
 res://minigame/runner/Scenes/FGBG/foreground.tscn
 res://minigame/runner/Scenes/Effectors/Backgrounds/scrolling_background.tscn
 res://maple_street/Scenes/Maple_Street.tscn
-res://minigame/bowling/Scenes/bowling.tscn
-res://minigame/bowling/Scripts/bowling.gd
-res://minigame/bowling/Scripts/finished.gd
 res://minigame/bowling/Scenes/finished.tscn

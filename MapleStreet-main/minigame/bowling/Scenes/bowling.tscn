@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" path="res://minigame/bowling/Scripts/bowling.gd" id="1_mypux"]
 [ext_resource type="Texture2D" uid="uid://dduyfxnjyh2de" path="res://minigame/bowling/Assets/game_frame.png" id="2_oddi8"]
-[ext_resource type="Texture2D" uid="uid://cijkd5mkebnce" path="res://minigame/bowling/Assets/Bowling_Game_Screen_Background_2.png" id="3_3a0q0"]
+[ext_resource type="Texture2D" uid="uid://dm0755abtttxa" path="res://minigame/bowling/Assets/Bowling_Game_Screen_BackgroundJPEG.jpg" id="3_6647m"]
 [ext_resource type="Texture2D" uid="uid://bfb42cdc6lk6d" path="res://minigame/bowling/Assets/Pins_Up.png" id="4_chk5g"]
 [ext_resource type="Script" path="res://minigame/bowling/Scripts/pumpkin.gd" id="5_48gey"]
 [ext_resource type="Texture2D" uid="uid://cjoj0wfwypwou" path="res://minigame/bowling/Assets/Pins_Strike.png" id="5_lt6yq"]
-[ext_resource type="Texture2D" uid="uid://bcx4hhv6eh2pb" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_1-removebg-preview.png" id="6_13bcn"]
 [ext_resource type="Texture2D" uid="uid://0kksyt1uvxqj" path="res://minigame/bowling/Assets/Pins_Some.png" id="6_l2637"]
 [ext_resource type="Texture2D" uid="uid://cff2eqmffc807" path="res://minigame/bowling/Assets/Crash_Effect.png" id="7_ltpmm"]
-[ext_resource type="Texture2D" uid="uid://bu7pn8xo5k6fm" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_2-removebg-preview.png" id="7_nmhta"]
-[ext_resource type="Texture2D" uid="uid://d13e7td68bcx7" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_3-removebg-preview.png" id="8_8mgud"]
+[ext_resource type="Texture2D" uid="uid://cy6372qc1psti" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_1.png" id="9_fdkwy"]
+[ext_resource type="Texture2D" uid="uid://bcry1aunqdybf" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_2.png" id="10_wo0x8"]
+[ext_resource type="Texture2D" uid="uid://cgslcop86v50s" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_3.png" id="11_f8yvl"]
 [ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="12_7wbhp"]
 [ext_resource type="Script" path="res://minigame/bowling/Scripts/bear.gd" id="13_s3e5a"]
 [ext_resource type="AudioStream" uid="uid://d1kljt4hyfpvr" path="res://minigame/bowling/sounds/A_Halloween_on_Maple_Street_-_Bear_Bowling.mp3" id="14_0876e"]
@@ -20,7 +20,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_13bcn")
+"texture": ExtResource("9_fdkwy")
 }],
 "loop": true,
 "name": &"rest",
@@ -28,13 +28,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_13bcn")
+"texture": ExtResource("9_fdkwy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_nmhta")
+"texture": ExtResource("10_wo0x8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_8mgud")
+"texture": ExtResource("11_f8yvl")
 }],
 "loop": true,
 "name": &"roll",
@@ -60,7 +60,7 @@ scale = Vector2(1.1, 1.1)
 [node name="background" type="TextureRect" parent="Node2D"]
 offset_right = 840.0
 offset_bottom = 840.0
-texture = ExtResource("3_3a0q0")
+texture = ExtResource("3_6647m")
 
 [node name="pins_Up" type="TextureRect" parent="Node2D"]
 offset_left = 175.0

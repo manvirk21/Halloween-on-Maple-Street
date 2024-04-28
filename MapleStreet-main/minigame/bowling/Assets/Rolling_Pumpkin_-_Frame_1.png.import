@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu7pn8xo5k6fm"
-path="res://.godot/imported/Rolling_Pumpkin_-_Frame_2-removebg-preview.png-8ef4a4ada0cb2c6f4175f3dda3718e1c.ctex"
+uid="uid://cy6372qc1psti"
+path="res://.godot/imported/Rolling_Pumpkin_-_Frame_1.png-f71491c66978adfdfb9e370cd3390bc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_2-removebg-preview.png"
-dest_files=["res://.godot/imported/Rolling_Pumpkin_-_Frame_2-removebg-preview.png-8ef4a4ada0cb2c6f4175f3dda3718e1c.ctex"]
+source_file="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_1.png"
+dest_files=["res://.godot/imported/Rolling_Pumpkin_-_Frame_1.png-f71491c66978adfdfb9e370cd3390bc9.ctex"]
 
 [params]
 
