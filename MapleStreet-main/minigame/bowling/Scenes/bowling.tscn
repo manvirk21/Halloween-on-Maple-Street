@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bu7pn8xo5k6fm" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_2-removebg-preview.png" id="7_nmhta"]
 [ext_resource type="Texture2D" uid="uid://d13e7td68bcx7" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_3-removebg-preview.png" id="8_8mgud"]
 [ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="12_7wbhp"]
-[ext_resource type="Script" path="res://minigame/bowling/Scenes/bear.gd" id="13_s3e5a"]
+[ext_resource type="Script" path="res://minigame/bowling/Scripts/bear.gd" id="13_s3e5a"]
 [ext_resource type="AudioStream" uid="uid://d1kljt4hyfpvr" path="res://minigame/bowling/sounds/A_Halloween_on_Maple_Street_-_Bear_Bowling.mp3" id="14_0876e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hhyq5"]
