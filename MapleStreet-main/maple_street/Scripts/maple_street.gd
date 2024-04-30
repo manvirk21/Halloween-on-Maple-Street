@@ -76,20 +76,25 @@ func change_scene():
 
 # display NPC if appropriate
 func NPC_display():
+	# get minigame and candy indo
 	var MINIGAMES = Global.VALID_MINIGAMES
 	var candy_inventory = Save.get_candy_inventory()
 	
+	# get NPC sprites and collisions
 	var NPCs = {
-		"maze" : $NPCsSprites/Mouse,
-		"bowling" : $NPCsSprites/Bear,
-		"runner" : $NPCsSprites/Bunny,
-		"cupswap" : $NPCsSprites/Raccoon,
-		"quiz" : $NPCsSprites/Owl
+		"maze" : [$NPCs/Sprites/Mouse, $NPCs/MouseCollision],
+		"bowling" : [$NPCs/Sprites/Bear, $NPCs/BearCollision],
+		"runner" : [$NPCs/Sprites/Bunny, $NPCs/BunnyCollision],
+		"cupswap" : [$NPCs/Sprites/Raccoon, $NPCs/RaccoonCollision],
+		"quiz" : [$NPCs/Sprites/Owl, $NPCs/OwlCollision]
 	}
 	
+	# make NPCs visible (and collideable) if Teddy got candy from respective minigame
+	# by default, NPC sprites are hidden and collisions are disabled
 	for minigame in MINIGAMES:
 		if candy_inventory[minigame] > 0:
-			NPCs[minigame].visible = true
+			NPCs[minigame][0].visible = true # show sprite
+			NPCs[minigame][1].set_deferred("disabled", false) # enable collision
 
 # SIGNALS 
 # Set Teddy's speed to normal when he's not in grass areas
