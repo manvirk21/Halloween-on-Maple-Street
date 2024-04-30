@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=30 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -28,6 +28,7 @@
 [ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="21_fn7h3"]
 [ext_resource type="Texture2D" uid="uid://daaer0foq2el4" path="res://maple_street/Assets/UI/temp-inventory.png" id="23_8b35x"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="23_akpl7"]
+[ext_resource type="Texture2D" uid="uid://66vvu5rbd3md" path="res://maple_street/Assets/UI/Inventory_Screen_Mock-up_2.png" id="27_cqwrp"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -311,21 +312,6 @@ autowrap_mode = 2
 process_mode = 3
 script = ExtResource("6_bcvno")
 
-[node name="Container" type="Node2D" parent="Buttons"]
-position = Vector2(500, 250)
-
-[node name="temp_inventory" type="TextureRect" parent="Buttons/Container"]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("23_8b35x")
-
-[node name="temp_help" type="TextureRect" parent="Buttons/Container"]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("23_8b35x")
-
 [node name="InventoryButton" type="TextureButton" parent="Buttons"]
 offset_left = 1702.0
 offset_top = 29.0
@@ -339,6 +325,21 @@ offset_top = 250.0
 offset_right = 1892.0
 offset_bottom = 325.0
 texture_normal = ExtResource("13_sk14g")
+
+[node name="Container" type="Node2D" parent="Buttons"]
+position = Vector2(160, 140)
+
+[node name="temp_inventory" type="TextureRect" parent="Buttons/Container"]
+visible = false
+offset_right = 1600.0
+offset_bottom = 800.0
+texture = ExtResource("27_cqwrp")
+
+[node name="temp_help" type="TextureRect" parent="Buttons/Container"]
+visible = false
+offset_right = 800.0
+offset_bottom = 588.0
+texture = ExtResource("23_8b35x")
 
 [node name="OpenWorld" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_fn7h3")
