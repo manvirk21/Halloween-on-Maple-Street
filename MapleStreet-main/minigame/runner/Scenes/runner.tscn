@@ -42,7 +42,7 @@ position = Vector2(6.52389, 35.7773)
 scale = Vector2(0.052147, 0.0567716)
 
 [node name="Spawner" parent="VBoxContainer" instance=ExtResource("4_f00vw")]
-position = Vector2(66.1446, 38.3396)
+position = Vector2(49.1578, 37.5131)
 scale = Vector2(0.0376929, 0.0395553)
 
 [node name="Cloud_spawner" parent="VBoxContainer" instance=ExtResource("6_p5xpm")]
