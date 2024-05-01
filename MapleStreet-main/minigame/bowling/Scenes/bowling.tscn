@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cy6372qc1psti" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_1.png" id="9_fdkwy"]
 [ext_resource type="Texture2D" uid="uid://bcry1aunqdybf" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_2.png" id="10_wo0x8"]
 [ext_resource type="Texture2D" uid="uid://cgslcop86v50s" path="res://minigame/bowling/Assets/Rolling_Pumpkin_-_Frame_3.png" id="11_f8yvl"]
-[ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="12_7wbhp"]
+[ext_resource type="Texture2D" uid="uid://vbb66vq4wru4" path="res://minigame/bowling/Assets/BearPawLarge.png" id="12_yexu6"]
 [ext_resource type="Script" path="res://minigame/bowling/Scripts/bear.gd" id="13_s3e5a"]
 [ext_resource type="AudioStream" uid="uid://d1kljt4hyfpvr" path="res://minigame/bowling/sounds/A_Halloween_on_Maple_Street_-_Bear_Bowling.mp3" id="14_0876e"]
 [ext_resource type="Texture2D" uid="uid://c24b15q7u14vj" path="res://minigame/maze/Assets/Winning_Screen_Wireframe.png" id="15_rgoj3"]
@@ -150,10 +150,9 @@ shape = SubResource("RectangleShape2D_00xyg")
 
 [node name="bear" type="Sprite2D" parent="Node2D"]
 visible = false
-position = Vector2(1500, 200)
-rotation = -1.5708
-scale = Vector2(2, 2)
-texture = ExtResource("12_7wbhp")
+position = Vector2(1500, 210)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_yexu6")
 script = ExtResource("13_s3e5a")
 
 [node name="Button" type="Button" parent="."]

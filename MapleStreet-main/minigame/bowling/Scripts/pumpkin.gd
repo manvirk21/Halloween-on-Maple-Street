@@ -91,7 +91,7 @@ func bear_reset():
 	$"../pins_Up".visible = true
 	await get_tree().create_timer(2).timeout
 	$"../bear".visible = false
-	if(strike_count >= 4):
+	if(strike_count >= 3):
 		give_candy = true
 		Global.change_to_main_street("bowling", give_candy)
 	
