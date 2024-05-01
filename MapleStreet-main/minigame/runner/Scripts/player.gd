@@ -6,6 +6,8 @@ var vel = Vector2.ZERO
 @export var gravity_scale = 25.0
 
 var score = 0
+var give_candy : bool = false
+
 
 enum {
 	JUMP,
@@ -55,7 +57,8 @@ func rewardplayer(scoretoadd):
 func killplayer():
 	queue_free()
 	if score >= 12:
-		print("You got candy!")
+		give_candy = true
 	else:
-		print("Try again to get a dozen carrots!")
+		give_candy = false
+	Global.change_to_main_street("runner", give_candy)
 
