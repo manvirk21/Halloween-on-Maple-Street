@@ -42,18 +42,19 @@ func show_question():
 		ListItem.add_item(option)
 
 func show_result():
-	ListItem.hide()
-	RestartButton.show()
-	QuitButton.show()
+	#ListItem.hide()
+	Global.change_to_main_street("quiz", give_candy)
+	#RestartButton.show()
+	#QuitButton.show()
 	var score = round(correct/items.size()*100)
 	var greet
-	if score >= 80:
-		greet = "Congratulations! You passed and can have some candy"
+	if score >= 90:
+		#greet = "Congratulations! You passed and can have some candy"
 		give_candy = true
 	else:
-		greet = "Oh no! You didn't get enough points..."
+		#greet = "Oh no! You didn't get enough points..."
 		give_candy = false
-	DisplayText.text = "{greet}! Your score is {score}%".format({"greet": greet, "score": score})
+	#DisplayText.text = "{greet}! Your score is {score}%".format({"greet": greet, "score": score})
 
 
 func _on_item_list_item_selected(index):
