@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccjbypgll3lqe"]
+[gd_scene load_steps=8 format=3 uid="uid://ccjbypgll3lqe"]
 
 [ext_resource type="Script" path="res://minigame/runner/Scripts/player.gd" id="1_lbvdq"]
+[ext_resource type="Texture2D" uid="uid://ccxhbwte7jwxd" path="res://minigame/runner/Assets/Sprites/Player/TeddyJump.png" id="3_jqirl"]
 [ext_resource type="Texture2D" uid="uid://coh8x4l48kol6" path="res://player/Assets/teddy_walk_01.png" id="4_iofgw"]
 [ext_resource type="Texture2D" uid="uid://bjioucp2nuuml" path="res://player/Assets/Teddy_StandingPNG.png" id="5_r5o2g"]
 
@@ -8,7 +9,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_r5o2g")
+"texture": ExtResource("3_jqirl")
 }],
 "loop": true,
 "name": &"jump",

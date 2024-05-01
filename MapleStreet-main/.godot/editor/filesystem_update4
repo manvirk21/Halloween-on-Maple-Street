@@ -1,15 +1,5 @@
-res://minigame/cupswap/Scenes/cupswap.tscn
-res://minigame/cupswap/Scripts/CupSwap.gd
+res://minigame/runner/Scenes/Player/player.tscn
+res://global/save_data/game.json
 res://maple_street/Scenes/TitleScreen.tscn
 res://maple_street/Scenes/Maple_Street.tscn
-res://player/Scenes/Street_Teddy.tscn
-res://minigame/maze/Scenes/maze.tscn
-res://minigame/bowling/Scenes/bowling.tscn
 res://minigame/runner/Scenes/runner.tscn
-res://minigame/maze/Scenes/maze_2.tscn
-res://global/save_data/game.json
-res://global/save_data/reset.json
-res://global/save_data/won.json
-res://maple_street/Scenes/settings.tscn
-res://maple_street/Scenes/credits.tscn
-res://minigame/quiz/Scenes/quiz.tscn
