@@ -1,6 +1,2 @@
 res://minigame/quiz/Scenes/quiz.tscn
 res://minigame/quiz/Scripts/game.gd
-res://maple_street/Scenes/TitleScreen.tscn
-res://maple_street/Scenes/Maple_Street.tscn
-res://minigame/runner/Scenes/runner.tscn
-res://minigame/runner/Scenes/Player/player.tscn

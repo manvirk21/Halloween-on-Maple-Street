@@ -43,7 +43,6 @@ func show_question():
 
 func show_result():
 	#ListItem.hide()
-	Global.change_to_main_street("quiz", give_candy)
 	#RestartButton.show()
 	#QuitButton.show()
 	var score = round(correct/items.size()*100)
@@ -55,6 +54,7 @@ func show_result():
 		#greet = "Oh no! You didn't get enough points..."
 		give_candy = false
 	#DisplayText.text = "{greet}! Your score is {score}%".format({"greet": greet, "score": score})
+	Global.change_to_main_street("quiz", give_candy)
 
 
 func _on_item_list_item_selected(index):
