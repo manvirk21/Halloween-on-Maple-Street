@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=35 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -29,6 +29,11 @@
 [ext_resource type="Texture2D" uid="uid://daaer0foq2el4" path="res://maple_street/Assets/UI/temp-inventory.png" id="23_8b35x"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="23_akpl7"]
 [ext_resource type="Texture2D" uid="uid://66vvu5rbd3md" path="res://maple_street/Assets/UI/Inventory_Screen_Mock-up_2.png" id="27_cqwrp"]
+[ext_resource type="Texture2D" uid="uid://c2rfv24637usv" path="res://maple_street/Assets/UI/Candy_Corn_Prize-_Maze.png" id="29_5che4"]
+[ext_resource type="Texture2D" uid="uid://c6ny11lnqxh5r" path="res://maple_street/Assets/UI/Bear_Bowling_Prize.png" id="30_tgjom"]
+[ext_resource type="Texture2D" uid="uid://derrx8c4w0pjk" path="res://maple_street/Assets/UI/Chocolate_Bar_Prize.png" id="31_fiigf"]
+[ext_resource type="Texture2D" uid="uid://81j7tcs38pae" path="res://minigame/cupswap/Assets/Cotton_Candy_Prize_-_Cup_Swap.png" id="32_uucrd"]
+[ext_resource type="Texture2D" uid="uid://bdmirct2cjndd" path="res://maple_street/Assets/UI/Lollipop_Prize_-_Owl_Trivia.png" id="33_0vxjj"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -324,22 +329,57 @@ offset_right = 1892.0
 offset_bottom = 325.0
 texture_normal = ExtResource("13_sk14g")
 
-[node name="Container" type="Node2D" parent="Buttons"]
+[node name="Help" type="Node2D" parent="Buttons"]
 position = Vector2(160, 140)
 
-[node name="temp_inventory" type="TextureRect" parent="Buttons/Container"]
-visible = false
-offset_right = 1600.0
-offset_bottom = 800.0
-texture = ExtResource("27_cqwrp")
-
-[node name="temp_help" type="TextureRect" parent="Buttons/Container"]
+[node name="temp_help" type="TextureRect" parent="Buttons/Help"]
 visible = false
 offset_right = 800.0
 offset_bottom = 588.0
 texture = ExtResource("23_8b35x")
 
+[node name="Inventory" type="Node2D" parent="Buttons"]
+
+[node name="Background" type="TextureRect" parent="Buttons/Inventory"]
+visible = false
+offset_left = 160.0
+offset_top = 140.0
+offset_right = 1760.0
+offset_bottom = 940.0
+texture = ExtResource("27_cqwrp")
+
+[node name="MazeCandy" type="Sprite2D" parent="Buttons/Inventory"]
+visible = false
+position = Vector2(378, 480)
+scale = Vector2(0.707763, 0.707763)
+texture = ExtResource("29_5che4")
+
+[node name="BowlingCandy" type="Sprite2D" parent="Buttons/Inventory"]
+visible = false
+position = Vector2(638, 724)
+scale = Vector2(0.495, 0.495)
+texture = ExtResource("30_tgjom")
+
+[node name="RunnerCandy" type="Sprite2D" parent="Buttons/Inventory"]
+visible = false
+position = Vector2(953, 462)
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("31_fiigf")
+
+[node name="CupSwapCandy" type="Sprite2D" parent="Buttons/Inventory"]
+visible = false
+position = Vector2(1309, 714)
+scale = Vector2(0.842466, 0.842466)
+texture = ExtResource("32_uucrd")
+
+[node name="QuizCandy" type="Sprite2D" parent="Buttons/Inventory"]
+visible = false
+position = Vector2(1542, 434)
+scale = Vector2(0.808219, 0.808219)
+texture = ExtResource("33_0vxjj")
+
 [node name="OpenWorld" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("21_fn7h3")
 autoplay = true
 
