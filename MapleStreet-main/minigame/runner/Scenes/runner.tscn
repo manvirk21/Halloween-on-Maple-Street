@@ -13,6 +13,20 @@
 [node name="Game" type="Node2D"]
 scale = Vector2(1.00167, 0.989457)
 
+[node name="Instructions" type="Label" parent="."]
+z_index = 4
+offset_left = 84.8583
+offset_top = 92.9803
+offset_right = 521.858
+offset_bottom = 287.98
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Jump over the rocks and get at least 12 carrots!"
+horizontal_alignment = 3
+vertical_alignment = 3
+autowrap_mode = 3
+justification_flags = 128
+
 [node name="GameOverUI" parent="." instance=ExtResource("6_stain")]
 process_mode = 3
 visible = false

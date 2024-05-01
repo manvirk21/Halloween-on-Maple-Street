@@ -90,6 +90,19 @@ flat = true
 [node name="MazeMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_yn6th")
 
+[node name="Instructions" type="Label" parent="."]
+offset_left = 86.0
+offset_top = 143.0
+offset_right = 523.0
+offset_bottom = 272.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Find my cheese and get to the exit!"
+horizontal_alignment = 3
+vertical_alignment = 3
+autowrap_mode = 3
+justification_flags = 128
+
 [connection signal="body_entered" from="Finish/FinishArea2D" to="Finish" method="_on_finish_area_2d_body_entered"]
 [connection signal="pressed" from="Finish/FinishScreen/continue_game" to="Finish" method="_on_continue_game_pressed"]
 [connection signal="pressed" from="Finish/FinishScreen/try_again" to="Finish" method="_on_try_again_pressed"]

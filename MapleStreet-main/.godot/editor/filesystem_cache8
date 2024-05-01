@@ -153,9 +153,9 @@ A_Halloween_on_Maple_Street_-_Mouse_Maze.mp3::AudioStreamMP3::212027016942443452
 background.png::CompressedTexture2D::8199054009412235758::1714580463::1714131532::1::::<><>::
 questions.json::JSON::-1::1714586637::0::1::::<><>::
 ::res://minigame/quiz/Scenes/::1714269907
-quiz.tscn::PackedScene::3706277920164376743::1714586653::0::1::::<><>::res://minigame/quiz/Scripts/game.gd<>uid://do2xhshjfjmu5::::res://minigame/quiz/Assets/background.png<>uid://clqyd8ngksvis::::res://minigame/quiz/sounds/A_Halloween_on_Maple_Street_-_Owl_Quiz.mp3
+quiz.tscn::PackedScene::3706277920164376743::1714587006::0::1::::<><>::res://minigame/quiz/Scripts/game.gd<>uid://do2xhshjfjmu5::::res://minigame/quiz/Assets/background.png<>uid://clqyd8ngksvis::::res://minigame/quiz/sounds/A_Halloween_on_Maple_Street_-_Owl_Quiz.mp3
 ::res://minigame/quiz/Scripts/::1714586479
-game.gd::GDScript::-1::1714586637::0::1::::<>Control<>::
+game.gd::GDScript::-1::1714587006::0::1::::<>Control<>::
 ::res://minigame/quiz/sounds/::1714581852
 A_Halloween_on_Maple_Street_-_Owl_Quiz.mp3::AudioStreamMP3::5579413010317344678::1714581801::1714581852::1::::<><>::
 ::res://minigame/runner/::1714580114
@@ -217,8 +217,8 @@ cloud01.gd::GDScript::-1::1714258440::0::1::::<>Node2D<>::
 cloud02.gd::GDScript::-1::1714258605::0::1::::<>Node2D<>::
 cloud03.gd::GDScript::-1::1714258711::0::1::::<>Node2D<>::
 cloud04.gd::GDScript::-1::1714258737::0::1::::<>Node2D<>::
-game_over_ui.gd::GDScript::-1::1714580107::0::1::::<>Control<>::
-player.gd::GDScript::-1::1714586637::0::1::::<>CharacterBody2D<>::
+game_over_ui.gd::GDScript::-1::1714586947::0::1::::<>Control<>::
+player.gd::GDScript::-1::1714586947::0::1::::<>CharacterBody2D<>::
 rock.gd::GDScript::-1::1714131532::0::1::::<>Node2D<>::
 scrollmovement.gd::GDScript::-1::1714131532::0::1::::<>Node2D<>::
 signals.gd::GDScript::-1::1714131532::0::1::::<>Node2D<>::
