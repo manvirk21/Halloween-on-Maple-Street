@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs2l4dmmw2om6"]
+[gd_scene load_steps=6 format=3 uid="uid://bs2l4dmmw2om6"]
 
 [ext_resource type="Script" path="res://minigame/quiz/Scripts/game.gd" id="1_g8lkh"]
 [ext_resource type="Texture2D" uid="uid://do2xhshjfjmu5" path="res://minigame/quiz/Assets/background.png" id="2_le2f0"]
+[ext_resource type="AudioStream" uid="uid://clqyd8ngksvis" path="res://minigame/quiz/sounds/A_Halloween_on_Maple_Street_-_Owl_Quiz.mp3" id="3_apvuy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jefce"]
 bg_color = Color(1, 1, 1, 1)
@@ -93,6 +94,10 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Quit"
 text_overrun_behavior = 4
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_apvuy")
+autoplay = true
 
 [connection signal="item_selected" from="ListItem" to="." method="_on_item_list_item_selected"]
 [connection signal="pressed" from="RestartButton" to="." method="_on_button_pressed"]

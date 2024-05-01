@@ -12,3 +12,4 @@ res://global/save_data/reset.json
 res://global/save_data/won.json
 res://maple_street/Scenes/settings.tscn
 res://maple_street/Scenes/credits.tscn
+res://minigame/quiz/Scenes/quiz.tscn
