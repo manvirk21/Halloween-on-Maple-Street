@@ -55,6 +55,8 @@ func hide_inventory():
 		# resume game
 		resume()
 
+
+
 # pause street 
 func pause(pauser):
 	Global.is_game_paused = true
@@ -78,3 +80,7 @@ func _on_help_button_pressed():
 	elif Global.current_pauser == Global.pausers.HELP_BUTTON:
 		resume()
 		$Help/temp_help.visible = false
+
+
+func _on_button_pressed():
+	hide_inventory()

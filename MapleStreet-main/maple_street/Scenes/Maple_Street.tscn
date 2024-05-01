@@ -351,6 +351,15 @@ offset_right = 1760.0
 offset_bottom = 940.0
 texture = ExtResource("27_cqwrp")
 
+[node name="Button" type="Button" parent="Buttons/Inventory/Background"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 43.0
+offset_right = 55.0
+offset_bottom = 52.0
+scale = Vector2(14.3302, 13.0425)
+flat = true
+
 [node name="MazeCandy" type="Sprite2D" parent="Buttons/Inventory"]
 visible = false
 position = Vector2(378, 480)
@@ -400,3 +409,4 @@ autoplay = true
 [connection signal="body_exited" from="MinigameEnabler/Quiz" to="MinigameEnabler" method="_quiz_area_exited"]
 [connection signal="pressed" from="Buttons/InventoryButton" to="Buttons" method="toggle_inventory"]
 [connection signal="pressed" from="Buttons/HelpButton" to="Buttons" method="_on_help_button_pressed"]
+[connection signal="pressed" from="Buttons/Inventory/Background/Button" to="Buttons" method="_on_button_pressed"]

@@ -1,9 +1,4 @@
-res://minigame/quiz/Scenes/quiz.tscn
-res://maple_street/Scenes/TitleScreen.tscn
 res://maple_street/Scenes/Maple_Street.tscn
-res://minigame/runner/Scenes/runner.tscn
-res://minigame/runner/Scenes/Player/player.tscn
-res://minigame/cupswap/Scenes/cupswap.tscn
-res://global/save_data/game.json
-res://minigame/maze/Scenes/maze.tscn
-res://minigame/maze/Scenes/maze_2.tscn
+res://maple_street/Scripts/maple_street.gd
+res://maple_street/Scripts/UI/UI.gd
+res://maple_street/Scenes/TitleScreen.tscn
