@@ -136,20 +136,14 @@ func check_position(trash: Button) -> String:
 
 func check_win(trash_position: String):
 	print("Trash position:", trash_position)
+	await timer(5)
 	if trash_position in candy and candy[trash_position].visible:
-		print("You won!")
-		$YouWin.visible = true
 		give_candy = true
-		await timer(5)
-		$PlayButton.visible = true
-		$YouWin.visible = false
-		$ExitGame.visible=true
+		Global.change_to_main_street("cupswap", give_candy)
 		# Show "You won!" text or perform other win actions
 	else:
-		print("Try again")
 		give_candy = false
-		$Retry.visible = true
-		$ExitGame.visible=true
+		Global.change_to_main_street("cupswap", give_candy)
 		# Show "Try again" text or perform other lose actions
 
 

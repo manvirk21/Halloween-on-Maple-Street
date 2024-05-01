@@ -1,9 +1,1 @@
-{
-	"candy" : {
-		"maze" : 0,
-		"bowling" : 0,
-		"runner" : 0,
-		"cupswap" : 0,
-		"quiz" : 0
-	}
-}
+{"candy":{"bowling":0,"cupswap":3,"maze":1,"quiz":0,"runner":0}}
