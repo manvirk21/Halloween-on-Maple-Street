@@ -120,6 +120,7 @@ position = Vector2(960, 540)
 texture = ExtResource("6_q57a5")
 
 [node name="ExitGame" type="Button" parent="."]
+visible = false
 offset_left = 1163.0
 offset_top = 680.0
 offset_right = 1365.0
