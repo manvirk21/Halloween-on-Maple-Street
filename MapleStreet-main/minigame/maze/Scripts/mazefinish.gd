@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var Congrats: Sprite2D = get_node("MiniGameFinish/FinishScreen") #set variable Congrats for the FinishScreen Sprite2D
+#@onready var Congrats: Sprite2D = get_node("MiniGameFinish/FinishScreen") #set variable Congrats for the FinishScreen Sprite2D
 @onready var Cheese: Sprite2D = get_node("../Cheese/CheeseSprite") 
 # Called when the node enters the scene tree for the first time.
 func _ready():

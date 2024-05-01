@@ -10,6 +10,8 @@ var near_y = 840
 var max_scale : float = 1.1
 var min_scale : float = max_scale * (1.8/3.0)
 
+var give_candy : bool = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -90,10 +92,12 @@ func bear_reset():
 	await get_tree().create_timer(2).timeout
 	$"../bear".visible = false
 	if(strike_count >= 4):
-		get_tree().change_scene_to_file("res://minigame/bowling/Scenes/finished.tscn")
+		give_candy = true
+		Global.change_to_main_street("bowling", give_candy)
 	
 func end_bowling():
-	$"../../FinishScreen".visible = true
+	give_candy = true
+	Global.change_to_main_street("bowling", give_candy)
 	
 func _on_strike_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	print("strike")

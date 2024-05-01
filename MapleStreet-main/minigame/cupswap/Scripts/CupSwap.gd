@@ -16,6 +16,7 @@ var candy_positions = {
 
 var trash_cans = {}
 var candy = {}
+var give_candy : bool = false
 
 func _ready():
 	trash_cans["left"] = $Trash1
@@ -138,6 +139,7 @@ func check_win(trash_position: String):
 	if trash_position in candy and candy[trash_position].visible:
 		print("You won!")
 		$YouWin.visible = true
+		give_candy = true
 		await timer(5)
 		$PlayButton.visible = true
 		$YouWin.visible = false
@@ -145,6 +147,7 @@ func check_win(trash_position: String):
 		# Show "You won!" text or perform other win actions
 	else:
 		print("Try again")
+		give_candy = false
 		$Retry.visible = true
 		$ExitGame.visible=true
 		# Show "Try again" text or perform other lose actions
@@ -160,5 +163,5 @@ func _on_retry_pressed():
 
 func _on_exit_game_pressed():
 	$ExitGame.visible = false
-	get_tree().change_scene_to_file("res://maple_street/Scenes/Maple_Street.tscn")
+	Global.change_to_main_street("cupswap", give_candy)
 	# Replace with function body.

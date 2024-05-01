@@ -11,7 +11,7 @@ var index_item : int = 0
 
 var correct : float = 0
 var wrong: int = 0
-
+var give_candy : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -49,8 +49,10 @@ func show_result():
 	var greet
 	if score >= 80:
 		greet = "Congratulations! You passed and can have some candy"
+		give_candy = true
 	else:
 		greet = "Oh no! You didn't get enough points..."
+		give_candy = false
 	DisplayText.text = "{greet}! Your score is {score}%".format({"greet": greet, "score": score})
 
 
@@ -68,4 +70,4 @@ func _on_button_pressed():
 
 
 func _on_quit_pressed():
-	get_tree().change_scene_to_file("res://maple_street/Scenes/Maple_Street.tscn")
+	Global.change_to_main_street("quiz", give_candy)
