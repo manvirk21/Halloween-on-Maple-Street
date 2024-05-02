@@ -1,5 +1,8 @@
-TextureButton
 Label
+RichTextLabel
+BoxContainer
+Container
+TextureButton
 Button
 AudioStreamPlayer
 CollisionPolygon2D
@@ -7,8 +10,5 @@ Area2D
 CollisionShape2D
 Node2D
 TextureRect
-Container
 AnimatedSprite2D
 Sprite2D
-ColorRect
-CanvasLayer
