@@ -103,8 +103,8 @@ func finish_dialog():
 	$Dialog.visible = false
 	$NPC_Name.visible = false
 	
-	# if starting/retrying minigame, send signal to MapleStreet node to change scene to minigame
-	if Global.dialog_key != "Completion":
+	# if starting minigame, send signal to MapleStreet node to change scene to minigame
+	if Global.dialog_key == "Instructions":
 		emit_signal("ChangeScene")
 	
 	# reset dialog key
