@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI/Dialog.gd" id="12_ejm64"]
 [ext_resource type="Texture2D" uid="uid://bw0c5mxtms8hh" path="res://maple_street/Assets/UI/DialogBoxLineArt.png" id="13_678g1"]
-[ext_resource type="Texture2D" uid="uid://dx8uu164iy0f7" path="res://maple_street/Assets/UI/questionMark_transparent.png" id="13_sk14g"]
 [ext_resource type="Texture2D" uid="uid://2nkumg3pudqn" path="res://maple_street/Assets/DoorLights/SecondHouseShaded01RabbitDoor.png" id="14_np42t"]
 [ext_resource type="Texture2D" uid="uid://3jw8gkrc1fgg" path="res://maple_street/Assets/DoorLights/SecondHouseShadedRaccoonDoor.png" id="15_mtnwa"]
 [ext_resource type="Texture2D" uid="uid://bm1gmqn2tnpx5" path="res://maple_street/Assets/UI/Bunny Text Box PNG.png" id="16_lf1h5"]
@@ -28,12 +27,13 @@
 [ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="21_fn7h3"]
 [ext_resource type="Texture2D" uid="uid://daaer0foq2el4" path="res://maple_street/Assets/UI/temp-inventory.png" id="23_8b35x"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="23_akpl7"]
+[ext_resource type="Texture2D" uid="uid://cebljqc60t2j7" path="res://maple_street/Assets/UI/Help_Icon.png" id="26_8rctk"]
 [ext_resource type="Texture2D" uid="uid://66vvu5rbd3md" path="res://maple_street/Assets/UI/Inventory_Screen_Mock-up_2.png" id="27_cqwrp"]
-[ext_resource type="Texture2D" uid="uid://c2rfv24637usv" path="res://maple_street/Assets/UI/Candy_Corn_Prize-_Maze.png" id="29_5che4"]
-[ext_resource type="Texture2D" uid="uid://c6ny11lnqxh5r" path="res://maple_street/Assets/UI/Bear_Bowling_Prize.png" id="30_tgjom"]
-[ext_resource type="Texture2D" uid="uid://derrx8c4w0pjk" path="res://maple_street/Assets/UI/Chocolate_Bar_Prize.png" id="31_fiigf"]
-[ext_resource type="Texture2D" uid="uid://81j7tcs38pae" path="res://minigame/cupswap/Assets/Cotton_Candy_Prize_-_Cup_Swap.png" id="32_uucrd"]
-[ext_resource type="Texture2D" uid="uid://bdmirct2cjndd" path="res://maple_street/Assets/UI/Lollipop_Prize_-_Owl_Trivia.png" id="33_0vxjj"]
+[ext_resource type="Texture2D" uid="uid://du3q7wcqf3uq8" path="res://maple_street/Assets/UI/Candy_Corn.png" id="29_8hyx8"]
+[ext_resource type="Texture2D" uid="uid://dxpmoidfmqn4u" path="res://maple_street/Assets/UI/Round Candy.png" id="30_61mg5"]
+[ext_resource type="Texture2D" uid="uid://b4pkpxry5wglm" path="res://maple_street/Assets/UI/ChocolateBarPNG.png" id="31_n8ern"]
+[ext_resource type="Texture2D" uid="uid://8j6ynraflms" path="res://maple_street/Assets/UI/Cotton_Candy.png" id="32_jg6m4"]
+[ext_resource type="Texture2D" uid="uid://bd5ny8j5y8qt4" path="res://maple_street/Assets/UI/Lollipop (1).png" id="33_leymm"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -327,9 +327,10 @@ texture_normal = ExtResource("11_7xv4g")
 [node name="HelpButton" type="TextureButton" parent="Buttons"]
 offset_left = 1820.0
 offset_top = 250.0
-offset_right = 1892.0
-offset_bottom = 325.0
-texture_normal = ExtResource("13_sk14g")
+offset_right = 2070.0
+offset_bottom = 500.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("26_8rctk")
 
 [node name="Help" type="Node2D" parent="Buttons"]
 position = Vector2(160, 140)
@@ -361,33 +362,33 @@ flat = true
 
 [node name="MazeCandy" type="Sprite2D" parent="Buttons/Inventory"]
 visible = false
-position = Vector2(378, 480)
+position = Vector2(364, 499)
 scale = Vector2(0.707763, 0.707763)
-texture = ExtResource("29_5che4")
+texture = ExtResource("29_8hyx8")
 
 [node name="BowlingCandy" type="Sprite2D" parent="Buttons/Inventory"]
 visible = false
-position = Vector2(638, 724)
+position = Vector2(636, 725)
 scale = Vector2(0.495, 0.495)
-texture = ExtResource("30_tgjom")
+texture = ExtResource("30_61mg5")
 
 [node name="RunnerCandy" type="Sprite2D" parent="Buttons/Inventory"]
 visible = false
-position = Vector2(953, 462)
-scale = Vector2(0.66, 0.66)
-texture = ExtResource("31_fiigf")
+position = Vector2(961, 458)
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("31_n8ern")
 
 [node name="CupSwapCandy" type="Sprite2D" parent="Buttons/Inventory"]
 visible = false
-position = Vector2(1309, 714)
-scale = Vector2(0.842466, 0.842466)
-texture = ExtResource("32_uucrd")
+position = Vector2(1312, 724)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("32_jg6m4")
 
 [node name="QuizCandy" type="Sprite2D" parent="Buttons/Inventory"]
 visible = false
-position = Vector2(1542, 434)
+position = Vector2(1537, 440)
 scale = Vector2(0.808219, 0.808219)
-texture = ExtResource("33_0vxjj")
+texture = ExtResource("33_leymm")
 
 [node name="OpenWorld" type="AudioStreamPlayer" parent="."]
 process_mode = 3
