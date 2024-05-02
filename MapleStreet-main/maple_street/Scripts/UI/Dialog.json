@@ -14,7 +14,7 @@
 			"Wowie! You did it, Teddy!",
 			"That cheese made it through the maze like a champ. Here's your candy!",
 			"Do you know why I love cheese so much?",
-			"It's because us mice are omnivores which means that I love eating  veggies, meat, and more!"
+			"It's because us mice are omnivores which means that I love eating veggies, meat, and more!"
 		],
 		
 		"Retry" : [
@@ -28,7 +28,7 @@
 	"bowling" : {
 		"Instructions" : [
 			"Hey Teddy, I just set up this new bowling lane for Halloween but my paws are too big to fit into the bowling balls.",
-			"So I'll make you a deal. You knock all those pins down for me once and I'll give you my most delicious piece of candy."
+			"So I'll make you a deal. You knock all those pins down for me three times and I'll give you my most delicious piece of candy."
 		],
 
 		"Minigame" : [
@@ -53,7 +53,7 @@
 		"Instructions" : [
 			"Hi Teddy. I know you're here for some halloween candy but you're out of luck because I ate them all since they were all so tasty.",
 			"I saved the best one for last, but I'm not willing to give it up without a challenge. So I'll make you a deal.",
-			"If you're good enough to beat me at my cup game, I might spare it just for you! So just follow the bins and find the one that has the ball!"
+			"If you're good enough to beat me at my cup game, I might spare it just for you! You just have to follow the bins and find the one that has my cotton candy!"
 		],
 
 		"Minigame" : [
@@ -78,7 +78,7 @@
 	"runner" : {
 		"Instructions" : [
 			"Teddy! It's great to see you. I know you're here for some candy, but can you do me a favor first?",
-			"I hurt my leg while hopping to get all these candy for halloween, and now I can't get to my carrots in my backyard because of all the barrels there.",
+			"I hurt my leg while dancing, and now I can't get to my carrots in my backyard.",
 			"Can you jump over the rocks and grab me a dozen carrots so I can make some dinner? In return, I'll give you my favorite piece of candy.",
 			"Remember a dozen is 12!"
 		],
@@ -105,7 +105,10 @@
 
 	"quiz" : {
 		"Instructions" : [
-			"Quiz Instructions"
+			"Hey, Teddy! I heard your brother is feeling a bit down and couldn’t join you tonight.",
+			"I have his favorite treat to cheer him up, but it comes with a little challenge.", 
+			"You must have visited the other homes before you came here. I hope you remember their fun facts, because I've got a trivia for you about every critter you've met in town.",
+			"If you answer all the questions correctly, you get to bring home your brother's favorite candy.",
 		],
 
 		"Minigame" : [
@@ -114,7 +117,8 @@
 
 		"Completion" : [
 			"Hoot hoot! Impressive, Teddy!",
-			"You got every question right. Here's your well-earned candy!"
+			"You got every question right. Here's your well-earned candy!",
+			"Now you’re all set to go back home to your brother."
 		],
 
 		"Retry" : [

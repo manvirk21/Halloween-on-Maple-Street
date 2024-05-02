@@ -1,5 +1,3 @@
-res://credits/scenes/credits.tscn
-res://maple_street/Scripts/TitleScreen.gd
 res://maple_street/Scenes/TitleScreen.tscn
 res://maple_street/Scenes/Maple_Street.tscn
 res://player/Scenes/Street_Teddy.tscn
@@ -9,9 +7,8 @@ res://minigame/bowling/Scenes/bowling.tscn
 res://minigame/runner/Scenes/runner.tscn
 res://minigame/maze/Scenes/maze_2.tscn
 res://maple_street/Scenes/settings.tscn
+res://credits/scenes/credits.tscn
 res://minigame/quiz/Scenes/quiz.tscn
-res://minigame/bowling/Scripts/bear.gd
 res://maple_street/Scenes/option_menu.tscn
-res://maple_street/Scripts/option_menu.gd
-res://maple_street/Scripts/UI/UI.gd
 res://global/save_data/game.json
+res://maple_street/Scripts/UI/Dialog.json

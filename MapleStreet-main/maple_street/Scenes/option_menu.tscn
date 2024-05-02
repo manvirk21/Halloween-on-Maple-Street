@@ -132,6 +132,7 @@ size_flags_vertical = 3
 stream = ExtResource("3_ol7rp")
 
 [node name="Back" type="Button" parent="."]
+layout_mode = 0
 offset_left = 596.0
 offset_top = 313.0
 offset_right = 738.0
