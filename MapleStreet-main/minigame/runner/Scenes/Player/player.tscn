@@ -8,12 +8,15 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_gr0tv"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 1.7,
 "texture": ExtResource("3_jqirl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r5o2g")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
-"speed": 3.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,

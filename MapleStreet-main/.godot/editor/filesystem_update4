@@ -1,4 +1,5 @@
-res://maple_street/Scenes/Maple_Street.tscn
-res://maple_street/Scripts/maple_street.gd
-res://maple_street/Scripts/UI/UI.gd
 res://maple_street/Scenes/TitleScreen.tscn
+res://maple_street/Scenes/Maple_Street.tscn
+res://minigame/runner/Scenes/Player/player.tscn
+res://global/save_data/game.json
+res://minigame/runner/Scenes/runner.tscn
