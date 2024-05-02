@@ -1,7 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://dtx7yre83vthn"]
+[gd_scene load_steps=20 format=3 uid="uid://dtx7yre83vthn"]
 
 [ext_resource type="Script" path="res://minigame/bowling/Scripts/bowling.gd" id="1_mypux"]
-[ext_resource type="Texture2D" uid="uid://dduyfxnjyh2de" path="res://minigame/bowling/Assets/game_frame.png" id="2_oddi8"]
 [ext_resource type="Texture2D" uid="uid://dm0755abtttxa" path="res://minigame/bowling/Assets/Bowling_Game_Screen_BackgroundJPEG.jpg" id="3_6647m"]
 [ext_resource type="Texture2D" uid="uid://bfb42cdc6lk6d" path="res://minigame/bowling/Assets/Pins_Up.png" id="4_chk5g"]
 [ext_resource type="Script" path="res://minigame/bowling/Scripts/pumpkin.gd" id="5_48gey"]
@@ -14,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://vbb66vq4wru4" path="res://minigame/bowling/Assets/BearPawLarge.png" id="12_yexu6"]
 [ext_resource type="Script" path="res://minigame/bowling/Scripts/bear.gd" id="13_s3e5a"]
 [ext_resource type="AudioStream" uid="uid://d1kljt4hyfpvr" path="res://minigame/bowling/sounds/A_Halloween_on_Maple_Street_-_Bear_Bowling.mp3" id="14_0876e"]
+[ext_resource type="Texture2D" uid="uid://dw3h1l6bgbsgy" path="res://minigame/bowling/Assets/BearFrameLarge.png" id="14_g5hwu"]
+[ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="15_e0hdu"]
 [ext_resource type="Texture2D" uid="uid://c24b15q7u14vj" path="res://minigame/maze/Assets/Winning_Screen_Wireframe.png" id="15_rgoj3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hhyq5"]
@@ -48,18 +49,14 @@ animations = [{
 [node name="Main" type="Node2D"]
 script = ExtResource("1_mypux")
 
-[node name="frame" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_oddi8")
-
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(800, 80)
+position = Vector2(780, 55)
 scale = Vector2(1.1, 1.1)
 
 [node name="background" type="TextureRect" parent="Node2D"]
 offset_right = 840.0
 offset_bottom = 840.0
+scale = Vector2(1.05, 1.05)
 texture = ExtResource("3_6647m")
 
 [node name="pins_Up" type="TextureRect" parent="Node2D"]
@@ -166,6 +163,22 @@ text = "End Game"
 [node name="BowlingMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_0876e")
 autoplay = true
+
+[node name="frame" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("14_g5hwu")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 517.0
+offset_bottom = 193.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_e0hdu")
+theme_override_font_sizes/font_size = 38
+text = "Get 3 strikes for some Halloween candy!"
+autowrap_mode = 2
 
 [node name="FinishScreen" type="Sprite2D" parent="."]
 visible = false
