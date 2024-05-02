@@ -331,10 +331,10 @@ offset_bottom = 244.0
 texture_normal = ExtResource("11_7xv4g")
 
 [node name="HelpButton" type="TextureButton" parent="Buttons"]
-offset_left = 1820.0
-offset_top = 250.0
-offset_right = 2070.0
-offset_bottom = 500.0
+offset_left = 1620.0
+offset_top = 100.0
+offset_right = 1870.0
+offset_bottom = 350.0
 scale = Vector2(0.3, 0.3)
 texture_normal = ExtResource("26_8rctk")
 
