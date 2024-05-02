@@ -10,4 +10,4 @@ func _on_settings_pressed():
 
 
 func _on_credits_pressed():
-	get_tree().change_scene_to_file("res://maple_street/Scenes/credits.tscn")
+	get_tree().change_scene_to_file("res://credits/scenes/credits.tscn")

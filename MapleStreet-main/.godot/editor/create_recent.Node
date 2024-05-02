@@ -1,3 +1,4 @@
+Label
 Button
 AudioStreamPlayer
 CollisionPolygon2D
@@ -8,7 +9,6 @@ TextureRect
 Container
 AnimatedSprite2D
 Sprite2D
-Label
 ColorRect
 TextureButton
 CanvasLayer

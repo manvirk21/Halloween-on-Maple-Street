@@ -98,7 +98,6 @@ position = Vector2(5952, 592)
 texture = ExtResource("7_0l4x6")
 
 [node name="Owl" type="Sprite2D" parent="NPCs/Sprites"]
-visible = false
 position = Vector2(7094, 522.5)
 scale = Vector2(0.992708, 1.01019)
 texture = ExtResource("10_qkrc1")
