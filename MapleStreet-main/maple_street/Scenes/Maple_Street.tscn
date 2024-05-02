@@ -99,7 +99,7 @@ position = Vector2(5952, 592)
 texture = ExtResource("7_0l4x6")
 
 [node name="Owl" type="Sprite2D" parent="NPCs/Sprites"]
-position = Vector2(7094, 522.5)
+position = Vector2(6563, 512.503)
 scale = Vector2(0.992708, 1.01019)
 texture = ExtResource("10_qkrc1")
 
@@ -125,7 +125,7 @@ polygon = PackedVector2Array(-1, 1, 59, 1, 56, 33, 70, 39, 70, 45, 90, 30, 108, 
 disabled = true
 
 [node name="OwlCollision" type="CollisionPolygon2D" parent="NPCs"]
-position = Vector2(7489, 462)
+position = Vector2(6958, 452.003)
 scale = Vector2(0.782367, 0.827164)
 polygon = PackedVector2Array(2, -1, 23, -28, 103, -30, 122, 48, 149, 51, 166, 66, 163, 83, 139, 97, 142, 166, 166, 175, 163, 233, 151, 275, 144, 283, 128, 284, 116, 295, 104, 285, 96, 287, 91, 326, 122, 337, 123, 341, 90, 336, 91, 344, 81, 338, 79, 340, 59, 333, 54, 343, 47, 336, 15, 339, 47, 327, 50, 288, 41, 283, 26, 288, 0, 296, 3, 287, -12, 286, -5, 274, -12, 269, 10, 232, 1, 214, 11, 149, 3, 139, 10, 127, -6, 125, -10, 101, 6, 83, 27, 73, 51, 2, 29, -8)
 disabled = true
