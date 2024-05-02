@@ -6,7 +6,7 @@ func _on_start_button_pressed():
 
 
 func _on_settings_pressed():
-	get_tree().change_scene_to_file("res://maple_street/Scenes/settings.tscn")
+	get_tree().quit()
 
 
 func _on_credits_pressed():

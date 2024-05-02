@@ -13,3 +13,5 @@ res://minigame/quiz/Scenes/quiz.tscn
 res://minigame/bowling/Scripts/bear.gd
 res://maple_street/Scenes/option_menu.tscn
 res://maple_street/Scripts/option_menu.gd
+res://maple_street/Scripts/UI/UI.gd
+res://global/save_data/game.json

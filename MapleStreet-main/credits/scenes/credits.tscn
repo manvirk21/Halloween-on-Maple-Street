@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c6xasp5qfnxt0"]
+[gd_scene load_steps=15 format=3 uid="uid://c6xasp5qfnxt0"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/settings.gd" id="1_y6egr"]
 [ext_resource type="Texture2D" uid="uid://conpk6iooapib" path="res://credits/assets/FirstRowHousesShaded01.png" id="2_fodvu"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://cfxikh3nc4tua" path="res://maple_street/Assets/NPC/OwlNPC.png" id="11_hdqif"]
 [ext_resource type="Texture2D" uid="uid://bjioucp2nuuml" path="res://player/Assets/Teddy_StandingPNG.png" id="12_sltu5"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="13_4crq5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_urcjp"]
 
 [node name="Credits" type="Node2D"]
 script = ExtResource("1_y6egr")
@@ -42,6 +44,7 @@ offset_left = 438.0
 offset_top = 211.0
 offset_right = 580.0
 offset_bottom = 345.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_urcjp")
 icon = ExtResource("5_gvywu")
 flat = true
 
