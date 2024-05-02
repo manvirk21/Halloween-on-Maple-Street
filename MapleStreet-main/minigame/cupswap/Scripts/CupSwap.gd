@@ -136,7 +136,7 @@ func check_position(trash: Button) -> String:
 
 func check_win(trash_position: String):
 	print("Trash position:", trash_position)
-	await timer(5)
+	await timer(3.2)
 	if trash_position in candy and candy[trash_position].visible:
 		give_candy = true
 		Global.change_to_main_street("cupswap", give_candy)

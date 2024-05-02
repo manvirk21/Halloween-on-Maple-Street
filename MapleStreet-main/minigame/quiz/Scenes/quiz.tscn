@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bs2l4dmmw2om6"]
+[gd_scene load_steps=7 format=3 uid="uid://bs2l4dmmw2om6"]
 
 [ext_resource type="Script" path="res://minigame/quiz/Scripts/game.gd" id="1_g8lkh"]
 [ext_resource type="Texture2D" uid="uid://do2xhshjfjmu5" path="res://minigame/quiz/Assets/background.png" id="2_le2f0"]
 [ext_resource type="AudioStream" uid="uid://clqyd8ngksvis" path="res://minigame/quiz/sounds/A_Halloween_on_Maple_Street_-_Owl_Quiz.mp3" id="3_apvuy"]
+[ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="3_whdaa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jefce"]
 bg_color = Color(1, 1, 1, 1)
@@ -54,14 +55,15 @@ justification_flags = 128
 
 [node name="Instructions" type="Label" parent="."]
 layout_mode = 2
-offset_left = 88.0
+offset_left = 83.0
 offset_top = 117.0
-offset_right = 525.0
+offset_right = 520.0
 offset_bottom = 246.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_whdaa")
 theme_override_font_sizes/font_size = 45
 text = "Answer all the questions correctly!"
-horizontal_alignment = 3
+horizontal_alignment = 1
 vertical_alignment = 3
 autowrap_mode = 3
 justification_flags = 128

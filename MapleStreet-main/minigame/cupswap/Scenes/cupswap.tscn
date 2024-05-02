@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwvg7830bux5d"]
+[gd_scene load_steps=11 format=3 uid="uid://cwvg7830bux5d"]
 
 [ext_resource type="Script" path="res://minigame/cupswap/Scripts/CupSwap.gd" id="1_3g2hc"]
 [ext_resource type="Texture2D" uid="uid://xnmk8r6hgql5" path="res://minigame/cupswap/Assets/Cup_Swap_Game_Background.png" id="2_fcl1t"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://44wowhpaotue" path="res://minigame/cupswap/Assets/Trash_Can_cupswap.png" id="4_uy6yb"]
 [ext_resource type="AudioStream" uid="uid://ootq6miqb6cx" path="res://minigame/cupswap/sounds/A_Halloween_on_Maple_Street_-_Racoon_Game.mp3" id="6_bdh80"]
 [ext_resource type="Texture2D" uid="uid://ibscnkijh11p" path="res://minigame/cupswap/Assets/RaccoonGameScreenTransparent.png" id="6_q57a5"]
+[ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="7_hk6ye"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yya4s"]
 
@@ -133,14 +134,15 @@ stream = ExtResource("6_bdh80")
 autoplay = true
 
 [node name="Instructions" type="Label" parent="."]
-offset_left = 88.0
-offset_top = 117.0
-offset_right = 525.0
-offset_bottom = 246.0
+offset_left = 82.0
+offset_top = 135.0
+offset_right = 519.0
+offset_bottom = 264.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_hk6ye")
 theme_override_font_sizes/font_size = 45
 text = "Find the bin with the cotton candy!"
-horizontal_alignment = 3
+horizontal_alignment = 1
 vertical_alignment = 3
 autowrap_mode = 3
 justification_flags = 128

@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://gnmwcs0buwwi"]
+[gd_scene load_steps=11 format=3 uid="uid://gnmwcs0buwwi"]
 
+[ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="1_kefg0"]
 [ext_resource type="PackedScene" uid="uid://b5yotg3nxth1p" path="res://minigame/runner/Scenes/FGBG/background.tscn" id="1_xxm55"]
 [ext_resource type="PackedScene" uid="uid://basaa74qx6e7q" path="res://minigame/runner/Scenes/FGBG/foreground.tscn" id="2_mmeh4"]
 [ext_resource type="PackedScene" uid="uid://ccjbypgll3lqe" path="res://minigame/runner/Scenes/Player/player.tscn" id="3_78afx"]
 [ext_resource type="PackedScene" uid="uid://xdseo5g3c2bv" path="res://minigame/runner/Scenes/Spawner/spawner.tscn" id="4_f00vw"]
 [ext_resource type="PackedScene" uid="uid://epghtp3e4cbc" path="res://minigame/runner/Scenes/UI/score_ui.tscn" id="5_dljuw"]
-[ext_resource type="PackedScene" uid="uid://dgirucdi7tlut" path="res://minigame/runner/Scenes/Spawner/cloud_spawner.tscn" id="6_p5xpm"]
+[ext_resource type="PackedScene" path="res://minigame/runner/Scenes/Spawner/cloud_spawner.tscn" id="6_p5xpm"]
 [ext_resource type="PackedScene" uid="uid://cp4s05lr4wwhh" path="res://minigame/runner/Scenes/UI/game_over_ui.tscn" id="6_stain"]
 [ext_resource type="Texture2D" uid="uid://bniwd08jvwoo5" path="res://minigame/runner/Assets/Backgrounds/FrameRunner.png" id="7_t0pgj"]
 [ext_resource type="AudioStream" uid="uid://ooymadleyttt" path="res://minigame/runner/sounds/A_Halloween_on_Maple_Street_-_Rabbit_Run_faster.mp3" id="8_llurp"]
@@ -20,9 +21,10 @@ offset_top = 92.9803
 offset_right = 521.858
 offset_bottom = 287.98
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_kefg0")
 theme_override_font_sizes/font_size = 45
 text = "Jump over the rocks and get at least 12 carrots!"
-horizontal_alignment = 3
+horizontal_alignment = 1
 vertical_alignment = 3
 autowrap_mode = 3
 justification_flags = 128

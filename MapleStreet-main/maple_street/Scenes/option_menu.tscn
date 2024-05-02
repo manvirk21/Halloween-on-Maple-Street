@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://budka15vti8do"]
+[gd_scene load_steps=11 format=3 uid="uid://budka15vti8do"]
 
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="2_e6pcm"]
 [ext_resource type="Script" path="res://maple_street/Scripts/option_menu.gd" id="2_kumx6"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://maple_street/Scripts/SoundEffectsHSlider.gd" id="3_p8bji"]
 [ext_resource type="Script" path="res://maple_street/Scripts/bgmHSlider.gd" id="4_w2yrt"]
 [ext_resource type="Texture2D" uid="uid://chepcxxu6b6xv" path="res://credits/assets/creditsbutton.png" id="7_bu68m"]
+[ext_resource type="Texture2D" uid="uid://brjeld1rrlv23" path="res://credits/assets/square.png" id="8_0t60w"]
+[ext_resource type="Texture2D" uid="uid://iojlt1bkt2he" path="res://credits/assets/credits.png" id="8_swhpd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qhbe5"]
 
@@ -25,16 +27,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -366.0
+offset_top = -233.0
+offset_right = 366.0
+offset_bottom = 233.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
-custom_minimum_size = Vector2(700, 450)
+custom_minimum_size = Vector2(600, 300)
 layout_mode = 2
+
+[node name="Credits" type="Sprite2D" parent="CenterContainer/PanelContainer"]
+position = Vector2(365, 228)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_swhpd")
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer"]
 layout_mode = 2
@@ -55,9 +62,6 @@ theme_override_fonts/font = ExtResource("2_e6pcm")
 theme_override_font_sizes/font_size = 60
 text = "Options"
 horizontal_alignment = 1
-
-[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
 
 [node name="HSeparator3" type="HSeparator" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
@@ -131,12 +135,18 @@ size_flags_vertical = 3
 [node name="button_tick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ol7rp")
 
+[node name="Square" type="Sprite2D" parent="."]
+position = Vector2(564, 352)
+rotation = 1.5708
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_0t60w")
+
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
-offset_left = 596.0
-offset_top = 313.0
-offset_right = 738.0
-offset_bottom = 447.0
+offset_left = 491.0
+offset_top = 307.0
+offset_right = 633.0
+offset_bottom = 441.0
 icon = ExtResource("7_bu68m")
 flat = true
 
