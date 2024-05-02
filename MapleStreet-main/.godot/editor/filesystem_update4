@@ -10,3 +10,6 @@ res://minigame/runner/Scenes/runner.tscn
 res://minigame/maze/Scenes/maze_2.tscn
 res://maple_street/Scenes/settings.tscn
 res://minigame/quiz/Scenes/quiz.tscn
+res://minigame/bowling/Scripts/bear.gd
+res://maple_street/Scenes/option_menu.tscn
+res://maple_street/Scripts/option_menu.gd

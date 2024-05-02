@@ -1,3 +1,5 @@
+res://maple_street/Scripts
+res://maple_street/Assets/sounds
 res://global/fonts
 res://global
 res://player/Assets
@@ -10,5 +12,4 @@ res://minigame/runner/Scenes/FGBG
 res://minigame/runner/Scripts
 res://minigame/bowling/Assets
 res://minigame/bowling/Scripts
-res://maple_street/Scripts
 res://maple_street/Scenes

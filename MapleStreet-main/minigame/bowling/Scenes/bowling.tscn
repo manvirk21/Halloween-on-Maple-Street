@@ -149,9 +149,8 @@ scale = Vector2(8.7, 16.313)
 shape = SubResource("RectangleShape2D_00xyg")
 
 [node name="bear" type="Sprite2D" parent="Node2D"]
-visible = false
-position = Vector2(1500, 210)
-scale = Vector2(0.4, 0.4)
+position = Vector2(1611, 210)
+scale = Vector2(0.499107, 0.4)
 texture = ExtResource("12_yexu6")
 script = ExtResource("13_s3e5a")
 

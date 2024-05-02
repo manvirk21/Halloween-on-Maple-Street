@@ -124,8 +124,22 @@ theme_override_colors/font_color = Color(0, 0.258824, 0, 1)
 theme_override_fonts/font = ExtResource("13_4crq5")
 theme_override_font_sizes/font_size = 40
 text = "FMS
-Ben Gould
+
 Deniz Tozaraydin
+"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 1069.0
+offset_top = 331.0
+offset_right = 1528.0
+offset_bottom = 622.0
+theme_override_colors/font_color = Color(0, 0.258824, 0, 1)
+theme_override_fonts/font = ExtResource("13_4crq5")
+theme_override_font_sizes/font_size = 39
+text = "
+Ben Gould
+
 "
 horizontal_alignment = 1
 
