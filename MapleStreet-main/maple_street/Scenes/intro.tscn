@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh28et6kg6osf"]
+
+[ext_resource type="Texture2D" uid="uid://cggdlrxo2s4x8" path="res://maple_street/Assets/intro/Teddy Brother Bedroom WIP PNG.png" id="1_wu5qs"]
+
+[node name="Intro" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(964, 546)
+texture = ExtResource("1_wu5qs")

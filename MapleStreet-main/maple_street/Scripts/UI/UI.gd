@@ -88,7 +88,7 @@ func _on_button_pressed():
 
 
 func _on_main_menu_pressed():
-	get_tree().change_scene_to_file("res://maple_street/Scenes/TitleScreen.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://maple_street/Scenes/EndOptions.tscn") # Replace with function body.
 
 
 func _on_help_back_pressed():

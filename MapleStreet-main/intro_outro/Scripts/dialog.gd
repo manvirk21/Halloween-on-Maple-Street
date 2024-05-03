@@ -10,7 +10,7 @@ var dialog_file : String = "res://intro_outro/Scripts/dialog.json"
 var all_dialog : Dictionary = JSON.parse_string(FileAccess.get_file_as_string(dialog_file))
 
 # scene to switch to after dialog is over
-var end_options : String = "res://maple_street/Scenes/TitleScreen.tscn"
+var end_options : String = "res://maple_street/Scenes/EndOptions.tscn"
 var maple_street : String = "res://maple_street/Scenes/Maple_Street.tscn"
 var next_scene : String
 

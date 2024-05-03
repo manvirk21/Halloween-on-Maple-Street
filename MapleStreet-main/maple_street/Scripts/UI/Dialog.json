@@ -18,7 +18,7 @@
 		],
 		
 		"Retry" : [
-			"Eep! You must have taken a wrong turn.",
+			"Eep! You forgot to get my cheese.",
 			"Just remember to go back if you get stuck! Let's try that again."
 		],
 
@@ -88,8 +88,7 @@
 		],
 
 		"Completion" : [
-			"Wow! Couldn't have hopped better myself! So, candy time!",
-			"That was great Teddy! Couldn't have hopped better myself!",
+			"That was great Teddy! Couldn't have hopped better myself! So, candy time!",
 			"I'm ready for some dinner. I'm sure you're curious about why I have so many carrots for dinner.",
 			"I just have to keep munching on things like carrots and other food because my teeth never stop growing.",
 			"So I use food to grind them down and keep them shiny."
