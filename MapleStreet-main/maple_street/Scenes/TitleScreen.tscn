@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://6i4e1iq6g2th"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/TitleScreen.gd" id="1_l3tev"]
-[ext_resource type="Texture2D" uid="uid://c3h2n8ym6whga" path="res://maple_street/Assets/TitleScreen/Title_Screen.png" id="2_gxhoo"]
+[ext_resource type="Texture2D" uid="uid://cnqe1xfgw2lne" path="res://maple_street/Assets/TitleScreen/StartScreen01.png" id="2_4bvqx"]
 [ext_resource type="Texture2D" uid="uid://efhdelhrqdxa" path="res://maple_street/Assets/TitleScreen/Start_Screen_-_Start_Button (1).png" id="3_2k31f"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="4_mt54a"]
 [ext_resource type="Texture2D" uid="uid://b6f37jxmn6i83" path="res://maple_street/Assets/TitleScreen/Start_Screen_-_Settings_.png" id="5_xsfw0"]
@@ -57,8 +57,7 @@ offset_bottom = 1079.0
 
 [node name="StartScreen" type="Sprite2D" parent="VBoxContainer"]
 position = Vector2(962.5, 544)
-scale = Vector2(2.62432, 2.2833)
-texture = ExtResource("2_gxhoo")
+texture = ExtResource("2_4bvqx")
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
