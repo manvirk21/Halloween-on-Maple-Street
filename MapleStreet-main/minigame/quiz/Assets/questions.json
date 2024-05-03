@@ -16,7 +16,7 @@
 	},
 	{
 		"question": "Why do mice love cheese so much?",
-		"options": ["It gives them superpowers", "t’s easy to find", "It’s stinky", "They're omnivores"],
+		"options": ["It gives them superpowers", "It’s easy to find", "It’s stinky", "They're omnivores"],
 		"correctOptionIndex": 3
 	}
 	]
