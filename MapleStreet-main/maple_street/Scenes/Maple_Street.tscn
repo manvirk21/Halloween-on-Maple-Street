@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=37 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://cebljqc60t2j7" path="res://maple_street/Assets/UI/Help_Icon.png" id="26_8rctk"]
 [ext_resource type="Texture2D" uid="uid://66vvu5rbd3md" path="res://maple_street/Assets/UI/Inventory_Screen_Mock-up_2.png" id="27_cqwrp"]
 [ext_resource type="Texture2D" uid="uid://du3q7wcqf3uq8" path="res://maple_street/Assets/UI/Candy_Corn.png" id="29_8hyx8"]
+[ext_resource type="Texture2D" uid="uid://chepcxxu6b6xv" path="res://credits/assets/creditsbutton.png" id="29_lruj0"]
 [ext_resource type="Texture2D" uid="uid://dxpmoidfmqn4u" path="res://maple_street/Assets/UI/Round Candy.png" id="30_61mg5"]
 [ext_resource type="Texture2D" uid="uid://b4pkpxry5wglm" path="res://maple_street/Assets/UI/ChocolateBarPNG.png" id="31_n8ern"]
 [ext_resource type="Texture2D" uid="uid://8j6ynraflms" path="res://maple_street/Assets/UI/Cotton_Candy.png" id="32_jg6m4"]
@@ -338,18 +339,23 @@ texture_normal = ExtResource("26_8rctk")
 position = Vector2(160, 140)
 
 [node name="temp_help" type="TextureRect" parent="Buttons/Help"]
+visible = false
 offset_left = 475.0
 offset_top = 33.0
 offset_right = 1275.0
 offset_bottom = 621.0
 texture = ExtResource("23_8b35x")
 
+[node name="Creditsbutton" type="Sprite2D" parent="Buttons/Help/temp_help"]
+position = Vector2(71, 65)
+texture = ExtResource("29_lruj0")
+
 [node name="Label" type="Label" parent="Buttons/Help/temp_help"]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 17.0
-offset_right = 795.0
-offset_bottom = 585.0
+offset_left = 126.0
+offset_top = 76.0
+offset_right = 703.0
+offset_bottom = 553.0
 theme_override_fonts/font = ExtResource("23_akpl7")
 theme_override_font_sizes/font_size = 60
 text = "Use your arrow keys to move Teddy.
@@ -358,6 +364,14 @@ Use the space bar to interact with the characters!"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="HelpBack" type="Button" parent="Buttons/Help/temp_help"]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 24.0
+offset_bottom = 21.0
+scale = Vector2(14.3302, 13.0425)
+flat = true
 
 [node name="Inventory" type="Node2D" parent="Buttons"]
 
@@ -428,4 +442,5 @@ autoplay = true
 [connection signal="pressed" from="Buttons/MainMenu" to="Buttons" method="_on_main_menu_pressed"]
 [connection signal="pressed" from="Buttons/InventoryButton" to="Buttons" method="toggle_inventory"]
 [connection signal="pressed" from="Buttons/HelpButton" to="Buttons" method="_on_help_button_pressed"]
+[connection signal="pressed" from="Buttons/Help/temp_help/HelpBack" to="Buttons" method="_on_help_back_pressed"]
 [connection signal="pressed" from="Buttons/Inventory/Background/Button" to="Buttons" method="_on_button_pressed"]

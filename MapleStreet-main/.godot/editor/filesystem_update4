@@ -1,1 +1,3 @@
 res://maple_street/Scenes/Maple_Street.tscn
+res://maple_street/Scenes/TitleScreen.tscn
+res://maple_street/Scripts/UI/UI.gd

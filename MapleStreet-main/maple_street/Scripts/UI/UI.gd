@@ -86,5 +86,11 @@ func _on_button_pressed():
 	hide_inventory()
 
 
+
 func _on_main_menu_pressed():
 	get_tree().change_scene_to_file("res://maple_street/Scenes/TitleScreen.tscn") # Replace with function body.
+
+
+func _on_help_back_pressed():
+	resume()
+	$Help/temp_help.visible = false
