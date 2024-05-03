@@ -51,6 +51,7 @@ func _process(_delta):
 		
 		elif dialog_finished:
 			finish_dialog()
+			game_won_check()
 
 # start dialog
 func start_dialog():
@@ -110,6 +111,12 @@ func finish_dialog():
 	# reset dialog key
 	else:
 		Global.dialog_key = "Instructions"
+
+
+# checks if game is won and switches to outro scene if applicable
+func game_won_check():
+	if Global.is_game_won() and not Save.is_outro_viewed():
+		get_tree().change_scene_to_file("res://intro_outro/Scenes/intro_outro.tscn")
 
 
 # pause street 

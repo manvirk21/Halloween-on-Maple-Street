@@ -40,15 +40,18 @@ var dialog_after_minigame : bool = false
 var dialog_key : String = "Instructions"
 var dialog_minigame : String
 
+
 # Change Teddy settings
 func set_Teddy_settings(resize : bool, sprite_flip : bool):
 	Teddy_resize_on = resize
 	Teddy_sprite_edit_on = sprite_flip
 
+
 # Initialize Street Teddy
 func initialize_Teddy_position(position : Vector2):
 	Street_Teddy_global_position = position
 	Street_Teddy_gp_not_initialized = false
+
 
 # returns true if all minigames have been won, false otherwise
 func is_game_won():
@@ -61,12 +64,6 @@ func is_game_won():
 	
 	return minigames_won == 5
 
-# position Teddy at the exit of the maze
-func move_Teddy_to_maze_exit():
-	Street_Teddy_global_position = Street_Teddy_maze_completed_position
-	
-	# have Teddy facing the mouse
-	Teddy_sprite_flip = true
 
 # used within minigame scenes
 func change_to_main_street(minigame : String, candy_acquired : bool):

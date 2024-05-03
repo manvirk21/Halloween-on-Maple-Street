@@ -5,5 +5,9 @@
 		"runner" : 0,
 		"cupswap" : 0,
 		"quiz" : 0
-	}
+	},
+	
+	"intro" : 0,
+	
+	"outro" : 0
 }

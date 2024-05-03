@@ -1,0 +1,17 @@
+{
+	"intro" : [
+		["Teddy", "Hey, Buddy. Can you believe it’s Halloween!? Wait - why aren’t you in your costume yet? We need to leave soon if we want to go trick or treating"],
+		["Buddy", "Hey, Teddy. I'm feeling a bit down. I really want to go, but I don’t feel good enough to go outside."],
+		["Teddy", "Oh no! I'm sorry to hear that, Buddy. Hey, don't worry! I'll go out and get you tons of candy from all of our neighbors. It'll be like having your own personal trick-or-treater!"],
+		["Buddy", "Yay! You're the best brother ever, Teddy!"],
+		["Teddy", "Absolutely! What are big brothers for, right? "],
+		["Buddy", "Can you make sure to stop by the owl’s house after you’re done? He always has my favorite candy."],
+		["Teddy", "You got it, Buddy. I will make sure to drop by every house to get you all the candy you can eat."]
+	],
+	
+	"outro" : [
+		["Buddy", "Mmm, “munch munch” these taste delicious, Teddy! And you even got me my favorite one! I’m feeling all better thanks to all these candies."],
+		["Teddy", "No worries, Buddy! I’m just happy to see you feeling better. I also had a lot of fun solving  challenges and got to learn all sorts of fun stuff. I’m sure you’ll get to play all the games with me and learn even more fun facts next year."],
+		["Buddy", "I can’t wait for it, Teddy! Sounds like it was a great “Halloween on Maple Street!”"]
+	]
+}

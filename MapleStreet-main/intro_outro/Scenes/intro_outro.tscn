@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://dh28et6kg6osf"]
+
+[ext_resource type="Script" path="res://intro_outro/Scripts/dialog.gd" id="1_5n1he"]
+[ext_resource type="Texture2D" uid="uid://dganwxhbgf5p7" path="res://intro_outro/Assets/Background/Intro.png" id="2_k26vj"]
+[ext_resource type="Texture2D" uid="uid://btix6r5d6c85m" path="res://intro_outro/Assets/Background/Outro.png" id="3_rnr53"]
+[ext_resource type="Texture2D" uid="uid://cyud06vd5k6ep" path="res://intro_outro/Assets/DialogBoxes/TeddyTextBox01.png" id="4_r71ly"]
+[ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="5_rnnyk"]
+[ext_resource type="Texture2D" uid="uid://7wie0vfxes4s" path="res://maple_street/Assets/UI/OwlTextboxPNG.png" id="5_ydkxt"]
+[ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="6_xarml"]
+
+[node name="intro_outro" type="Node2D"]
+script = ExtResource("1_5n1he")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Intro" type="Sprite2D" parent="Background"]
+position = Vector2(960, 540)
+texture = ExtResource("2_k26vj")
+
+[node name="Outro" type="Sprite2D" parent="Background"]
+position = Vector2(960, 540)
+texture = ExtResource("3_rnr53")
+
+[node name="DialogBox" type="Node2D" parent="."]
+
+[node name="Teddy" type="Sprite2D" parent="DialogBox"]
+position = Vector2(958, 884)
+texture = ExtResource("4_r71ly")
+
+[node name="Buddy" type="Sprite2D" parent="DialogBox"]
+position = Vector2(958, 884)
+texture = ExtResource("5_ydkxt")
+
+[node name="Speaker" type="Label" parent="."]
+offset_left = 440.0
+offset_top = 775.0
+offset_right = 1721.0
+offset_bottom = 968.0
+theme_override_colors/font_color = Color(0.14902, 0.105882, 0.0196078, 1)
+theme_override_fonts/font = ExtResource("5_rnnyk")
+theme_override_font_sizes/font_size = 40
+text = "text"
+autowrap_mode = 2
+
+[node name="Dialog" type="Label" parent="."]
+offset_left = 442.0
+offset_top = 831.0
+offset_right = 1761.0
+offset_bottom = 968.0
+theme_override_colors/font_color = Color(0.384314, 0.27451, 0.0509804, 1)
+theme_override_fonts/font = ExtResource("5_rnnyk")
+theme_override_font_sizes/font_size = 40
+text = "text"
+autowrap_mode = 2
+
+[node name="OpenWorld" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_xarml")
+autoplay = true

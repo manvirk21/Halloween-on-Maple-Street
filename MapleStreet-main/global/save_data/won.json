@@ -1,9 +1,13 @@
 {
 	"candy" : {
-		"maze" : 0,
-		"bowling" : 0,
-		"runner" : 0,
-		"cupswap" : 0,
-		"quiz" : 0
-	}
+		"maze" : 1,
+		"bowling" : 1,
+		"runner" : 1,
+		"cupswap" : 1,
+		"quiz" : 1
+	},
+	
+	"intro" : 1,
+	
+	"outro" : 1
 }
