@@ -130,6 +130,17 @@ texture = ExtResource("8_cvso0")
 position = Vector2(6717, 542)
 texture = ExtResource("8_biuku")
 
+[node name="BehindTombstones" type="Area2D" parent="Scenery"]
+
+[node name="MouseTombstone" type="CollisionPolygon2D" parent="Scenery/BehindTombstones"]
+polygon = PackedVector2Array(315, 728, 310, 692, 310, 652, 329, 616, 366, 581, 378, 571, 395, 593, 418, 614, 432, 637, 437, 663, 434, 706, 430, 741, 416, 749)
+
+[node name="BearTombstone" type="CollisionPolygon2D" parent="Scenery/BehindTombstones"]
+polygon = PackedVector2Array(2811, 660, 2832, 748, 2954, 749, 2976, 656, 2983, 648, 2980, 641, 2962, 637, 2944, 638, 2938, 620, 2922, 604, 2901, 592, 2881, 593, 2861, 605, 2845, 624, 2842, 637, 2813, 638, 2804, 646, 2804, 654)
+
+[node name="RaccoonTombstone" type="CollisionPolygon2D" parent="Scenery/BehindTombstones"]
+polygon = PackedVector2Array(4930, 659, 4943, 745, 5046, 764, 5069, 751, 5093, 660, 5078, 653, 5066, 642, 5061, 623, 5039, 616, 5007, 611, 4982, 613, 4964, 628, 4959, 647, 4947, 648)
+
 [node name="Mailboxes" type="Node2D" parent="."]
 
 [node name="Mouse" type="Sprite2D" parent="Mailboxes"]
@@ -202,7 +213,6 @@ polygon = PackedVector2Array(2, -1, 23, -28, 103, -30, 122, 48, 149, 51, 166, 66
 disabled = true
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
-visible = false
 light_mask = 2
 collision_layer = 2
 
@@ -218,7 +228,20 @@ polygon = PackedVector2Array(2, 505, -1, 4, 7699, -1, 7680, 541, 7523, 541, 7524
 [node name="Pumpkins" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
 polygon = PackedVector2Array(3313, 714, 3315, 754, 3350, 767, 3393, 764, 3461, 748, 3453, 704, 3385, 702, 3395, 716)
 
+[node name="MouseTombstone" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
+position = Vector2(-3019, -6)
+polygon = PackedVector2Array(3331, 721, 3337, 749, 3433, 768, 3444, 761, 3453, 741, 3436, 746)
+
+[node name="BearTombstone" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
+position = Vector2(-513, 9)
+polygon = PackedVector2Array(3341, 726, 3346, 755, 3465, 755, 3470, 725)
+
+[node name="RaccoonTombstone" type="CollisionPolygon2D" parent="EnvironmentCollisions"]
+position = Vector2(1636, 24)
+polygon = PackedVector2Array(3306, 713, 3306, 737, 3405, 756, 3429, 740, 3436, 717, 3413, 730)
+
 [node name="GrassAreas" type="Area2D" parent="."]
+visible = false
 
 [node name="NotGrass" type="CollisionPolygon2D" parent="GrassAreas"]
 polygon = PackedVector2Array(-1, 984, -3, 1078, 3841, 1083, 3838, 992, 3619, 994, 3629, 975, 3354, 584, 3120, 567, 3076, 666, 3063.75, 666.195, 2879, 992, 2673, 992, 2595, 848, 2618, 839, 2560, 721, 2540, 721, 2537, 707, 2545, 691, 2492, 584, 2480, 576, 2491, 560, 2468, 493, 2280, 490, 2253, 563, 2258, 573, 2225, 623, 2215, 645, 2220, 665, 2199, 686, 2211, 701, 2195, 708, 2179, 761, 2184, 781, 2162, 840, 2175, 849, 2160.26, 863.138, 2144, 922, 2151, 947, 2142, 991, 616, 988, 592, 914, 592, 854, 609, 792, 726, 765, 832, 762, 905, 758, 968, 740, 1056, 710, 1119, 703, 1159, 684, 1172, 612, 1168, 528, 1077, 521, 1072, 590, 1057, 631, 999, 645, 899, 647, 818, 648, 600, 663, 590, 615, 589, 560, 508, 560, 486, 639, 473, 715, 434, 815, 414, 896, 357, 992)
@@ -510,6 +533,8 @@ process_mode = 3
 stream = ExtResource("21_fn7h3")
 autoplay = true
 
+[connection signal="body_entered" from="Scenery/BehindTombstones" to="." method="_teddy_behind_tombstones"]
+[connection signal="body_exited" from="Scenery/BehindTombstones" to="." method="_teddy_not_behind_tombstones"]
 [connection signal="body_entered" from="GrassAreas" to="." method="_on_Teddy_exits_grass"]
 [connection signal="body_exited" from="GrassAreas" to="." method="_on_Teddy_enters_grass"]
 [connection signal="body_entered" from="MinigameEnabler/Maze" to="MinigameEnabler" method="_maze_area_entered"]

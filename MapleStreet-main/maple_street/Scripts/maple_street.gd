@@ -108,3 +108,12 @@ func _on_Teddy_enters_grass(body):
 	if body.name == "Street_Teddy":
 		Global.Teddy_Speed = Global.GRASS_SPEED
 
+
+# when teddy walks in area behind tombstones, move tombstones forward
+func _teddy_behind_tombstones(body):
+	$Scenery.z_index = 1
+
+
+# when teddy leaves area behind tombstones, move tombstones back
+func _teddy_not_behind_tombstones(body):
+	$Scenery.z_index = 0
