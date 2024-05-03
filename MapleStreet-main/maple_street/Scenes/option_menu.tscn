@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://budka15vti8do"]
+[gd_scene load_steps=13 format=3 uid="uid://budka15vti8do"]
 
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="2_e6pcm"]
 [ext_resource type="Script" path="res://maple_street/Scripts/option_menu.gd" id="2_kumx6"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://iojlt1bkt2he" path="res://credits/assets/credits.png" id="8_swhpd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qhbe5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gpsg6"]
 
 [node name="OptionsMenu" type="ColorRect"]
 material = SubResource("ShaderMaterial_qhbe5")
@@ -161,6 +163,7 @@ offset_left = 491.0
 offset_top = 307.0
 offset_right = 633.0
 offset_bottom = 441.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gpsg6")
 icon = ExtResource("7_bu68m")
 flat = true
 

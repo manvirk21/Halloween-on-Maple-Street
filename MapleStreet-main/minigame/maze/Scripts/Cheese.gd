@@ -4,6 +4,8 @@ extends Node2D
 
 func _on_pickup_body_entered(_body):
 	Cheese.visible = false
+	$collectcheese.play(0)
+	
 
 
 # Called when the node enters the scene tree for the first time.

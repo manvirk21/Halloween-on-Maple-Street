@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=54 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -51,6 +51,8 @@
 [ext_resource type="AudioStream" uid="uid://badqk6bryq8m3" path="res://maple_street/Assets/sounds/ES_Door Knock 12 - SFX Producer.mp3" id="48_3temd"]
 [ext_resource type="AudioStream" uid="uid://os14yanalftf" path="res://maple_street/Assets/sounds/ES_Footsteps Forest 7 - SFX Producer.mp3" id="48_gujxa"]
 [ext_resource type="AudioStream" uid="uid://ccxjm1kgs8qvm" path="res://maple_street/Assets/sounds/ES_Toddler Walk 2 - SFX Producer.mp3" id="49_1ro3n"]
+[ext_resource type="Texture2D" uid="uid://dcguyvutr36bb" path="res://maple_street/Assets/UI/SettingsIcon.png" id="52_1t38l"]
+[ext_resource type="PackedScene" uid="uid://budka15vti8do" path="res://maple_street/Scenes/option_menu.tscn" id="53_xti8b"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -411,6 +413,17 @@ autowrap_mode = 2
 process_mode = 3
 script = ExtResource("6_bcvno")
 
+[node name="OptionsMenu" parent="Buttons" instance=ExtResource("53_xti8b")]
+visible = false
+
+[node name="settings" type="TextureButton" parent="Buttons"]
+offset_left = 242.0
+offset_top = 100.0
+offset_right = 492.0
+offset_bottom = 350.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("52_1t38l")
+
 [node name="MainMenu" type="TextureButton" parent="Buttons"]
 offset_right = 250.0
 offset_bottom = 250.0
@@ -568,6 +581,7 @@ bus = &"Music"
 [connection signal="body_exited" from="MinigameEnabler/Cupswap" to="MinigameEnabler" method="_cupswap_area_exited"]
 [connection signal="body_entered" from="MinigameEnabler/Quiz" to="MinigameEnabler" method="_quiz_area_entered"]
 [connection signal="body_exited" from="MinigameEnabler/Quiz" to="MinigameEnabler" method="_quiz_area_exited"]
+[connection signal="pressed" from="Buttons/settings" to="Buttons" method="_on_settings_pressed"]
 [connection signal="pressed" from="Buttons/MainMenu" to="Buttons" method="_on_main_menu_pressed"]
 [connection signal="pressed" from="Buttons/InventoryButton" to="Buttons" method="toggle_inventory"]
 [connection signal="pressed" from="Buttons/HelpButton" to="Buttons" method="_on_help_button_pressed"]

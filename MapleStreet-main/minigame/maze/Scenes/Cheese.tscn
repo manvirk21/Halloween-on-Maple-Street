@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvjgbwkd4oomw"]
+[gd_scene load_steps=4 format=3 uid="uid://cvjgbwkd4oomw"]
 
 [ext_resource type="Script" path="res://minigame/maze/Scripts/Cheese.gd" id="1_j5ftf"]
 [ext_resource type="Texture2D" uid="uid://c4h2jf07527sd" path="res://minigame/maze/Assets/Cheese_For_Maze.png" id="2_bpdcp"]
+[ext_resource type="AudioStream" uid="uid://2pwhemcxbuq6" path="res://maple_street/Assets/sounds/ES_Multimedia Chime 35 - SFX Producer.mp3" id="3_nnqck"]
 
 [node name="Cheese" type="Node2D"]
 position = Vector2(2, 2)
@@ -17,5 +18,9 @@ texture = ExtResource("2_bpdcp")
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Pickup"]
 position = Vector2(217, 155)
 polygon = PackedVector2Array(-5, -18, 21, -15, 21, 6, -18, 17, -19, -5, -6, -18)
+
+[node name="collectcheese" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_nnqck")
+bus = &"SoundEffects"
 
 [connection signal="body_entered" from="Pickup" to="." method="_on_pickup_body_entered"]

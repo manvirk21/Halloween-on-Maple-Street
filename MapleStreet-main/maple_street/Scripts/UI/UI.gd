@@ -94,3 +94,7 @@ func _on_main_menu_pressed():
 func _on_help_back_pressed():
 	resume()
 	$Help/temp_help.visible = false
+
+
+func _on_settings_pressed():
+	$OptionsMenu.visible = true

@@ -121,3 +121,7 @@ func _teddy_behind_tombstones(body):
 # when teddy leaves area behind tombstones, move tombstones back
 func _teddy_not_behind_tombstones(body):
 	$Scenery.z_index = 0
+
+
+func _on_settings_pressed():
+	$OptionsMenu.visible = true # Replace with function body.

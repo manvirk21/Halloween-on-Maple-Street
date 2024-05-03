@@ -1,6 +1,7 @@
-AudioStreamPlayer2D
-Button
 TextureButton
+Button
+AudioStreamPlayer2D
+AudioListener2D
 Label
 RichTextLabel
 BoxContainer
@@ -11,4 +12,3 @@ Area2D
 CollisionShape2D
 Node2D
 TextureRect
-AnimatedSprite2D

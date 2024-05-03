@@ -148,6 +148,8 @@ vertical_alignment = 3
 autowrap_mode = 3
 justification_flags = 128
 
+[node name="swapnoise" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="Trash1" to="." method="_on_trash_1_pressed"]
 [connection signal="pressed" from="Trash2" to="." method="_on_trash_2_pressed"]

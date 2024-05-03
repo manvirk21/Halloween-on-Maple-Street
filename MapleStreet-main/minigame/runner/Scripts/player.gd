@@ -41,6 +41,7 @@ func _input(event):
 	if state == RUN:
 		if event.is_action_pressed("jump"):
 			state = JUMP
+			$jump.play(0)
 
 func _on_area_2d_body_entered(body):
 	if body is StaticBody2D:
@@ -53,6 +54,7 @@ func _on_area_2d_body_exited(body):
 func rewardplayer(scoretoadd):
 	score += scoretoadd
 	Signals.emit_signal("updatescore", score)
+	$collectcarrot.play(0)
 	
 
 func killplayer():

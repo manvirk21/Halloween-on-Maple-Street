@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bbi06dkv4dmbs"]
+[gd_scene load_steps=13 format=3 uid="uid://bbi06dkv4dmbs"]
 
 [ext_resource type="Script" path="res://minigame/maze/Scripts/maze.gd" id="1_gpj00"]
 [ext_resource type="Texture2D" uid="uid://jntnktkacac" path="res://minigame/maze/Assets/MouseHouse_Maze_Prototype.png" id="2_vw0gl"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c3flmmd32aah6" path="res://maple_street/Scenes/minigame_finish.tscn" id="7_6gd11"]
 [ext_resource type="AudioStream" uid="uid://5hcsme27hiqj" path="res://minigame/maze/sounds/A_Halloween_on_Maple_Street_-_Mouse_Maze.mp3" id="8_cypti"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="9_y2ajn"]
+[ext_resource type="AudioStream" uid="uid://2pwhemcxbuq6" path="res://maple_street/Assets/sounds/ES_Multimedia Chime 35 - SFX Producer.mp3" id="10_ljqj8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u6o27"]
 radius = 10.8167
@@ -76,5 +77,9 @@ horizontal_alignment = 1
 vertical_alignment = 3
 autowrap_mode = 3
 justification_flags = 128
+
+[node name="collectcheese" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_ljqj8")
+bus = &"SoundEffects"
 
 [connection signal="body_entered" from="Finish/FinishArea2D" to="Finish" method="_on_finish_area_2d_body_entered"]

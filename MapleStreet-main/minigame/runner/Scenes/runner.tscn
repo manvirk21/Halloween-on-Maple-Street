@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://gnmwcs0buwwi"]
+[gd_scene load_steps=13 format=3 uid="uid://gnmwcs0buwwi"]
 
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="1_kefg0"]
 [ext_resource type="PackedScene" uid="uid://b5yotg3nxth1p" path="res://minigame/runner/Scenes/FGBG/background.tscn" id="1_xxm55"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ccjbypgll3lqe" path="res://minigame/runner/Scenes/Player/player.tscn" id="3_78afx"]
 [ext_resource type="PackedScene" uid="uid://xdseo5g3c2bv" path="res://minigame/runner/Scenes/Spawner/spawner.tscn" id="4_f00vw"]
 [ext_resource type="PackedScene" uid="uid://epghtp3e4cbc" path="res://minigame/runner/Scenes/UI/score_ui.tscn" id="5_dljuw"]
+[ext_resource type="AudioStream" uid="uid://bowluf6tvhk26" path="res://minigame/runner/sounds/ES_PREL Ascend Cartoon - SFX Producer.mp3" id="6_btatk"]
 [ext_resource type="PackedScene" path="res://minigame/runner/Scenes/Spawner/cloud_spawner.tscn" id="6_p5xpm"]
 [ext_resource type="PackedScene" uid="uid://cp4s05lr4wwhh" path="res://minigame/runner/Scenes/UI/game_over_ui.tscn" id="6_stain"]
 [ext_resource type="Texture2D" uid="uid://bniwd08jvwoo5" path="res://minigame/runner/Assets/Backgrounds/FrameRunner.png" id="7_t0pgj"]
@@ -58,6 +59,18 @@ scale = Vector2(0.0700354, 0.0394247)
 position = Vector2(6.52389, 35.7773)
 scale = Vector2(0.052147, 0.0567716)
 
+[node name="jump" type="AudioStreamPlayer2D" parent="VBoxContainer/Player"]
+position = Vector2(-750.505, -677.736)
+scale = Vector2(0.799743, 0.720292)
+stream = ExtResource("6_btatk")
+bus = &"SoundEffects"
+
+[node name="collectcarrot" type="AudioStreamPlayer2D" parent="VBoxContainer/Player"]
+position = Vector2(-750.505, -677.736)
+scale = Vector2(0.799743, 0.720292)
+stream = ExtResource("11_g0nkv")
+bus = &"SoundEffects"
+
 [node name="Spawner" parent="VBoxContainer" instance=ExtResource("4_f00vw")]
 position = Vector2(49.1578, 37.5131)
 scale = Vector2(0.0376929, 0.0395553)
@@ -87,7 +100,3 @@ grow_vertical = 1
 stream = ExtResource("8_llurp")
 autoplay = true
 bus = &"Music"
-
-[node name="collectcarrot" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_g0nkv")
-bus = &"SoundEffects"
