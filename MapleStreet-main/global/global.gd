@@ -18,7 +18,7 @@ var Teddy_Speed : float = NORMAL_SPEED # used by Street Teddy scene
 # Street Teddy position
 var Street_Teddy_gp_not_initialized : bool = true
 var Street_Teddy_global_position : Vector2
-var Street_Teddy_maze_completed_position : Vector2
+var Street_Teddy_initial_position : Vector2
 var Street_Teddy_reposition : Dictionary = {
 	"maze" : [null, true],
 	"bowling" : [null, false],
@@ -89,3 +89,8 @@ func change_to_main_street(minigame : String, candy_acquired : bool):
 
 	# change scene to maple street
 	get_tree().change_scene_to_file("res://maple_street/Scenes/Maple_Street.tscn")
+
+
+# resets teddy's position
+func reset_teddy_position():
+	Street_Teddy_global_position = Street_Teddy_initial_position

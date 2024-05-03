@@ -35,6 +35,7 @@ func instantiate_Teddy():
 		set_minigame_finished_positions()
 		var initial_marker = $PositionMarkers/InitialTeddyPosition
 		Global.Street_Teddy_global_position = initial_marker.global_position
+		Global.Street_Teddy_initial_position = initial_marker.global_position
 		Global.Street_Teddy_gp_not_initialized = false
 	
 	# position Teddy correctly
