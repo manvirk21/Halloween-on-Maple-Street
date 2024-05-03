@@ -1,13 +1,13 @@
 [gd_scene load_steps=55 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
-[ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
+[ext_resource type="Texture2D" uid="uid://buihfk3um5nxb" path="res://maple_street/Assets/Houses/houses01.png" id="2_6pk3l"]
+[ext_resource type="Texture2D" uid="uid://bgfmbnnt6yklb" path="res://maple_street/Assets/Houses/houses02.png" id="3_godsg"]
 [ext_resource type="Script" path="res://maple_street/Scripts/minigame_enabler.gd" id="3_k28yf"]
-[ext_resource type="Texture2D" uid="uid://c3n3b7uyhgvkm" path="res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg" id="3_qwi7m"]
-[ext_resource type="Texture2D" uid="uid://31br8wohlnas" path="res://maple_street/Assets/Houses/SecondHouseShadedPart01.png" id="4_sygxs"]
+[ext_resource type="Texture2D" uid="uid://bed8n7h22wcmh" path="res://maple_street/Assets/Houses/houses03.png" id="4_pd58b"]
 [ext_resource type="Texture2D" uid="uid://dxnky5efvjn2u" path="res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png" id="5_4v37p"]
+[ext_resource type="Texture2D" uid="uid://c5cpllq68y1wx" path="res://maple_street/Assets/Houses/houses04.png" id="5_6l8df"]
 [ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="5_6qnc0"]
-[ext_resource type="Texture2D" uid="uid://ddxomws82yu0r" path="res://maple_street/Assets/Houses/SecondHouseShaded02.png" id="5_46742"]
 [ext_resource type="Texture2D" uid="uid://xikusl2jfhyr" path="res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png" id="6_02pr7"]
 [ext_resource type="Texture2D" uid="uid://7e6ghsradah5" path="res://maple_street/Assets/Scenery/BearScenery.png" id="6_6pxrm"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI/UI.gd" id="6_bcvno"]
@@ -78,19 +78,19 @@ editor_draw_drag_margin = true
 
 [node name="MouseHouse" type="Sprite2D" parent="HousesSprites"]
 position = Vector2(960, 540)
-texture = ExtResource("2_t3sfn")
+texture = ExtResource("2_6pk3l")
 
 [node name="BearHouse" type="Sprite2D" parent="HousesSprites"]
 position = Vector2(2880, 540)
-texture = ExtResource("3_qwi7m")
+texture = ExtResource("3_godsg")
 
 [node name="HouseSet2" type="Sprite2D" parent="HousesSprites"]
 position = Vector2(4800, 540)
-texture = ExtResource("4_sygxs")
+texture = ExtResource("4_pd58b")
 
 [node name="HouseSet3" type="Sprite2D" parent="HousesSprites"]
 position = Vector2(6720, 540)
-texture = ExtResource("5_46742")
+texture = ExtResource("5_6l8df")
 
 [node name="CandyPopUps" type="Node2D" parent="."]
 
