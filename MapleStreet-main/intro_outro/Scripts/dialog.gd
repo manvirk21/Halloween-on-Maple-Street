@@ -10,7 +10,7 @@ var dialog_file : String = "res://intro_outro/Scripts/dialog.json"
 var all_dialog : Dictionary = JSON.parse_string(FileAccess.get_file_as_string(dialog_file))
 
 # scene to switch to after dialog is over
-var title_screen : String = "res://maple_street/Scenes/TitleScreen.tscn"
+var end_options : String = "res://maple_street/Scenes/TitleScreen.tscn"
 var maple_street : String = "res://maple_street/Scenes/Maple_Street.tscn"
 var next_scene : String
 
@@ -25,7 +25,7 @@ func _ready():
 		Save.set_intro_viewed()
 	else:
 		scene = "outro"
-		next_scene = title_screen
+		next_scene = end_options
 		$Background/Intro.visible = false
 		Save.set_outro_viewed()
 	
