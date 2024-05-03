@@ -3,6 +3,15 @@ extends CanvasLayer
 signal ChangeScene
 var game_paused : bool = false
 
+# Candy sprites for when returning from a minigame
+@onready var candy : Dictionary = {
+	"maze" = $"../CandyPopUps/Maze",
+	"bowling" = $"../CandyPopUps/Bowling",
+	"runner" = $"../CandyPopUps/Runner",
+	"cupswap" = $"../CandyPopUps/Cupswap",
+	"quiz" = $"../CandyPopUps/Quiz"
+}
+
 # Dialog helpers
 var dialog_not_started : bool = true # to know if dialog needs to be initialized
 var dialog_running : bool = false # to know to keep showing dialog
@@ -76,6 +85,10 @@ func start_dialog():
 	dialog_box = get_node(minigame_npc + "DialogBox")
 	dialog_box.visible = true
 	
+	# display candy
+	if Global.dialog_key == "Completion":
+		candy[Global.active_minigame].visible = true
+	
 	# display dialog text
 	display_dialog_text()
 	
@@ -103,6 +116,9 @@ func finish_dialog():
 	dialog_box.visible = false
 	$Dialog.visible = false
 	$NPC_Name.visible = false
+	
+	# hide candy
+	candy[Global.active_minigame].visible = false
 	
 	# if starting minigame, send signal to MapleStreet node to change scene to minigame
 	if Global.dialog_key == "Instructions":
