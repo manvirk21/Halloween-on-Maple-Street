@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwvg7830bux5d"]
+[gd_scene load_steps=12 format=3 uid="uid://cwvg7830bux5d"]
 
 [ext_resource type="Script" path="res://minigame/cupswap/Scripts/CupSwap.gd" id="1_3g2hc"]
 [ext_resource type="Texture2D" uid="uid://xnmk8r6hgql5" path="res://minigame/cupswap/Assets/Cup_Swap_Game_Background.png" id="2_fcl1t"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://ootq6miqb6cx" path="res://minigame/cupswap/sounds/A_Halloween_on_Maple_Street_-_Racoon_Game.mp3" id="6_bdh80"]
 [ext_resource type="Texture2D" uid="uid://ibscnkijh11p" path="res://minigame/cupswap/Assets/RaccoonGameScreenTransparent.png" id="6_q57a5"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="7_hk6ye"]
+[ext_resource type="AudioStream" uid="uid://uq6c1vfrsaxq" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Victory.mp3" id="8_mjy56"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yya4s"]
 
@@ -149,6 +150,11 @@ autowrap_mode = 3
 justification_flags = 128
 
 [node name="swapnoise" type="AudioStreamPlayer2D" parent="."]
+
+[node name="win" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_mjy56")
+bus = &"SoundEffects"
+area_mask = 1025
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="Trash1" to="." method="_on_trash_1_pressed"]

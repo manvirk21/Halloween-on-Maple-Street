@@ -1,5 +1,21 @@
 extends Node
 
+#@onready var MapleStreet: Node2D = get_tree().get_root().get_node("res://maple_street/Scripts/maple_street.gd")
+#@onready var victory: AudioStreamPlayer2D = MapleStreet.get_node("Victory")
+func playVictorySound():
+   	# Load the MapleStreet scene
+	var maplestreet_scene = preload("res://maple_street/Scenes/Maple_Street.tscn")
+	var maplestreet_instance = maplestreet_scene.instantiate()
+
+	# Add the MapleStreet scene as a child of the root node
+	get_tree().get_root().add_child(maplestreet_instance)
+
+	# Play the sound
+	var sound_player = maplestreet_instance.get_node("MapleStreet/Victory")
+	sound_player.play(0)
+
+	maplestreet_instance.queue_free()
+
 # helpers to know if game is paused and by what
 var is_game_paused : bool = false
 enum pausers {HELP_BUTTON, INVENTORY_BUTTON, DIALOG, NONE}
@@ -78,6 +94,7 @@ func change_to_main_street(minigame : String, candy_acquired : bool):
 	if candy_acquired:
 		# give the candy
 		Save.give_candy_to_Teddy(minigame)
+		
 	
 		# update Teddy position and sprite
 		var settings = Street_Teddy_reposition[minigame]

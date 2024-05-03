@@ -140,6 +140,7 @@ func check_win(trash_position: String):
 	if trash_position in candy and candy[trash_position].visible:
 		give_candy = true
 		Global.change_to_main_street("cupswap", give_candy)
+		$win.play(0)
 		# Show "You won!" text or perform other win actions
 	else:
 		give_candy = false
