@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=41 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -9,10 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="5_6qnc0"]
 [ext_resource type="Texture2D" uid="uid://ddxomws82yu0r" path="res://maple_street/Assets/Houses/SecondHouseShaded02.png" id="5_46742"]
 [ext_resource type="Texture2D" uid="uid://xikusl2jfhyr" path="res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png" id="6_02pr7"]
+[ext_resource type="Texture2D" uid="uid://7e6ghsradah5" path="res://maple_street/Assets/Scenery/BearScenery.png" id="6_6pxrm"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI/UI.gd" id="6_bcvno"]
 [ext_resource type="Texture2D" uid="uid://b7hhhwsiu05xr" path="res://maple_street/Assets/NPC/Colorblockedmousesmall.png" id="6_cfwgk"]
 [ext_resource type="Texture2D" uid="uid://dmajvt2pqlg7v" path="res://maple_street/Assets/NPC/Resized Raccoon.png" id="7_0l4x6"]
+[ext_resource type="Texture2D" uid="uid://dhf215iojbtay" path="res://maple_street/Assets/Scenery/MouseScenery.png" id="7_6oqeb"]
+[ext_resource type="Texture2D" uid="uid://p7vj6hn5d6l1" path="res://maple_street/Assets/Scenery/OwlScenery01.png" id="8_biuku"]
 [ext_resource type="Texture2D" uid="uid://b4weqs3uvlsq5" path="res://maple_street/Assets/NPC/Resized Bunny.png" id="8_bk0tn"]
+[ext_resource type="Texture2D" uid="uid://drbjgli7wp5nj" path="res://maple_street/Assets/Scenery/RabbitScenery.png" id="8_cvso0"]
 [ext_resource type="Texture2D" uid="uid://cfxikh3nc4tua" path="res://maple_street/Assets/NPC/OwlNPC.png" id="10_qkrc1"]
 [ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI/Dialog.gd" id="12_ejm64"]
@@ -21,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://bm1gmqn2tnpx5" path="res://maple_street/Assets/UI/Bunny Text Box PNG.png" id="16_lf1h5"]
 [ext_resource type="Texture2D" uid="uid://istx7llj5anb" path="res://maple_street/Assets/DoorLights/SecondHouseOwlDoor.png" id="16_x82po"]
 [ext_resource type="Texture2D" uid="uid://cldkj1p1c01nk" path="res://maple_street/Assets/UI/Bear Text Box.png" id="17_2ff0b"]
-[ext_resource type="Texture2D" uid="uid://n1x2rmlq13th" path="res://maple_street/Assets/UI/OwlTextboxPNG.png" id="18_gen4j"]
+[ext_resource type="Texture2D" uid="uid://7wie0vfxes4s" path="res://maple_street/Assets/UI/OwlTextboxPNG.png" id="18_gen4j"]
 [ext_resource type="Texture2D" uid="uid://pjrm2x627wvg" path="res://maple_street/Assets/UI/Raccoon Text Box.png" id="18_r3alk"]
 [ext_resource type="Texture2D" uid="uid://cv6s2bjx6f2vo" path="res://maple_street/Assets/UI/Mouse Text Box.png" id="19_c7aed"]
 [ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="21_fn7h3"]
@@ -73,6 +77,24 @@ texture = ExtResource("4_sygxs")
 [node name="HouseSet3" type="Sprite2D" parent="HousesSprites"]
 position = Vector2(6720, 540)
 texture = ExtResource("5_46742")
+
+[node name="Scenery" type="Node2D" parent="."]
+
+[node name="MouseScenery" type="Sprite2D" parent="Scenery"]
+position = Vector2(962, 542)
+texture = ExtResource("7_6oqeb")
+
+[node name="BearScenery" type="Sprite2D" parent="Scenery"]
+position = Vector2(2883, 541)
+texture = ExtResource("6_6pxrm")
+
+[node name="BunnyScenery" type="Sprite2D" parent="Scenery"]
+position = Vector2(4797, 541)
+texture = ExtResource("8_cvso0")
+
+[node name="OwlScenery" type="Sprite2D" parent="Scenery"]
+position = Vector2(6717, 542)
+texture = ExtResource("8_biuku")
 
 [node name="NPCs" type="StaticBody2D" parent="."]
 collision_layer = 2
@@ -134,6 +156,7 @@ polygon = PackedVector2Array(2, -1, 23, -28, 103, -30, 122, 48, 149, 51, 166, 66
 disabled = true
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
+visible = false
 light_mask = 2
 collision_layer = 2
 
@@ -339,6 +362,7 @@ texture_normal = ExtResource("26_8rctk")
 position = Vector2(160, 140)
 
 [node name="temp_help" type="TextureRect" parent="Buttons/Help"]
+visible = false
 offset_left = 475.0
 offset_top = 33.0
 offset_right = 1275.0
