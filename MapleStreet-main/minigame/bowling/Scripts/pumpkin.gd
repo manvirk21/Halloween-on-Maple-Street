@@ -94,10 +94,7 @@ func bear_reset():
 	if(strike_count >= 3):
 		give_candy = true
 		Global.change_to_main_street("bowling", give_candy)
-	
-func end_bowling():
-	give_candy = true
-	Global.change_to_main_street("bowling", give_candy)
+
 	
 func _on_strike_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	print("strike")
