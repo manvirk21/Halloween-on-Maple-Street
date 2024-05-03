@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://6i4e1iq6g2th"]
+[gd_scene load_steps=15 format=3 uid="uid://6i4e1iq6g2th"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/TitleScreen.gd" id="1_l3tev"]
 [ext_resource type="Texture2D" uid="uid://c3h2n8ym6whga" path="res://maple_street/Assets/TitleScreen/Title_Screen.png" id="2_gxhoo"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="6_jrqqy"]
 [ext_resource type="Texture2D" uid="uid://dl3abgqn4ro1s" path="res://maple_street/Assets/TitleScreen/Start_Screen_-_Credits.png" id="7_or8nf"]
 [ext_resource type="Texture2D" uid="uid://x4024vmln4kc" path="res://maple_street/Assets/TitleScreen/Title_Card_B_3.png" id="7_rnnjn"]
+[ext_resource type="Texture2D" uid="uid://daaer0foq2el4" path="res://maple_street/Assets/UI/temp-inventory.png" id="9_vjbj4"]
 
 [sub_resource type="FontFile" id="FontFile_jqq4x"]
 subpixel_positioning = 0
@@ -62,34 +63,50 @@ texture = ExtResource("2_gxhoo")
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 140.0
-offset_top = 873.0
-offset_right = 602.0
-offset_bottom = 998.0
+offset_top = 862.0
+offset_right = 1055.0
+offset_bottom = 1130.0
+scale = Vector2(0.55, 0.55)
 theme = SubResource("Theme_4cdov")
+theme_override_colors/font_color = Color(0.380392, 0.172549, 0.129412, 1)
+theme_override_fonts/font = ExtResource("4_mt54a")
+theme_override_font_sizes/font_size = 90
 theme_override_styles/focus = SubResource("StyleBoxEmpty_s116d")
 text = "Start"
+icon = ExtResource("5_xsfw0")
+flat = true
+icon_alignment = 1
 
 [node name="StartGame" type="Sprite2D" parent="StartButton"]
+visible = false
 position = Vector2(231, 62.5)
 scale = Vector2(0.54, 0.569)
 texture = ExtResource("3_2k31f")
 
 [node name="Credits" type="Button" parent="."]
 layout_mode = 0
-offset_left = 732.0
-offset_top = 873.0
-offset_right = 1201.0
-offset_bottom = 998.0
+offset_left = 720.0
+offset_top = 861.0
+offset_right = 1635.0
+offset_bottom = 1129.0
+scale = Vector2(0.55, 0.55)
 theme = SubResource("Theme_4cdov")
+theme_override_colors/font_color = Color(0.380392, 0.172549, 0.129412, 1)
+theme_override_fonts/font = ExtResource("4_mt54a")
+theme_override_font_sizes/font_size = 90
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mtwop")
 text = "Credits"
+icon = ExtResource("5_xsfw0")
+flat = true
+icon_alignment = 1
 
 [node name="Credit" type="Sprite2D" parent="Credits"]
+visible = false
 position = Vector2(234.5, 61.5)
 scale = Vector2(0.57, 0.546)
 texture = ExtResource("7_or8nf")
 
-[node name="Quit" type="Button" parent="."]
+[node name="Reset" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1277.0
 offset_top = 861.0
@@ -101,7 +118,7 @@ theme_override_colors/font_color = Color(0.380392, 0.172549, 0.129412, 1)
 theme_override_fonts/font = ExtResource("4_mt54a")
 theme_override_font_sizes/font_size = 90
 theme_override_styles/focus = SubResource("StyleBoxEmpty_efimj")
-text = "Quit"
+text = "Reset"
 icon = ExtResource("5_xsfw0")
 flat = true
 icon_alignment = 1
@@ -115,6 +132,54 @@ position = Vector2(971, 191)
 scale = Vector2(2.06506, 2.02769)
 texture = ExtResource("7_rnnjn")
 
+[node name="ResetWindow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(955, 503)
+texture = ExtResource("9_vjbj4")
+
+[node name="Label" type="Label" parent="ResetWindow"]
+offset_left = -598.0
+offset_top = -249.0
+offset_right = 598.0
+offset_bottom = -108.0
+theme_override_fonts/font = ExtResource("4_mt54a")
+theme_override_font_sizes/font_size = 50
+text = "Are you sure you want to reset? 
+This resets all save data 
+and restarts the game"
+horizontal_alignment = 1
+
+[node name="No" type="Button" parent="ResetWindow"]
+offset_left = -173.0
+offset_top = 115.0
+offset_right = 742.0
+offset_bottom = 383.0
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0.380392, 0.172549, 0.129412, 1)
+theme_override_fonts/font = ExtResource("4_mt54a")
+theme_override_font_sizes/font_size = 90
+text = "No"
+icon = ExtResource("5_xsfw0")
+flat = true
+icon_alignment = 1
+
+[node name="Yes" type="Button" parent="ResetWindow"]
+offset_left = -175.0
+offset_top = -6.0
+offset_right = 740.0
+offset_bottom = 262.0
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0.380392, 0.172549, 0.129412, 1)
+theme_override_fonts/font = ExtResource("4_mt54a")
+theme_override_font_sizes/font_size = 90
+text = "Yes
+"
+icon = ExtResource("5_xsfw0")
+flat = true
+icon_alignment = 1
+
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="ResetWindow/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="ResetWindow/Yes" to="." method="_on_yes_pressed"]

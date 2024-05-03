@@ -12,8 +12,17 @@ func _on_start_button_pressed():
 
 
 func _on_settings_pressed():
-	get_tree().quit()
+	$ResetWindow.visible = true
 
 
 func _on_credits_pressed():
 	get_tree().change_scene_to_file("res://credits/scenes/credits.tscn")
+
+
+func _on_no_pressed():
+	$ResetWindow.visible = false
+
+
+func _on_yes_pressed():
+	Save.reset()
+	$ResetWindow.visible = false

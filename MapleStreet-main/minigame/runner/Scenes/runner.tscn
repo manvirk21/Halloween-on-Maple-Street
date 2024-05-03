@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ccjbypgll3lqe" path="res://minigame/runner/Scenes/Player/player.tscn" id="3_78afx"]
 [ext_resource type="PackedScene" uid="uid://xdseo5g3c2bv" path="res://minigame/runner/Scenes/Spawner/spawner.tscn" id="4_f00vw"]
 [ext_resource type="PackedScene" uid="uid://epghtp3e4cbc" path="res://minigame/runner/Scenes/UI/score_ui.tscn" id="5_dljuw"]
-[ext_resource type="PackedScene" uid="uid://dgirucdi7tlut" path="res://minigame/runner/Scenes/Spawner/cloud_spawner.tscn" id="6_p5xpm"]
+[ext_resource type="PackedScene" path="res://minigame/runner/Scenes/Spawner/cloud_spawner.tscn" id="6_p5xpm"]
 [ext_resource type="PackedScene" uid="uid://cp4s05lr4wwhh" path="res://minigame/runner/Scenes/UI/game_over_ui.tscn" id="6_stain"]
 [ext_resource type="Texture2D" uid="uid://bniwd08jvwoo5" path="res://minigame/runner/Assets/Backgrounds/FrameRunner.png" id="7_t0pgj"]
 [ext_resource type="AudioStream" uid="uid://ooymadleyttt" path="res://minigame/runner/sounds/A_Halloween_on_Maple_Street_-_Rabbit_Run_faster.mp3" id="8_llurp"]

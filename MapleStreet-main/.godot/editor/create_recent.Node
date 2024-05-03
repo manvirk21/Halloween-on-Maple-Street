@@ -1,9 +1,9 @@
+Button
+TextureButton
 Label
 RichTextLabel
 BoxContainer
 Container
-TextureButton
-Button
 AudioStreamPlayer
 CollisionPolygon2D
 Area2D
