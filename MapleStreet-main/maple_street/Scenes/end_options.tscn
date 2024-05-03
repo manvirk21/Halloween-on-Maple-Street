@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://3b7mobuo0c11"]
+[gd_scene load_steps=11 format=3 uid="uid://3b7mobuo0c11"]
 
 [ext_resource type="Texture2D" uid="uid://c3h2n8ym6whga" path="res://maple_street/Assets/TitleScreen/Title_Screen.png" id="2_cbkpj"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="5_m6kgo"]
 [ext_resource type="Texture2D" uid="uid://b6f37jxmn6i83" path="res://maple_street/Assets/TitleScreen/Start_Screen_-_Settings_.png" id="6_0ucxj"]
+[ext_resource type="AudioStream" uid="uid://uq6c1vfrsaxq" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Victory.mp3" id="6_bfw3v"]
 [ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="7_ew1nb"]
 [ext_resource type="Texture2D" uid="uid://x4024vmln4kc" path="res://maple_street/Assets/TitleScreen/Title_Card_B_3.png" id="8_k2t8w"]
 
@@ -100,13 +101,16 @@ expand_icon = true
 
 [node name="OpenWorld" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_ew1nb")
-autoplay = true
 
 [node name="TitleCardB3" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(971, 191)
 scale = Vector2(2.06506, 2.02769)
 texture = ExtResource("8_k2t8w")
+
+[node name="victory" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_bfw3v")
+autoplay = true
 
 [connection signal="pressed" from="Quit" to="." method="_on_end_game_pressed"]
 [connection signal="pressed" from="KeepPlaying" to="." method="on_keep_playing_pressed"]
