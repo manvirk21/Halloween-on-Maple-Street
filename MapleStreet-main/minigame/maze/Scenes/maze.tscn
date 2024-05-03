@@ -64,13 +64,13 @@ autoplay = true
 
 [node name="Instructions" type="Label" parent="."]
 offset_left = 85.0
-offset_top = 136.0
+offset_top = 103.0
 offset_right = 522.0
-offset_bottom = 265.0
+offset_bottom = 339.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_y2ajn")
 theme_override_font_sizes/font_size = 45
-text = "Find my cheese and get to the exit!"
+text = "Use your arrow keys to move around.  Find my cheese and get to the exit!"
 horizontal_alignment = 1
 vertical_alignment = 3
 autowrap_mode = 3

@@ -170,14 +170,16 @@ offset_bottom = 1080.0
 texture = ExtResource("14_g5hwu")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 100.0
-offset_top = 100.0
-offset_right = 517.0
-offset_bottom = 193.0
+offset_left = 93.0
+offset_top = 90.0
+offset_right = 533.0
+offset_bottom = 375.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("15_e0hdu")
 theme_override_font_sizes/font_size = 38
-text = "Get 3 strikes for some Halloween candy!"
+text = "Get 3 strikes for some Halloween candy!
+
+Press your space bar to roll the pumpkin."
 autowrap_mode = 2
 
 [node name="FinishScreen" type="Sprite2D" parent="."]

@@ -366,6 +366,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="HelpBack" type="Button" parent="Buttons/Help/temp_help"]
+layout_mode = 0
 offset_left = 16.0
 offset_top = 12.0
 offset_right = 24.0
