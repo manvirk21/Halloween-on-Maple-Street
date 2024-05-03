@@ -80,6 +80,7 @@ func reset():
 	
 	# save 
 	save_file.store_line(reset_data_string)
+	_load()
 
 
 # opens save file
