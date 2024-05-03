@@ -76,11 +76,10 @@ func reset():
 	# get reset save data
 	var reset_file_name : String = "res://global/save_data/reset.json"
 	var reset_data_dict = JSON.parse_string(FileAccess.get_file_as_string(reset_file_name))
-	var reset_data_string = JSON.stringify(reset_data_dict)
 	
 	# save 
-	save_file.store_line(reset_data_string)
-	_load()
+	save_data = reset_data_dict
+	_save()
 
 
 # opens save file
