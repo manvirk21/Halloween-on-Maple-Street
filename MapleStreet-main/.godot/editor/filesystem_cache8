@@ -2,7 +2,7 @@ ea4bc82a6ad023ab7ee23ee620429895
 ::res://::1714739443
 icon.svg::CompressedTexture2D::2558303370247231020::1714131531::1714739632::1::::<><>::
 ::res://credits/::1714659375
-::res://credits/assets/::1714739432
+::res://credits/assets/::1714739638
 credits.png::CompressedTexture2D::590979172497092534::1714659372::1714674015::1::::<><>::
 creditsbutton.png::CompressedTexture2D::5273336354865740375::1714659372::1714674014::1::::<><>::
 FirstRowHousesShaded01.png::CompressedTexture2D::5783252343189090541::1714659372::1714674017::1::::<><>::
@@ -21,10 +21,10 @@ reset.json::JSON::-1::1714739432::0::1::::<><>::
 won.json::JSON::-1::1714739432::0::1::::<><>::
 ::res://intro_outro/::1714739441
 ::res://intro_outro/Assets/::1714739442
-::res://intro_outro/Assets/Background/::1714739442
+::res://intro_outro/Assets/Background/::1714739640
 Intro.png::CompressedTexture2D::7581224940183738622::1714739432::1714739640::1::::<><>::
 Outro.png::CompressedTexture2D::3737976524711810412::1714739432::1714739640::1::::<><>::
-::res://intro_outro/Assets/DialogBoxes/::1714739442
+::res://intro_outro/Assets/DialogBoxes/::1714739638
 TeddyTextBox01.png::CompressedTexture2D::6498889626447669219::1714739432::1714739638::1::::<><>::
 ::res://intro_outro/Scenes/::1714739442
 intro_outro.tscn::PackedScene::7708334006138253817::1714739432::0::1::::<><>::res://intro_outro/Scripts/dialog.gd<>uid://dganwxhbgf5p7::::res://intro_outro/Assets/Background/Intro.png<>uid://btix6r5d6c85m::::res://intro_outro/Assets/Background/Outro.png<>uid://cyud06vd5k6ep::::res://intro_outro/Assets/DialogBoxes/TeddyTextBox01.png<>uid://bbsbxslie4s0h::::res://global/fonts/ComicNeue-Regular.ttf<>uid://7wie0vfxes4s::::res://maple_street/Assets/UI/OwlTextboxPNG.png<>uid://cvnd7y86efl6f::::res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3
@@ -33,7 +33,7 @@ dialog.gd::GDScript::-1::1714739432::0::1::::<>Node2D<>::
 dialog.json::JSON::-1::1714739432::0::1::::<><>::
 ::res://maple_street/::1714739443
 ::res://maple_street/Assets/::1714739440
-::res://maple_street/Assets/CandyPopUps/::1714739440
+::res://maple_street/Assets/CandyPopUps/::1714739638
 BowlingCandyPlacement.png::CompressedTexture2D::3727952584614799626::1714739432::1714739638::1::::<><>::
 CupswapCandyPlacement.png::CompressedTexture2D::4173015313359747704::1714739432::1714739638::1::::<><>::
 MazeCandyPlacement.png::CompressedTexture2D::3290170091352036300::1714739432::1714739637::1::::<><>::
@@ -54,9 +54,9 @@ MouseHouseIIJPEG.jpg::CompressedTexture2D::8229338772140731420::1714131531::1714
 SecondHouseShaded02.png::CompressedTexture2D::7418181922618964419::1714256773::1714257220::1::::<><>::
 SecondHouseShadedPart01.png::CompressedTexture2D::2019054286861760206::1714256601::1714257219::1::::<><>::
 WIPSecondRowHouses.png::CompressedTexture2D::7006965396494906387::1714131531::1714131531::1::::<><>::
-::res://maple_street/Assets/intro/::1714739440
+::res://maple_street/Assets/intro/::1714739635
 Teddy Brother Bedroom WIP PNG.png::CompressedTexture2D::5206563419550381155::1714739432::1714739635::1::::<><>::
-::res://maple_street/Assets/Mailbox/::1714739440
+::res://maple_street/Assets/Mailbox/::1714739636
 MailboxMouse.png::CompressedTexture2D::7303614375147611278::1714739432::1714739636::1::::<><>::
 MailboxOwl.png::CompressedTexture2D::4197228063385789050::1714739432::1714739635::1::::<><>::
 ::res://maple_street/Assets/NPC/::1714269896
@@ -72,7 +72,7 @@ OwlNPC.png::CompressedTexture2D::5171770279313389852::1714580454::1714581110::1:
 Resized Bunny.png::CompressedTexture2D::4467585890070950958::1714131531::1714256439::1::::<><>::
 Resized Owl.png::CompressedTexture2D::6048928151655266623::1714150098::1714256439::1::::<><>::
 Resized Raccoon.png::CompressedTexture2D::8002113169699317861::1714131531::1714256439::1::::<><>::
-::res://maple_street/Assets/Scenery/::1714739440
+::res://maple_street/Assets/Scenery/::1714739634
 BearScenery.png::CompressedTexture2D::2256193845214916036::1714739432::1714739634::1::::<><>::
 MouseScenery.png::CompressedTexture2D::7662593223469174460::1714739432::1714739634::1::::<><>::
 OwlScenery01.png::CompressedTexture2D::1120185511362028516::1714739432::1714739633::1::::<><>::
@@ -123,14 +123,14 @@ questionMark_transparent.png::CompressedTexture2D::8842981391196778830::17141315
 Raccoon Text Box.png::CompressedTexture2D::1072467127867730936::1714131531::1714256439::1::::<><>::
 Round Candy.png::CompressedTexture2D::8805325151157883202::1714659372::1714674013::1::::<><>::
 temp-inventory.png::CompressedTexture2D::7159536599013071483::1714255996::1714256438::1::::<><>::
-::res://maple_street/Scenes/::1714739432
+::res://maple_street/Scenes/::1714740327
 EndOptions.tscn::PackedScene::3947920035502028085::1714739432::0::1::::<><>::res://maple_street/Scripts/EndOptions.gd<>uid://c3h2n8ym6whga::::res://maple_street/Assets/TitleScreen/Title_Screen.png<>uid://bbsbxslie4s0h::::res://global/fonts/ComicNeue-Regular.ttf<>uid://b6f37jxmn6i83::::res://maple_street/Assets/TitleScreen/Start_Screen_-_Settings_.png<>uid://dl3abgqn4ro1s::::res://maple_street/Assets/TitleScreen/Start_Screen_-_Credits.png<>uid://cvnd7y86efl6f::::res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3<>uid://x4024vmln4kc::::res://maple_street/Assets/TitleScreen/Title_Card_B_3.png<>uid://daaer0foq2el4::::res://maple_street/Assets/UI/temp-inventory.png
 intro.tscn::PackedScene::7708334006138253817::1714739432::0::1::::<><>::uid://cggdlrxo2s4x8::::res://maple_street/Assets/intro/Teddy Brother Bedroom WIP PNG.png
-Maple_Street.tscn::PackedScene::4231654671746741309::1714739432::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://31br8wohlnas::::res://maple_street/Assets/Houses/SecondHouseShadedPart01.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://ddxomws82yu0r::::res://maple_street/Assets/Houses/SecondHouseShaded02.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>uid://7e6ghsradah5::::res://maple_street/Assets/Scenery/BearScenery.png<>res://maple_street/Scripts/UI/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://dmajvt2pqlg7v::::res://maple_street/Assets/NPC/Resized Raccoon.png<>uid://dhf215iojbtay::::res://maple_street/Assets/Scenery/MouseScenery.png<>uid://p7vj6hn5d6l1::::res://maple_street/Assets/Scenery/OwlScenery01.png<>uid://b4weqs3uvlsq5::::res://maple_street/Assets/NPC/Resized Bunny.png<>uid://drbjgli7wp5nj::::res://maple_street/Assets/Scenery/RabbitScenery.png<>uid://bm41vdsgbkjai::::res://maple_street/Assets/CandyPopUps/MazeCandyPlacement.png<>uid://cfxikh3nc4tua::::res://maple_street/Assets/NPC/OwlNPC.png<>uid://btd33mttlqqdu::::res://maple_street/Assets/CandyPopUps/BowlingCandyPlacement.png<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>uid://n62mrji82012::::res://maple_street/Assets/CandyPopUps/RunnerCandyPlacement.png<>res://maple_street/Scripts/UI/Dialog.gd<>uid://b0po7necuwss3::::res://maple_street/Assets/CandyPopUps/CupswapCandyPlacement.png<>uid://bjvw55jvhsb7k::::res://maple_street/Assets/CandyPopUps/QuizCandyPlacement.png<>uid://2nkumg3pudqn::::res://maple_street/Assets/DoorLights/SecondHouseShaded01RabbitDoor.png<>uid://dcb6pxyfkyf1g::::res://maple_street/Assets/Mailbox/MailboxMouse.png<>uid://3jw8gkrc1fgg::::res://maple_street/Assets/DoorLights/SecondHouseShadedRaccoonDoor.png<>uid://b02fy6ldi02xy::::res://maple_street/Assets/Mailbox/MailboxOwl.png<>uid://bm1gmqn2tnpx5::::res://maple_street/Assets/UI/Bunny Text Box PNG.png<>uid://istx7llj5anb::::res://maple_street/Assets/DoorLights/SecondHouseOwlDoor.png<>uid://cldkj1p1c01nk::::res://maple_street/Assets/UI/Bear Text Box.png<>uid://n1x2rmlq13th::::res://maple_street/Assets/UI/OwlTextboxPNG.png<>uid://pjrm2x627wvg::::res://maple_street/Assets/UI/Raccoon Text Box.png<>uid://cv6s2bjx6f2vo::::res://maple_street/Assets/UI/Mouse Text Box.png<>uid://cvnd7y86efl6f::::res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3<>uid://bbsbxslie4s0h::::res://global/fonts/ComicNeue-Regular.ttf<>uid://cebljqc60t2j7::::res://maple_street/Assets/UI/Help_Icon.png<>uid://66vvu5rbd3md::::res://maple_street/Assets/UI/Inventory_Screen_Mock-up_2.png<>uid://brjeld1rrlv23::::res://credits/assets/square.png<>uid://du3q7wcqf3uq8::::res://maple_street/Assets/UI/Candy_Corn.png<>uid://chepcxxu6b6xv::::res://credits/assets/creditsbutton.png<>uid://dxpmoidfmqn4u::::res://maple_street/Assets/UI/Round Candy.png<>uid://b4pkpxry5wglm::::res://maple_street/Assets/UI/ChocolateBarPNG.png<>uid://8j6ynraflms::::res://maple_street/Assets/UI/Cotton_Candy.png<>uid://bd5ny8j5y8qt4::::res://maple_street/Assets/UI/Lollipop (1).png<>uid://b6v4qhkklgmpi::::res://maple_street/Assets/UI/Home__Pause_Button.png
+Maple_Street.tscn::PackedScene::4231654671746741309::1714740327::0::1::::<><>::res://maple_street/Scripts/maple_street.gd<>uid://dpimaingcsnm7::::res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg<>res://maple_street/Scripts/minigame_enabler.gd<>uid://c3n3b7uyhgvkm::::res://maple_street/Assets/Houses/BearHouseIIJPEG.jpg<>uid://31br8wohlnas::::res://maple_street/Assets/Houses/SecondHouseShadedPart01.png<>uid://dxnky5efvjn2u::::res://maple_street/Assets/DoorLights/MouseHouseDoorIICropped.png<>uid://d1kjx58e3pw66::::res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png<>uid://ddxomws82yu0r::::res://maple_street/Assets/Houses/SecondHouseShaded02.png<>uid://xikusl2jfhyr::::res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png<>uid://7e6ghsradah5::::res://maple_street/Assets/Scenery/BearScenery.png<>res://maple_street/Scripts/UI/UI.gd<>uid://b7hhhwsiu05xr::::res://maple_street/Assets/NPC/Colorblockedmousesmall.png<>uid://dmajvt2pqlg7v::::res://maple_street/Assets/NPC/Resized Raccoon.png<>uid://dhf215iojbtay::::res://maple_street/Assets/Scenery/MouseScenery.png<>uid://p7vj6hn5d6l1::::res://maple_street/Assets/Scenery/OwlScenery01.png<>uid://b4weqs3uvlsq5::::res://maple_street/Assets/NPC/Resized Bunny.png<>uid://drbjgli7wp5nj::::res://maple_street/Assets/Scenery/RabbitScenery.png<>uid://bm41vdsgbkjai::::res://maple_street/Assets/CandyPopUps/MazeCandyPlacement.png<>uid://cfxikh3nc4tua::::res://maple_street/Assets/NPC/OwlNPC.png<>uid://btd33mttlqqdu::::res://maple_street/Assets/CandyPopUps/BowlingCandyPlacement.png<>uid://c5x1p0owyt4tl::::res://maple_street/Assets/UI/Inventory_ButtonPNG.png<>uid://n62mrji82012::::res://maple_street/Assets/CandyPopUps/RunnerCandyPlacement.png<>res://maple_street/Scripts/UI/Dialog.gd<>uid://b0po7necuwss3::::res://maple_street/Assets/CandyPopUps/CupswapCandyPlacement.png<>uid://bjvw55jvhsb7k::::res://maple_street/Assets/CandyPopUps/QuizCandyPlacement.png<>uid://2nkumg3pudqn::::res://maple_street/Assets/DoorLights/SecondHouseShaded01RabbitDoor.png<>uid://dcb6pxyfkyf1g::::res://maple_street/Assets/Mailbox/MailboxMouse.png<>uid://3jw8gkrc1fgg::::res://maple_street/Assets/DoorLights/SecondHouseShadedRaccoonDoor.png<>uid://b02fy6ldi02xy::::res://maple_street/Assets/Mailbox/MailboxOwl.png<>uid://bm1gmqn2tnpx5::::res://maple_street/Assets/UI/Bunny Text Box PNG.png<>uid://istx7llj5anb::::res://maple_street/Assets/DoorLights/SecondHouseOwlDoor.png<>uid://cldkj1p1c01nk::::res://maple_street/Assets/UI/Bear Text Box.png<>uid://n1x2rmlq13th::::res://maple_street/Assets/UI/OwlTextboxPNG.png<>uid://pjrm2x627wvg::::res://maple_street/Assets/UI/Raccoon Text Box.png<>uid://cv6s2bjx6f2vo::::res://maple_street/Assets/UI/Mouse Text Box.png<>uid://cvnd7y86efl6f::::res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3<>uid://bbsbxslie4s0h::::res://global/fonts/ComicNeue-Regular.ttf<>uid://cebljqc60t2j7::::res://maple_street/Assets/UI/Help_Icon.png<>uid://66vvu5rbd3md::::res://maple_street/Assets/UI/Inventory_Screen_Mock-up_2.png<>uid://brjeld1rrlv23::::res://credits/assets/square.png<>uid://du3q7wcqf3uq8::::res://maple_street/Assets/UI/Candy_Corn.png<>uid://chepcxxu6b6xv::::res://credits/assets/creditsbutton.png<>uid://dxpmoidfmqn4u::::res://maple_street/Assets/UI/Round Candy.png<>uid://b4pkpxry5wglm::::res://maple_street/Assets/UI/ChocolateBarPNG.png<>uid://8j6ynraflms::::res://maple_street/Assets/UI/Cotton_Candy.png<>uid://bd5ny8j5y8qt4::::res://maple_street/Assets/UI/Lollipop (1).png<>uid://b6v4qhkklgmpi::::res://maple_street/Assets/UI/Home__Pause_Button.png
 minigame_finish.tscn::PackedScene::6749140830691585789::1714131531::0::1::::<><>::res://maple_street/Scripts/minigame_finish.gd<>uid://c24b15q7u14vj::::res://minigame/maze/Assets/Winning_Screen_Wireframe.png
 option_menu.tscn::PackedScene::3796999272574715912::1714692841::0::1::::<><>::uid://bbsbxslie4s0h::::res://global/fonts/ComicNeue-Regular.ttf<>res://maple_street/Scripts/option_menu.gd<>res://maple_street/Scripts/MasterHSlider.gd<>uid://djsm4wna0jh86::::res://maple_street/Assets/sounds/button_tick.wav<>res://maple_street/Scripts/SoundEffectsHSlider.gd<>res://maple_street/Scripts/bgmHSlider.gd<>uid://chepcxxu6b6xv::::res://credits/assets/creditsbutton.png<>uid://brjeld1rrlv23::::res://credits/assets/square.png<>uid://iojlt1bkt2he::::res://credits/assets/credits.png
 settings.tscn::PackedScene::512475277738891978::1714692840::0::1::::<><>::res://maple_street/Scripts/settings.gd
-TitleScreen.tscn::PackedScene::2194138489511529113::1714739432::0::1::::<><>::res://maple_street/Scripts/TitleScreen.gd<>uid://c3h2n8ym6whga::::res://maple_street/Assets/TitleScreen/Title_Screen.png<>uid://efhdelhrqdxa::::res://maple_street/Assets/TitleScreen/Start_Screen_-_Start_Button (1).png<>uid://bbsbxslie4s0h::::res://global/fonts/ComicNeue-Regular.ttf<>uid://b6f37jxmn6i83::::res://maple_street/Assets/TitleScreen/Start_Screen_-_Settings_.png<>uid://cvnd7y86efl6f::::res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3<>uid://dl3abgqn4ro1s::::res://maple_street/Assets/TitleScreen/Start_Screen_-_Credits.png<>uid://x4024vmln4kc::::res://maple_street/Assets/TitleScreen/Title_Card_B_3.png<>uid://daaer0foq2el4::::res://maple_street/Assets/UI/temp-inventory.png
+TitleScreen.tscn::PackedScene::2194138489511529113::1714740326::0::1::::<><>::res://maple_street/Scripts/TitleScreen.gd<>uid://c3h2n8ym6whga::::res://maple_street/Assets/TitleScreen/Title_Screen.png<>uid://efhdelhrqdxa::::res://maple_street/Assets/TitleScreen/Start_Screen_-_Start_Button (1).png<>uid://bbsbxslie4s0h::::res://global/fonts/ComicNeue-Regular.ttf<>uid://b6f37jxmn6i83::::res://maple_street/Assets/TitleScreen/Start_Screen_-_Settings_.png<>uid://cvnd7y86efl6f::::res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3<>uid://dl3abgqn4ro1s::::res://maple_street/Assets/TitleScreen/Start_Screen_-_Credits.png<>uid://x4024vmln4kc::::res://maple_street/Assets/TitleScreen/Title_Card_B_3.png<>uid://daaer0foq2el4::::res://maple_street/Assets/UI/temp-inventory.png
 ::res://maple_street/Scripts/::1714739432
 bgmHSlider.gd::GDScript::-1::1714695813::0::1::::<>HSlider<>::
 EndOptions.gd::GDScript::-1::1714739432::0::1::::<>Control<>::
@@ -171,7 +171,7 @@ pumpkin.gd::GDScript::-1::1714739432::0::1::::<>Area2D<>::
 ::res://minigame/bowling/sounds/::1714148490
 A_Halloween_on_Maple_Street_-_Bear_Bowling.mp3::AudioStreamMP3::9005500765367633503::1714147574::1714256438::1::::<><>::
 ::res://minigame/cupswap/::1714580114
-::res://minigame/cupswap/Assets/::1714146547
+::res://minigame/cupswap/Assets/::1714739632
 A_Halloween_on_Maple_Street_-_Racoon_Game.mp3::AudioStreamMP3::7885294138746881719::1714131531::1714581801::1::::<><>::
 background.jpg::CompressedTexture2D::1802065556356919356::1714131531::1714131531::1::::<><>::
 cotton.png::CompressedTexture2D::2263159160464103567::1714131531::1714131531::1::::<><>::
@@ -208,12 +208,12 @@ maze_2.gd::GDScript::-1::1714695813::0::1::::<>Node2D<>::
 ::res://minigame/maze/sounds/::1714256438
 A_Halloween_on_Maple_Street_-_Mouse_Maze.mp3::AudioStreamMP3::2120270169424434529::1714147575::1714256438::1::::<><>::
 ::res://minigame/quiz/::1714707580
-::res://minigame/quiz/Assets/::1714739432
+::res://minigame/quiz/Assets/::1714740110
 background.png::CompressedTexture2D::8199054009412235758::1714580463::1714131532::1::::<><>::
-questions.json::JSON::-1::1714739432::0::1::::<><>::
-::res://minigame/quiz/Scenes/::1714739432
+questions.json::JSON::-1::1714740110::0::1::::<><>::
+::res://minigame/quiz/Scenes/::1714740337
 quiz.gdshader::Shader::-1::1714708439::0::1::::<><>::
-quiz.tscn::PackedScene::3706277920164376743::1714739432::0::1::::<><>::res://minigame/quiz/Scripts/game.gd<>uid://do2xhshjfjmu5::::res://minigame/quiz/Assets/background.png<>uid://clqyd8ngksvis::::res://minigame/quiz/sounds/A_Halloween_on_Maple_Street_-_Owl_Quiz.mp3<>uid://bbsbxslie4s0h::::res://global/fonts/ComicNeue-Regular.ttf
+quiz.tscn::PackedScene::3706277920164376743::1714740337::0::1::::<><>::res://minigame/quiz/Scripts/game.gd<>uid://do2xhshjfjmu5::::res://minigame/quiz/Assets/background.png<>uid://clqyd8ngksvis::::res://minigame/quiz/sounds/A_Halloween_on_Maple_Street_-_Owl_Quiz.mp3<>uid://bbsbxslie4s0h::::res://global/fonts/ComicNeue-Regular.ttf
 ::res://minigame/quiz/Scripts/::1714695813
 game.gd::GDScript::-1::1714695813::0::1::::<>Control<>::
 ::res://minigame/quiz/sounds/::1714581852
@@ -292,7 +292,7 @@ Teddy_Character_Prototype.png::CompressedTexture2D::838191016239524456::17141315
 Teddy_StandingPNG.png::CompressedTexture2D::3035521181708404099::1714131532::1714131532::1::::<><>::
 teddy_walk_01.png::CompressedTexture2D::5771982098150318605::1714131532::1714256438::1::::<><>::
 teddy_walk_02.png::CompressedTexture2D::2942885042472045530::1714131532::1714256438::1::::<><>::
-::res://player/Scenes/::1714692840
-Street_Teddy.tscn::PackedScene::1182670203585194002::1714692840::0::1::::<><>::res://player/Scripts/player.gd<>uid://coh8x4l48kol6::::res://player/Assets/teddy_walk_01.png<>uid://bh6s5fan62tt7::::res://player/Assets/teddy_walk_02.png
+::res://player/Scenes/::1714740326
+Street_Teddy.tscn::PackedScene::1182670203585194002::1714740326::0::1::::<><>::res://player/Scripts/player.gd<>uid://coh8x4l48kol6::::res://player/Assets/teddy_walk_01.png<>uid://bh6s5fan62tt7::::res://player/Assets/teddy_walk_02.png
 ::res://player/Scripts/::1714695813
 player.gd::GDScript::-1::1714695813::0::1::::<>CharacterBody2D<>::
