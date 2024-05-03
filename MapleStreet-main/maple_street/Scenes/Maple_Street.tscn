@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=46 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -17,9 +17,14 @@
 [ext_resource type="Texture2D" uid="uid://p7vj6hn5d6l1" path="res://maple_street/Assets/Scenery/OwlScenery01.png" id="8_biuku"]
 [ext_resource type="Texture2D" uid="uid://b4weqs3uvlsq5" path="res://maple_street/Assets/NPC/Resized Bunny.png" id="8_bk0tn"]
 [ext_resource type="Texture2D" uid="uid://drbjgli7wp5nj" path="res://maple_street/Assets/Scenery/RabbitScenery.png" id="8_cvso0"]
+[ext_resource type="Texture2D" uid="uid://bm41vdsgbkjai" path="res://maple_street/Assets/CandyPopUps/MazeCandyPlacement.png" id="10_nx6qv"]
 [ext_resource type="Texture2D" uid="uid://cfxikh3nc4tua" path="res://maple_street/Assets/NPC/OwlNPC.png" id="10_qkrc1"]
+[ext_resource type="Texture2D" uid="uid://btd33mttlqqdu" path="res://maple_street/Assets/CandyPopUps/BowlingCandyPlacement.png" id="11_4aevt"]
 [ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
+[ext_resource type="Texture2D" uid="uid://n62mrji82012" path="res://maple_street/Assets/CandyPopUps/RunnerCandyPlacement.png" id="12_3ukg0"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI/Dialog.gd" id="12_ejm64"]
+[ext_resource type="Texture2D" uid="uid://b0po7necuwss3" path="res://maple_street/Assets/CandyPopUps/CupswapCandyPlacement.png" id="13_n2cns"]
+[ext_resource type="Texture2D" uid="uid://bjvw55jvhsb7k" path="res://maple_street/Assets/CandyPopUps/QuizCandyPlacement.png" id="14_nnq1j"]
 [ext_resource type="Texture2D" uid="uid://2nkumg3pudqn" path="res://maple_street/Assets/DoorLights/SecondHouseShaded01RabbitDoor.png" id="14_np42t"]
 [ext_resource type="Texture2D" uid="uid://3jw8gkrc1fgg" path="res://maple_street/Assets/DoorLights/SecondHouseShadedRaccoonDoor.png" id="15_mtnwa"]
 [ext_resource type="Texture2D" uid="uid://bm1gmqn2tnpx5" path="res://maple_street/Assets/UI/Bunny Text Box PNG.png" id="16_lf1h5"]
@@ -77,6 +82,33 @@ texture = ExtResource("4_sygxs")
 [node name="HouseSet3" type="Sprite2D" parent="HousesSprites"]
 position = Vector2(6720, 540)
 texture = ExtResource("5_46742")
+
+[node name="CandyPopUps" type="Node2D" parent="."]
+
+[node name="Maze" type="Sprite2D" parent="CandyPopUps"]
+visible = false
+position = Vector2(652, 483)
+texture = ExtResource("10_nx6qv")
+
+[node name="Bowling" type="Sprite2D" parent="CandyPopUps"]
+visible = false
+position = Vector2(2851, 519)
+texture = ExtResource("11_4aevt")
+
+[node name="Runner" type="Sprite2D" parent="CandyPopUps"]
+visible = false
+position = Vector2(4793, 514)
+texture = ExtResource("12_3ukg0")
+
+[node name="Cupswap" type="Sprite2D" parent="CandyPopUps"]
+visible = false
+position = Vector2(6693, 491)
+texture = ExtResource("13_n2cns")
+
+[node name="Quiz" type="Sprite2D" parent="CandyPopUps"]
+visible = false
+position = Vector2(7051, 482)
+texture = ExtResource("14_nnq1j")
 
 [node name="Scenery" type="Node2D" parent="."]
 
@@ -156,7 +188,6 @@ polygon = PackedVector2Array(2, -1, 23, -28, 103, -30, 122, 48, 149, 51, 166, 66
 disabled = true
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
-visible = false
 light_mask = 2
 collision_layer = 2
 
@@ -270,13 +301,13 @@ position = Vector2(1055, 392)
 position = Vector2(2892, 485)
 
 [node name="runnerFinishPosition" type="Marker2D" parent="PositionMarkers"]
-position = Vector2(4698, 443)
+position = Vector2(4685, 468)
 
 [node name="cupswapFinishPosition" type="Marker2D" parent="PositionMarkers"]
 position = Vector2(6183, 493)
 
 [node name="quizFinishPosition" type="Marker2D" parent="PositionMarkers"]
-position = Vector2(7180, 592)
+position = Vector2(7135, 491)
 
 [node name="InitialTeddyPosition" type="Marker2D" parent="PositionMarkers"]
 position = Vector2(55, 741)
