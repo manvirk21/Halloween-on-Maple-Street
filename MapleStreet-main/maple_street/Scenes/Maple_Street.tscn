@@ -21,14 +21,14 @@
 [ext_resource type="Texture2D" uid="uid://bm1gmqn2tnpx5" path="res://maple_street/Assets/UI/Bunny Text Box PNG.png" id="16_lf1h5"]
 [ext_resource type="Texture2D" uid="uid://istx7llj5anb" path="res://maple_street/Assets/DoorLights/SecondHouseOwlDoor.png" id="16_x82po"]
 [ext_resource type="Texture2D" uid="uid://cldkj1p1c01nk" path="res://maple_street/Assets/UI/Bear Text Box.png" id="17_2ff0b"]
-[ext_resource type="Texture2D" uid="uid://7wie0vfxes4s" path="res://maple_street/Assets/UI/OwlTextboxPNG.png" id="18_gen4j"]
+[ext_resource type="Texture2D" uid="uid://n1x2rmlq13th" path="res://maple_street/Assets/UI/OwlTextboxPNG.png" id="18_gen4j"]
 [ext_resource type="Texture2D" uid="uid://pjrm2x627wvg" path="res://maple_street/Assets/UI/Raccoon Text Box.png" id="18_r3alk"]
 [ext_resource type="Texture2D" uid="uid://cv6s2bjx6f2vo" path="res://maple_street/Assets/UI/Mouse Text Box.png" id="19_c7aed"]
 [ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="21_fn7h3"]
-[ext_resource type="Texture2D" uid="uid://daaer0foq2el4" path="res://maple_street/Assets/UI/temp-inventory.png" id="23_8b35x"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="23_akpl7"]
 [ext_resource type="Texture2D" uid="uid://cebljqc60t2j7" path="res://maple_street/Assets/UI/Help_Icon.png" id="26_8rctk"]
 [ext_resource type="Texture2D" uid="uid://66vvu5rbd3md" path="res://maple_street/Assets/UI/Inventory_Screen_Mock-up_2.png" id="27_cqwrp"]
+[ext_resource type="Texture2D" uid="uid://brjeld1rrlv23" path="res://credits/assets/square.png" id="28_r12ou"]
 [ext_resource type="Texture2D" uid="uid://du3q7wcqf3uq8" path="res://maple_street/Assets/UI/Candy_Corn.png" id="29_8hyx8"]
 [ext_resource type="Texture2D" uid="uid://chepcxxu6b6xv" path="res://credits/assets/creditsbutton.png" id="29_lruj0"]
 [ext_resource type="Texture2D" uid="uid://dxpmoidfmqn4u" path="res://maple_street/Assets/UI/Round Candy.png" id="30_61mg5"]
@@ -339,12 +339,11 @@ texture_normal = ExtResource("26_8rctk")
 position = Vector2(160, 140)
 
 [node name="temp_help" type="TextureRect" parent="Buttons/Help"]
-visible = false
 offset_left = 475.0
 offset_top = 33.0
 offset_right = 1275.0
 offset_bottom = 621.0
-texture = ExtResource("23_8b35x")
+texture = ExtResource("28_r12ou")
 
 [node name="Creditsbutton" type="Sprite2D" parent="Buttons/Help/temp_help"]
 position = Vector2(71, 65)
@@ -353,17 +352,30 @@ texture = ExtResource("29_lruj0")
 [node name="Label" type="Label" parent="Buttons/Help/temp_help"]
 layout_mode = 0
 offset_left = 126.0
-offset_top = 76.0
+offset_top = 100.0
 offset_right = 703.0
-offset_bottom = 553.0
+offset_bottom = 241.0
+theme_override_colors/font_color = Color(0.133333, 0.0588235, 0.0313726, 1)
 theme_override_fonts/font = ExtResource("23_akpl7")
 theme_override_font_sizes/font_size = 60
-text = "Use your arrow keys to move Teddy.
-
-Use the space bar to interact with the characters!"
+text = "Use your arrow keys to move Teddy."
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Buttons/Help/temp_help"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 280.0
+offset_right = 703.0
+offset_bottom = 493.0
+theme_override_colors/font_color = Color(0.133333, 0.0588235, 0.0313726, 1)
+theme_override_fonts/font = ExtResource("23_akpl7")
+theme_override_font_sizes/font_size = 60
+text = "Use the space bar to interact with the characters!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="HelpBack" type="Button" parent="Buttons/Help/temp_help"]
 layout_mode = 0
