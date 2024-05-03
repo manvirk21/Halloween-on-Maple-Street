@@ -40,7 +40,7 @@ func _process(_delta):
 	# check if instruction dialog shuld be started
 	var user_input = Input.is_action_just_pressed("DIALOG") 
 	var instructions_dialog = user_input and Global.minigame_ready
-	
+
 	# check if retry/completion dialog shuld be started
 	var start_feedback_dialog = Global.dialog_after_minigame and not dialog_feedback_started # makes sure feedback dialog starts
 	var continue_feedback_dialog = user_input and Global.dialog_after_minigame # makes sure sure feedback continues
@@ -109,7 +109,6 @@ func finish_dialog():
 	
 	# reset globals
 	Global.dialog_after_minigame = false
-	Global.minigame_ready = false
 	
 	# resume scene and hide dialog nodes
 	resume()

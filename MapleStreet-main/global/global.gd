@@ -72,6 +72,7 @@ func change_to_main_street(minigame : String, candy_acquired : bool):
 	
 	# assume minigame wasn't completed
 	dialog_key = "Retry"
+	minigame_ready = true
 	
 	# if candy was acquired 
 	if candy_acquired:
@@ -86,6 +87,9 @@ func change_to_main_street(minigame : String, candy_acquired : bool):
 		# select dialog blurb
 		dialog_key = "Completion"
 		active_minigame = minigame
+		
+		# deactivate minigame
+		minigame_ready = false
 
 	# change scene to maple street
 	get_tree().change_scene_to_file("res://maple_street/Scenes/Maple_Street.tscn")
