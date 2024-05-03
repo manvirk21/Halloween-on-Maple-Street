@@ -90,6 +90,7 @@ flat = true
 
 [node name="MazeMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_yn6th")
+autoplay = true
 
 [node name="Instructions" type="Label" parent="."]
 offset_left = 85.0

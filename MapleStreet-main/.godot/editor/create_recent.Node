@@ -1,3 +1,4 @@
+AudioStreamPlayer2D
 Button
 TextureButton
 Label
@@ -11,4 +12,3 @@ CollisionShape2D
 Node2D
 TextureRect
 AnimatedSprite2D
-Sprite2D

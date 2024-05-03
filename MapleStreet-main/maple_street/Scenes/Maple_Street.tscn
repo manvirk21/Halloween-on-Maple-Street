@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=52 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -47,6 +47,10 @@
 [ext_resource type="Texture2D" uid="uid://8j6ynraflms" path="res://maple_street/Assets/UI/Cotton_Candy.png" id="32_jg6m4"]
 [ext_resource type="Texture2D" uid="uid://bd5ny8j5y8qt4" path="res://maple_street/Assets/UI/Lollipop (1).png" id="33_leymm"]
 [ext_resource type="Texture2D" uid="uid://b6v4qhkklgmpi" path="res://maple_street/Assets/UI/Home__Pause_Button.png" id="34_yl816"]
+[ext_resource type="AudioStream" uid="uid://cnbm7jqic00ci" path="res://maple_street/Assets/sounds/ES_Box Shake Candy 1 - SFX Producer.mp3" id="41_0s5i4"]
+[ext_resource type="AudioStream" uid="uid://badqk6bryq8m3" path="res://maple_street/Assets/sounds/ES_Door Knock 12 - SFX Producer.mp3" id="48_3temd"]
+[ext_resource type="AudioStream" uid="uid://os14yanalftf" path="res://maple_street/Assets/sounds/ES_Footsteps Forest 7 - SFX Producer.mp3" id="48_gujxa"]
+[ext_resource type="AudioStream" uid="uid://ccxjm1kgs8qvm" path="res://maple_street/Assets/sounds/ES_Toddler Walk 2 - SFX Producer.mp3" id="49_1ro3n"]
 
 [node name="MapleStreet" type="Node2D"]
 script = ExtResource("1_xbb3s")
@@ -481,6 +485,10 @@ flat = true
 
 [node name="Inventory" type="Node2D" parent="Buttons"]
 
+[node name="InventorySound" type="AudioStreamPlayer2D" parent="Buttons/Inventory"]
+stream = ExtResource("41_0s5i4")
+bus = &"SoundEffects"
+
 [node name="Background" type="TextureRect" parent="Buttons/Inventory"]
 visible = false
 offset_left = 160.0
@@ -528,10 +536,23 @@ position = Vector2(1537, 440)
 scale = Vector2(0.808219, 0.808219)
 texture = ExtResource("33_leymm")
 
+[node name="walkgrass" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("48_gujxa")
+bus = &"SoundEffects"
+
+[node name="walksidewalk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("49_1ro3n")
+bus = &"SoundEffects"
+
+[node name="DoorKnock" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("48_3temd")
+bus = &"SoundEffects"
+
 [node name="OpenWorld" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("21_fn7h3")
 autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="Scenery/BehindTombstones" to="." method="_teddy_behind_tombstones"]
 [connection signal="body_exited" from="Scenery/BehindTombstones" to="." method="_teddy_not_behind_tombstones"]

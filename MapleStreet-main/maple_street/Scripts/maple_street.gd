@@ -102,11 +102,15 @@ func NPC_display():
 func _on_Teddy_exits_grass(body):
 	if body.name == "Street_Teddy":
 		Global.Teddy_Speed = Global.NORMAL_SPEED
+		$walksidewalk.play(0)
+		$walkgrass.stop()
 
 # Slow down Teddy when he's in grass areas
 func _on_Teddy_enters_grass(body):
 	if body.name == "Street_Teddy":
 		Global.Teddy_Speed = Global.GRASS_SPEED
+		$walkgrass.play(0)
+		$walksidewalk.stop()
 
 
 # when teddy walks in area behind tombstones, move tombstones forward

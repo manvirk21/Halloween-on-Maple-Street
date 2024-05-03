@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2pwhemcxbuq6"
+path="res://.godot/imported/ES_Multimedia Chime 35 - SFX Producer.mp3-5b63017a5756c4c8d7d640338139fd35.mp3str"
+
+[deps]
+
+source_file="res://maple_street/Assets/sounds/ES_Multimedia Chime 35 - SFX Producer.mp3"
+dest_files=["res://.godot/imported/ES_Multimedia Chime 35 - SFX Producer.mp3-5b63017a5756c4c8d7d640338139fd35.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

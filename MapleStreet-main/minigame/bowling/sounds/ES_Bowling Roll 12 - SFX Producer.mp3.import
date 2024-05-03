@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vyh2l75exmxy"
+path="res://.godot/imported/ES_Bowling Roll 12 - SFX Producer.mp3-68ea8d084973a59e106b362138b9b054.mp3str"
+
+[deps]
+
+source_file="res://minigame/bowling/sounds/ES_Bowling Roll 12 - SFX Producer.mp3"
+dest_files=["res://.godot/imported/ES_Bowling Roll 12 - SFX Producer.mp3-68ea8d084973a59e106b362138b9b054.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

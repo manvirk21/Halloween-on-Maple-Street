@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://badqk6bryq8m3"
+path="res://.godot/imported/ES_Door Knock 12 - SFX Producer.mp3-4eb1451ce06f738b3a7e28dab4079fc5.mp3str"
+
+[deps]
+
+source_file="res://maple_street/Assets/sounds/ES_Door Knock 12 - SFX Producer.mp3"
+dest_files=["res://.godot/imported/ES_Door Knock 12 - SFX Producer.mp3-4eb1451ce06f738b3a7e28dab4079fc5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

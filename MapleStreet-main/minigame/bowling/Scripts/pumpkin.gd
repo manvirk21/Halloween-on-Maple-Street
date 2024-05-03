@@ -51,6 +51,7 @@ func _process(delta):
 		
 func roll():
 	$AnimatedSprite2D.play("roll")
+	$Roll.play(0)
 	position.y += -5
 	
 func reset():
@@ -67,6 +68,7 @@ func knock_pins():
 		reset()
 	else:
 		$"../Crash".visible = true
+		$CrashSound.play(0)
 		$"../pins_Up".visible = false
 		if pin_status == 3:
 			$"../pins_Strike".visible = true

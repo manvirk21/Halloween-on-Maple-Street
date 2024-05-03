@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://os14yanalftf"
+path="res://.godot/imported/ES_Footsteps Forest 7 - SFX Producer.mp3-4f71448e6e4bb15169e025c8e2d5a42e.mp3str"
+
+[deps]
+
+source_file="res://maple_street/Assets/sounds/ES_Footsteps Forest 7 - SFX Producer.mp3"
+dest_files=["res://.godot/imported/ES_Footsteps Forest 7 - SFX Producer.mp3-4f71448e6e4bb15169e025c8e2d5a42e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

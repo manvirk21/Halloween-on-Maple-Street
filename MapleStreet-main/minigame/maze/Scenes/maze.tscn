@@ -61,6 +61,7 @@ shape = SubResource("RectangleShape2D_k5pud")
 [node name="MazeMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_cypti")
 autoplay = true
+bus = &"Music"
 
 [node name="Instructions" type="Label" parent="."]
 offset_left = 85.0

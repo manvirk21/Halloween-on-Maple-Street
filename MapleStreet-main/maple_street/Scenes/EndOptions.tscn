@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bwinwwd130xrp"]
+[gd_scene load_steps=13 format=3 uid="uid://capcg7mhhtfr5"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/EndOptions.gd" id="1_mlps0"]
 [ext_resource type="Texture2D" uid="uid://c3h2n8ym6whga" path="res://maple_street/Assets/TitleScreen/Title_Screen.png" id="2_vanwh"]

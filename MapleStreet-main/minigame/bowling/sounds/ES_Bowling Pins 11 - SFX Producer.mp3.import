@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brplhrkciqa5d"
+path="res://.godot/imported/ES_Bowling Pins 11 - SFX Producer.mp3-01059600422e9f710b9c627f1ce776fb.mp3str"
+
+[deps]
+
+source_file="res://minigame/bowling/sounds/ES_Bowling Pins 11 - SFX Producer.mp3"
+dest_files=["res://.godot/imported/ES_Bowling Pins 11 - SFX Producer.mp3-01059600422e9f710b9c627f1ce776fb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

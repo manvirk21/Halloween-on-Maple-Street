@@ -132,6 +132,7 @@ text = "Exit Game"
 [node name="CupswapMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_bdh80")
 autoplay = true
+bus = &"Music"
 
 [node name="Instructions" type="Label" parent="."]
 offset_left = 82.0

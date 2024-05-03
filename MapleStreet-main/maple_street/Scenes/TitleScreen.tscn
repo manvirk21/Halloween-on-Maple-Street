@@ -126,6 +126,7 @@ icon_alignment = 1
 [node name="OpenWorld" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_jrqqy")
 autoplay = true
+bus = &"Music"
 
 [node name="TitleCardB3" type="Sprite2D" parent="."]
 position = Vector2(971, 191)

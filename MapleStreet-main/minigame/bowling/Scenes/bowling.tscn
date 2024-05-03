@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dtx7yre83vthn"]
+[gd_scene load_steps=22 format=3 uid="uid://dtx7yre83vthn"]
 
 [ext_resource type="Script" path="res://minigame/bowling/Scripts/bowling.gd" id="1_mypux"]
 [ext_resource type="Texture2D" uid="uid://dm0755abtttxa" path="res://minigame/bowling/Assets/Bowling_Game_Screen_BackgroundJPEG.jpg" id="3_6647m"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://dw3h1l6bgbsgy" path="res://minigame/bowling/Assets/BearFrameLarge.png" id="14_g5hwu"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="15_e0hdu"]
 [ext_resource type="Texture2D" uid="uid://c24b15q7u14vj" path="res://minigame/maze/Assets/Winning_Screen_Wireframe.png" id="15_rgoj3"]
+[ext_resource type="AudioStream" uid="uid://brplhrkciqa5d" path="res://minigame/bowling/sounds/ES_Bowling Pins 11 - SFX Producer.mp3" id="17_do6iw"]
+[ext_resource type="AudioStream" uid="uid://vyh2l75exmxy" path="res://minigame/bowling/sounds/ES_Bowling Roll 12 - SFX Producer.mp3" id="18_cdbni"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hhyq5"]
 animations = [{
@@ -48,6 +50,10 @@ animations = [{
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_mypux")
+
+[node name="CrashSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_do6iw")
+bus = &"SoundEffects"
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(780, 55)
@@ -114,6 +120,12 @@ animation = &"roll"
 position = Vector2(0, 20)
 shape = SubResource("CircleShape2D_54kkt")
 
+[node name="Roll" type="AudioStreamPlayer2D" parent="Node2D/pumpkin"]
+position = Vector2(-1129.09, -750)
+scale = Vector2(0.909091, 0.909091)
+stream = ExtResource("18_cdbni")
+bus = &"SoundEffects"
+
 [node name="strike" type="Area2D" parent="Node2D" groups=["strike"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/strike"]
@@ -163,6 +175,7 @@ text = "End Game"
 [node name="BowlingMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_0876e")
 autoplay = true
+bus = &"Music"
 
 [node name="frame" type="TextureRect" parent="."]
 offset_right = 1920.0

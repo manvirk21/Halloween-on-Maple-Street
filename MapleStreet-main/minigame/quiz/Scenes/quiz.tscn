@@ -117,6 +117,7 @@ text_overrun_behavior = 4
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_apvuy")
 autoplay = true
+bus = &"Music"
 
 [connection signal="item_selected" from="ListItem" to="." method="_on_item_list_item_selected"]
 [connection signal="pressed" from="RestartButton" to="." method="_on_button_pressed"]

@@ -53,6 +53,7 @@ func _on_area_2d_body_exited(body):
 func rewardplayer(scoretoadd):
 	score += scoretoadd
 	Signals.emit_signal("updatescore", score)
+	
 
 func killplayer():
 	queue_free()

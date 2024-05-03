@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://gnmwcs0buwwi"]
+[gd_scene load_steps=12 format=3 uid="uid://gnmwcs0buwwi"]
 
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="1_kefg0"]
 [ext_resource type="PackedScene" uid="uid://b5yotg3nxth1p" path="res://minigame/runner/Scenes/FGBG/background.tscn" id="1_xxm55"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cp4s05lr4wwhh" path="res://minigame/runner/Scenes/UI/game_over_ui.tscn" id="6_stain"]
 [ext_resource type="Texture2D" uid="uid://bniwd08jvwoo5" path="res://minigame/runner/Assets/Backgrounds/FrameRunner.png" id="7_t0pgj"]
 [ext_resource type="AudioStream" uid="uid://ooymadleyttt" path="res://minigame/runner/sounds/A_Halloween_on_Maple_Street_-_Rabbit_Run_faster.mp3" id="8_llurp"]
+[ext_resource type="AudioStream" uid="uid://2pwhemcxbuq6" path="res://maple_street/Assets/sounds/ES_Multimedia Chime 35 - SFX Producer.mp3" id="11_g0nkv"]
 
 [node name="Game" type="Node2D"]
 scale = Vector2(1.00167, 0.989457)
@@ -85,3 +86,8 @@ grow_vertical = 1
 [node name="RunnerMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_llurp")
 autoplay = true
+bus = &"Music"
+
+[node name="collectcarrot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_g0nkv")
+bus = &"SoundEffects"
