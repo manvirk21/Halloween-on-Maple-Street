@@ -88,6 +88,7 @@ func _on_button_pressed():
 
 
 func _on_main_menu_pressed():
+	Global.Street_Teddy_global_position = $"../Street_Teddy".global_position
 	get_tree().change_scene_to_file("res://maple_street/Scenes/EndOptions.tscn") # Replace with function body.
 
 

@@ -25,5 +25,6 @@ func _on_no_pressed():
 
 func _on_yes_pressed():
 	Save.reset()
+	Global.reset_teddy_position()
 	$ResetWindow.visible = false
 	get_tree().change_scene_to_file("res://maple_street/Scenes/TitleScreen.tscn")

@@ -80,9 +80,6 @@ func reset():
 	# save 
 	save_data = reset_data_dict
 	_save()
-	
-	# reset teddy position
-	Global.reset_teddy_position()
 
 
 # opens save file
