@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=55 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://2nkumg3pudqn" path="res://maple_street/Assets/DoorLights/SecondHouseShaded01RabbitDoor.png" id="14_np42t"]
 [ext_resource type="Texture2D" uid="uid://dcb6pxyfkyf1g" path="res://maple_street/Assets/Mailbox/MailboxMouse.png" id="15_jsadx"]
 [ext_resource type="Texture2D" uid="uid://3jw8gkrc1fgg" path="res://maple_street/Assets/DoorLights/SecondHouseShadedRaccoonDoor.png" id="15_mtnwa"]
+[ext_resource type="Texture2D" uid="uid://d2fuy3o11ltg0" path="res://maple_street/Assets/Mailbox/StreetSign.png" id="16_0jely"]
 [ext_resource type="Texture2D" uid="uid://b02fy6ldi02xy" path="res://maple_street/Assets/Mailbox/MailboxOwl.png" id="16_iyijn"]
 [ext_resource type="Texture2D" uid="uid://bm1gmqn2tnpx5" path="res://maple_street/Assets/UI/Bunny Text Box PNG.png" id="16_lf1h5"]
 [ext_resource type="Texture2D" uid="uid://istx7llj5anb" path="res://maple_street/Assets/DoorLights/SecondHouseOwlDoor.png" id="16_x82po"]
@@ -153,6 +154,11 @@ polygon = PackedVector2Array(4930, 659, 4943, 745, 5046, 764, 5069, 751, 5093, 6
 z_index = 3
 position = Vector2(960, 541)
 texture = ExtResource("15_jsadx")
+
+[node name="sign" type="Sprite2D" parent="Mailboxes"]
+z_index = 3
+position = Vector2(960, 541)
+texture = ExtResource("16_0jely")
 
 [node name="Owl" type="Sprite2D" parent="Mailboxes"]
 z_index = 3

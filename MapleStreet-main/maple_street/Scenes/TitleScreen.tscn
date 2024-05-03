@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b6f37jxmn6i83" path="res://maple_street/Assets/TitleScreen/Start_Screen_-_Settings_.png" id="5_xsfw0"]
 [ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="6_jrqqy"]
 [ext_resource type="Texture2D" uid="uid://dl3abgqn4ro1s" path="res://maple_street/Assets/TitleScreen/Start_Screen_-_Credits.png" id="7_or8nf"]
-[ext_resource type="Texture2D" uid="uid://x4024vmln4kc" path="res://maple_street/Assets/TitleScreen/Title_Card_B_3.png" id="7_rnnjn"]
+[ext_resource type="Texture2D" uid="uid://jnyqdyjchdun" path="res://maple_street/Assets/TitleScreen/TextureTitle.png" id="8_rbgaj"]
 [ext_resource type="Texture2D" uid="uid://daaer0foq2el4" path="res://maple_street/Assets/UI/temp-inventory.png" id="9_vjbj4"]
 
 [sub_resource type="FontFile" id="FontFile_jqq4x"]
@@ -62,9 +62,9 @@ texture = ExtResource("2_gxhoo")
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 140.0
+offset_left = 127.0
 offset_top = 862.0
-offset_right = 1055.0
+offset_right = 1042.0
 offset_bottom = 1130.0
 scale = Vector2(0.55, 0.55)
 theme = SubResource("Theme_4cdov")
@@ -131,7 +131,7 @@ bus = &"Music"
 [node name="TitleCardB3" type="Sprite2D" parent="."]
 position = Vector2(971, 191)
 scale = Vector2(2.06506, 2.02769)
-texture = ExtResource("7_rnnjn")
+texture = ExtResource("8_rbgaj")
 
 [node name="ResetWindow" type="Sprite2D" parent="."]
 visible = false

@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dganwxhbgf5p7" path="res://intro_outro/Assets/Background/Intro.png" id="2_k26vj"]
 [ext_resource type="Texture2D" uid="uid://btix6r5d6c85m" path="res://intro_outro/Assets/Background/Outro.png" id="3_rnr53"]
 [ext_resource type="Texture2D" uid="uid://cyud06vd5k6ep" path="res://intro_outro/Assets/DialogBoxes/TeddyTextBox01.png" id="4_r71ly"]
+[ext_resource type="Texture2D" uid="uid://cdqgof0lgjauq" path="res://intro_outro/Assets/DialogBoxes/BuddyTextbox.png" id="5_41kx3"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="5_rnnyk"]
-[ext_resource type="Texture2D" uid="uid://n1x2rmlq13th" path="res://maple_street/Assets/UI/OwlTextboxPNG.png" id="5_ydkxt"]
 [ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="6_xarml"]
 
 [node name="intro_outro" type="Node2D"]
@@ -29,7 +29,7 @@ texture = ExtResource("4_r71ly")
 
 [node name="Buddy" type="Sprite2D" parent="DialogBox"]
 position = Vector2(958, 884)
-texture = ExtResource("5_ydkxt")
+texture = ExtResource("5_41kx3")
 
 [node name="Speaker" type="Label" parent="."]
 offset_left = 440.0
