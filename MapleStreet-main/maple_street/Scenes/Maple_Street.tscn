@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://b1j3y7ywd0ahx"]
+[gd_scene load_steps=41 format=3 uid="uid://b1j3y7ywd0ahx"]
 
 [ext_resource type="Script" path="res://maple_street/Scripts/maple_street.gd" id="1_xbb3s"]
 [ext_resource type="Texture2D" uid="uid://dpimaingcsnm7" path="res://maple_street/Assets/Houses/MouseHouseIIJPEG.jpg" id="2_t3sfn"]
@@ -9,10 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://d1kjx58e3pw66" path="res://maple_street/Assets/NPC/ColorblockedbearKRAsmall.png" id="5_6qnc0"]
 [ext_resource type="Texture2D" uid="uid://ddxomws82yu0r" path="res://maple_street/Assets/Houses/SecondHouseShaded02.png" id="5_46742"]
 [ext_resource type="Texture2D" uid="uid://xikusl2jfhyr" path="res://maple_street/Assets/DoorLights/BearHouseDoorIICropped.png" id="6_02pr7"]
+[ext_resource type="Texture2D" uid="uid://7e6ghsradah5" path="res://maple_street/Assets/Scenery/BearScenery.png" id="6_6pxrm"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI/UI.gd" id="6_bcvno"]
 [ext_resource type="Texture2D" uid="uid://b7hhhwsiu05xr" path="res://maple_street/Assets/NPC/Colorblockedmousesmall.png" id="6_cfwgk"]
 [ext_resource type="Texture2D" uid="uid://dmajvt2pqlg7v" path="res://maple_street/Assets/NPC/Resized Raccoon.png" id="7_0l4x6"]
+[ext_resource type="Texture2D" uid="uid://dhf215iojbtay" path="res://maple_street/Assets/Scenery/MouseScenery.png" id="7_6oqeb"]
+[ext_resource type="Texture2D" uid="uid://p7vj6hn5d6l1" path="res://maple_street/Assets/Scenery/OwlScenery01.png" id="8_biuku"]
 [ext_resource type="Texture2D" uid="uid://b4weqs3uvlsq5" path="res://maple_street/Assets/NPC/Resized Bunny.png" id="8_bk0tn"]
+[ext_resource type="Texture2D" uid="uid://drbjgli7wp5nj" path="res://maple_street/Assets/Scenery/RabbitScenery.png" id="8_cvso0"]
 [ext_resource type="Texture2D" uid="uid://cfxikh3nc4tua" path="res://maple_street/Assets/NPC/OwlNPC.png" id="10_qkrc1"]
 [ext_resource type="Texture2D" uid="uid://c5x1p0owyt4tl" path="res://maple_street/Assets/UI/Inventory_ButtonPNG.png" id="11_7xv4g"]
 [ext_resource type="Script" path="res://maple_street/Scripts/UI/Dialog.gd" id="12_ejm64"]
@@ -25,10 +29,10 @@
 [ext_resource type="Texture2D" uid="uid://pjrm2x627wvg" path="res://maple_street/Assets/UI/Raccoon Text Box.png" id="18_r3alk"]
 [ext_resource type="Texture2D" uid="uid://cv6s2bjx6f2vo" path="res://maple_street/Assets/UI/Mouse Text Box.png" id="19_c7aed"]
 [ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="21_fn7h3"]
-[ext_resource type="Texture2D" uid="uid://daaer0foq2el4" path="res://maple_street/Assets/UI/temp-inventory.png" id="23_8b35x"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="23_akpl7"]
 [ext_resource type="Texture2D" uid="uid://cebljqc60t2j7" path="res://maple_street/Assets/UI/Help_Icon.png" id="26_8rctk"]
 [ext_resource type="Texture2D" uid="uid://66vvu5rbd3md" path="res://maple_street/Assets/UI/Inventory_Screen_Mock-up_2.png" id="27_cqwrp"]
+[ext_resource type="Texture2D" uid="uid://brjeld1rrlv23" path="res://credits/assets/square.png" id="28_r12ou"]
 [ext_resource type="Texture2D" uid="uid://du3q7wcqf3uq8" path="res://maple_street/Assets/UI/Candy_Corn.png" id="29_8hyx8"]
 [ext_resource type="Texture2D" uid="uid://chepcxxu6b6xv" path="res://credits/assets/creditsbutton.png" id="29_lruj0"]
 [ext_resource type="Texture2D" uid="uid://dxpmoidfmqn4u" path="res://maple_street/Assets/UI/Round Candy.png" id="30_61mg5"]
@@ -73,6 +77,24 @@ texture = ExtResource("4_sygxs")
 [node name="HouseSet3" type="Sprite2D" parent="HousesSprites"]
 position = Vector2(6720, 540)
 texture = ExtResource("5_46742")
+
+[node name="Scenery" type="Node2D" parent="."]
+
+[node name="MouseScenery" type="Sprite2D" parent="Scenery"]
+position = Vector2(962, 542)
+texture = ExtResource("7_6oqeb")
+
+[node name="BearScenery" type="Sprite2D" parent="Scenery"]
+position = Vector2(2883, 541)
+texture = ExtResource("6_6pxrm")
+
+[node name="BunnyScenery" type="Sprite2D" parent="Scenery"]
+position = Vector2(4797, 541)
+texture = ExtResource("8_cvso0")
+
+[node name="OwlScenery" type="Sprite2D" parent="Scenery"]
+position = Vector2(6717, 542)
+texture = ExtResource("8_biuku")
 
 [node name="NPCs" type="StaticBody2D" parent="."]
 collision_layer = 2
@@ -134,6 +156,7 @@ polygon = PackedVector2Array(2, -1, 23, -28, 103, -30, 122, 48, 149, 51, 166, 66
 disabled = true
 
 [node name="EnvironmentCollisions" type="StaticBody2D" parent="."]
+visible = false
 light_mask = 2
 collision_layer = 2
 
@@ -344,7 +367,7 @@ offset_left = 475.0
 offset_top = 33.0
 offset_right = 1275.0
 offset_bottom = 621.0
-texture = ExtResource("23_8b35x")
+texture = ExtResource("28_r12ou")
 
 [node name="Creditsbutton" type="Sprite2D" parent="Buttons/Help/temp_help"]
 position = Vector2(71, 65)
@@ -353,17 +376,30 @@ texture = ExtResource("29_lruj0")
 [node name="Label" type="Label" parent="Buttons/Help/temp_help"]
 layout_mode = 0
 offset_left = 126.0
-offset_top = 76.0
+offset_top = 100.0
 offset_right = 703.0
-offset_bottom = 553.0
+offset_bottom = 241.0
+theme_override_colors/font_color = Color(0.133333, 0.0588235, 0.0313726, 1)
 theme_override_fonts/font = ExtResource("23_akpl7")
 theme_override_font_sizes/font_size = 60
-text = "Use your arrow keys to move Teddy.
-
-Use the space bar to interact with the characters!"
+text = "Use your arrow keys to move Teddy."
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Buttons/Help/temp_help"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 280.0
+offset_right = 703.0
+offset_bottom = 493.0
+theme_override_colors/font_color = Color(0.133333, 0.0588235, 0.0313726, 1)
+theme_override_fonts/font = ExtResource("23_akpl7")
+theme_override_font_sizes/font_size = 60
+text = "Use the space bar to interact with the characters!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="HelpBack" type="Button" parent="Buttons/Help/temp_help"]
 layout_mode = 0
