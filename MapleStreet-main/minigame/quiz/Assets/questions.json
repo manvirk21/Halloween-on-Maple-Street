@@ -18,5 +18,10 @@
 		"question": "Why do mice love cheese so much?",
 		"options": ["It gives them superpowers", "It’s easy to find", "It’s stinky", "They're omnivores"],
 		"correctOptionIndex": 3
+	},
+	{
+		"question": "How do owls see everything around them so well?",
+		"options": ["They can turn their head all the way around ", "They have big, wide eyes", "They have eyes on the back of their head", "They eat a lot of carrots"],
+		"correctOptionIndex": 0
 	}
 	]
