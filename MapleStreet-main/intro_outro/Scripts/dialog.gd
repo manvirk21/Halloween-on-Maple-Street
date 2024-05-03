@@ -25,6 +25,7 @@ func _ready():
 		Save.set_intro_viewed()
 	else:
 		scene = "outro"
+		$victory.play(0)
 		next_scene = end_options
 		$Background/Intro.visible = false
 		Save.set_outro_viewed()

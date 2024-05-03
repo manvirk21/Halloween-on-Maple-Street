@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dh28et6kg6osf"]
+[gd_scene load_steps=9 format=3 uid="uid://dh28et6kg6osf"]
 
 [ext_resource type="Script" path="res://intro_outro/Scripts/dialog.gd" id="1_5n1he"]
 [ext_resource type="Texture2D" uid="uid://dganwxhbgf5p7" path="res://intro_outro/Assets/Background/Intro.png" id="2_k26vj"]
 [ext_resource type="Texture2D" uid="uid://btix6r5d6c85m" path="res://intro_outro/Assets/Background/Outro.png" id="3_rnr53"]
 [ext_resource type="Texture2D" uid="uid://cyud06vd5k6ep" path="res://intro_outro/Assets/DialogBoxes/TeddyTextBox01.png" id="4_r71ly"]
-[ext_resource type="Texture2D" uid="uid://cdqgof0lgjauq" path="res://intro_outro/Assets/DialogBoxes/BuddyTextbox.png" id="5_41kx3"]
+[ext_resource type="Texture2D" path="res://intro_outro/Assets/DialogBoxes/BuddyTextbox.png" id="5_41kx3"]
 [ext_resource type="FontFile" uid="uid://bbsbxslie4s0h" path="res://global/fonts/ComicNeue-Regular.ttf" id="5_rnnyk"]
 [ext_resource type="AudioStream" uid="uid://cvnd7y86efl6f" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Open_World.mp3" id="6_xarml"]
+[ext_resource type="AudioStream" uid="uid://uq6c1vfrsaxq" path="res://maple_street/Assets/sounds/A_Halloween_on_Maple_Street_-_Victory.mp3" id="8_fx1pb"]
 
 [node name="intro_outro" type="Node2D"]
 script = ExtResource("1_5n1he")
@@ -56,3 +57,6 @@ autowrap_mode = 2
 [node name="OpenWorld" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_xarml")
 autoplay = true
+
+[node name="victory" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_fx1pb")
