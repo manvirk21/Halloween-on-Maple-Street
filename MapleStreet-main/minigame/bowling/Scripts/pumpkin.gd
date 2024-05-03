@@ -3,6 +3,7 @@ var move = 8
 var left_right = true
 var pin_status = 0 # 0: up, 1: left, 2: right, 3: strike
 var strike_count = 0
+var sound_has_played = false
 
 # Resize variables
 var far_y = 0
@@ -40,6 +41,9 @@ func _process(delta):
 		else:
 			if(position.y >= 180):
 				roll()
+				if !sound_has_played:
+					sound_has_played = true
+					$Roll.play(0)
 			else:
 				$AnimatedSprite2D.stop()
 				visible = false
@@ -49,9 +53,9 @@ func _process(delta):
 	if Input.is_action_pressed("ui_accept"):
 		left_right = false
 		
+		
 func roll():
 	$AnimatedSprite2D.play("roll")
-	$Roll.play(0)
 	position.y += -5
 	
 func reset():
@@ -68,7 +72,6 @@ func knock_pins():
 		reset()
 	else:
 		$"../Crash".visible = true
-		$CrashSound.play(0)
 		$"../pins_Up".visible = false
 		if pin_status == 3:
 			$"../pins_Strike".visible = true
@@ -100,12 +103,14 @@ func bear_reset():
 	
 func _on_strike_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	print("strike")
+	$"../../CrashSound".play(0)
 	pin_status = 3
 	strike_count += 1
 
 
 func _on_some_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	print("some")
+	$"../../CrashSound".play(0)
 	if position.x > 420:
 		print("right")
 		pin_status = 2 #right
